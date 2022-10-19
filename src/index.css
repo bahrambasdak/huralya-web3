@@ -1,5 +1,33 @@
-body {
+*{
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+#root{
+
+  /* width: 100vw;
+  height: 100vh; */
+text-align: center;
+ margin: 0 auto;
+ min-height:max-content;
+ /*
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; */
+background-color: rgb(19, 27, 34);
+}
+
+body {
+min-width: 100vw;
+min-height:fit-content;
+text-align: center;
+margin: 0 auto;
+background-color: rgb(19, 27, 34);
+overflow-x: hidden;
+
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
