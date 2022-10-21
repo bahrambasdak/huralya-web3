@@ -181,7 +181,6 @@ min-height: max-content;
 ////////////////////////////////////////////     Footer    //////////////////////
 .footer {
    width: 100%;
-   grid-row: 3/4;
    position: sticky;
   //width: 95%;
   bottom: 0;
@@ -476,6 +475,8 @@ min-width: 30%;
       display: none;
     }
 
+
+
     .footer .join {
       .btn {
         max-width: 10vw;
@@ -483,30 +484,35 @@ min-width: 30%;
     }
   }
   @media only screen and #{$mq-medium} {
+
     .App {
     margin: 0 8%;
     }
   }
 
   @media only screen and #{$mq-large} {
+
     .App {
     margin: 0 12%;
     }
   }
 
   @media only screen and #{$mq-xlarge} {
+
     .App {
     margin: 0 18%;
     }
   }
 
   @media only screen and #{$mq-xxlarge} {
+
     .App {
     margin: 0 25%;
     }
   }
 
   @media only screen and #{$mq-retina} {
+
     .App {
     margin: 0 30%;
     }
