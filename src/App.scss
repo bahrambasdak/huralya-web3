@@ -7,39 +7,22 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: "(min-width: #{$bp-xsmall})";
-$mq-small: "(min-width: #{$bp-small})";
-$mq-medium: "(min-width: #{$bp-medium})";
-$mq-large: "(min-width: #{$bp-large})";
-$mq-xlarge: "(min-width: #{$bp-xlarge})";
-$mq-xxlarge: "(min-width: #{$bp-xxlarge})";
-$mq-retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
 
-.App {
-
-display: flex;
-  flex-direction: column;
-  align-items: center;
-min-height: max-content;
-  position: relative;
-  //  height: max-content;
-  //  width: max-content;
-  background-color: rgb(19, 27, 34);
-  color: rgba(195, 201, 206, 0.979);
-  overflow: none;
-}
+$header-background-color: #282f42;
+$header-menu-text-color: #9298a5;
 
 .card {
   padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 5px rgba($color: #071429, $alpha: 0.05);
+  border-radius: 20px;
+  //box-shadow: 0 0 10px 5px rgba($color: #071429, $alpha: 0.05);
 }
-
-// .maincontainer{
-//   display: flex;
-//   flex-direction: column;
-
-// }
 
 ///////////////////////////////////////////  Header   ////////////////////
 .header {
@@ -47,11 +30,11 @@ min-height: max-content;
 
   width: 95%;
   position: sticky;
-  top: 0;
-  background-color: #1d3041;
-  border-radius: 50px;
+  top: 1rem;
+  background-color: $header-background-color;
+  border-radius: 59px;
 
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
   // height: 50px;
   padding: 0px 10px 0px 10px;
@@ -69,11 +52,9 @@ min-height: max-content;
 .header-menu {
   flex-grow: 1;
   max-width: 60%;
-  height: 100%;
-  // margin: 0 40px 0 40px;
-
   .menu {
     display: flex;
+    flex-grow: 1;
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
@@ -89,14 +70,21 @@ min-height: max-content;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-wrap: wrap;
       flex-grow: 1;
       height: 100%;
       text-decoration: none;
-      color: rgb(216, 213, 213);
+      color: $header-menu-text-color; //#9298A5;
+      font-weight: 300;
+      font-size: 22px;
+
       //padding: 0 20px 0 20px;
       overflow: hidden;
       min-width: fit-content;
       text-align: center;
+      img {
+        padding-right: 0.5rem;
+      }
     }
     .item:hover {
       color: white;
@@ -130,11 +118,6 @@ min-height: max-content;
     }
 
     .active {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
       background-image: linear-gradient(
         -180deg,
         rgb(60, 53, 150),
@@ -149,7 +132,6 @@ min-height: max-content;
 
 .header-login {
   padding: 15px;
-
   //width: 20%;
   flex-grow: 1;
   max-width: 20%;
@@ -157,11 +139,16 @@ min-height: max-content;
   justify-content: center;
   .login-btn {
     flex-grow: 1;
-
+    color: #9298a5;
+    font-family: "Bahnschrift";
+    font-weight: 300;
+    font-size: 20px;
     max-width: 100px;
     padding: 8px;
-    background-color: transparent;
-    border-radius: 20px;
+    background-color: #282f42;
+    border: 1px solid #9298a5;
+    border-radius: 164px;
+    box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -172,16 +159,12 @@ min-height: max-content;
 
 .login-btn {
 }
-/////////////////////////////////////////////////////
-
-.Container {
-  width: 90%;
-}
-
+//////
 ////////////////////////////////////////////     Footer    //////////////////////
+///
 .footer {
-   width: 100%;
-   position: sticky;
+  width: 100%;
+  position: sticky;
   //width: 95%;
   bottom: 0;
   display: flex;
@@ -191,6 +174,10 @@ min-height: max-content;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 0 20px 0 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  color: #9298a5;
 }
 
 .footer-links {
@@ -241,6 +228,10 @@ min-height: max-content;
     flex-grow: 1;
     max-width: 7vw;
     cursor: pointer;
+    background: #161c26;
+    border: 1px solid #9298a5;
+    box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 164px;
   }
 }
 
@@ -250,47 +241,40 @@ min-height: max-content;
 .Container {
   width: 95%;
   flex-grow: 1;
-  grid-row: 2/3;
-  //height:100%;
 }
+
 .lyatoken-page {
   display: flex;
   width: 100%;
-  //margin: 0 auto;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  //height: 100%;
   row-gap: 20px;
   padding: 20px 0 20px 0;
   .top {
     text-align: left;
     display: flex;
     justify-content: space-between;
-    //align-items: center;
     width: 100%;
-    //max-height: 20vh;
-
     column-gap: 10px;
 
     .exchanges {
-      //height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      //padding: 20px;
       flex-grow: 1;
-      background-image: linear-gradient(
-        90deg,
-        rgb(21, 109, 110),
-        rgb(19, 27, 34)
+      background: linear-gradient(
+        90.01deg,
+        #099098 -51.74%,
+        rgba(32, 36, 57, 0) 111.83%
       );
-      //flex-shrink: 1;
 
       .title {
         padding: 0px 0 20px 0;
-        color: aliceblue;
-        font-weight: bolder;
+        color: white;
+
+        font-weight: 600;
+        font-size: 24px;
       }
 
       .exchange {
@@ -308,15 +292,17 @@ min-height: max-content;
 
     .contract-address {
       flex-grow: 1;
-      //height: 100%;
-      background-image: linear-gradient(
-        -90deg,
-        rgb(21, 109, 110),
-        rgb(19, 27, 34)
+      background: linear-gradient(
+        270.28deg,
+        #099098 -52.43%,
+        rgba(32, 36, 57, 0) 111.01%
       );
+      border-radius: 20px;
       .title {
         padding: 0px 0 20px 0;
-        font-weight: bolder;
+        font-weight: 600;
+        font-size: 24px;
+        color: #ffffff;
       }
       .contract {
         display: flex;
@@ -333,27 +319,28 @@ min-height: max-content;
     }
 
     .logo {
+      padding: 0.5rem;
       display: flex;
       max-width: 15vw;
       max-height: 100%;
+      justify-content: flex-end;
+      align-items: center;
+      flex-grow: 1;
+      background: linear-gradient(
+        89.31deg,
+        #09d6e2 -112.47%,
+        rgba(40, 47, 66, 0) 111.21%
+      );
+      border-radius: 20px;
+
       img {
         flex-grow: 1;
+        flex-shrink: 0;
         max-height: fit-content;
         max-width: fit-content;
         width: 100%;
         height: 100%;
-        border-radius: 20px;
       }
-      //height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-grow: 1;
-      background-image: linear-gradient(
-        45deg,
-        rgb(10, 184, 184),
-        rgb(19, 27, 34)
-      );
     }
   }
 
@@ -362,27 +349,35 @@ min-height: max-content;
     //max-height: max-content;
 
     display: flex;
-   
-  justify-content:space-between;
+    align-items: baseline;
+    justify-content: space-between;
     color: aliceblue;
     background-color: #253046;
     padding: 3rem 2rem;
     column-gap: 2rem;
     .LyaTokenDescription {
-min-width: 30%;
-//flex-grow: 1;
+      min-width: 30%;
+      //flex-grow: 1;
       //flex-shrink: 0;
       text-align: left;
 
       .icon {
         //width: min-content;
       }
+
       .title {
         //width: min-content;
+        padding: 1rem 0;
+        font-weight: 600;
+        font-size: 25px;
+        color: #ebebeb;
       }
       .text {
-        // width: min-content;
-        
+        font-weight: 300;
+        //font-size: 20px;
+
+        color: #898d92;
+
         width: 100%;
       }
     }
@@ -391,12 +386,15 @@ min-width: 30%;
 
 .btn {
   padding: 5px;
-  border-radius: 20px;
-  border-color: rgba(172, 176, 179, 0.5);
-  background-color: rgba(6, 33, 54, 0.5);
-  color: aliceblue;
   cursor: pointer;
   transition: all 0.2s;
+  background: #181c27;
+  border: 2px solid #595f71;
+  border-radius: 63px;
+  font-family: "Alatsi";
+  font-weight: 400;
+  font-size: 20px;
+  color: #595f71;
 }
 
 .btn:hover {
@@ -409,19 +407,19 @@ min-width: 30%;
 .contract {
 }
 
-
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
 ///
-///
 .App {
-  margin: 0 1%;
-  //height: 100vh;
- // max-width: 1366px;
-  //width: 100%;
-
   display: flex;
-  //margin: 0 auto;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  background-color: rgb(19, 27, 34);
+  color: rgba(195, 201, 206, 0.979);
+  margin: 0 30%;
+  min-height: 100vh;
   flex: 1 0 auto;
+  font-family: "Bahnschrift";
 }
 
 //   $bp-xsmall: 37.5em; // 600px
@@ -430,142 +428,111 @@ min-width: 30%;
 // $bp-large: 85.375em; // 1366px
 // $bp-xlarge: 120em; // 1920px
 // $bp-xxlarge: 160em; // 2560px
-  
-  @media only screen and #{$mq-xsmall} {
-    .App {
-    margin: 0 1%;
-    }
 
-    .Container{
-      padding-bottom: 10px;
-    }
-      .lyatoken-page {
-        flex-wrap: wrap;
-        .content {
-          flex-wrap: wrap;
-          row-gap: 3rem;
-        }
-      }
-      .lyatoken-page .top {
-        flex-wrap: wrap;
-        //flex-direction: column;
-        row-gap: 10px;
-      }
-    
-      .header .header-menu {
-        font-size: 0.7rem;
-      }
-    
-      .footer {
-        flex-direction: column;
-      
-        .join {
-          width: 100%;
-          .btn {
-            max-width: 100vw;
-          }
-        }
-      }
-  }
-  @media only screen and #{$mq-small} {
-    .App {
-    margin: 0 4%;
-    }
-    .lyatoken-page .top .logo {
-      display: none;
-    }
-
-
-
-    .footer .join {
-      .btn {
-        max-width: 10vw;
-      }
-    }
-  }
-  @media only screen and #{$mq-medium} {
-
-    .App {
-    margin: 0 8%;
-    }
-  }
-
-  @media only screen and #{$mq-large} {
-
-    .App {
-    margin: 0 12%;
-    }
-  }
-
-  @media only screen and #{$mq-xlarge} {
-
-    .App {
-    margin: 0 18%;
-    }
-  }
-
-  @media only screen and #{$mq-xxlarge} {
-
-    .App {
-    margin: 0 25%;
-    }
-  }
-
-  @media only screen and #{$mq-retina} {
-
-    .App {
+@media only screen and #{$mq-retina} {
+  .App {
     margin: 0 30%;
-    }
   }
-
-
-
-
-
-@media only screen and (max-width: 768px) {
-  //for tablet////
-
-
-
-
-
-  .footer{
-   // position: inherit;
-  }
-
-
 }
 
-@media only screen and (max-width: 600px) {
-  //for mobile////
-// .Container{
-//   padding-bottom: 10px;
-// }
-//   .lyatoken-page {
-//     flex-wrap: wrap;
-//     .content {
-//       flex-wrap: wrap;
-//       row-gap: 3rem;
-//     }
-//   }
-//   .lyatoken-page .top {
-//     flex-wrap: wrap;
-//     //flex-direction: column;
-//     row-gap: 10px;
-//   }
+@media only screen and #{$mq-xxlarge} {
+  .App {
+    margin: 0 25%;
+  }
+}
 
-//   .header .header-menu {
-//     font-size: 0.7rem;
-//   }
+@media only screen and #{$mq-xlarge} {
+  .App {
+    margin: 0 18%;
+  }
+}
+@media only screen and #{$mq-large} {
+  .App {
+    margin: 0 6%; //0 12%;
+  }
+}
 
-//   .footer {
-//     flex-direction: column;
-  
-//     .join {
-//       width: 100%;
-//       .btn {
-//         max-width: 100vw;
-//       }
-//     }
-//   }
+@media only screen and #{$mq-medium} {
+  .App {
+    margin: 0 4%;
+  }
+}
+
+@media only screen and #{$mq-small} {
+  .App {
+    margin: 0 2%;
+  }
+  .lyatoken-page .top .logo {
+    display: none;
+  }
+
+  .footer {
+    //flex-direction: column;
+  }
+  .footer .join {
+    .btn {
+      max-width: 10vw;
+    }
+  }
+
+  .header .header-menu {
+    font-size: 0.9rem;
+    .menu {
+      .item {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        img {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and #{$mq-xsmall} {
+  .App {
+    margin: 0 1%;
+  }
+
+  .Container {
+    padding-bottom: 10px;
+  }
+  .lyatoken-page {
+    flex-wrap: wrap;
+    .content {
+      flex-wrap: wrap;
+      row-gap: 3rem;
+    }
+  }
+  .lyatoken-page .top {
+    flex-wrap: wrap;
+    //flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .header .header-menu {
+    font-size: 0.7rem;
+    .menu {
+      .item {
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+        img {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+
+    .join {
+      width: 100%;
+      .btn {
+        max-width: 100vw;
+      }
+    }
+  }
 }

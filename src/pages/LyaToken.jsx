@@ -1,22 +1,27 @@
 import LyaTokenDescription from "../components/LyaTokenDescription";
-import content_icon1 from "../img/lyaicon1.JPG";
-import content_icon2 from "../img/lyaicon2.JPG";
-import content_icon3 from "../img/lyaicon3.JPG";
-import lyaLogo from "../img/lyaLogo.JPG";
-const lorem10 =
-  `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, sed!`;
-const lorem20 = `Lorem ipsum dolor sit amet consectetur, adipisicing elit
-. Quidem exercitationem unde aliquid eligendi dicta non, nobis sed quam repellat incidunt.
-. Quidem exercitationem unde aliquid eligendi dicta non, nobis sed quam repellat incidunt.
-. Quidem exercitationem unde aliquid eligendi dicta non, nobis sed quam repellat incidunt.
+import lya_icon1 from "../img/lya_icon1.svg";
+import lya_icon2 from "../img/lya_icon2.svg";
+import lya_icon3 from "../img/lya_icon3.svg";
+//import d from "../img/d.svg";
+import lyaLogo from "../img/lya_page_logo.svg";
+const LyaTokenDescription1 = `All consumption of lya token is in the ecosystem and its printing and burning 
+is done only based on supply and demand for users. The company's fundraising is only through 
+the Insignia Collection, and ZERO LYA tokens will belong to the Huralya team.`;
+const LyaTokenDescription2 = `Currently, it can only be purchased from within the Genesis 
+game via the App Store and Google Play. Soon it will be possible to buy and sell tokens 
+from any reputable crypto exchanges and you so can exchange them with any common 
+cryptocurrencies such as BTC, ETH, USDT or …
 `;
+
+const LyaTokenDescription3 = `LYA, the currency token in hualya game ecosystems. 
+All user’s transactions, expenses and income will be covered by this coin.`
 
 const LyaToken = () => {
   return (
     <div className="lyatoken-page">
       <div className="top">
         <div className="exchanges card">
-          <div className="title">exchanges</div>
+          <div className="title">Exchanges</div>
           <div className="exchange">
             <button className="btn">Kucoin</button>
             <button className="btn">MEXC</button>
@@ -33,24 +38,24 @@ const LyaToken = () => {
         </div>
 
         <div className="logo card">
-          <img src={lyaLogo} alt="lyaLogo" />
+          <img src={lyaLogo} alt="lya_page_logo" />
         </div>
       </div>
       <div className="content card">
         <LyaTokenDescription
-          icon={content_icon1}
+          icon={lya_icon1}
           title="Allocation and release"
-          text={lorem20}
+          text={LyaTokenDescription1}
         />
         <LyaTokenDescription
-          icon={content_icon2}
+          icon={lya_icon2}
           title="how to buy and sell"
-          text={lorem20}
+          text={LyaTokenDescription2}
         />
         <LyaTokenDescription
-          icon={content_icon3}
+          icon={lya_icon3}
           title="Token Usage"
-          text={lorem10}
+          text={LyaTokenDescription3}
         />
       </div>
     </div>
