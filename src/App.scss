@@ -44,6 +44,11 @@ $header-menu-text-color: #9298a5;
   // height: 50px;
   padding: 0px 0px 0px 10px;
   //overflow: hidden;
+
+  .toggle-menu {
+    display: none;
+    cursor: pointer;
+  }
 }
 .header-logo {
   //padding: 15px;
@@ -184,7 +189,7 @@ $header-menu-text-color: #9298a5;
   //padding: 0;
 
   font-weight: 400;
-  font-size: 0.8rem;
+  //font-size: 0.8rem;
   color: #9298a5;
 
   .footer-links {
@@ -325,13 +330,59 @@ $header-menu-text-color: #9298a5;
       .contract {
         display: flex;
         column-gap: 10px;
-
         width: 100%;
         column-gap: 10px;
-        .btn {
+        position: relative;
+        .ether-hover {
+          position: absolute;
+          display:none;
+          background-color: #9298a5;
+          border-radius: 50px;
+          top: calc(100% + 10px);
+          transition: all 1s;
+
+          padding: 5px;
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 5px;
+            p {
+              font-size: 12px;
+            }
+            .icon {
+              font-size: 1.2rem;
+              font-weight: 100;
+            }
+          }
+        }
+
+        .ether-hover::after {
+          content: "";
+          position: absolute;
+          border-bottom: 10px solid #9298a5;
+          border-right: 10px solid transparent;
+          left: 5%;
+          bottom: 100%;
+        }
+        .ethereum {
           flex-grow: 1;
           max-width: 30%;
           min-width: fit-content;
+        }
+        .ethereum:hover {
+          .ether-hover {
+            display: flex;
+            align-items: center;
+          }
+        }
+        .smartchain {
+          flex-grow: 1;
+          max-width: 30%;
+          min-width: fit-content;
+        }
+        .btn {
+          width: 100%;
         }
       }
     }
@@ -447,13 +498,11 @@ $header-menu-text-color: #9298a5;
     }
   }
 
-
   .right {
     width: 20%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .min {
       width: 100%;
@@ -464,8 +513,7 @@ $header-menu-text-color: #9298a5;
     }
 
     .circulate-supply {
-     // position: absolute;
-
+      // position: absolute;
 
       img {
         width: 100%;
@@ -582,24 +630,62 @@ $header-menu-text-color: #9298a5;
   }
 
   .header {
+    z-index: 11;
+    .toggle-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: white;
+      .icon {
+        z-index: -2;
+      }
+      p {
+        font-size: 1.3rem;
+        padding-right: 5px;
+      }
+    }
+
     .header-login {
       .login-btn {
         font-size: 0.8rem;
       }
     }
+
     .header-menu {
-      font-size: 0.7rem;
+      transition: all 0.5s;
+      //display: none;
+      position: absolute;
+      left: -100%;
+      top: 100%;
+      background-color: $header-background-color;
+
       .menu {
+        padding: 0;
+        //padding-top: 30px;
+        flex-direction: column;
+        align-items: stretch;
+        li {
+          padding: 0;
+        }
+        //row-gap: 30px;
         .item {
-          flex-direction: column;
-          justify-content: baseline;
-          align-items: center;
-          font-size: 0.8rem;
+          padding: 20px 10px;
+          width: 100%;
+          flex-direction: row;
+          justify-content: stretch;
+          column-gap: 10px;
+
+          font-size: 1.2rem;
           img {
             padding: 0;
           }
         }
       }
+    }
+
+    .show {
+      left: -5%;
     }
   }
 

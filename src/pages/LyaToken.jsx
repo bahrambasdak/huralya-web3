@@ -2,6 +2,8 @@ import LyaTokenDescription from "../components/LyaTokenDescription";
 import lya_icon1 from "../img/lya_icon1.svg";
 import lya_icon2 from "../img/lya_icon2.svg";
 import lya_icon3 from "../img/lya_icon3.svg";
+import metamask_icon from "../img/metamask_icon.svg";
+import { FiCopy } from "react-icons/fi";
 //import d from "../img/d.svg";
 import lyaLogo from "../img/lya_page_logo.svg";
 const LyaTokenDescription1 = `All consumption of lya token is in the ecosystem and its printing and burning 
@@ -14,7 +16,7 @@ cryptocurrencies such as BTC, ETH, USDT or …
 `;
 
 const LyaTokenDescription3 = `LYA, the currency token in hualya game ecosystems. 
-All user’s transactions, expenses and income will be covered by this coin.`
+All user’s transactions, expenses and income will be covered by this coin.`;
 
 const LyaToken = () => {
   return (
@@ -32,8 +34,22 @@ const LyaToken = () => {
         <div className="contract-address card">
           <div className="title">Contract Address</div>
           <div className="contract">
-            <button className="btn">Ethereum</button>
-            <button className="btn">SmartChain</button>
+            <div className="ethereum">
+              <button className="btn">Ethereum</button>
+              <span className="ether-hover">
+                <div>
+                  <p>0x3F162087420604ebBaa03eD048D8a8709De78923</p>
+                  <div className="icon">
+                    | <FiCopy />
+                    <img src={metamask_icon} alt="metamask_icon" />
+                  </div>
+                </div>
+              </span>
+            </div>
+
+            <div className="smartchain">
+              <button className="btn">SmartChain</button>
+            </div>
           </div>
         </div>
 

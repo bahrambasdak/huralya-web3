@@ -13,7 +13,7 @@
   margin: 0 auto;
 
   box-sizing: border-box;
-  background-color: #161C26;
+  background-color: #161c26;
 }
 
 body {
@@ -22,11 +22,11 @@ body {
   overflow-x: hidden;
   text-align: center;
   margin: 0 auto;
-  background-color: #161C26;
+  background-color: #161c26;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",'Bahnschrift',
-    sans-serif;
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Bahnschrift", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
