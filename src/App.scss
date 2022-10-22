@@ -31,7 +31,7 @@ $header-menu-text-color: #9298a5;
 ///////////////////////////////////////////  Header   ////////////////////
 .header {
   display: flex;
-
+  z-index: 2;
   width: 95%;
   position: sticky;
   top: 0.7rem;
@@ -124,15 +124,15 @@ $header-menu-text-color: #9298a5;
       border-image-slice: 1;
     }
     .item4::after {
-      border-image: linear-gradient(90deg, rgb(75, 7, 66), rgb(252, 172, 255));
+      border-image: linear-gradient(254.24deg, #bc68fe 14.93%, #6f31d6 87.95%);
       border-image-slice: 1;
     }
 
     .active {
       background-image: linear-gradient(
-        -180deg,
-        rgb(60, 53, 150),
-        rgb(34, 40, 48)
+        0.74deg,
+        #191d28 0.38%,
+        rgba(25, 29, 40, 0) 99.11%
       );
     }
     .active::after {
@@ -175,7 +175,7 @@ $header-menu-text-color: #9298a5;
 ////////////////////////////////////////////     Footer    //////////////////////
 ///
 .footer {
-  position: sticky;
+  //position: sticky;
   //width: 95%;
   width: 100%;
   bottom: 0;
@@ -261,6 +261,18 @@ $header-menu-text-color: #9298a5;
 /////////////////////////////////////////////////   LYA Page  ///////////////////@at-root
 ///
 ///
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #181c27;
+  border: 2px solid #595f71;
+  border-radius: 63px;
+  font-family: "Alatsi";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #595f71;
+}
 .Container {
   width: 95%;
   flex-grow: 1;
@@ -288,8 +300,8 @@ $header-menu-text-color: #9298a5;
       flex-grow: 1;
       background: linear-gradient(
         90.01deg,
-        #099098 -51.74%,
-        rgba(32, 36, 57, 0) 111.83%
+        #08757a -51.74%,
+        rgba(32, 36, 57, 0) 100%
       );
 
       .title {
@@ -317,8 +329,8 @@ $header-menu-text-color: #9298a5;
       flex-grow: 1;
       background: linear-gradient(
         270.28deg,
-        #099098 -52.43%,
-        rgba(32, 36, 57, 0) 111.01%
+        #08757a -52.43%,
+        rgba(32, 36, 57, 0) 100%
       );
       border-radius: 20px;
       .title {
@@ -333,14 +345,15 @@ $header-menu-text-color: #9298a5;
         width: 100%;
         column-gap: 10px;
         position: relative;
+
         .ether-hover {
           position: absolute;
-          display:none;
+          display: none;
           background-color: #9298a5;
           border-radius: 50px;
           top: calc(100% + 10px);
           transition: all 1s;
-
+          color: #282f42;
           padding: 5px;
           div {
             display: flex;
@@ -380,6 +393,14 @@ $header-menu-text-color: #9298a5;
           flex-grow: 1;
           max-width: 30%;
           min-width: fit-content;
+          .btn {
+            font-family: "Bahnschrift";
+            font-size: 1.1rem;
+            font-weight: 300;
+            padding: 4px 5px;
+          }
+
+          // font-size: 30px;
         }
         .btn {
           width: 100%;
@@ -397,8 +418,8 @@ $header-menu-text-color: #9298a5;
       flex-grow: 1;
       background: linear-gradient(
         89.31deg,
-        #09d6e2 -112.47%,
-        rgba(40, 47, 66, 0) 111.21%
+        #09858b -100%,
+        rgba(40, 47, 66, 0) 100%
       );
       border-radius: 20px;
 
@@ -456,19 +477,6 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
-}
-
-.btn {
-  padding: 5px;
-  cursor: pointer;
-  transition: all 0.2s;
-  background: #181c27;
-  border: 2px solid #595f71;
-  border-radius: 63px;
-  font-family: "Alatsi";
-  font-weight: 400;
-  font-size: 1rem;
-  color: #595f71;
 }
 
 .btn:hover {
