@@ -1,5 +1,5 @@
 import { Route} from "react-router";
-import { BrowserRouter ,Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
 import LyaToken from "../pages/LyaToken";
 
 const Content = () => {

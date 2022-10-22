@@ -30,7 +30,7 @@ const LyaToken = () => {
           </div>
         </div>
         <div className="contract-address card">
-          <div className="title">contract address</div>
+          <div className="title">Contract Address</div>
           <div className="contract">
             <button className="btn">Ethereum</button>
             <button className="btn">SmartChain</button>

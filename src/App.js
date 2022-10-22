@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.scss";
 import Footer from "./components/Footer";
 import Content from "./components/Content";
@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    
 
     <div className="App">
      
@@ -21,7 +21,7 @@ function App() {
     </BrowserRouter>
     </div>
 
-    </>
+   
   );
 }
 
