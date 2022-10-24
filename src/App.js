@@ -1,6 +1,7 @@
 import "./App.scss";
+import "./insignia.scss";
 import Footer from "./components/Footer";
-import Content from "./components/Content";
+import Container from "./components/Container";
 import Header from "./components/Header";
 import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
@@ -18,10 +19,10 @@ function App() {
   return (
     <div className="App" onClick={toggleMenu}>
       <BrowserRouter>
-        <Header toggleMenu={toggleMenu} showMenu={showMenu} />
-        <Content />
+        <Header toggleMenu={toggleMenu} showMenu={showMenu}/>
+        <Container/>
 
-        <Footer />
+        <Footer/>
       </BrowserRouter>
     </div>
   );

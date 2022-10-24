@@ -6,6 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="footer">
+      <div className="footer-content">
       <div className="footer-links">
         <ul>
           <li className="link">TERMS</li>
@@ -34,6 +35,7 @@ const Footer = () => {
       <div className="join">
         <button className="btn">Join Us!</button>
       </div>
+    </div>
     </div>
   );
 };

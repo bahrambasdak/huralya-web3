@@ -28,63 +28,50 @@ $header-menu-text-color: #9298a5;
   //box-shadow: 0 0 10px 5px rgba($color: #071429, $alpha: 0.05);
 }
 
-
-
 .App {
-
+  display: flex;
   margin: 0 30%;
   flex-direction: column;
-  align-items: center;
+align-items: center;
 
   position: relative;
-height: 100vh;
+min-height: 100vh;
   flex: 1 0 auto;
   font-family: "Bahnschrift";
   background-color: #161c26;
-  overflow-x: hidden;
+  //overflow-x: hidden;
+  position: relative;
 }
 
 .Container {
-  display: flex;
-  justify-content: center;
+ // display: flex;
+  //justify-content: center;
   width: 100%;
-  flex-grow: 1;
+
+ // flex-grow: 1;
+ // min-height: 90vh;
 }
 
 ///////////////////////////////////////////  Header   ////////////////////
+///
 .header {
+  position: sticky;
   display: flex;
   width: 100%;
-  display: flex;
-  margin: 0 30%;
-  flex-direction: column;
-  align-items: center;
-  //min-height: 100vh;
-  flex: 1 0 auto;
+  z-index: 2;
+
+
+  padding: 1rem 0;
 
   justify-content: center;
-   margin: 3rem;
 
-  // width: 100%;
-
-width: 100%;
-margin: 1rem;
- //display: flex;
- //justify-content: center;
- //width: 100%;
- //flex-grow: 1;
-
+  top: 0;
+  width: 100%;
 }
 .header-content {
   display: flex;
-  //width: 100%;
-  z-index: 2;
-  max-width: 100%;
-  //position: sticky;
-//position: fixed;
- // top: 0.7rem;
- // left: 0;
-  margin-bottom: 0.3rem;
+
+  width: 100%;
   background-color: $header-background-color;
   border-radius: 59px;
 
@@ -100,7 +87,7 @@ margin: 1rem;
   }
 }
 .header-logo {
-  //padding: 15px;
+  padding: 8px;
   overflow: hidden;
 
   .logo-img {
@@ -180,8 +167,8 @@ margin: 1rem;
     .active {
       background-image: linear-gradient(
         0.74deg,
-        #191d28 0.38%,
-        rgba(25, 29, 40, 0) 99.11%
+        #0c0e16 0.5%,
+        rgba(159, 176, 219, 0.05) 100%
       );
     }
     .active::after {
@@ -226,9 +213,10 @@ margin: 1rem;
 /// 
 .footer{
   display: flex;
-justify-self: flex-end;
-position: fixed;
-bottom: 0;
+  position: absolute;
+  bottom: 0;
+
+
   align-items: center;
 
   width: 105%;
@@ -240,7 +228,7 @@ bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #304355;
+  background-color: #282f42;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   padding: 0 5px 0 5px;
@@ -284,7 +272,7 @@ bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 7px;
+
       cursor: pointer;
       background-color: #161c26;
       border-radius: 0.3rem;
@@ -306,7 +294,7 @@ bottom: 0;
     .btn {
       font-size: 0.7rem;
       flex-grow: 1;
-      max-width: 7vw;
+      max-width: 6vw;
       cursor: pointer;
       background: #161c26;
       border: 1px solid #9298a5;
@@ -331,10 +319,6 @@ bottom: 0;
   font-size: 1rem;
   color: #595f71;
 }
-.Container {
-  width: 95%;
-  flex-grow: 1;
-}
 
 .lyatoken-page {
   display: flex;
@@ -343,7 +327,7 @@ bottom: 0;
   align-items: center;
   justify-content: space-between;
   row-gap: 20px;
-  padding: 20px 0 20px 0;
+  //padding: 20px 0 20px 0;
   .top {
     text-align: left;
     display: flex;
@@ -401,7 +385,6 @@ bottom: 0;
         display: flex;
         column-gap: 10px;
         width: 100%;
-        column-gap: 10px;
         position: relative;
 
         .ether-hover {
@@ -438,7 +421,7 @@ bottom: 0;
         }
         .ethereum {
           flex-grow: 1;
-          max-width: 30%;
+          max-width: 38%;
           min-width: fit-content;
         }
         .ethereum:hover {
@@ -449,7 +432,7 @@ bottom: 0;
         }
         .smartchain {
           flex-grow: 1;
-          max-width: 30%;
+          max-width: 38%;
           min-width: fit-content;
           .btn {
             font-family: "Bahnschrift";
@@ -467,13 +450,13 @@ bottom: 0;
     }
 
     .logo {
-      padding: 0.5rem;
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
       display: flex;
-      max-width: 15vw;
-      max-height: 100%;
+      // max-width: 15vw;
+      //max-height: 100%;
       justify-content: flex-end;
       align-items: center;
-      flex-grow: 1;
+      //flex-grow: 1;
       background: linear-gradient(
         89.31deg,
         #09858b -100%,
@@ -482,10 +465,10 @@ bottom: 0;
       border-radius: 20px;
 
       img {
-        flex-grow: 1;
+        //flex-grow: 1;
 
-        max-height: fit-content;
-        max-width: fit-content;
+        // max-height: fit-content;
+        // max-width: fit-content;
         width: 100%;
         height: 100%;
       }
@@ -539,6 +522,7 @@ bottom: 0;
 
 .btn:hover {
   border-color: white;
+  //olor: white;
 }
 
 // .exchange {
@@ -547,63 +531,11 @@ bottom: 0;
 // .contract {
 // }
 
-.insigniaNFT-page {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-  justify-content: space-between;
-  row-gap: 20px;
-  padding: 20px 0 20px 0;
-
-  .Huralya-Squirrel {
-    position: relative;
-    width: 80%;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .right {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .min {
-      width: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .circulate-supply {
-      // position: absolute;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
+//////////////////////////////////////////////////////////////INSIGNIA Page  //////////////////
+///
 
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
 ///
-.App {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  background-color: rgb(19, 27, 34);
-  //color: rgba(195, 201, 206, 0.979);
-  margin: 0 30%;
-  min-height: 100vh;
-  flex: 1 0 auto;
-  font-family: "Bahnschrift";
-  background-color: #161c26;
-}
 
 //   $bp-xsmall: 37.5em; // 600px
 // $bp-small: 48em; // 768px
@@ -616,10 +548,17 @@ bottom: 0;
   .App {
     margin: 0 30%;
   }
+  .footer {
+    margin: 0 30%;
+  }
 }
 
 @media only screen and #{$mq-xxlarge} {
   .App {
+    margin: 0 25%;
+  }
+
+  .footer {
     margin: 0 25%;
   }
 }
@@ -628,21 +567,45 @@ bottom: 0;
   .App {
     margin: 0 18%;
   }
+  .footer {
+    margin: 0 18%;
+  }
 }
 @media only screen and #{$mq-large} {
   .App {
     margin: 0 6%; //0 12%;
+    height: auto;
+
+  }
+  .footer {
+    margin: 0 6%;
   }
 }
 
 @media only screen and #{$mq-medium} {
   .App {
     margin: 0 4%;
+    height: auto;
+
+  }
+  .footer {
+    margin: 0 4%;
+  }
+
+  .lyatoken-page .top {
+    .logo {
+      padding: 0;
+    }
   }
 }
 
 @media only screen and #{$mq-small} {
   .App {
+    margin: 0 2%;
+    height: auto;
+  }
+
+  .footer {
     margin: 0 2%;
   }
   .lyatoken-page .top .logo {
@@ -652,13 +615,13 @@ bottom: 0;
   // .footer {
   //   //flex-direction: column;
   // }
-  .footer .join {
+  .footer-content .join {
     .btn {
       max-width: 10vw;
     }
   }
 
-  .header .header-menu {
+  .header-content .header-menu {
     font-size: 0.9rem;
     .menu {
       .item {
@@ -675,6 +638,13 @@ bottom: 0;
 
 @media only screen and #{$mq-xsmall} {
   .App {
+    margin: 0 1%;
+    font-family: "Bahnschrift";
+    height: auto;
+
+  }
+
+  .footer {
     margin: 0 1%;
   }
 
@@ -693,9 +663,22 @@ bottom: 0;
     flex-wrap: wrap;
     //flex-direction: column;
     row-gap: 10px;
+
+    .btn {
+      font-family: "Alatsi";
+    }
+    .smartchain {
+      .btn {
+        font-family: "Bahnschrift";
+      }
+    }
+
+    .logo {
+      padding: 0;
+    }
   }
 
-  .header {
+  .header-content {
     z-index: 11;
     .toggle-menu {
       display: flex;
@@ -755,13 +738,31 @@ bottom: 0;
     }
   }
 
-  .footer {
+  .footer-content {
     flex-direction: column;
+    //align-items: stretch;
     padding-top: 0.5rem;
+    .social-icons ul {
+      column-gap: 20px;
+    }
     .join {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
       width: 100%;
+
       .btn {
+        //max-width: vw;
+        flex-grow: 0;
         max-width: 100vw;
+        font-size: 1rem;
+        //width: 100px;
+        padding: 10px 20px;
+        margin-bottom: 5px;
+      }
+      .btn:hover {
+        border-color: white;
+        color: white;
       }
     }
   }

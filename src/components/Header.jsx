@@ -9,6 +9,7 @@ import { ImMenu3, ImMenu4 } from "react-icons/im";
 const Header = ({ toggleMenu, showMenu }) => {
   return (
     <div className="header">
+      <div className="header-content">
       <div className="toggle-menu mobile-menu" onClick={toggleMenu}>
         <p className="mobile-menu">Menu</p>
         {showMenu ? (
@@ -67,6 +68,7 @@ const Header = ({ toggleMenu, showMenu }) => {
       <div className="header-login">
         <button className="login-btn btn">LOGIN</button>
       </div>
+    </div>
     </div>
   );
 };

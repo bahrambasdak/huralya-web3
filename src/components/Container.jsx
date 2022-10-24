@@ -3,7 +3,7 @@ import { Routes } from "react-router-dom";
 import InsigniaNFT from "../pages/InsigniaNFT";
 import LyaToken from "../pages/LyaToken";
 
-const Content = () => {
+const Container = () => {
   return (
     <div className="Container">
       <Routes>
@@ -15,4 +15,4 @@ const Content = () => {
   );
 };
 
-export default Content;
+export default Container;
