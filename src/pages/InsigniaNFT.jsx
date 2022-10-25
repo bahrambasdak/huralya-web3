@@ -26,7 +26,20 @@ const InsigniaNFT = () => {
            </p>
       </div>
       <div className="circulate-supply">
-        <img src={insignia_supply} alt="" />
+        <img src={insignia_supply} alt="" className="background-img" />
+        <div className="text1">
+          <p>Circulating Supply</p>
+          <p>1000</p>
+        </div>
+
+        <div>
+          <div>
+            <p>next mint price</p>
+            <p>200 LYA</p>
+          </div>
+          <div></div>
+        </div>
+
       </div>
     </div>
   );
