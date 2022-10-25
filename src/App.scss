@@ -31,22 +31,19 @@ $header-menu-text-color: #9298a5;
 .App {
   //width:calc(100% - scroll-width);
   width: 100%;
-   text-align: center;
-   position: relative;
+  text-align: center;
+  position: relative;
   min-height: 100vh;
   //text-align: center;
 
-padding-bottom: 3rem;
+  padding-bottom: 3rem;
   font-family: "Bahnschrift";
   background-color: #161c26;
 }
 
-
 // .App::-webkit-scrollbar-corner {
 //   display: none;
 // }
-
-
 
 ///////////////////////////////////////////  Header   ////////////////////
 ///
@@ -57,9 +54,9 @@ padding-bottom: 3rem;
   //width: 100%;
   //width: 100%;
   max-width: 100%;
-//width: 100vw;
+  //width: 100vw;
   z-index: 2;
-position:sticky;
+  position: sticky;
   padding: 1rem 0;
   top: 0;
 }
@@ -69,12 +66,12 @@ position:sticky;
   margin: 0 30%;
   flex: 1 0 auto;
   max-width: 100%;
- // overflow-y: scroll;
-
+  min-height: fit-content;
+  //height: 100%;
+  // overflow-y: scroll;
 }
 .header-content {
   display: flex;
-
 
   width: 100%;
   background-color: $header-background-color;
@@ -217,15 +214,13 @@ position:sticky;
 ///
 ///
 .footer {
-
- // justify-self: flex-end;
+  // justify-self: flex-end;
   position: absolute;
-bottom: 0;
+  bottom: 0;
   width: 100%;
 
   max-width: 100vw;
   align-items: center;
-
 
   justify-content: center;
 }
@@ -309,7 +304,7 @@ bottom: 0;
       box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
       border-radius: 164px;
     }
-    .btn:hover{
+    .btn:hover {
       border-color: white;
     }
   }
@@ -334,6 +329,7 @@ bottom: 0;
 .lyatoken-page {
   display: flex;
   width: 100%;
+  // height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -544,6 +540,255 @@ bottom: 0;
 
 //////////////////////////////////////////////////////////////INSIGNIA Page  //////////////////
 ///
+///
+///
+.insigniaNFT-page {
+  //flex-grow: 1;
+  display: grid;
+  grid-template-columns: 7fr 9fr 1fr 3fr;
+  grid-template-rows: 65% 3% 32%;
+  //position: relative;
+  // height: 480px;
+  width: 100%;
+
+  font-family: "Alatsi";
+  font-weight: 400;
+
+  .Huralya-Squirrel {
+    //height: 100%;
+    grid-column: 1/3;
+    grid-row: 1/4;
+    // overflow-x: visible;
+    position: relative;
+
+    .background-img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      z-index: 0;
+    }
+    .content {
+      width: 100%;
+      position: absolute;
+      padding: 20px 3.5rem 20px 20px;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      z-index: 2;
+      text-align: left;
+
+      /* width */
+      ::-webkit-scrollbar {
+        width: 0.2rem;
+        max-height: 50%;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        //box-shadow: inset 0 0 5px grey;
+        background: linear-gradient(0deg, #898d92, #898d92),
+          linear-gradient(0deg, #898d92, #898d92), #898d92;
+        border-radius: 20px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(0deg, #cfd5dc, #cfd5dc),
+          linear-gradient(0deg, #898d92, #898d92), #898d92;
+        border-radius: 20px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        // background: #b30000;
+      }
+
+      .title {
+        color: #e29b1d;
+        padding: 0.6rem;
+      }
+      .desc1 {
+        color: #cfd5dc;
+        padding: 0.6rem;
+      }
+      .desc2 {
+        color: #cfd5dc;
+        font-size: 0.8rem;
+        padding: 0.6rem;
+      }
+      .scrollable-section {
+        padding: 20px;
+        height: 70%;
+        background-color: rgba(62, 70, 91, 0.54);
+        border-radius: 20px;
+      }
+      .scroll {
+        height: 100%;
+        overflow-y: auto;
+        padding-right: 20px;
+        .section {
+          display: flex;
+          //flex-wrap: wrap;
+          justify-content: space-between;
+          border-bottom: 1px solid #282f42;
+          align-items: stretch;
+
+          .title {
+            color: #dddedf;
+            min-width: fit-content;
+            padding: 0.7rem 0rem 0.7rem 0px;
+            //flex-grow: 1;
+            display: flex;
+            align-items: center;
+          }
+          .text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #898d92;
+            font-size: 12px;
+            flex-grow: 1;
+            //padding-left: 1rem;
+            padding: 0.3rem 1rem;
+            .icon {
+              min-width: fit-content;
+              color: #cfd5dc;
+            }
+          }
+        }
+        .plan-section {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  .min {
+    height: 100%;
+    grid-column: 3/5;
+    grid-row: 1/2;
+    overflow-x: visible;
+    position: relative;
+    .background-img {
+      width: 120%;
+      position: absolute;
+      right: 0;
+      height: 100%;
+      object-fit: fill;
+      z-index: 0;
+    }
+    .content {
+      position: absolute;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 15px 15px 0px;
+
+      .cat-img {
+        position: relative;
+        flex-grow: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+          mix-blend-mode: lighten;
+        }
+      }
+      .cat-img::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        border-bottom: 2px solid rgb(190, 186, 186);
+      }
+
+      .bottoms {
+        flex-grow: 1;
+        align-self: stretch;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 3px;
+
+        .mint-btn {
+          background-color: #181c27;
+          border: 2px solid #595f71;
+          border-radius: 63px 0px 0px 63px;
+          flex-grow: 1;
+          padding: 0.3rem 0;
+          color: #abb1ba;
+        }
+        .market-btn {
+          flex-grow: 1;
+          background-color: #181c27;
+          border: 2px solid #595f71;
+          border-radius: 0px 63px 63px 0px;
+          padding: 0.3rem 0;
+          color: #abb1ba;
+        }
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        column-gap: 3px;
+        font-size: 12px;
+        flex-grow: 1;
+        color: #979b9f;
+        .icon {
+          color: #e2641d;
+        }
+      }
+    }
+  }
+
+  //
+  .circulate-supply {
+    // height: 100%;
+    grid-column: 3/5;
+    grid-row: 3/4;
+    overflow-x: visible;
+    position: relative;
+
+    .background-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      z-index: 0;
+    }
+
+    .content {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 20px 20px 20px 30px;
+
+      line-height: 18px;
+      font-size: 13px;
+      color: #979b9f;
+      > div div {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
 
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
 ///
@@ -603,19 +848,29 @@ bottom: 0;
   .footer-content {
     margin: 0 8%;
   }
+
+  .insigniaNFT-page {
+    .circulate-supply {
+      .content {
+        font-size: 0.8rem;
+        padding: 1rem 7% 1rem 10%;
+        //padding-left: 1.2rem;
+      }
+    }
+  }
 }
 
 @media only screen and #{$mq-medium} {
   .header {
-    margin: 0 8%;
+    margin: 0 6%;
   }
   .Container {
-    margin: 0 8%;
+    margin: 0 6%;
     //padding-bottom: 3rem;
   }
   .footer-content {
     margin: 0 5%;
-   .join {
+    .join {
       .btn {
         max-width: 10vw;
       }
@@ -627,6 +882,24 @@ bottom: 0;
       padding: 0;
     }
   }
+
+  .insigniaNFT-page {
+    .circulate-supply {
+      .content {
+        font-size: 0.7rem;
+        padding: 6%;
+        padding-left: 10%;
+      }
+    }
+
+    .min {
+      .content {
+        .bottoms {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and #{$mq-small} {
@@ -636,10 +909,10 @@ bottom: 0;
   .Container {
     margin: 0 4%;
   }
-  .footer{
-   // position: static;
+  .footer {
+    // position: static;
   }
-  .Container{
+  .Container {
     //padding-bottom: 1rem;
   }
   .footer-content {
@@ -671,10 +944,113 @@ bottom: 0;
       }
     }
   }
+
+  .insigniaNFT-page {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    //min-height: 100%;
+
+    .Huralya-Squirrel {
+      width: 100%;
+      height: 100%;
+      min-height: 80vh;
+      //min-height: fit-content;
+      .background-img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        z-index: 0;
+      }
+      .content {
+      }
+    }
+
+    .min {
+      //height: 100%;
+      width: 100%;
+
+      max-height: 70vh;
+      overflow-x: unset;
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      .background-img {
+        width: 100%;
+        position: static;
+        //height: 100%;
+        object-fit: fill;
+        z-index: 0;
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px 15px 0px;
+
+        .cat-img {
+          flex-grow: 0;
+          img {
+          }
+        }
+
+        .bottoms {
+          // flex-grow: 0;
+          // align-self:unset;
+          padding: 0 20%;
+        }
+        .text {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .circulate-supply {
+      height: 100%;
+      width: 100%;
+      //display: flex;
+      // grid-column: 3/5;
+      // grid-row: 1/2;
+      overflow-x: unset;
+      position: relative;
+      .background-img {
+        width: 100%;
+        position: static;
+        height: 100%;
+        object-fit: fill;
+        z-index: 0;
+      }
+
+      .content {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 15% 10% 15% 18%;
+
+        line-height: 2rem;
+        font-size: 1.2rem;
+        // > div div {
+        //   flex-grow: 1;
+        //   display: flex;
+        //   justify-content: space-between;
+        // }
+      }
+    }
+  }
 }
 
 @media only screen and #{$mq-xsmall} {
-  .App{
+  .App {
     padding-bottom: 9rem;
   }
   .header {
@@ -683,7 +1059,7 @@ bottom: 0;
   .Container {
     margin: 0 5%;
   }
-  .footer{
+  .footer {
     //position:static;
   }
   .footer-content {
@@ -691,22 +1067,22 @@ bottom: 0;
   }
 
   .Container {
-   // padding-bottom: 1rem;
+    // padding-bottom: 1rem;
   }
   .lyatoken-page {
     flex-wrap: wrap;
-    .top{
-      .exchanges{
-        .exchange{
-          .pancakeswap{
-//flex-grow: 0;
-max-width: 32%;
+    .top {
+      .exchanges {
+        .exchange {
+          .pancakeswap {
+            //flex-grow: 0;
+            max-width: 32%;
           }
           //column-gap: 10px;
           flex-wrap: wrap;
           row-gap: 10px;
-          .btn{
-           // max-width: 30%;
+          .btn {
+            // max-width: 30%;
           }
         }
       }
@@ -821,6 +1197,62 @@ max-width: 32%;
       .btn:hover {
         border-color: white;
         color: white;
+      }
+    }
+  }
+
+  .insigniaNFT-page {
+
+
+    .Huralya-Squirrel{
+      .content{
+  padding: 0.8rem;
+
+  .scrollable-section {
+    padding: 10px;
+    margin-right: 3%;
+
+
+    border-radius: 20px;
+
+  }
+  .scroll {
+    padding-right: 10px;
+    .section {
+      justify-content: space-between;
+
+      .title {
+        color: #dddedf;
+        min-width: fit-content;
+        font-size: 0.8rem;
+        padding: 0.5rem 0rem 0.5rem 0px;
+      }
+      .text {
+        padding: 0.3rem .5rem;
+        .icon {
+
+        }
+      }
+    }
+    .plan-section {
+      flex-wrap: wrap;
+    }
+  }
+      }
+    }
+
+    .min{
+     
+      .content{
+        display: flex;
+        .text{
+padding-left: 2rem;
+        }
+      }
+    }
+    .circulate-supply {
+      .content {
+        font-size: 1rem;
       }
     }
   }

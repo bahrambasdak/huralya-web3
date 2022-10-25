@@ -1,0 +1,61 @@
+.genesis-page {
+    position: relative;
+  .background-img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+  }
+
+  .content {
+    position: absolute;
+    bottom: 0rem;
+   padding: 0 2rem;
+    width: 100%;
+   // min-height:fit-content;
+
+    .left {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      .icons {
+        height: 100%;
+       // background-image: url("./img/genesis_icon_bg.svg");
+        // background-size:cover;
+        // background-repeat: round;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        .icons-bg {
+            // width: 100%;
+            // height: 100%;
+            object-fit: fill;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .android-icon {
+            padding: 1.5rem;
+            z-index: 1;
+        }
+        .apple-icon {
+            padding: 1.5rem;
+            z-index: 1;
+        }
+      }
+
+      .text {
+        align-self: flex-end;
+        color: white;
+      }
+    }
+  }
+}
+
+.center {
+}
+.right {
+}

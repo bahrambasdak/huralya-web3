@@ -1,5 +1,7 @@
+//import "./insignia.scss";
 import "./App.scss";
-import "./insignia.scss";
+import "./genesis.scss";
+
 import Footer from "./components/Footer";
 import Container from "./components/Container";
 import Header from "./components/Header";

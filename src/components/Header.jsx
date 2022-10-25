@@ -25,7 +25,7 @@ const Header = ({ toggleMenu, showMenu }) => {
         <ul className="menu">
           <li>
             <NavLink
-              to="/GENESIS"
+              to="/genesis"
               className="item item1"
               activeClassName="active"
             >
