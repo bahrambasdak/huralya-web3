@@ -29,47 +29,52 @@ $header-menu-text-color: #9298a5;
 }
 
 .App {
-  display: flex;
-  margin: 0 30%;
-  flex-direction: column;
-align-items: center;
+  //width:calc(100% - scroll-width);
+  width: 100%;
+   text-align: center;
+   position: relative;
+  min-height: 100vh;
+  //text-align: center;
 
-  position: relative;
-min-height: 100vh;
-  flex: 1 0 auto;
+padding-bottom: 3rem;
   font-family: "Bahnschrift";
   background-color: #161c26;
-  //overflow-x: hidden;
-  position: relative;
 }
 
-.Container {
- // display: flex;
-  //justify-content: center;
-  width: 100%;
 
- // flex-grow: 1;
- // min-height: 90vh;
-}
+// .App::-webkit-scrollbar-corner {
+//   display: none;
+// }
+
+
 
 ///////////////////////////////////////////  Header   ////////////////////
 ///
 .header {
-  position: sticky;
   display: flex;
-  width: 100%;
+  margin: 0 30%;
+  flex: 1 0 auto;
+  //width: 100%;
+  //width: 100%;
+  max-width: 100%;
+//width: 100vw;
   z-index: 2;
-
-
+position:sticky;
   padding: 1rem 0;
-
-  justify-content: center;
-
   top: 0;
-  width: 100%;
+}
+
+.Container {
+  display: flex;
+  margin: 0 30%;
+  flex: 1 0 auto;
+  max-width: 100%;
+ // overflow-y: scroll;
+
 }
 .header-content {
   display: flex;
+
 
   width: 100%;
   background-color: $header-background-color;
@@ -210,22 +215,25 @@ min-height: 100vh;
 //////
 ////////////////////////////////////////////     Footer    //////////////////////
 ///
-/// 
-.footer{
-  display: flex;
+///
+.footer {
+
+ // justify-self: flex-end;
   position: absolute;
-  bottom: 0;
+bottom: 0;
+  width: 100%;
 
-
+  max-width: 100vw;
   align-items: center;
 
-  width: 105%;
+
   justify-content: center;
 }
 .footer-content {
- 
-   width: 105%; 
   display: flex;
+  margin: 0 30%;
+  flex: 1 0 auto;
+  //width: 105%;
   align-items: center;
   justify-content: space-between;
   background-color: #282f42;
@@ -301,6 +309,9 @@ min-height: 100vh;
       box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
       border-radius: 164px;
     }
+    .btn:hover{
+      border-color: white;
+    }
   }
 }
 
@@ -326,14 +337,14 @@ min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  row-gap: 20px;
+  row-gap: 1rem;
   //padding: 20px 0 20px 0;
   .top {
     text-align: left;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    column-gap: 10px;
+    column-gap: 12px;
 
     .exchanges {
       display: flex;
@@ -484,7 +495,7 @@ min-height: 100vh;
     justify-content: space-between;
     color: aliceblue;
     background-color: #253046;
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
     column-gap: 2rem;
     .LyaTokenDescription {
       min-width: 30%;
@@ -503,7 +514,7 @@ min-height: 100vh;
 
       .title {
         //width: min-content;
-        padding: 1rem 0;
+        padding: 1rem 0 0.8rem 0;
         font-weight: 600;
         //font-size: ;
         color: #ebebeb;
@@ -545,51 +556,70 @@ min-height: 100vh;
 // $bp-xxlarge: 160em; // 2560px
 
 @media only screen and #{$mq-retina} {
-  .App {
+  #root {
+    overflow-y: auto;
+  }
+  .header {
     margin: 0 30%;
   }
-  .footer {
+  .Container {
+    margin: 0 30%;
+  }
+  .footer-content {
     margin: 0 30%;
   }
 }
 
 @media only screen and #{$mq-xxlarge} {
-  .App {
+  .header {
     margin: 0 25%;
   }
-
-  .footer {
+  .Container {
+    margin: 0 25%;
+  }
+  .footer-content {
     margin: 0 25%;
   }
 }
 
 @media only screen and #{$mq-xlarge} {
-  .App {
+  .header {
     margin: 0 18%;
   }
-  .footer {
+  .Container {
+    margin: 0 18%;
+  }
+  .footer-content {
     margin: 0 18%;
   }
 }
 @media only screen and #{$mq-large} {
-  .App {
-    margin: 0 6%; //0 12%;
-    height: auto;
-
+  .header {
+    margin: 0 10%;
   }
-  .footer {
-    margin: 0 6%;
+  .Container {
+    margin: 0 10%;
+  }
+  .footer-content {
+    margin: 0 8%;
   }
 }
 
 @media only screen and #{$mq-medium} {
-  .App {
-    margin: 0 4%;
-    height: auto;
-
+  .header {
+    margin: 0 8%;
   }
-  .footer {
-    margin: 0 4%;
+  .Container {
+    margin: 0 8%;
+    //padding-bottom: 3rem;
+  }
+  .footer-content {
+    margin: 0 5%;
+   .join {
+      .btn {
+        max-width: 10vw;
+      }
+    }
   }
 
   .lyatoken-page .top {
@@ -600,13 +630,20 @@ min-height: 100vh;
 }
 
 @media only screen and #{$mq-small} {
-  .App {
-    margin: 0 2%;
-    height: auto;
+  .header {
+    margin: 0 4%;
   }
-
-  .footer {
-    margin: 0 2%;
+  .Container {
+    margin: 0 4%;
+  }
+  .footer{
+   // position: static;
+  }
+  .Container{
+    //padding-bottom: 1rem;
+  }
+  .footer-content {
+    margin: 0 4%;
   }
   .lyatoken-page .top .logo {
     display: none;
@@ -637,22 +674,43 @@ min-height: 100vh;
 }
 
 @media only screen and #{$mq-xsmall} {
-  .App {
-    margin: 0 1%;
-    font-family: "Bahnschrift";
-    height: auto;
-
+  .App{
+    padding-bottom: 9rem;
   }
-
-  .footer {
-    margin: 0 1%;
+  .header {
+    margin: 0 5%;
+  }
+  .Container {
+    margin: 0 5%;
+  }
+  .footer{
+    //position:static;
+  }
+  .footer-content {
+    margin: 0 5%;
   }
 
   .Container {
-    padding-bottom: 10px;
+   // padding-bottom: 1rem;
   }
   .lyatoken-page {
     flex-wrap: wrap;
+    .top{
+      .exchanges{
+        .exchange{
+          .pancakeswap{
+//flex-grow: 0;
+max-width: 32%;
+          }
+          //column-gap: 10px;
+          flex-wrap: wrap;
+          row-gap: 10px;
+          .btn{
+           // max-width: 30%;
+          }
+        }
+      }
+    }
     .content {
       flex-wrap: wrap;
       row-gap: 3rem;

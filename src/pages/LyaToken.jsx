@@ -28,7 +28,7 @@ const LyaToken = () => {
             <button className="btn">Kucoin</button>
             <button className="btn">MEXC</button>
             <button className="btn">uniswap</button>
-            <button className="btn">pancakeswap</button>
+            <button className="btn pancakeswap">pancakeswap</button>
           </div>
         </div>
         <div className="contract-address card">

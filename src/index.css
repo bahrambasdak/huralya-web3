@@ -19,10 +19,11 @@
 }
 
 #root {
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
 height: 100vh;
-
+overflow-y: scroll;
+overflow-x: hidden;
   box-sizing: border-box;
   background-color: #161c26;
   position: relative;
@@ -34,7 +35,8 @@ width: 100vw;
   box-sizing: border-box;
   overflow-x: hidden;
 height: 100vh;
-  margin: 0 auto;
+  margin: 0;
+  
   text-align: center;
   background-color: #161c26;
 
