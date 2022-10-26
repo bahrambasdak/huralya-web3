@@ -87,29 +87,136 @@
     }
   }
 
-  .bottom {
+  .bottom-section {
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 0 3%;
     height: 40%;
+
+.small-btns{
+ 
+  .s-btn{
+    position: relative;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid #FBC350;
+    background-color: transparent;
+    margin: 3px;
+  }
+  .left::after{
+    content: '';
+    border: 5px solid transparent;
+    border-right-color: #FBC350;
+    position: absolute;
+    right: calc(50% - 1.5px);
+    top: calc(50% - 5px);
+  }
+
+  .right::after{
+    content: '';
+    border: 5px solid transparent;
+    border-left-color: #FBC350;
+    position: absolute;
+    left: calc(50% - 1.5px);
+    top: calc(50% - 5px);
+  }
+}
+
+
+
     .bottom-top {
       width: 100%;
       height: 70%;
       display: flex;
-      //justify-content: center;
+      justify-content: space-between;
+      
+
       .backers {
         background-image: url("./img/about_us_backer_bg.svg");
         background-size: cover;
         background-repeat: round;
-
+        width: 70%;
+        height: 100%;
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-around;
+        padding: 1rem;
+        .top{
+          display: flex;
+          justify-content: space-between;
+        }
+        .buttons{
+          display: flex;
+          justify-content: space-between;
+          .btns{
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+            
+            .btn{
+              flex-grow: 1;
+              max-width: 19%;
+              min-width: fit-content;
+              //padding: 0 .5rem;
+            }
+          }
+          .small-btns{
+            flex-grow: 1;
+
+          }
+        }
+
       }
       .team {
         background-image: url("./img/about_us_team_bg.svg");
         background-size: cover;
         background-repeat: round;
+        margin-left: 0.5rem;
         flex-grow: 1;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .title{
+          align-self: flex-start;
+          color: white;
+        }
+
+        .profile-img{
+          display: flex;
+          justify-content: space-between;
+          img{
+            width: 30%;
+          }
+        }
+      }
+    }
+
+
+    .socials{
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+      padding: 1rem;
+      .btns{
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        .btn{
+
+          flex-grow: 1;
+          max-width: 24%;
+          min-width: fit-content;
+        }
+      }
+      .small-btns{
+        flex-grow: 1;
+
       }
     }
   }

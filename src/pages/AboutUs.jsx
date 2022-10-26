@@ -1,6 +1,9 @@
 import icon1 from "../img/about_us_icon1.svg";
 import icon2 from "../img/about_us_icon2.svg";
 import icon3 from "../img/about_us_icon3.svg";
+import profileImg1 from "../img/about_us_team_profile1.svg";
+import profileImg2 from "../img/about_us_team_profile2.svg";
+import profileImg3 from "../img/about_us_team_profile3.svg";
 
 const AboutUs = () => {
   return (
@@ -55,7 +58,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="bottom">
+      <div className="bottom-section">
         <div className="bottom-top">
           <div className="backers">
             <div className="top">
@@ -64,13 +67,13 @@ const AboutUs = () => {
             </div>
             <div className="buttons">
               <div className="btns">
-                <button>a16z</button>
-                <button>Ycombinator</button>
-                <button>binance labs</button>
-                <button>animaco brands</button>
-                <button>binance labs</button>
+                <button className="btn">a16z</button>
+                <button className="btn">Ycombinator</button>
+                <button className="btn">binance labs</button>
+                <button className="btn">animaco brands</button>
+                <button className="btn">binance labs</button>
               </div>
-              <div className="small-btn">
+              <div className="small-btns">
               <button className="s-btn left"></button>
             <button className="s-btn right"></button>
               </div>
@@ -79,26 +82,26 @@ const AboutUs = () => {
           <div className="team">
             <div className="title">Our Team</div>
             <div className="profile-img">
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
+              <img src={profileImg1} alt="" />
+              <img src={profileImg2}alt="" />
+              <img src={profileImg3} alt="" />
             </div>
-            <div className="small-btn">
-              <button></button>
-              <button></button>
+            <div className="small-btns">
+            <button className="s-btn left"></button>
+            <button className="s-btn right"></button>
             </div>
           </div>
         </div>
         <div className="socials">
           <div className="btns">
-            <button>yahoo!</button>
-            <button>coinMarketCap</button>
-            <button>CoinDesk</button>
-            <button>GAMERANK</button>
+            <button className="btn">yahoo!</button>
+            <button className="btn">coinMarketCap</button>
+            <button className="btn">CoinDesk</button>
+            <button className="btn">GAMERANK</button>
           </div>
-          <div className="small-btn">
-            <button></button>
-            <button></button>
+          <div className="small-btns">
+          <button className="s-btn left"></button>
+            <button className="s-btn right"></button>
           </div>
         </div>
       </div>

@@ -1,15 +1,20 @@
 .genesis-page {
   position: relative;
+  width: 100%;
+  height: 480px;
+
   .background-img {
     width: 100%;
-    height: 100%;
+     height: 90%;
     object-fit: fill;
     z-index: 0;
+    border-radius: 30px;
+
   }
 
   .content {
     position: absolute;
-    bottom: -2rem;
+    bottom: 0;
     padding: 0 2rem;
     width: 100%;
     display: flex;
@@ -17,6 +22,7 @@
 
     .left {
       display: flex;
+      align-self: flex-end;
       .icons {
         display: flex;
         flex-direction: column;
@@ -57,102 +63,109 @@
         width: 60%;
       }
     }
-  }
-}
 
-.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  .title {
-    display: flex;
-    align-items: flex-end;
-    font-weight: 600;
-    font-size: 2rem;
-    .text-left {
 
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      .title {
+        display: flex;
+        align-items: flex-end;
+        font-weight: 600;
+        font-size: 2rem;
+        .text-left {
+    
+        }
+        .text-right {
+          padding-left: 1rem;
+          position: relative;
+          img {
+            position: absolute;
+            bottom: 80%;
+            left: 20%;
+            //width: 100%;
+          }
+          p {
+            //color-scheme: linear-gradient(0deg, #d4a50b -17.36%, rgba(219, 55, 34, 0) 100%);
+            color: rgb(243, 142, 74);
+          }
+        }
+      }
+      .explore-btn {
+        button {
+          display: flex;
+          align-items: flex-end;
+          background: rgba(53, 53, 53, 0.26);
+          font-weight: 350;
+          font-size: 1.3rem;
+          border: 1.5px solid #ffffff;
+          border-radius: 57px;
+          padding: 0.7rem 1.2rem;
+          color: white;
+          img{
+            padding-left: 0.5rem;
+          }
+        }
+      }
+      .sector-btn {
+        display: flex;
+        align-items: center;
+        button{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: transparent;
+          border: none;
+        }
+      }
     }
-    .text-right {
-      padding-left: 1rem;
+    
+    
+
+    .right {
       position: relative;
-      img {
-        position: absolute;
-        bottom: 80%;
-        left: 20%;
-        //width: 100%;
-      }
-      p {
-        //color-scheme: linear-gradient(0deg, #d4a50b -17.36%, rgba(219, 55, 34, 0) 100%);
-        color: rgb(243, 142, 74);
-      }
-    }
-  }
-  .explore-btn {
-    button {
       display: flex;
       align-items: flex-end;
-      background: rgba(53, 53, 53, 0.26);
-      font-weight: 350;
-      font-size: 1.3rem;
-      border: 1.5px solid #ffffff;
-      border-radius: 57px;
-      padding: 0.7rem 1.2rem;
-      color: white;
       img{
-        padding-left: 0.5rem;
+    
+      }
+      div{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        bottom: 55%;
+        left: 15%;
+        button{
+          padding: .7rem;
+          background-color: #09D6E2;
+          border-radius: 50%;
+          border: none;
+          position: relative;
+    
+        }
+        button::after{
+          content: '';
+          border: 5px solid transparent;
+          border-left: 5px solid white;
+          position: absolute;
+          left: 40%;
+          top: calc(50% - 5px);
+        }
+        p{
+          padding: .3rem;
+          font-weight: 300;
+          font-size: 1.1rem;
+          color: #FFFFFF;
+    
+        }
       }
     }
-  }
-  .sector-btn {
-    display: flex;
-    align-items: center;
-    button{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: transparent;
-      border: none;
-    }
+    
   }
 }
-.right {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  img{
 
-  }
-  div{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 30%;
-    left: 15%;
-    button{
-      padding: .7rem;
-      background-color: #09D6E2;
-      border-radius: 50%;
-      border: none;
-      position: relative;
-
-    }
-    button::after{
-      content: '';
-      border: 5px solid transparent;
-      border-left: 5px solid white;
-      position: absolute;
-      left: 40%;
-      top: calc(50% - 5px);
-    }
-    p{
-      padding: .3rem;
-      font-weight: 300;
-      font-size: 1.1rem;
-      color: #FFFFFF;
-
-    }
-  }
-}
