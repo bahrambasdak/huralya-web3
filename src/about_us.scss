@@ -1,0 +1,116 @@
+.about-us {
+  width: 100%;
+  position: relative;
+  height: 480px;
+  .about-desc {
+    background: #282f42;
+    border-radius: 27px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 70%;
+    row-gap: 1rem;
+    .title {
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: #ebebeb;
+    }
+    .desc {
+      font-weight: 350;
+      font-size: 1rem;
+      color: #898d92;
+      text-align: left;
+    }
+
+    .desc-icons {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 70%;
+      margin-right: 10%;
+      //margin-top: 5%;
+
+      align-self: center;
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .icon {
+          //padding-bottom: 5px;
+        }
+
+        .desc {
+          padding-top: 20px;
+          font-weight: 350;
+          font-size: 0.8rem;
+          color: #9298a5;
+        }
+      }
+      .item2 {
+        position: relative;
+        .desc {
+          color: #ffb111;
+        }
+      }
+      .item2::after {
+        content: "";
+        position: absolute;
+        background-color: #ffb111;
+        padding: 1px 40%;
+        top: calc(40% - 2px);
+        left: 10%;
+        z-index: 2;
+      }
+
+      .item2::before {
+        content: "";
+        position: absolute;
+        background-color: #ffb111;
+        border-radius: 50%;
+        padding: 3px;
+        top: calc(40% - 4px);
+        left: calc(50% - 3px);
+        z-index: 2;
+      }
+    }
+
+    .desc-icons::after {
+      content: "";
+      position: absolute;
+      border-bottom: 1.5px solid white;
+      width: 100%;
+      top: calc(40% - 1.5px);
+      z-index: 0;
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 3%;
+    height: 40%;
+    .bottom-top {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      //justify-content: center;
+      .backers {
+        background-image: url("./img/about_us_backer_bg.svg");
+        background-size: cover;
+        background-repeat: round;
+
+        flex-grow: 1;
+      }
+      .team {
+        background-image: url("./img/about_us_team_bg.svg");
+        background-size: cover;
+        background-repeat: round;
+        flex-grow: 1;
+      }
+    }
+  }
+}

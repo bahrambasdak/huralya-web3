@@ -8,7 +8,7 @@ const InsigniaNFT = () => {
   return (
     <div className="insigniaNFT-page">
       <div className="Huralya-Squirrel">
-        <img src={huralya_squirrel_left} alt="" className="background-img" />
+        {/* <img src={huralya_squirrel_left} alt="" className="background-img" /> */}
         <div className="content">
           <h3 className="title">Huralya Squirrel</h3>
           <p className="desc1">Squirrel NFTs are a way to invest in Huralya</p>

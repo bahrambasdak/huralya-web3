@@ -35,7 +35,7 @@ const Header = ({ toggleMenu, showMenu }) => {
           </li>
           <li>
             <NavLink
-              to="/Aboutus"
+              to="/aboutus"
               className="item item2"
               activeClassName="active"
             >
