@@ -71,8 +71,8 @@ const AboutUs = () => {
                 <button>binance labs</button>
               </div>
               <div className="small-btn">
-                <button></button>
-                <button></button>
+              <button className="s-btn left"></button>
+            <button className="s-btn right"></button>
               </div>
             </div>
           </div>
