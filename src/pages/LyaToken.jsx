@@ -54,7 +54,7 @@ const LyaToken = () => {
         </div>
 
         <div className="logo card">
-          <img src={lyaLogo} alt="lya_page_logo" />
+          <img src={lyaLogo} alt="lya_page_logo" width={141} height={86}/>
         </div>
       </div>
       <div className="content card">

@@ -7,8 +7,24 @@ import { AiOutlineExclamationCircle, AiOutlinePlus } from "react-icons/ai";
 const InsigniaNFT = () => {
   return (
     <div className="insigniaNFT-page">
+            <div className="min">
+        <img src={insignia_min} alt="" className="background-img" width={270} height={310}/>
+        <div className="content">
+          <div className="cat-img">
+            <img src={cat} alt="" width={200} height={200}/>
+          </div>
+          <div className="bottoms">
+            <button className="mint-btn">Mint</button>
+            <button className="market-btn">Market place</button>
+          </div>
+          <p className="text">
+            Upcoming MINT on Mars-21-2023
+            <AiOutlineExclamationCircle className="icon" />
+          </p>
+        </div>
+      </div>
       <div className="Huralya-Squirrel">
-        {/* <img src={huralya_squirrel_left} alt="" className="background-img" /> */}
+        <img src={huralya_squirrel_left} alt="" className="background-img" width={850} height={480}/>
         <div className="content">
           <h3 className="title">Huralya Squirrel</h3>
           <p className="desc1">Squirrel NFTs are a way to invest in Huralya</p>
@@ -27,60 +43,68 @@ const InsigniaNFT = () => {
 
             <div className="section">
               <div className="title">Squirrel supply</div>
-              <p className="text">
+              <input type="checkbox" className="checkbox"/>
+              <p className="text"><p>
                 The number of squirrels is limited by demand at the highest
                 price, and no new squirrels are created as demand decreases.
                 Even at peak demand, only 1,000 squirrels can be minted each
                 month
-              
+              </p>
               <AiOutlinePlus className="icon" />
               </p>
             </div>
 
             <div className="section">
               <div className="title">A useful pet in Genesis game</div>
+              <input type="checkbox" className="checkbox"/>
               <p className="text">
+                <p>
                 Squirrels are cute and useful pets that can collect food on your
                 island
-             
+                </p>
               <AiOutlinePlus className="icon" />
               </p>
+              
             </div>
 
             <div className="section">
               <div className="title">NFT staking </div>
-              <p className="text">
+              <input type="checkbox" className="checkbox"/>
+              <p className="text"><p>
                 You can get 10% profit per month (from minted price) by staking
                 nfts for up to one year. In the 10th month, you have a valuable
                 NFT that is risk free for you!!
-              
+              </p>
               <AiOutlinePlus className="icon" />
               </p>
             </div>
 
             <div className="section">
               <div className="title">DAO</div>
-              <p className="text">
+              <input type="checkbox" className="checkbox"/>
+              <p className="text"><p>
                 With each NFT you will have the right to vote in company
                 decisions - we have democracy
-             
+             </p>
               <AiOutlinePlus className="icon" />
               </p>
             </div>
             <div className="section">
               <div className="title">Airdrops</div>
-              <p className="text">
+              <input type="checkbox" className="checkbox"/>
+              <p className="text"><p>
                 Holdings of NFTs may include airdrops in the future
-             
+             </p>
               <AiOutlinePlus className="icon" />
               </p>
             </div>
             <div className="section">
               <div className="title">Profile picture</div>
-              <p className="text">
+              <input type="checkbox" className="checkbox"/>
+              <p className="text"><p>
                 Each squirrel has a unique avatar that you can use as your
                 profile picture in our games
-              
+              </p>
               <AiOutlinePlus className="icon" />
               </p>
             </div>
@@ -89,24 +113,9 @@ const InsigniaNFT = () => {
         </div>
       </div>
 
-      <div className="min">
-        <img src={insignia_min} alt="" className="background-img" />
-        <div className="content">
-          <div className="cat-img">
-            <img src={cat} alt="" />
-          </div>
-          <div className="bottoms">
-            <button className="mint-btn">Mint</button>
-            <button className="market-btn">Market place</button>
-          </div>
-          <p className="text">
-            Upcoming MINT on Mars-21-2023
-            <AiOutlineExclamationCircle className="icon" />
-          </p>
-        </div>
-      </div>
+
       <div className="circulate-supply">
-        <img src={insignia_supply} alt="" className="background-img" />
+        <img src={insignia_supply} alt="" className="background-img" width={235} height={170}/>
         <div className="content">
           <div className="text1">
             <div>
