@@ -23,6 +23,11 @@
     .left {
       display: flex;
       align-self: flex-end;
+justify-self: flex-start;
+max-width:30%;
+min-width: 20%;
+
+
       .icons {
         display: flex;
         flex-direction: column;
