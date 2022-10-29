@@ -17,8 +17,12 @@ cryptocurrencies such as BTC, ETH, USDT or …
 
 const LyaTokenDescription3 = `LYA, the currency token in hualya game ecosystems. 
 All user’s transactions, expenses and income will be covered by this coin.`;
-
+const ethereumAddress = '0x3F162087420604ebBaa03eD048D8a8709De78923';
 const LyaToken = () => {
+
+  const addressCopy=()=>{
+navigator.clipboard.writeText(ethereumAddress);
+  }
   return (
     <div className="lyatoken-page">
       <div className="top">
@@ -38,9 +42,9 @@ const LyaToken = () => {
               <button className="btn">Ethereum</button>
               <span className="ether-hover">
                 <div>
-                  <p>0x3F162087420604ebBaa03eD048D8a8709De78923</p>
-                  <div className="icon">
-                    | <FiCopy />
+                  <p>{ethereumAddress}</p>
+                  <div className="icons">
+                    | <FiCopy  onClick={addressCopy} className='copy-icon'/>
                     <img src={metamask_icon} alt="metamask_icon" />
                   </div>
                 </div>

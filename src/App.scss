@@ -32,6 +32,30 @@ $header-menu-text-color: #9298a5;
   //box-shadow: 0 0 10px 5px rgba($color: #071429, $alpha: 0.05);
 }
 
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #282f42;
+  border: 1px solid #595f71;
+  //border-radius: 164px;
+  border-radius: 63px;
+  font-family: "Alatsi";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #595f71;
+  //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+  //border-radius: 164px;
+}
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+.btn:active {
+  box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+
 .App {
   width: 100%;
   text-align: center;
@@ -76,9 +100,9 @@ $header-menu-text-color: #9298a5;
   border-radius: 59px;
 
   align-items: stretch;
-  justify-content: space-around;
+  justify-content: space-between;
   // height: 50px;
-  padding: 0px 0px 0px 10px;
+  padding: 0 20px;
   //overflow: hidden;
 
   .mobile-menu-btn {
@@ -238,16 +262,16 @@ $header-menu-text-color: #9298a5;
     align-items: center;
     .login-btn {
       flex-grow: 1;
-      color: #9298a5;
+      //color: #9298a5;
       font-family: "Bahnschrift";
       font-weight: 300;
       font-size: 20px;
       max-width: 100px;
-      padding: 5px;
-      background-color: #282f42;
-      border: 1px solid #9298a5;
-      border-radius: 164px;
-      box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+      padding: 5px 20px;
+      // background-color: #282f42;
+      // border: 1px solid #9298a5;
+      // border-radius: 164px;
+      //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
     }
   }
 }
@@ -348,9 +372,9 @@ $header-menu-text-color: #9298a5;
       font-size: 0.7rem;
       flex-grow: 1;
       max-width: 6vw;
-    //  cursor: pointer;
-     // background: #161c26;
-    //  border: 1px solid #9298a5;
+      //  cursor: pointer;
+      // background: #161c26;
+      //  border: 1px solid #9298a5;
       //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
       //border-radius: 164px;
     }
@@ -363,29 +387,6 @@ $header-menu-text-color: #9298a5;
 /////////////////////////////////////////////////   LYA Page  ///////////////////@at-root
 ///
 ///
-.btn {
-  padding: 5px;
-  cursor: pointer;
-  transition: all 0.2s;
-  background-color: #282F42;
-  border: 1px solid #595F71;
-  //border-radius: 164px;
-  border-radius: 63px;
-  font-family: "Alatsi";
-  font-weight: 400;
-  font-size: 1rem;
-  color: #595f71;
-      //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
-      //border-radius: 164px;
-}
-.btn:hover{
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border: none;
-}
-.btn:active{
-  box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
-  border: none;
-}
 
 .lyatoken-page {
   display: flex;
@@ -454,30 +455,40 @@ $header-menu-text-color: #9298a5;
         column-gap: 10px;
         width: 100%;
         position: relative;
-   
 
         .ether-hover {
           position: absolute;
           display: none;
-          background-color: #9298a5;
-          border-radius: 50px;
-          top: calc(100% + 10px);
+          top: calc(100% - 10px);
           transition: all 1s;
-          color: #282f42;
-          padding: 5px;
-          
-       
+          align-items: center;
+          padding-top: 20px;
+          //left: 0;
+
           div {
             display: flex;
             align-items: center;
             justify-content: center;
             column-gap: 5px;
+            background-color: #9298a5;
+            border-radius: 50px;
+            padding: 4px 5px;
+            color: #282f42;
             p {
               font-size: 12px;
             }
-            .icon {
+            .icons {
               font-size: 1.2rem;
               font-weight: 100;
+              .copy-icon:hover {
+                color: rgb(197, 194, 194);
+              }
+              .copy-icon:active {
+                color: white;
+              }
+              .copy-icon {
+                position: relative;
+              }
             }
           }
         }
@@ -487,21 +498,32 @@ $header-menu-text-color: #9298a5;
           position: absolute;
           border-bottom: 10px solid #9298a5;
           border-right: 10px solid transparent;
-          left: 5%;
-          bottom: 100%;
+          left: 20%;
+          top: 10px;
+          //display: none;
+        }
+
+        .ether-hover::before {
+          content: "";
+          position: absolute;
+          border-bottom: 10px solid #9298a5;
+          border-left: 10px solid transparent;
+          right: 40%;
+          top: 10px;
+          display: none;
         }
         .ethereum {
           flex-grow: 1;
           max-width: 38%;
           min-width: fit-content;
-         // margin-bottom: 10px;
+          // margin-bottom: 10px;
         }
         .ethereum:hover {
           .ether-hover {
             display: flex;
-            align-items: center;
           }
         }
+
         .smartchain {
           flex-grow: 1;
           max-width: 38%;
@@ -519,10 +541,7 @@ $header-menu-text-color: #9298a5;
           width: 100%;
         }
       }
-
     }
-
- 
 
     .logo {
       padding: 0.5rem 0.5rem 0.5rem 2rem;
@@ -596,8 +615,7 @@ $header-menu-text-color: #9298a5;
 }
 
 .btn:hover {
- 
- // border-color: white;
+  // border-color: white;
   //olor: white;
 }
 
@@ -637,13 +655,16 @@ $header-menu-text-color: #9298a5;
       height: 100%;
       object-fit: fill;
       z-index: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
     }
     .content {
       width: 100%;
-      position: absolute;
+      z-index: 1;
       padding: 20px 3.5rem 20px 20px;
-      top: 0;
-      left: 0;
+
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -678,21 +699,25 @@ $header-menu-text-color: #9298a5;
       .title {
         color: #e29b1d;
         padding: 0.6rem;
+        z-index: 1;
       }
       .desc1 {
         color: #cfd5dc;
         padding: 0.6rem;
+        z-index: 1;
       }
       .desc2 {
         color: #cfd5dc;
         font-size: 0.8rem;
         padding: 0.6rem;
+        z-index: 1;
       }
       .scrollable-section {
         padding: 20px;
         height: 70%;
         background-color: rgba(62, 70, 91, 0.54);
         border-radius: 20px;
+        z-index: 1;
       }
       .scroll {
         height: 100%;
@@ -723,8 +748,8 @@ $header-menu-text-color: #9298a5;
             flex-grow: 1;
             //padding-left: 1rem;
             padding: 0.3rem 1rem;
-            p{
-              transition: opacity .3s;
+            p {
+              transition: opacity 0.3s;
               opacity: 0;
             }
             .icon {
@@ -732,7 +757,7 @@ $header-menu-text-color: #9298a5;
               color: white;
             }
           }
-          .checkbox{
+          .checkbox {
             position: absolute;
             right: 10px;
             top: calc(50% - 7px);
@@ -741,14 +766,13 @@ $header-menu-text-color: #9298a5;
             opacity: 0;
             cursor: pointer;
           }
-          .checkbox:checked ~.text {
-            p{
+          .checkbox:checked ~ .text {
+            p {
               opacity: 1;
             }
-            .icon{
-              color: #dccfdb ;
+            .icon {
+              color: #dccfdb;
             }
-
           }
         }
         .plan-section {
@@ -808,7 +832,7 @@ $header-menu-text-color: #9298a5;
         justify-content: center;
         align-items: center;
         column-gap: 3px;
-        z-index: 2;
+        //z-index: 2;
 
         .mint-btn {
           background-color: #181c27;
@@ -834,7 +858,7 @@ $header-menu-text-color: #9298a5;
         font-size: 12px;
         flex-grow: 1;
         color: #979b9f;
-        z-index: 2;
+        // z-index: 2;
         .icon {
           color: #e2641d;
         }
@@ -973,6 +997,7 @@ $header-menu-text-color: #9298a5;
     }
   }
 
+  //////////////////////////////////////////////////////////////LyaTokenPage//////
   .lyatoken-page .top {
     .logo {
       padding: 0;
@@ -1042,20 +1067,11 @@ $header-menu-text-color: #9298a5;
   }
   .footer {
     // position: static;
-  }
-  .Container {
-    //padding-bottom: 1rem;
-  }
-  .footer-content {
-    margin: 0 4%;
-  }
-  .lyatoken-page .top .logo {
-    display: none;
+    .footer-content {
+      margin: 0 4%;
+    }
   }
 
-  // .footer {
-  //   //flex-direction: column;
-  // }
   .footer-content .join {
     .btn {
       max-width: 10vw;
@@ -1066,19 +1082,6 @@ $header-menu-text-color: #9298a5;
     .mobile-menu-btn {
       display: block;
     }
-    // .header-menu {
-    //   font-size: 0.9rem;
-    //   .menu {
-    //     .item {
-    //       flex-direction: column;
-    //       justify-content: baseline;
-    //       align-items: center;
-    //       img {
-    //         padding: 0;
-    //       }
-    //     }
-    //   }
-    // }
     .header-menu {
       white-space: nowrap;
       z-index: -1;
@@ -1129,7 +1132,6 @@ $header-menu-text-color: #9298a5;
         }
       }
     }
-
     .show {
       opacity: 1;
       z-index: 2;
@@ -1140,6 +1142,28 @@ $header-menu-text-color: #9298a5;
     }
   }
 
+  //////////////////////////////////////////////////////////////LyaTokenPage//////
+  ///
+  .lyatoken-page .top {
+    .logo {
+      display: none;
+    }
+    .contract-address {
+      .contract {
+        .ether-hover::after {
+          display: none;
+        }
+        .ether-hover::before {
+          display: flex;
+        }
+        .ether-hover {
+          left: -80%;
+        }
+      }
+    }
+  }
+
+  ////////////////////////////////////////////////////////////////////////////InsigniaNFT Page
   .insigniaNFT-page {
     display: flex;
     flex-direction: column;
@@ -1243,7 +1267,7 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
-
+  //////////////////////////////////////////////////////////////genesis Page
   .genesis-page {
     .content {
       height: 90%;
@@ -1273,6 +1297,13 @@ $header-menu-text-color: #9298a5;
     height: max-content;
     min-height: fit-content;
     margin-bottom: 2rem;
+
+    .about-desc {
+      .desc-icons {
+        width: 100%;
+        margin: 0;
+      }
+    }
 
     .bottom-section {
       padding-top: 1rem;
@@ -1350,46 +1381,54 @@ $header-menu-text-color: #9298a5;
   .Container {
     // padding-bottom: 1rem;
   }
+
+  /////////////////////////////////////////////////////////////////LyaToken Page//////////
   .lyatoken-page {
     flex-wrap: wrap;
     .top {
+      flex-wrap: wrap;
+      row-gap: 10px;
       .exchanges {
         .exchange {
           .pancakeswap {
-            //flex-grow: 0;
             max-width: 32%;
           }
-          //column-gap: 10px;
           flex-wrap: wrap;
           row-gap: 10px;
           .btn {
-            // max-width: 30%;
+            font-family: "Alatsi";
           }
         }
+      }
+
+      .contract-address {
+        .contract {
+          .ether-hover {
+            left: -8%;
+          }
+          .ether-hover::after {
+            display: block;
+          }
+          .ether-hover::before {
+            display: none;
+          }
+        }
+      }
+
+      .smartchain {
+        .btn {
+          font-family: "Bahnschrift";
+        }
+      }
+
+      .logo {
+        padding: 0;
       }
     }
     .content {
       flex-wrap: wrap;
       row-gap: 3rem;
       padding-top: 1rem;
-    }
-  }
-  .lyatoken-page .top {
-    flex-wrap: wrap;
-    //flex-direction: column;
-    row-gap: 10px;
-
-    .btn {
-      font-family: "Alatsi";
-    }
-    .smartchain {
-      .btn {
-        font-family: "Bahnschrift";
-      }
-    }
-
-    .logo {
-      padding: 0;
     }
   }
 
@@ -1402,7 +1441,7 @@ $header-menu-text-color: #9298a5;
 
     .header-login {
       .login-btn {
-        font-size: 0.8rem;
+        // font-size: 0.8rem;
       }
     }
 
@@ -1490,8 +1529,8 @@ $header-menu-text-color: #9298a5;
         margin-bottom: 5px;
       }
       .btn:hover {
-       // border-color: white;
-      //  color: white;
+        // border-color: white;
+        //  color: white;
       }
     }
   }
@@ -1611,7 +1650,7 @@ $header-menu-text-color: #9298a5;
   .about-us {
     height: auto;
     min-height: fit-content;
-    padding-bottom: 12rem;
+    //padding-bottom: 1rem;
     .about-desc {
       height: auto;
     }
