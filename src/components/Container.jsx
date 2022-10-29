@@ -4,6 +4,7 @@ import AboutUs from "../pages/AboutUs";
 import Genesis from "../pages/Genesis";
 import InsigniaNFT from "../pages/InsigniaNFT";
 import LyaToken from "../pages/LyaToken";
+import Mint from "../pages/Mint";
 
 const Container = () => {
   return (
@@ -12,7 +13,7 @@ const Container = () => {
         <Route path="/lyatoken" element={<LyaToken />}></Route>
         <Route path="/insignia" element={<InsigniaNFT />}></Route>
         <Route path="/genesis" element={<Genesis />}></Route>
-        <Route path="/aboutus" element={<AboutUs />}></Route>
+        <Route path="/aboutus" element={<Mint />}></Route>
 
         <Route path="/" element={<LyaToken />}></Route>
       </Routes>

@@ -1,8 +1,8 @@
 //import "./insignia.scss";
 import "./genesis.scss";
-import "./about_us.scss"
+import "./about_us.scss";
+import "./mint.scss";
 import "./App.scss";
-
 
 import Footer from "./components/Footer";
 import Container from "./components/Container";
@@ -16,17 +16,16 @@ function App() {
   const toggleMenu = (e) => {
     e.stopPropagation();
     console.log(e.target.className);
-    if (e.target.className.includes("dot"))
-      setShowMenu((prev) => !prev);
+    if (e.target.className.includes("dot")) setShowMenu((prev) => !prev);
     else if (showMenu) setShowMenu((prev) => !prev);
   };
   return (
     <div className="App" onClick={toggleMenu}>
       <BrowserRouter>
-        <Header toggleMenu={toggleMenu} showMenu={showMenu}/>
-        <Container/>
+        <Header toggleMenu={toggleMenu} showMenu={showMenu} />
+        <Container />
 
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );

@@ -645,11 +645,8 @@ $header-menu-text-color: #9298a5;
     height: 100%;
     grid-column: 1/3;
     grid-row: 1/4;
-    // overflow-x: visible;
     position: relative;
-    // background-image: url("./img/insignia_page_left.svg");
-    // background-size: cover;
-    // background-repeat: round;
+
     .background-img {
       width: 100%;
       height: 100%;
@@ -1359,6 +1356,25 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
+
+  /////////////////////////////////////////////Mint Page///////////////
+  ///
+  ///
+
+  .mint {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: max-content;
+    .Huralya-Squirrel {
+      width: 100%;
+      height: auto;
+      max-height: fit-content;
+    }
+    .buy-sell {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 @media only screen and #{$mq-xsmall} {
@@ -1708,4 +1724,28 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
+
+  /////////////////////////////////////////////Mint Page///////////////
+
+
+  .mint {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: max-content;
+    .Huralya-Squirrel {
+      width: 100%;
+      height: auto;
+      max-height: fit-content;
+      .content{
+        padding: 0;
+      }
+    }
+    .buy-sell {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+
 }
