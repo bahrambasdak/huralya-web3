@@ -149,6 +149,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    font-family: "Alatsi";
     background: linear-gradient(
       -180deg,
       rgba(32, 36, 57, 0) 0%,
@@ -173,10 +174,12 @@
         font-size: 14px;
         line-height: 24px;
         text-align: left;
+        font-family: "Alatsi";
       }
       .last {
         font-size: 10px;
         padding-left: 10px;
+        font-family: "Alatsi";
       }
     }
     .bar {
@@ -194,7 +197,7 @@
       justify-content: center;
       p {
         display: flex;
-        //align-items: center;
+        font-family: "Alatsi";
         column-gap: 3px;
         justify-content: center;
         .icon {
@@ -207,6 +210,7 @@
       color: #eaeaea;
       font-size: 14px;
       padding: 1rem 0;
+      font-family: "Alatsi";
     }
   }
 }

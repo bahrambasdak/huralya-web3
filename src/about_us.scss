@@ -16,12 +16,14 @@
       font-weight: 400;
       font-size: 1.4rem;
       color: #ebebeb;
+      font-family: "Alatsi";
     }
     .desc {
       font-weight: 350;
       font-size: 1rem;
       color: #898d92;
       text-align: left;
+      font-family: "Alatsi";
     }
 
     .desc-icons {
@@ -47,6 +49,7 @@
           font-weight: 350;
           font-size: 0.8rem;
           color: #9298a5;
+          font-family: 'Bahnschrift';
         }
       }
       .item2 {
@@ -93,7 +96,7 @@
     width: 100%;
     padding: 0 2%;
     height: 40%;
-
+    font-family: 'Bahnschrift';
     .small-btns {
       .s-btn {
         position: relative;
@@ -159,12 +162,14 @@
             align-items: center;
             .title {
               color: white;
+              font-family: 'Bahnschrift';
             }
             .help {
               display: flex;
               align-items: center;
               column-gap: 10px;
               color: #7c8290;
+              font-family: 'Bahnschrift';
               .q-icon{
                 color: #5FAA73;
               }
@@ -181,6 +186,7 @@
               align-items: center;
               flex-wrap: wrap;
               row-gap: 10px;
+              font-family: 'Bahnschrift';
               .btn {
                 flex-grow: 1;
                 max-width: 19%;
@@ -206,6 +212,7 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
+        font-family: 'Bahnschrift';
         .teamBg {
           position: absolute;
           width: 100%;
@@ -221,6 +228,7 @@
           color: white;
           z-index: 1;
           padding-bottom: 10px;
+          font-family: 'Bahnschrift';
         }
 
         .profile-img {
