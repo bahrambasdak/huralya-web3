@@ -86,7 +86,7 @@
         padding-right: 20px;
         .section {
           display: flex;
-          //flex-wrap: wrap;
+          flex-wrap: wrap;
           justify-content: space-between;
           border-bottom: 1px solid #282f42;
           align-items: stretch;
@@ -95,8 +95,8 @@
           .title {
             color: #dddedf;
             min-width: fit-content;
-            padding: 0.7rem 0rem 0.7rem 0px;
-            //flex-grow: 1;
+            padding: 0.7rem 0rem 0.2rem 0px;
+            font-family: "Alatsi";
             display: flex;
             align-items: center;
           }
@@ -107,16 +107,21 @@
             color: #898d92;
             font-size: 12px;
             flex-grow: 1;
-            //padding-left: 1rem;
-            padding: 0.3rem 1rem;
+            font-family: "Alatsi";
+            padding: 0.3rem 1.5rem;
             p {
-              transition: opacity 0.3s;
-              opacity: 0;
+              display: none;
             }
-            .icon {
-              min-width: fit-content;
-              color: white;
-            }
+          }
+          .icon {
+            min-width: fit-content;
+            color: white;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 5px;
+            top: calc(50% - 7px);
+            z-index: 0;
           }
           .checkbox {
             position: absolute;
@@ -125,11 +130,12 @@
             width: 20px;
             height: 20px;
             opacity: 0;
+            z-index: 1;
             cursor: pointer;
           }
           .checkbox:checked ~ .text {
             p {
-              opacity: 1;
+              display: flex;
             }
             .icon {
               color: #dccfdb;

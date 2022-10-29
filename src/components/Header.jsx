@@ -34,7 +34,7 @@ const Header = ({ toggleMenu, showMenu }) => {
             height={41}
           />
         </div>
-        {loggedIn ? (
+        {!loggedIn ? (
           <div className={`header-menu ${showMenu ? "show" : ""}`}>
             <ul className="menu">
               <li>
@@ -93,15 +93,6 @@ const Header = ({ toggleMenu, showMenu }) => {
               </li>
               <li>
                 <NavLink
-                  to="/marketplace"
-                  className="item item2"
-                  activeClassName="active"
-                >
-                 market place
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
                   to="/dashboard"
                   className="item item3"
                   activeClassName="active"
@@ -114,7 +105,7 @@ const Header = ({ toggleMenu, showMenu }) => {
         )}
         <div className="header-login">
           <button className="login-btn btn" onClick={handleLogin}>
-            LOGIN
+           {loggedIn ? 'LOGOUT' : 'LOGIN'} 
           </button>
         </div>
       </div>

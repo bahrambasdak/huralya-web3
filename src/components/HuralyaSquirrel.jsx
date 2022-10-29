@@ -38,8 +38,9 @@ const HuralyaSquirrel = ({ huralya_squirrel_left }) => {
                   Even at peak demand, only 1,000 squirrels can be minted each
                   month
                 </p>
-                <AiOutlinePlus className="icon" />
+                
               </p>
+              <AiOutlinePlus className="icon" />
             </div>
 
             <div className="section">

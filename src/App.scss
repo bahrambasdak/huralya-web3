@@ -59,6 +59,7 @@ $header-menu-text-color: #9298a5;
   min-height: 100vh;
 
   padding-bottom: 3rem;
+  padding-top: 6.2rem;
   font-family: "Bahnschrift";
   background-color: #161c26;
 }
@@ -66,17 +67,20 @@ $header-menu-text-color: #9298a5;
 ///////////////////////////////////////////  Header   ////////////////////
 .header {
   display: flex;
-  margin: 0 30%;
-  flex: 1 0 auto;
+
   max-width: 100%;
   z-index: 2;
-  position: sticky;
+  position: fixed;
   padding: 1rem 0;
   top: 0;
+  width: 100%;
 
   .header-content {
     display: flex;
-    width: 100%;
+    margin: 0 30%;
+    flex: 1 0 auto;
+
+    // width: 100%;
     background-color: $header-background-color;
     border-radius: 59px;
     align-items: stretch;
@@ -147,7 +151,7 @@ $header-menu-text-color: #9298a5;
           height: 100%;
           padding: 0px 5px 0px 5px;
           .item {
-            font-family: 'Bahnschrift';
+            font-family: "Bahnschrift";
             position: relative;
             display: flex;
             align-items: center;
@@ -210,7 +214,7 @@ $header-menu-text-color: #9298a5;
             );
             border-image-slice: 1;
           }
-  
+
           .active {
             background-image: linear-gradient(
               0.74deg,
@@ -222,7 +226,6 @@ $header-menu-text-color: #9298a5;
             left: 0;
           }
         }
-
       }
     }
 
@@ -289,7 +292,7 @@ $header-menu-text-color: #9298a5;
       .link {
         padding: 5px;
         cursor: pointer;
-        font-family: 'Bahnschrift';
+        font-family: "Bahnschrift";
       }
       .link:hover {
         color: white;
@@ -332,7 +335,7 @@ $header-menu-text-color: #9298a5;
   }
 }
 
-/////////////////////////////////////////////////   LYA Page  ///////////////////@at-root
+/////////////////////////////////////////////////   LYA Page  ///////////////////
 .lyatoken-page {
   display: flex;
   width: 100%;
@@ -418,6 +421,9 @@ $header-menu-text-color: #9298a5;
             .icons {
               font-size: 1.2rem;
               font-weight: 100;
+              .copy-icon {
+                cursor: pointer;
+              }
               .copy-icon:hover {
                 color: #08757a;
               }
@@ -508,13 +514,13 @@ $header-menu-text-color: #9298a5;
         padding: 1rem 0 0.8rem 0;
         font-weight: 600;
         color: #ebebeb;
-        font-family: 'Bahnschrift';
+        font-family: "Bahnschrift";
       }
       .text {
         font-weight: 300;
         color: #898d92;
         width: 100%;
-        font-family: 'Bahnschrift';
+        font-family: "Bahnschrift";
       }
     }
   }
@@ -600,7 +606,7 @@ $header-menu-text-color: #9298a5;
         padding-right: 20px;
         .section {
           display: flex;
-          //flex-wrap: wrap;
+          flex-wrap: wrap;
           justify-content: space-between;
           border-bottom: 1px solid #282f42;
           align-items: stretch;
@@ -609,7 +615,7 @@ $header-menu-text-color: #9298a5;
           .title {
             color: #dddedf;
             min-width: fit-content;
-            padding: 0.7rem 0rem 0.7rem 0px;
+            padding: 0.7rem 0rem 0.2rem 0px;
             font-family: "Alatsi";
             display: flex;
             align-items: center;
@@ -622,16 +628,20 @@ $header-menu-text-color: #9298a5;
             font-size: 12px;
             flex-grow: 1;
             font-family: "Alatsi";
-            //padding-left: 1rem;
-            padding: 0.3rem 1rem;
+            padding: 0.3rem 1.5rem;
             p {
-              transition: opacity 0.3s;
-              opacity: 0;
+              display: none;
             }
-            .icon {
-              min-width: fit-content;
-              color: white;
-            }
+          }
+          .icon {
+            min-width: fit-content;
+            color: white;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 5px;
+            top: calc(50% - 7px);
+            z-index: 0;
           }
           .checkbox {
             position: absolute;
@@ -640,11 +650,12 @@ $header-menu-text-color: #9298a5;
             width: 20px;
             height: 20px;
             opacity: 0;
+            z-index: 1;
             cursor: pointer;
           }
           .checkbox:checked ~ .text {
             p {
-              opacity: 1;
+              display: flex;
             }
             .icon {
               color: #dccfdb;
@@ -700,6 +711,7 @@ $header-menu-text-color: #9298a5;
       }
 
       .bottoms {
+        z-index: 1;
         flex-grow: 1;
         align-self: stretch;
         font-size: 17px;
@@ -735,6 +747,7 @@ $header-menu-text-color: #9298a5;
         flex-grow: 1;
         color: #979b9f;
         font-family: "Alatsi";
+        z-index: 1;
         .icon {
           color: #e2641d;
         }
@@ -793,11 +806,10 @@ $header-menu-text-color: #9298a5;
 // $bp-xxlarge: 160em; // 2560px
 
 @media only screen and #{$mq-retina} {
-  #root {
-    overflow-y: auto;
-  }
   .header {
-    margin: 0 30%;
+    .header-content {
+      margin: 0 30%;
+    }
   }
   .Container {
     margin: 0 30%;
@@ -811,7 +823,9 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-xxlarge} {
   .header {
-    margin: 0 25%;
+    .header-content {
+      margin: 0 25%;
+    }
   }
   .Container {
     margin: 0 25%;
@@ -825,7 +839,9 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-xlarge} {
   .header {
-    margin: 0 18%;
+    .header-content {
+      margin: 0 18%;
+    }
   }
   .Container {
     margin: 0 18%;
@@ -838,7 +854,9 @@ $header-menu-text-color: #9298a5;
 }
 @media only screen and #{$mq-large} {
   .header {
-    margin: 0 10%;
+    .header-content {
+      margin: 0 10%;
+    }
   }
   .Container {
     margin: 0 10%;
@@ -861,7 +879,9 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-medium} {
   .header {
-    margin: 0 6%;
+    .header-content {
+      margin: 0 6%;
+    }
   }
   .Container {
     margin: 0 6%;
@@ -930,7 +950,9 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-small} {
   .header {
-    margin: 0 4%;
+    .header-content {
+      margin: 0 4%;
+    }
   }
   .Container {
     margin: 0 4%;
@@ -1024,7 +1046,6 @@ $header-menu-text-color: #9298a5;
               }
             }
           }
-
         }
       }
 
@@ -1150,7 +1171,17 @@ $header-menu-text-color: #9298a5;
   .about-us {
     height: max-content;
     min-height: fit-content;
-    margin-bottom: 2rem;
+
+    .about-desc {
+      height: auto;
+      width: 100%;
+      margin: 0;
+      .desc-icons {
+        width: 100%;
+        .item {
+        }
+      }
+    }
     .bottom-section {
       padding-top: 1rem;
       position: relative;
@@ -1225,7 +1256,9 @@ $header-menu-text-color: #9298a5;
     padding-bottom: 9rem;
   }
   .header {
-    margin: 0 5%;
+    .header-content {
+      margin: 0 5%;
+    }
   }
   .Container {
     margin: 0 5%;
@@ -1340,7 +1373,6 @@ $header-menu-text-color: #9298a5;
               }
             }
           }
-
         }
       }
 
@@ -1477,9 +1509,16 @@ $header-menu-text-color: #9298a5;
   .about-us {
     height: auto;
     min-height: fit-content;
-    padding-bottom: 12rem;
+
     .about-desc {
       height: auto;
+      width: 100%;
+      margin: 0;
+      .desc-icons {
+        width: 100%;
+        .item {
+        }
+      }
     }
     .bottom-section {
       padding-top: 1rem;

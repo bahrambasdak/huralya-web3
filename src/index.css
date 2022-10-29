@@ -22,7 +22,7 @@
   margin: 0;
   text-align: center;
 height: 100vh;
-overflow-y: scroll;
+overflow-y: auto;
 overflow-x: hidden;
   box-sizing: border-box;
   background-color: #161c26;
