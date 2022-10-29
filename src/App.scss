@@ -29,7 +29,6 @@ $header-menu-text-color: #9298a5;
 .card {
   padding: 15px;
   border-radius: 20px;
-  //box-shadow: 0 0 10px 5px rgba($color: #071429, $alpha: 0.05);
 }
 
 .btn {
@@ -38,14 +37,11 @@ $header-menu-text-color: #9298a5;
   transition: all 0.2s;
   background-color: #282f42;
   border: 1px solid #595f71;
-  //border-radius: 164px;
   border-radius: 63px;
   font-family: "Alatsi";
   font-weight: 400;
   font-size: 1rem;
   color: #595f71;
-  //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
-  //border-radius: 164px;
 }
 .btn:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -68,19 +64,184 @@ $header-menu-text-color: #9298a5;
 }
 
 ///////////////////////////////////////////  Header   ////////////////////
-///
 .header {
   display: flex;
   margin: 0 30%;
   flex: 1 0 auto;
-  //width: 100%;
-  //width: 100%;
   max-width: 100%;
-  //width: 100vw;
   z-index: 2;
   position: sticky;
   padding: 1rem 0;
   top: 0;
+
+  .header-content {
+    display: flex;
+    width: 100%;
+    background-color: $header-background-color;
+    border-radius: 59px;
+    align-items: stretch;
+    justify-content: space-around;
+    padding: 0px 0px 0px 10px;
+    .mobile-menu-btn {
+      background-color: rgba($color: #586664, $alpha: 0.5);
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      border: none;
+      position: fixed;
+      left: 3%;
+      bottom: 5%;
+      display: none;
+      cursor: pointer;
+      .dots {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .m-dot {
+          transition: all 0.3s ease;
+          background-color: white;
+          border-radius: 50%;
+          padding: 3px;
+        }
+      }
+
+      .active {
+        .dot1 {
+          transform: translate3d(-7.5px, 14.5px, 0);
+        }
+        .dot2 {
+          transform: translate3d(7px, 0, 0);
+        }
+        .dot3 {
+          transform: translate3d(0, -4px, 0);
+        }
+      }
+    }
+
+    .header-logo {
+      padding: 8px;
+      overflow: hidden;
+      .logo-img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .header-menu {
+      flex-grow: 1;
+      max-width: 60%;
+      .menu {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        li {
+          flex-grow: 1;
+          height: 100%;
+          padding: 0px 5px 0px 5px;
+        }
+        .item {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          flex-grow: 1;
+          height: 100%;
+          text-decoration: none;
+          color: $header-menu-text-color; //#9298A5;
+          @include header-menu-font;
+          overflow: hidden;
+          min-width: fit-content;
+          text-align: center;
+          img {
+            padding-right: 0.5rem;
+          }
+        }
+        .item:hover {
+          color: white;
+        }
+        .item::after {
+          content: "";
+          box-sizing: border-box;
+          position: absolute;
+          border-bottom: 0.2rem solid transparent;
+          width: 100%;
+          left: 100%;
+          bottom: 0;
+          transition: all 0.3s ease-out;
+        }
+        .item1::after {
+          border-image: linear-gradient(
+            90deg,
+            rgb(27, 90, 7),
+            rgb(177, 247, 170)
+          );
+          border-image-slice: 1;
+        }
+        .item2::after {
+          border-image: linear-gradient(
+            90deg,
+            rgb(119, 58, 8),
+            rgb(243, 210, 161)
+          );
+          border-image-slice: 1;
+        }
+        .item3::after {
+          border-image: linear-gradient(
+            90deg,
+            rgb(10, 48, 97),
+            rgb(192, 232, 255)
+          );
+          border-image-slice: 1;
+        }
+        .item4::after {
+          border-image: linear-gradient(
+            254.24deg,
+            #bc68fe 14.93%,
+            #6f31d6 87.95%
+          );
+          border-image-slice: 1;
+        }
+
+        .active {
+          background-image: linear-gradient(
+            0.74deg,
+            #0c0e16 0.5%,
+            rgba(159, 176, 219, 0.05) 100%
+          );
+        }
+        .active::after {
+          left: 0;
+        }
+      }
+    }
+
+    .header-login {
+      flex-grow: 1;
+      max-width: 15%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .login-btn {
+        flex-grow: 1;
+        color: #9298a5;
+        font-family: "Bahnschrift";
+        font-weight: 300;
+        font-size: 20px;
+        max-width: 100px;
+        padding: 5px;
+        background-color: #282f42;
+        border-color: #9298a5;
+      }
+    }
+  }
 }
 
 .Container {
@@ -89,321 +250,96 @@ $header-menu-text-color: #9298a5;
   flex: 1 0 auto;
   max-width: 100%;
   min-height: fit-content;
-  //height: 100%;
-  // overflow-y: scroll;
-}
-.header-content {
-  display: flex;
-
-  width: 100%;
-  background-color: $header-background-color;
-  border-radius: 59px;
-
-  align-items: stretch;
-  justify-content: space-between;
-  // height: 50px;
-  padding: 0 20px;
-  //overflow: hidden;
-
-  .mobile-menu-btn {
-    background-color: rgba($color: #586664, $alpha: 0.5);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: none;
-    position: fixed;
-    left: 3%;
-    bottom: 5%;
-    display: none;
-    cursor: pointer;
-    .dots {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      position: relative;
-      width: 100%;
-      height: 100%;
-
-      .m-dot {
-        transition: all 0.3s ease;
-        background-color: white;
-        border-radius: 50%;
-        padding: 3px;
-      }
-    }
-
-    .active {
-      .m-dot {
-        //position: absolute;
-      }
-      .dot1 {
-        transform: translate3d(-7.5px, 14.5px, 0);
-      }
-      .dot2 {
-        transform: translate3d(7px, 0, 0);
-      }
-      .dot3 {
-        transform: translate3d(0, -4px, 0);
-      }
-    }
-  }
-
-  .header-logo {
-    padding: 8px;
-    overflow: hidden;
-
-    .logo-img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  .header-menu {
-    flex-grow: 1;
-    max-width: 60%;
-
-    .menu {
-      display: flex;
-      flex-grow: 1;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 100%;
-
-      li {
-        flex-grow: 1;
-        height: 100%;
-        padding: 0px 5px 0px 5px;
-      }
-
-      .item {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-grow: 1;
-        height: 100%;
-        text-decoration: none;
-        color: $header-menu-text-color; //#9298A5;
-        @include header-menu-font;
-        overflow: hidden;
-        min-width: fit-content;
-        text-align: center;
-        img {
-          padding-right: 0.5rem;
-        }
-      }
-      .item:hover {
-        color: white;
-      }
-      .item::after {
-        content: "";
-        box-sizing: border-box;
-        position: absolute;
-        border-bottom: 0.2rem solid transparent;
-
-        width: 100%;
-        left: 100%;
-        bottom: 0;
-        transition: all 0.3s ease-out;
-      }
-      .item1::after {
-        border-image: linear-gradient(
-          90deg,
-          rgb(27, 90, 7),
-          rgb(177, 247, 170)
-        );
-        border-image-slice: 1;
-      }
-      .item2::after {
-        border-image: linear-gradient(
-          90deg,
-          rgb(119, 58, 8),
-          rgb(243, 210, 161)
-        );
-        border-image-slice: 1;
-      }
-      .item3::after {
-        border-image: linear-gradient(
-          90deg,
-          rgb(10, 48, 97),
-          rgb(192, 232, 255)
-        );
-        border-image-slice: 1;
-      }
-      .item4::after {
-        border-image: linear-gradient(
-          254.24deg,
-          #bc68fe 14.93%,
-          #6f31d6 87.95%
-        );
-        border-image-slice: 1;
-      }
-
-      .active {
-        background-image: linear-gradient(
-          0.74deg,
-          #0c0e16 0.5%,
-          rgba(159, 176, 219, 0.05) 100%
-        );
-      }
-      .active::after {
-        left: 0;
-      }
-    }
-  }
-
-  .header-login {
-    flex-grow: 1;
-    max-width: 15%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    .login-btn {
-      flex-grow: 1;
-      //color: #9298a5;
-      font-family: "Bahnschrift";
-      font-weight: 300;
-      font-size: 20px;
-      max-width: 100px;
-      padding: 5px 20px;
-      // background-color: #282f42;
-      // border: 1px solid #9298a5;
-      // border-radius: 164px;
-      //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
-    }
-  }
 }
 
-// .menu {
-// }
-// .item {
-// }
-
-// .login-btn {
-// }
-//////
 ////////////////////////////////////////////     Footer    //////////////////////
-///
-///
 .footer {
-  // justify-self: flex-end;
   position: absolute;
   bottom: 0;
   width: 100%;
-
   max-width: 100vw;
   align-items: center;
-
   justify-content: center;
-}
-.footer-content {
-  display: flex;
-  margin: 0 30%;
-  flex: 1 0 auto;
-  //width: 105%;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #282f42;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  padding: 0 5px 0 5px;
-  //padding: 0;
-
-  font-weight: 400;
-  //font-size: 0.8rem;
-  color: #9298a5;
-
-  .footer-links {
+  .footer-content {
     display: flex;
-    flex-grow: 1;
-    justify-content: center;
-  }
-  .footer-links ul {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-around;
-    //max-width: 70%;
-    .link {
-      padding: 5px;
-      cursor: pointer;
-    }
-    .link:hover {
-      color: white;
-    }
-  }
-  // .link {
-  // }
-
-  .social-icons {
-    flex-grow: 1;
-  }
-
-  .social-icons ul {
-    display: flex;
-    justify-content: center;
+    margin: 0 30%;
+    flex: 1 0 auto;
     align-items: center;
-    padding: 0.3rem;
-    .icon {
+    justify-content: space-between;
+    background-color: #282f42;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 0 5px 0 5px;
+    font-weight: 400;
+    color: #9298a5;
+    .footer-links {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    .footer-links ul {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      .link {
+        padding: 5px;
+        cursor: pointer;
+      }
+      .link:hover {
+        color: white;
+      }
+    }
+    .social-icons {
+      flex-grow: 1;
+    }
+
+    .social-icons ul {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      cursor: pointer;
-      background-color: #161c26;
-      border-radius: 0.3rem;
-      color: #9298a5;
       padding: 0.3rem;
-      margin: 0.2rem;
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #161c26;
+        border-radius: 0.3rem;
+        color: #9298a5;
+        padding: 0.3rem;
+        margin: 0.2rem;
+      }
+      .icon:hover {
+        color: white;
+      }
     }
-    .icon:hover {
-      color: white;
-    }
-  }
-  // .icon {
-  // }
-  .join {
-    display: flex;
-    justify-content: flex-end;
-    flex-grow: 1;
-    //max-width: 15%;
-    .btn {
-      font-size: 0.7rem;
+    .join {
+      display: flex;
+      justify-content: flex-end;
       flex-grow: 1;
-      max-width: 6vw;
-      //  cursor: pointer;
-      // background: #161c26;
-      //  border: 1px solid #9298a5;
-      //box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
-      //border-radius: 164px;
-    }
-    .btn:hover {
-      //border-color: white;
+      .btn {
+        font-size: 0.7rem;
+        flex-grow: 1;
+        max-width: 6vw;
+      }
     }
   }
 }
 
 /////////////////////////////////////////////////   LYA Page  ///////////////////@at-root
-///
-///
-
 .lyatoken-page {
   display: flex;
   width: 100%;
-  // height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   row-gap: 1rem;
-  //padding: 20px 0 20px 0;
   .top {
     text-align: left;
     display: flex;
     justify-content: space-between;
     width: 100%;
     column-gap: 12px;
-
     .exchanges {
       display: flex;
       flex-direction: column;
@@ -455,40 +391,26 @@ $header-menu-text-color: #9298a5;
         column-gap: 10px;
         width: 100%;
         position: relative;
-
         .ether-hover {
           position: absolute;
           display: none;
-          top: calc(100% - 10px);
+          background-color: #9298a5;
+          border-radius: 50px;
+          top: calc(100% + 10px);
           transition: all 1s;
-          align-items: center;
-          padding-top: 20px;
-          //left: 0;
-
+          color: #282f42;
+          padding: 5px;
           div {
             display: flex;
             align-items: center;
             justify-content: center;
             column-gap: 5px;
-            background-color: #9298a5;
-            border-radius: 50px;
-            padding: 4px 5px;
-            color: #282f42;
             p {
               font-size: 12px;
             }
-            .icons {
+            .icon {
               font-size: 1.2rem;
               font-weight: 100;
-              .copy-icon:hover {
-                color: rgb(197, 194, 194);
-              }
-              .copy-icon:active {
-                color: white;
-              }
-              .copy-icon {
-                position: relative;
-              }
             }
           }
         }
@@ -498,19 +420,8 @@ $header-menu-text-color: #9298a5;
           position: absolute;
           border-bottom: 10px solid #9298a5;
           border-right: 10px solid transparent;
-          left: 20%;
-          top: 10px;
-          //display: none;
-        }
-
-        .ether-hover::before {
-          content: "";
-          position: absolute;
-          border-bottom: 10px solid #9298a5;
-          border-left: 10px solid transparent;
-          right: 40%;
-          top: 10px;
-          display: none;
+          left: 5%;
+          bottom: 100%;
         }
         .ethereum {
           flex-grow: 1;
@@ -521,9 +432,9 @@ $header-menu-text-color: #9298a5;
         .ethereum:hover {
           .ether-hover {
             display: flex;
+            align-items: center;
           }
         }
-
         .smartchain {
           flex-grow: 1;
           max-width: 38%;
@@ -534,8 +445,6 @@ $header-menu-text-color: #9298a5;
             font-weight: 300;
             padding: 4px 5px;
           }
-
-          // font-size: 30px;
         }
         .btn {
           width: 100%;
@@ -546,23 +455,15 @@ $header-menu-text-color: #9298a5;
     .logo {
       padding: 0.5rem 0.5rem 0.5rem 2rem;
       display: flex;
-      // max-width: 15vw;
-      //max-height: 100%;
       justify-content: flex-end;
       align-items: center;
-      //flex-grow: 1;
+      border-radius: 20px;
       background: linear-gradient(
         89.31deg,
         #09858b -100%,
         rgba(40, 47, 66, 0) 100%
       );
-      border-radius: 20px;
-
       img {
-        //flex-grow: 1;
-
-        // max-height: fit-content;
-        // max-width: fit-content;
         width: 100%;
         height: 100%;
       }
@@ -571,8 +472,6 @@ $header-menu-text-color: #9298a5;
 
   .content {
     width: 100%;
-    //max-height: max-content;
-
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -582,94 +481,53 @@ $header-menu-text-color: #9298a5;
     column-gap: 2rem;
     .LyaTokenDescription {
       min-width: 30%;
-      //flex-grow: 1;
-      //flex-shrink: 0;
       text-align: left;
-
-      .icon {
-        //width: min-content;
-
-        // img{
-        //   width: 50%;
-        //   height: 50%;
-        // }
-      }
-
       .title {
-        //width: min-content;
         padding: 1rem 0 0.8rem 0;
         font-weight: 600;
-        //font-size: ;
         color: #ebebeb;
       }
       .text {
         font-weight: 300;
-        //font-size: 20px;
-
         color: #898d92;
-
         width: 100%;
       }
     }
   }
 }
 
-.btn:hover {
-  // border-color: white;
-  //olor: white;
-}
-
-// .exchange {
-// }
-
-// .contract {
-// }
-
 //////////////////////////////////////////////////////////////INSIGNIA Page  //////////////////
-///
-///
-///
 .insigniaNFT-page {
-  //flex-grow: 1;
   display: grid;
   grid-template-columns: 7fr 9fr 1fr 3fr;
   grid-template-rows: 65% 3% 32%;
-  //position: relative;
   height: 480px;
   width: 100%;
-
   font-family: "Alatsi";
   font-weight: 400;
-
   .Huralya-Squirrel {
     height: 100%;
     grid-column: 1/3;
     grid-row: 1/4;
     position: relative;
-
     .background-img {
       width: 100%;
       height: 100%;
       object-fit: fill;
       z-index: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
     }
     .content {
       width: 100%;
-      z-index: 1;
+      position: absolute;
       padding: 20px 3.5rem 20px 20px;
-
+      top: 0;
+      left: 0;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: left;
-      //z-index: 2;
       text-align: left;
-
       /* width */
       ::-webkit-scrollbar {
         width: 0.2rem;
@@ -689,32 +547,26 @@ $header-menu-text-color: #9298a5;
         border-radius: 20px;
       }
       /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        // background: #b30000;
-      }
+
 
       .title {
         color: #e29b1d;
         padding: 0.6rem;
-        z-index: 1;
       }
       .desc1 {
         color: #cfd5dc;
         padding: 0.6rem;
-        z-index: 1;
       }
       .desc2 {
         color: #cfd5dc;
         font-size: 0.8rem;
         padding: 0.6rem;
-        z-index: 1;
       }
       .scrollable-section {
         padding: 20px;
         height: 70%;
         background-color: rgba(62, 70, 91, 0.54);
         border-radius: 20px;
-        z-index: 1;
       }
       .scroll {
         height: 100%;
@@ -794,7 +646,6 @@ $header-menu-text-color: #9298a5;
       z-index: 0;
     }
     .content {
-      //position: absolute;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -829,7 +680,6 @@ $header-menu-text-color: #9298a5;
         justify-content: center;
         align-items: center;
         column-gap: 3px;
-        //z-index: 2;
 
         .mint-btn {
           background-color: #181c27;
@@ -855,7 +705,6 @@ $header-menu-text-color: #9298a5;
         font-size: 12px;
         flex-grow: 1;
         color: #979b9f;
-        // z-index: 2;
         .icon {
           color: #e2641d;
         }
@@ -863,9 +712,7 @@ $header-menu-text-color: #9298a5;
     }
   }
 
-  //
   .circulate-supply {
-    // height: 100%;
     grid-column: 3/5;
     grid-row: 3/4;
     overflow-x: visible;
@@ -894,7 +741,6 @@ $header-menu-text-color: #9298a5;
       justify-content: space-between;
       align-items: stretch;
       padding: 20px 20px 20px 30px;
-
       line-height: 18px;
       font-size: 13px;
       color: #979b9f;
@@ -908,8 +754,6 @@ $header-menu-text-color: #9298a5;
 }
 
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
-///
-
 //   $bp-xsmall: 37.5em; // 600px
 // $bp-small: 48em; // 768px
 // $bp-medium: 64em; // 1024px
@@ -927,8 +771,10 @@ $header-menu-text-color: #9298a5;
   .Container {
     margin: 0 30%;
   }
-  .footer-content {
-    margin: 0 30%;
+  .footer {
+    .footer-content {
+      margin: 0 30%;
+    }
   }
 }
 
@@ -939,8 +785,10 @@ $header-menu-text-color: #9298a5;
   .Container {
     margin: 0 25%;
   }
-  .footer-content {
-    margin: 0 25%;
+  .footer {
+    .footer-content {
+      margin: 0 25%;
+    }
   }
 }
 
@@ -951,8 +799,10 @@ $header-menu-text-color: #9298a5;
   .Container {
     margin: 0 18%;
   }
-  .footer-content {
-    margin: 0 18%;
+  .footer {
+    .footer-content {
+      margin: 0 18%;
+    }
   }
 }
 @media only screen and #{$mq-large} {
@@ -962,8 +812,10 @@ $header-menu-text-color: #9298a5;
   .Container {
     margin: 0 10%;
   }
-  .footer-content {
-    margin: 0 8%;
+  .footer {
+    .footer-content {
+      margin: 0 8%;
+    }
   }
 
   .insigniaNFT-page {
@@ -971,7 +823,6 @@ $header-menu-text-color: #9298a5;
       .content {
         font-size: 0.8rem;
         padding: 1rem 7% 1rem 10%;
-        //padding-left: 1.2rem;
       }
     }
   }
@@ -983,21 +834,23 @@ $header-menu-text-color: #9298a5;
   }
   .Container {
     margin: 0 6%;
-    //padding-bottom: 3rem;
   }
-  .footer-content {
-    margin: 0 5%;
-    .join {
-      .btn {
-        max-width: 10vw;
+  .footer {
+    .footer-content {
+      margin: 0 5%;
+      .join {
+        .btn {
+          max-width: 10vw;
+        }
       }
     }
   }
 
-  //////////////////////////////////////////////////////////////LyaTokenPage//////
-  .lyatoken-page .top {
-    .logo {
-      padding: 0;
+  .lyatoken-page {
+    .top {
+      .logo {
+        padding: 0;
+      }
     }
   }
 
@@ -1021,27 +874,16 @@ $header-menu-text-color: #9298a5;
 
   .genesis-page {
     .content {
-      // height: 100%;
-
       .center {
         position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
-        //height: 100%;
         top: 0;
-        //height: fit-content;
-        // row-gap: 3rem;
         left: 20%;
-
-        .explore-btn {
-        }
-        .sector-btn {
-        }
       }
       .right {
-        //align-self: flex-end;
         position: absolute;
         right: 5%;
         bottom: 0;
@@ -1063,18 +905,22 @@ $header-menu-text-color: #9298a5;
     margin: 0 4%;
   }
   .footer {
-    // position: static;
     .footer-content {
       margin: 0 4%;
+      .join {
+        .btn {
+          max-width: 10vw;
+        }
+      }
     }
   }
-
-  .footer-content .join {
-    .btn {
-      max-width: 10vw;
+  .lyatoken-page {
+    .top {
+      .logo {
+        display: none;
+      }
     }
   }
-
   .header-content {
     .mobile-menu-btn {
       display: block;
@@ -1129,6 +975,7 @@ $header-menu-text-color: #9298a5;
         }
       }
     }
+
     .show {
       opacity: 1;
       z-index: 2;
@@ -1139,54 +986,26 @@ $header-menu-text-color: #9298a5;
     }
   }
 
-  //////////////////////////////////////////////////////////////LyaTokenPage//////
-  ///
-  .lyatoken-page .top {
-    .logo {
-      display: none;
-    }
-    .contract-address {
-      .contract {
-        .ether-hover::after {
-          display: none;
-        }
-        .ether-hover::before {
-          display: flex;
-        }
-        .ether-hover {
-          left: -80%;
-        }
-      }
-    }
-  }
-
-  ////////////////////////////////////////////////////////////////////////////InsigniaNFT Page
+  //////////////////////////////////////////InsigniaNFT Page////////////////////
   .insigniaNFT-page {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
     height: auto;
-    //min-height: 100%;
-
     .Huralya-Squirrel {
       width: 100%;
       height: 100%;
       min-height: 80vh;
-      //min-height: fit-content;
       .background-img {
         width: 100%;
         height: 100%;
         object-fit: fill;
         z-index: 0;
       }
-      .content {
-      }
     }
 
     .min {
-      //height: 100%;
       width: 100%;
-
       max-height: 70vh;
       overflow-x: unset;
       position: relative;
@@ -1195,7 +1014,6 @@ $header-menu-text-color: #9298a5;
       .background-img {
         width: 100%;
         position: static;
-        //height: 100%;
         object-fit: fill;
         z-index: 0;
       }
@@ -1212,13 +1030,8 @@ $header-menu-text-color: #9298a5;
 
         .cat-img {
           flex-grow: 0;
-          img {
-          }
         }
-
         .bottoms {
-          // flex-grow: 0;
-          // align-self:unset;
           padding: 0 20%;
         }
         .text {
@@ -1230,9 +1043,6 @@ $header-menu-text-color: #9298a5;
     .circulate-supply {
       height: 100%;
       width: 100%;
-      //display: flex;
-      // grid-column: 3/5;
-      // grid-row: 1/2;
       overflow-x: unset;
       position: relative;
       .background-img {
@@ -1256,15 +1066,10 @@ $header-menu-text-color: #9298a5;
 
         line-height: 2rem;
         font-size: 1.2rem;
-        // > div div {
-        //   flex-grow: 1;
-        //   display: flex;
-        //   justify-content: space-between;
-        // }
       }
     }
   }
-  //////////////////////////////////////////////////////////////genesis Page
+  ////////////////////////////////////////////GENESIS Page/////////////////
   .genesis-page {
     .content {
       height: 90%;
@@ -1276,7 +1081,6 @@ $header-menu-text-color: #9298a5;
         left: 15%;
       }
       .right {
-        //align-self: flex-end;
         position: absolute;
         right: 5%;
         bottom: 0;
@@ -1294,14 +1098,6 @@ $header-menu-text-color: #9298a5;
     height: max-content;
     min-height: fit-content;
     margin-bottom: 2rem;
-
-    .about-desc {
-      .desc-icons {
-        width: 100%;
-        margin: 0;
-      }
-    }
-
     .bottom-section {
       padding-top: 1rem;
       position: relative;
@@ -1325,13 +1121,6 @@ $header-menu-text-color: #9298a5;
             flex-direction: column;
             align-items: stretch;
             row-gap: 10px;
-            .btns {
-              // flex-direction: column;
-
-              .btn {
-                //  max-width: 100%;
-              }
-            }
           }
         }
         .team {
@@ -1356,25 +1145,6 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
-
-  /////////////////////////////////////////////Mint Page///////////////
-  ///
-  ///
-
-  .mint {
-    flex-wrap: wrap;
-    height: auto;
-    min-height: max-content;
-    .Huralya-Squirrel {
-      width: 100%;
-      height: auto;
-      max-height: fit-content;
-    }
-    .buy-sell {
-      width: 100%;
-      height: auto;
-    }
-  }
 }
 
 @media only screen and #{$mq-xsmall} {
@@ -1388,47 +1158,19 @@ $header-menu-text-color: #9298a5;
     margin: 0 5%;
   }
   .footer {
-    //position:static;
-  }
-  .footer-content {
-    margin: 0 5%;
-  }
-
-  .Container {
-    // padding-bottom: 1rem;
+    .footer-content {
+      margin: 0 5%;
+    }
   }
 
-  /////////////////////////////////////////////////////////////////LyaToken Page//////////
+  //////////////////////////////////////////////lyaToken Page//////////////////
   .lyatoken-page {
     flex-wrap: wrap;
     .top {
       flex-wrap: wrap;
       row-gap: 10px;
-      .exchanges {
-        .exchange {
-          .pancakeswap {
-            max-width: 32%;
-          }
-          flex-wrap: wrap;
-          row-gap: 10px;
-          .btn {
-            font-family: "Alatsi";
-          }
-        }
-      }
-
-      .contract-address {
-        .contract {
-          .ether-hover {
-            left: -8%;
-          }
-          .ether-hover::after {
-            display: block;
-          }
-          .ether-hover::before {
-            display: none;
-          }
-        }
+      .btn {
+        font-family: "Alatsi";
       }
 
       .smartchain {
@@ -1436,9 +1178,17 @@ $header-menu-text-color: #9298a5;
           font-family: "Bahnschrift";
         }
       }
-
       .logo {
         padding: 0;
+      }
+      .exchanges {
+        .exchange {
+          .pancakeswap {
+            max-width: 32%;
+          }
+          flex-wrap: wrap;
+          row-gap: 10px;
+        }
       }
     }
     .content {
@@ -1447,126 +1197,118 @@ $header-menu-text-color: #9298a5;
       padding-top: 1rem;
     }
   }
+  .header {
+    .header-content {
+      z-index: 3;
 
-  .header-content {
-    z-index: 3;
-
-    .mobile-menu-btn {
-      display: block;
-    }
-
-    .header-login {
-      .login-btn {
-        // font-size: 0.8rem;
+      .mobile-menu-btn {
+        display: block;
       }
-    }
 
-    .header-menu {
-      white-space: nowrap;
-      z-index: -1;
-      opacity: 0;
-      padding: 8px;
-      border-radius: 12px;
-      -webkit-transform: translate3d(0, 8px, 0);
-      transform: translate3d(0, 8px, 0);
-      -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%), 0 12px 12px rgb(0 0 0 / 5%),
-        0 24px 24px rgb(0 0 0 / 5%);
-      box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
-        0 24px 24px #0000000d;
-      -webkit-transition: opacity 0.8s var(--ease-quart),
-        -webkit-transform 0.6s var(--ease-quart);
-      transition: opacity 0.8s var(--ease-quart),
-        -webkit-transform 0.6s var(--ease-quart);
-      -o-transition: opacity 0.8s var(--ease-quart),
-        transform 0.6s var(--ease-quart);
-      transition: opacity 0.8s var(--ease-quart),
-        transform 0.6s var(--ease-quart);
-      transition: opacity 0.8s var(--ease-quart),
-        transform 0.6s var(--ease-quart),
-        -webkit-transform 0.6s var(--ease-quart);
-      position: fixed;
-
-      bottom: 15%;
-      left: -100%;
-      background-color: $header-background-color;
-
-      .menu {
-        padding: 0;
-        flex-direction: column;
-        align-items: stretch;
-        li {
-          padding: 0;
+      .header-login {
+        .login-btn {
+          font-size: 0.8rem;
         }
-        .item {
-          padding: 20px 10px;
-          width: 100%;
-          flex-direction: row;
-          justify-content: stretch;
-          column-gap: 10px;
-          font-size: 1.2rem;
-          border-radius: 10px;
-          img {
+      }
+
+      .header-menu {
+        white-space: nowrap;
+        z-index: -1;
+        opacity: 0;
+        padding: 8px;
+        border-radius: 12px;
+        -webkit-transform: translate3d(0, 8px, 0);
+        transform: translate3d(0, 8px, 0);
+        -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
+          0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
+        box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
+          0 24px 24px #0000000d;
+        -webkit-transition: opacity 0.8s var(--ease-quart),
+          -webkit-transform 0.6s var(--ease-quart);
+        transition: opacity 0.8s var(--ease-quart),
+          -webkit-transform 0.6s var(--ease-quart);
+        -o-transition: opacity 0.8s var(--ease-quart),
+          transform 0.6s var(--ease-quart);
+        transition: opacity 0.8s var(--ease-quart),
+          transform 0.6s var(--ease-quart);
+        transition: opacity 0.8s var(--ease-quart),
+          transform 0.6s var(--ease-quart),
+          -webkit-transform 0.6s var(--ease-quart);
+        position: fixed;
+
+        bottom: 15%;
+        left: -100%;
+        background-color: $header-background-color;
+
+        .menu {
+          padding: 0;
+          flex-direction: column;
+          align-items: stretch;
+          li {
             padding: 0;
+          }
+          .item {
+            padding: 20px 10px;
+            width: 100%;
+            flex-direction: row;
+            justify-content: stretch;
+            column-gap: 10px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            img {
+              padding: 0;
+            }
           }
         }
       }
-    }
 
-    .show {
-      opacity: 1;
-      z-index: 2;
-      pointer-events: auto;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translateZ(0);
-      left: 5%;
-    }
-  }
-
-  .footer-content {
-    flex-direction: column;
-    //align-items: stretch;
-    padding-top: 0.5rem;
-    .social-icons ul {
-      column-gap: 20px;
-    }
-    .join {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      width: 100%;
-
-      .btn {
-        //max-width: vw;
-        flex-grow: 0;
-        max-width: 100vw;
-        font-size: 1rem;
-        //width: 100px;
-        padding: 10px 20px;
-        margin-bottom: 5px;
-      }
-      .btn:hover {
-        // border-color: white;
-        //  color: white;
+      .show {
+        opacity: 1;
+        z-index: 2;
+        pointer-events: auto;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translateZ(0);
+        left: 5%;
       }
     }
   }
+  .footer {
+    .footer-content {
+      flex-direction: column;
+      padding-top: 0.5rem;
+      .social-icons ul {
+        column-gap: 20px;
+      }
+      .join {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
 
+        .btn {
+          flex-grow: 0;
+          max-width: 100vw;
+          font-size: 1rem;
+          padding: 10px 20px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+//////////////////////////////////////////////////insignia page//////////////
   .insigniaNFT-page {
     .Huralya-Squirrel {
       .content {
         padding: 0.8rem;
-
         .scrollable-section {
           padding: 10px;
           margin-right: 3%;
-
           border-radius: 20px;
         }
         .scroll {
           padding-right: 10px;
           .section {
             justify-content: space-between;
-
             .title {
               color: #dddedf;
               min-width: fit-content;
@@ -1575,8 +1317,6 @@ $header-menu-text-color: #9298a5;
             }
             .text {
               padding: 0.3rem 0.5rem;
-              .icon {
-              }
             }
           }
           .plan-section {
@@ -1600,7 +1340,7 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
-
+/////////////////////////////////////////////GENESIS page////////////////
   .genesis-page {
     .content {
       height: 90%;
@@ -1622,17 +1362,11 @@ $header-menu-text-color: #9298a5;
         left: 10%;
         row-gap: 0;
         .title {
-          //font-size: 1.4rem;
-
           .text {
             display: flex;
             flex-wrap: wrap;
             row-gap: 1rem;
-
-            //line-height: 4rem;
             .text-right {
-              // padding-left: 0.5rem;
-
               img {
                 width: 50%;
                 left: 30%;
@@ -1650,14 +1384,9 @@ $header-menu-text-color: #9298a5;
         }
       }
       .right {
-        //align-self: flex-end;
         position: absolute;
         right: 5%;
         bottom: 0;
-        img {
-        }
-        div {
-        }
       }
     }
   }
@@ -1666,7 +1395,7 @@ $header-menu-text-color: #9298a5;
   .about-us {
     height: auto;
     min-height: fit-content;
-    //padding-bottom: 1rem;
+    padding-bottom: 12rem;
     .about-desc {
       height: auto;
     }
@@ -1693,13 +1422,6 @@ $header-menu-text-color: #9298a5;
             flex-direction: column;
             align-items: stretch;
             row-gap: 10px;
-            .btns {
-              // flex-direction: column;
-
-              .btn {
-                //  max-width: 100%;
-              }
-            }
           }
         }
         .team {
@@ -1724,28 +1446,4 @@ $header-menu-text-color: #9298a5;
       }
     }
   }
-
-  /////////////////////////////////////////////Mint Page///////////////
-
-
-  .mint {
-    flex-wrap: wrap;
-    height: auto;
-    min-height: max-content;
-    .Huralya-Squirrel {
-      width: 100%;
-      height: auto;
-      max-height: fit-content;
-      .content{
-        padding: 0;
-      }
-    }
-    .buy-sell {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-
-
 }

@@ -34,10 +34,12 @@
       text-align: left;
 
       /* width */
+     
       ::-webkit-scrollbar {
         width: 0.2rem;
         max-height: 50%;
       }
+
       /* Track */
       ::-webkit-scrollbar-track {
         //box-shadow: inset 0 0 5px grey;
@@ -52,9 +54,6 @@
         border-radius: 20px;
       }
       /* Handle on hover */
-      ::-webkit-scrollbar-thumb:hover {
-        // background: #b30000;
-      }
 
       .title {
         color: #e29b1d;
@@ -78,9 +77,11 @@
         background-color: rgba(62, 70, 91, 0.54);
         border-radius: 20px;
         z-index: 1;
+
       }
       .scroll {
         height: 100%;
+
         overflow-y: auto;
         padding-right: 20px;
         .section {
