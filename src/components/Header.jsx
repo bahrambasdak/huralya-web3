@@ -6,6 +6,7 @@ import menuIcon3 from "../img/menu_icon3.svg";
 import menuIcon4 from "../img/menu_icon4.svg";
 import { ImMenu3, ImMenu4 } from "react-icons/im";
 import { useState } from "react";
+import Logo1 from "./svgComponent/Logo";
 
 const Header = ({ toggleMenu, showMenu }) => {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -33,6 +34,7 @@ const Header = ({ toggleMenu, showMenu }) => {
             width={109}
             height={41}
           />
+          {/* <Logo1 className="logo-img"/> */}
         </div>
         {!loggedIn ? (
           <div className={`header-menu ${showMenu ? "show" : ""}`}>

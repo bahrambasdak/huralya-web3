@@ -1,4 +1,5 @@
 import { AiOutlinePlus } from "react-icons/ai";
+import InsigniaPageLeftBg from "./svgComponent/InsigniaPageLeftBg";
 
 const HuralyaSquirrel = ({ huralya_squirrel_left }) => {
   return (
@@ -12,6 +13,8 @@ const HuralyaSquirrel = ({ huralya_squirrel_left }) => {
           height={480}
         />
       )}
+
+      {/* <InsigniaPageLeftBg className="background-img"/> */}
       <div className="content">
         <h3 className="title">Huralya Squirrel</h3>
         <p className="desc1">Squirrel NFTs are a way to invest in Huralya</p>

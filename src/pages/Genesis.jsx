@@ -6,10 +6,23 @@ import genesis_logo from "../img/genesis_logo.svg";
 import btn_logo from "../img/genesis_btn_logo.svg";
 import genesis_trailer from "../img/genesis_trailer.svg";
 import sector_btn from "../img/genesis_sector_btn.svg";
+import GenesisBgSvg from "../components/svgComponent/GenesisBgSvg";
+import GenesisTrailerBgSvg from "../components/svgComponent/GenesisTrailerBgSvg";
+//import Convert from 'convert-svg-react';
+import { useState } from "react";
+import { useEffect } from "react";
+import GenesisTrailerSvg from "../components/svgComponent/GenesisTrailerSvg";
 const Genesis = () => {
+  const [genesisBgSvg , setGenesisBgSvg]= useState('');
+  useEffect(()=>{
+    //Convert(genesis_background).then(svg=>setGenesisBgSvg(svg))
+  },[])
   return (
     <div className="genesis-page">
-      <img src={genesis_background} alt="" className="background-img" width={1100} height={445}/>
+
+      {/* <img src={genesis_background} alt="" className="background-img" width={1100} height={445}/> */}
+      <div className="background-img"><GenesisBgSvg  /></div>
+      
 
       <div className="content">
         <div className="left">
@@ -45,6 +58,8 @@ const Genesis = () => {
 
         <div className="right">
           <img src={genesis_trailer} alt="" width={150} height={155}/>
+{/* <GenesisTrailerBgSvg/>
+          <GenesisTrailerSvg className="trailer-svg"/> */}
           <div>
             <button></button>
             <p>watch trailer</p>

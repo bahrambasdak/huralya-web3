@@ -1,6 +1,7 @@
 import { Route } from "react-router";
 import { Routes } from "react-router-dom";
 import AboutUs from "../pages/AboutUs";
+import Dashboard from "../pages/Dashboard";
 import Genesis from "../pages/Genesis";
 import InsigniaNFT from "../pages/InsigniaNFT";
 import LyaToken from "../pages/LyaToken";
@@ -15,6 +16,7 @@ const Container = () => {
         <Route path="/genesis" element={<Genesis />}></Route>
         <Route path="/aboutus" element={<AboutUs />}></Route>
         <Route path="/mint" element={<Mint />}></Route>
+        <Route path="/dashboard" element={<Dashboard />}></Route>
 
         <Route path="/" element={<LyaToken />}></Route>
       </Routes>
