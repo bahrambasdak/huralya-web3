@@ -1,6 +1,23 @@
+// Breakpoints
+$bp-xsmall: 37.5em; // 600px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+
 .dashboardPage {
   width: 100%;
-  height: 480px;
+  height: 530px;
   row-gap: 10px;
   display: flex;
   flex-direction: column;
@@ -47,7 +64,7 @@
         justify-content: space-between;
         align-items: stretch;
         color: #bdc3cc;
-        flex-grow: 1;
+        //flex-grow: 1;
         > div {
           padding: 10px;
         }
@@ -259,59 +276,264 @@
         }
       }
 
-
-      .referral{
+      .referral {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        .content{
-   display: flex;
-   font-size: 15px;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   padding: 10px;
-   justify-self: stretch;
-   flex-grow: 1;
-   row-gap: 2px;
-   button{
-    margin-top: 3px;
-    padding: 3px 15px;
-    color: #CFD5DC;
-   }
+        .content {
+          display: flex;
+          font-size: 15px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          justify-self: stretch;
+          flex-grow: 1;
+          row-gap: 2px;
+          button {
+            margin-top: 3px;
+            padding: 3px 15px;
+            color: #cfd5dc;
+          }
         }
-        .refCode{
+        .refCode {
           width: 100%;
-   display: flex;
-   justify-content: center;
-   padding: 10px 10px;
-   column-gap: 5px;
+          display: flex;
+          justify-content: center;
+          padding: 10px 10px;
+          column-gap: 10px;
           background: rgba(62, 70, 91, 0.37);
           font-size: 13px;
-          
+          span {
+            cursor: pointer;
+            font-size: 15px;
+          }
+          span:hover {
+            color: white;
+          }
+          span:active {
+            color: #099098;
+          }
         }
-
       }
-
-
-    ::-webkit-scrollbar {
-      width: 0.2rem;
-      max-height: 50%;
-    }
-
     }
   }
 
   .nft {
     width: 100%;
     height: 50%;
-   background-color: #282F42;
-    background: linear-gradient(90.05deg, #099098 10%, rgba($color: #282F42, $alpha: 1) 20% , #282F42 100%);
-  
+    overflow: hidden;
+    font-size: 12px;
+    //background-color: #282f42;
+    background: linear-gradient(
+      90.05deg,
+      rgba($color: #099098, $alpha: 0.5) 0%,
+      10%,
+      rgba($color: #282f42, $alpha: 1) 100%
+    );
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
 
+    ::-webkit-scrollbar {
+      width: 0.2rem;
+      max-height: 50%;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: linear-gradient(0deg, #898d92, #898d92),
+        linear-gradient(0deg, #898d92, #898d92), #898d92;
+      border-radius: 20px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(0deg, #cfd5dc, #cfd5dc),
+        linear-gradient(0deg, #898d92, #898d92), #898d92;
+      border-radius: 20px;
+    }
+
+    .leftBtns {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-grow: 1;
+      width: 20%;
+      row-gap: 20px;
+      .btnHeader {
+        background: linear-gradient(
+          90.05deg,
+          #099098 -44.6%,
+          rgba(32, 36, 57, 0) 111.8%
+        );
+        width: 100%;
+        height: 15%;
+        background: rgba(62, 70, 91, 0.28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btns {
+        width: 100%;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        padding-left: 20px;
+        align-items: center;
+        height: 60%;
+        row-gap: 5px;
+        button {
+          //max-width: 50%;
+          flex-grow: 1;
+          min-width: 70%;
+          max-width: 90%;
+          color: #cfd5dc;
+        }
+      }
+    }
+
+    .nftPocket {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      row-gap: 20px;
+      flex-grow: 1;
+      width: 35%;
+      position: relative;
+      .nftHeader {
+        width: 100%;
+        height: 15%;
+        background: rgba(62, 70, 91, 0.28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .users {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        column-gap: 5px;
+        padding: 10px;
+        padding-right: 20px;
+        height: 70%;
+        position: relative;
+        background-image: linear-gradient(
+          transparent 90%,
+          rgba(141, 138, 138, 0.72) 30%
+        );
+        background-position: right;
+        background-size: 1px 10px;
+        background-repeat: repeat-y;
+
+        :first-child {
+          // padding-bottom: 20px;
+        }
+        > div {
+          background-color: #384055;
+          border-radius: 15px;
+          position: relative;
+          height: 80%;
+          //padding: 5px;
+          .name {
+            position: absolute;
+            background: #595f71;
+            border-radius: 10px;
+            padding: 2px 5px;
+          }
+          img {
+            width: 100%;
+            height: 85%;
+          }
+          .userDesc {
+            //background: #554438;
+            font-size: 10px;
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+
+    .stakingR {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      flex-grow: 1;
+      width: 25%;
+      row-gap: 20px;
+      .stakingHeader {
+        width: 100%;
+        height: 15%;
+        background: rgba(62, 70, 91, 0.28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      > div {
+        padding: 10px 20px;
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+      }
+      .claimBtn {
+        color: white;
+        font-size: 18px;
+        display: flex;
+        width: 100%;
+        //justify-content: space-between;
+        align-items: center;
+        .btn {
+          padding: 0 10px;
+          margin-left: 20px;
+          font-size: 12px;
+          color: white;
+        }
+      }
+    }
+    .activities {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      flex-grow: 1;
+      width: 20%;
+      row-gap: 20px;
+      .activitesHeader {
+        width: 100%;
+        height: 15%;
+        background: rgba(62, 70, 91, 0.28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 10px;
+        .btn {
+          padding: 2px 10px;
+          font-size: 12px;
+          color: white;
+        }
+      }
+      .activitySection {
+        direction: rtl;
+        padding: 10px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 10px;
+        height: 70%;
+        p {
+          text-align: left;
+        }
+      }
+    }
   }
-//background-color: rgba($color: #000000, $alpha: 1.0);
+
   .dashboardFooter {
     width: 100%;
     height: 20%;
@@ -345,6 +567,13 @@
             padding: 5px 6px;
             border-radius: 7px;
             color: #9298a5;
+            cursor: pointer;
+          }
+          li:hover {
+            color: #ffff;
+          }
+          li:active {
+            color: #099098;
           }
         }
       }
@@ -353,7 +582,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content:stretch;
+      justify-content: stretch;
       row-gap: 3px;
       height: 100%;
 
@@ -361,8 +590,8 @@
         height: 35%;
         display: flex;
         justify-content: space-evenly;
-        
-        >span {
+
+        > span {
           //height: 100%;
           //width: 100%;
           img {
@@ -371,485 +600,161 @@
           }
         }
       }
-      :last-child{
-       // padding-top: 5px;
-       justify-self: flex-end;
+
+      .reserved {
+        padding-top: 10px;
       }
     }
+
     .footerRight {
-    }
-  }
-      .header-menu {
-        white-space: nowrap;
-
-        opacity: 0;
-        padding: 8px;
-        border-radius: 12px;
-        -webkit-transform: translate3d(0, 8px, 0);
-        transform: translate3d(0, 8px, 0);
-        -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
-          0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
-        box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
-          0 24px 24px #0000000d;
-        -webkit-transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        -o-transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        position: fixed;
-
-        bottom: 15%;
-        left: -100%;
-        background-color: $header-background-color;
-
-        .menu {
-          padding: 0;
-          flex-direction: column;
-          align-items: stretch;
-          li {
-            padding: 0;
-            .item {
-              padding: 20px 10px;
-              width: 100%;
-              flex-direction: row;
-              justify-content: stretch;
-              column-gap: 10px;
-              font-size: 1.2rem;
-              border-radius: 10px;
-              img {
-                padding: 0;
-              }
-            }
-          }
-        }
-      }
-
-      .show {
-        opacity: 1;
-        z-index: 2;
-        pointer-events: auto;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translateZ(0);
-        left: 5%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      column-gap: 20px;
+      > span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
       }
     }
   }
+}
 
-  //////////////////////////////////////////InsigniaNFT Page////////////////////
-  .insigniaNFT-page {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+///////////////////////////////RESPONSIVE///////////////////////////////////////////////
+//   $bp-xsmall: 37.5em; // 600px
+// $bp-small: 48em; // 768px
+// $bp-medium: 64em; // 1024px
+// $bp-large: 85.375em; // 1366px
+// $bp-xlarge: 120em; // 1920px
+// $bp-xxlarge: 160em; // 2560px
+
+@media only screen and #{$mq-retina} {
+}
+
+@media only screen and #{$mq-xxlarge} {
+}
+
+@media only screen and #{$mq-xlarge} {
+}
+@media only screen and #{$mq-large} {
+}
+
+@media only screen and #{$mq-medium} {
+}
+
+@media only screen and #{$mq-small} {
+  .dashboardPage {
     height: auto;
-    .Huralya-Squirrel {
-      width: 100%;
-      height: 100%;
-      min-height: 80vh;
-      .background-img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        z-index: 0;
-      }
-    }
+    .top {
+      height: max-content;
 
-    .min {
-      width: 100%;
-      max-height: 70vh;
-      overflow-x: unset;
-      position: relative;
-      text-align: center;
-      margin: 0 auto;
-      .background-img {
-        width: 100%;
-        position: static;
-        object-fit: fill;
-        z-index: 0;
-      }
-      .content {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 15px 15px 0px;
-
-        .cat-img {
-          flex-grow: 0;
-        }
-        .bottoms {
-          padding: 0 20%;
-        }
-        .text {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .circulate-supply {
-      height: 100%;
-      width: 100%;
-      overflow-x: unset;
-      position: relative;
-      .background-img {
-        width: 100%;
-        position: static;
-        height: 100%;
-        object-fit: fill;
-        z-index: 0;
-      }
-
-      .content {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 15% 10% 15% 18%;
-
-        line-height: 2rem;
-        font-size: 1.2rem;
-      }
-    }
-  }
-  ////////////////////////////////////////////GENESIS Page/////////////////
-  .genesis-page {
-    .content {
-      height: 90%;
-
-      .center {
-        position: absolute;
-        top: 0;
-        row-gap: 6rem;
-        left: 15%;
-      }
-      .right {
-        position: absolute;
-        right: 5%;
-        bottom: 0;
-        div {
-          position: absolute;
-          bottom: 70%;
-          left: 15%;
-        }
-      }
-    }
-  }
-
-  //////////////////////////////about-us-page///////////
-  .about-us {
-    height: max-content;
-    min-height: fit-content;
-
-    .about-desc {
-      height: auto;
-      width: 100%;
-      margin: 0;
-      .desc-icons {
-        width: 100%;
-        .item {
-        }
-      }
-    }
-    .bottom-section {
-      padding-top: 1rem;
-      position: relative;
-      height: auto;
-      min-height: fit-content;
-      .bottom-top {
-        flex-direction: column;
-        row-gap: 1rem;
+      .cards {
         height: auto;
-        .content {
-          row-gap: 10px;
-        }
-        .backers {
-          width: 100%;
-
-          .top {
-            flex-direction: column;
-            row-gap: 10px;
-          }
-          .buttons {
-            flex-direction: column;
-            align-items: stretch;
-            row-gap: 10px;
-          }
-        }
-        .team {
-          width: 90%;
-          row-gap: 20px;
-        }
-      }
-
-      .socials {
-        flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
         row-gap: 10px;
-        .btns {
-          flex-wrap: wrap;
-          row-gap: 10px;
-          column-gap: 5px;
-          .btn {
-            max-width: 35%;
-          }
-        }
-      }
-    }
-  }
-
-  /////////////////////////////////////////////mint Page//////////////
-  .mint {
-    .Huralya-Squirrel {
-      width: 70%;
-      .content {
-        padding: 10px 5px;
-        .scrollable-section {
-          padding: 10px;
-          .scroll {
-            padding-right: 0;
-          }
+        .card {
+          min-width: fit-content;
+          flex-grow: 1;
         }
       }
     }
 
-    .buy-sell {
-      width: 30%;
+    .nft {
+      flex-wrap: wrap;
+      height: auto;
+      .leftBtns {
+        // min-width: fit-content;
+        width: 50%;
+      }
+      .nftPocket {
+        width: 50%;
+      }
+      .stakingR {
+        width: 50%;
+        z-index: 1;
+      }
+      .activities {
+        width: 50%;
+        height: 50%;
+      }
+    }
+
+    .dashboardFooter {
+      height: auto;
+      flex-wrap: wrap;
+      min-height: fit-content;
+      //row-gap: 20px;
+
+      .footerLeft {
+        min-width: fit-content;
+        flex-grow: 1;
+        height: auto;
+        justify-content: center;
+        row-gap: 5px;
+      }
+      .footerCenter {
+        min-width: fit-content;
+        flex-grow: 1;
+        height: auto;
+      }
+
+      .footerRight {
+        min-width: fit-content;
+        //  flex-grow: 1;
+        height: auto;
+        // justify-content: center;
+      }
     }
   }
 }
 
 @media only screen and #{$mq-xsmall} {
-  .App {
-    padding-bottom: 9rem;
-  }
-  .header {
-    .header-content {
-      margin: 0 5%;
-    }
-  }
-  .Container {
-    margin: 0 5%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 5%;
-    }
-  }
-
   .dashboardPage {
-    height: auto;
-    .top {
+    .nft {
       flex-wrap: wrap;
-      row-gap: 10px;
-      .contract-address {
-        .contract {
-          .ether-hover {
-            left: -8%;
-          }
-          .ether-hover::after {
-            display: block;
-            left: 20%;
-          }
-          .ether-hover::before {
-            display: none;
-          }
-        }
-      }
-
-      .btn {
-        font-family: "Alatsi";
-      }
-
-      .smartchain {
-        .btn {
-          font-family: "Bahnschrift";
-        }
-      }
-      .logo {
-        padding: 0;
-      }
-      .exchanges {
-        .exchange {
-          .pancakeswap {
-            max-width: 32%;
-          }
-          flex-wrap: wrap;
-          row-gap: 10px;
-        }
-      }
-    }
-    .content {
-      flex-wrap: wrap;
-      row-gap: 3rem;
-      padding-top: 1rem;
-    }
-  }
-
-  .header {
-    .header-content {
-      //z-index: 3;
-
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      .header-menu {
-        white-space: nowrap;
-        padding: 8px;
-        border-radius: 12px;
-        -webkit-transform: translate3d(0, 8px, 0);
-        transform: translate3d(0, 8px, 0);
-        -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
-          0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
-        box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
-          0 24px 24px #0000000d;
-        -webkit-transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        -o-transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        position: fixed;
-
-        bottom: 15%;
-        left: -100%;
-        background-color: $header-background-color;
-
-        .menu {
-          padding: 0;
-          flex-direction: column;
-          align-items: stretch;
-          li {
-            padding: 0;
-            .item {
-              padding: 20px 10px;
-              width: 100%;
-              flex-direction: row;
-              justify-content: stretch;
-              column-gap: 10px;
-              font-size: 1.2rem;
-              border-radius: 10px;
-              img {
-                padding: 0;
-              }
-            }
-          }
-        }
-      }
-
-@media only screen and #{$mq-xlarge} {
-  .header {
-    .header-content {
-      margin: 0 18%;
-    }
-  }
-  }
-  .footer {
-    .footer-content {
-      flex-direction: column;
-      padding-top: 0.5rem;
-      .social-icons ul {
-        column-gap: 20px;
-      }
-      .join {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
+      height: auto;
+      .leftBtns {
+        // min-width: fit-content;
         width: 100%;
+      }
+      .nftPocket {
+        width: 100%;
+      }
+      .stakingR {
+        width: 100%;
+        z-index: 1;
+      }
+      .activities {
+        width: 100%;
+        height: 30%;
+      }
+    }
 
     .dashboardFooter {
-      height: auto;
-      flex-wrap: wrap;
-          }
-        }
-      }
-    }
+      row-gap: 20px;
 
-    .min {
-      .content {
-        display: flex;
-        .text {
-          padding-left: 2rem;
-        }
+      .footerLeft {
+        width: 100%;
+        flex-grow: 1;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
       }
-    }
-    .circulate-supply {
-      .content {
-        font-size: 1rem;
+      .footerCenter {
+        width: 100%;
+
       }
-    }
-  }
-  /////////////////////////////////////////////GENESIS page////////////////
-  .genesis-page {
-    .content {
-      height: 90%;
-      .left {
-        .icons {
-          .text {
-            left: 20%;
-            bottom: -2%;
-          }
-        }
-      }
-      .center {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        top: 0;
-        left: 10%;
-        row-gap: 0;
-        .title {
-          .text {
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 1rem;
-            .text-right {
-              img {
-                width: 50%;
-                left: 30%;
-                bottom: 70%;
-              }
-            }
-          }
+
+      .footerRight {
+        width: 100%;
+        >span{
+          text-align: left;
         }
 
-        .explore-btn {
-          padding-bottom: 7rem;
-        }
-        .sector-btn {
-          padding-right: 3rem;
-        }
-      }
-      .right {
-        position: absolute;
-        right: 5%;
-        bottom: 0;
       }
     }
   }
-
-
-
-
 }

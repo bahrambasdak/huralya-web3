@@ -4,6 +4,13 @@ import icon1 from "../img/dashboardPageIcon1.svg";
 import classes from "../styles/dashboardPage.module.scss"; //'dashboardPage.module.scss';
 import lyaLogo from "../img/lya_page_logo.svg";
 import chart from "../img/dashboardPageChart.svg";
+import userLogo from "../img/dashboardPageUserLogo.svg";
+import { BsWhatsapp } from "react-icons/bs";
+import { ImFacebook } from "react-icons/im";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
+import android_icon from "../img/genesis_android_icon.svg";
+import apple_icon from "../img/genesis_apple_icon.svg";
 const Dashboard = () => {
   return (
     <div className={classes.dashboardPage}>
@@ -28,7 +35,7 @@ const Dashboard = () => {
           <div className={`${classes.card} , ${classes.balance}`}>
             <div className={classes.gameBalance}>
               <div>game account Balance</div>
-              <div >
+              <div>
                 <span>2500 LYA</span>
                 <span>3000$</span>
               </div>
@@ -42,9 +49,11 @@ const Dashboard = () => {
           <div className={`${classes.card} , ${classes.wallet}`}>
             <div>
               <div className={classes.addr}>
-                <span ><img src={icon1} alt="" /></span>
-                <span >
-                  <div >
+                <span>
+                  <img src={icon1} alt="" />
+                </span>
+                <span>
+                  <div>
                     <span>From</span>
                     <span>wallet</span>
                   </div>
@@ -59,23 +68,24 @@ const Dashboard = () => {
                 <input type="text" />
               </div>
             </div>
-            <div><button className="btn">Confirm</button></div>
+            <div>
+              <button className="btn">Confirm</button>
+            </div>
           </div>
 
           <div className={`${classes.card} , ${classes.price}`}>
             <div className={classes.logo}>
-              <img src={lyaLogo} alt="" width={50} height={50}/>
+              <img src={lyaLogo} alt="" width={50} height={50} />
               <span>
                 <span>LYA Price</span>
                 <span>$1.2</span>
               </span>
             </div>
             <div className={classes.chart}>
-              <img src={chart} alt="" width={225} height={90}/>
+              <img src={chart} alt="" width={225} height={90} />
             </div>
             <div className={classes.marketCcap}>Market Cap: $12,500,000</div>
           </div>
-
 
           <div className={`${classes.card} , ${classes.referral}`}>
             <div className={classes.content}>
@@ -95,9 +105,136 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className={classes.nft}></div>
 
-      <div className={classes.dashboardFooter}></div>
+      <div className={classes.nft}>
+        <div className={classes.leftBtns}>
+          <div className={classes.btnHeader}></div>
+          <div className={classes.btns}>
+            <button className="btn">vitalize</button>
+            <button className="btn">stake</button>
+            <button className="btn">Gift</button>
+            <button className="btn">Gift</button>
+            <button className="btn">Gift</button>
+            <button className="btn">Gift</button>
+          </div>
+        </div>
+
+        <div className={classes.nftPocket}>
+          <div className={classes.nftHeader}>NFT Pocket</div>
+          <div className={classes.users}>
+            <div>
+              <div className={classes.name}>#3256</div>
+              <img src={userLogo} alt="" />
+              <div className={classes.userDesc}><span>age:45d</span> <span>mp:1</span> </div>
+            </div>
+            <div>
+              <div className={classes.name}>#3256</div>
+              <img src={userLogo} alt="" />
+              <p className={classes.userDesc}><span>age:45d</span> <span>mp:1</span></p>
+            </div>
+            <div>
+              <div className={classes.name}>#3256</div>
+              <img src={userLogo} alt="" />
+              <p className={classes.userDesc}><span>age:45d</span> <span>mp:1</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div className={classes.stakingR}>
+          <div className={classes.stakingHeader}>Staking Reward</div>
+          <div>
+          <div>Earn LYA by staking Squirrels</div>
+          <div className={classes.claimBtn}>
+            <p>240 LYA</p> <button className={`btn ${classes.btn}`}>Claim</button>
+          </div>
+          <div>You will be rewarded 30 LYA per month</div>
+          <div>Read the staking rules</div>
+          </div>
+        </div>
+
+        <div className={classes.activities}>
+          <div className={classes.activitesHeader}>
+            <p>Activities</p> <button className={`btn ${classes.btn}`}>Sort by</button>
+          </div>
+          <div className={classes.activitySection}>
+            <p> #3445 staked on 4/8/2022</p>
+            <p>login from new device</p>
+            <p>climed 125 LYA as staking reward</p>
+            <p>transfer 250 lya from g to w 3/7/2022</p>
+            <p>#3456 Unstaked on 5/9/2022</p>
+            <p>Earn 1 LYA per referral</p>
+            <p>Earn 1 LYA per referral</p>
+            <p>Earn 1 LYA per referral</p>
+            <p>Earn 1 LYA per referral</p>
+            <p>Earn 1 LYA per referral</p>
+            <p>Earn 1 LYA per referral</p>
+            <p>Earn 1 LYA per referral</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={classes.dashboardFooter}>
+        <div className={classes.footerLeft}>
+          <p>Whitepaper</p>
+          <p>Bug Bounty</p>
+          <div className="social-icons">
+            <ul>
+              <li className="icon">
+                <ImFacebook />
+              </li>
+              <li className="icon">
+                <AiOutlineTwitter />
+              </li>
+
+              <li className="icon">
+                <BsWhatsapp />
+              </li>
+              <li className="icon">
+                <FaLinkedinIn />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={classes.footerCenter}>
+          <div className={classes.icons}>
+            <span>
+              <img
+                src={android_icon}
+                alt=""
+                className="android-icon"
+                width={55}
+                height={55}
+              />
+            </span>
+            <span>
+              <img
+                src={apple_icon}
+                alt=""
+                className="apple-icon"
+                width={55}
+                height={55}
+              />
+            </span>
+          </div>
+          <div>learn how to earn...</div>
+          <div className={classes.reserved}>Huralya © 2022 , All rights reserved </div>
+        </div>
+
+        <div className={classes.footerRight}>
+          <span>
+            <div> tradable on</div>
+            <div>open sea - rarible</div>
+            <div>binance - kucoin</div>
+            <div>uniswap - pancakeswap</div>
+          </span>
+          <span>
+          <div></div>
+            <div> Customer Support</div>
+            <div>Terms & agreement</div>
+            <div>Privacy Policy</div>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
