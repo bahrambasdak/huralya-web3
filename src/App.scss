@@ -261,7 +261,7 @@ $header-menu-text-color: #9298a5;
 }
 
 ////////////////////////////////////////////     Footer    //////////////////////
-.footer {
+.App .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1280,146 +1280,146 @@ height: 90px;
   }
 
   //////////////////////////////////////////////lyaToken Page//////////////////
-  .lyatoken-page {
-    flex-wrap: wrap;
-    .top {
+    .Container .lyatoken-page {
       flex-wrap: wrap;
-      row-gap: 10px;
-      .contract-address {
-        .contract {
-          .ether-hover {
-            left: -8%;
-          }
-          .ether-hover::after {
-            display: block;
-            left: 20%;
-          }
-          .ether-hover::before {
-            display: none;
+      .top {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        .contract-address {
+          .contract {
+            .ether-hover {
+              left: -8%;
+            }
+            .ether-hover::after {
+              display: block;
+              left: 20%;
+            }
+            .ether-hover::before {
+              display: none;
+            }
           }
         }
-      }
-
-      .btn {
-        font-family: "Alatsi";
-      }
-
-      .smartchain {
+  
         .btn {
-          font-family: "Bahnschrift";
+          font-family: "Alatsi";
         }
-      }
-      .logo {
-        padding: 0;
-      }
-      .exchanges {
-        .exchange {
-          .pancakeswap {
-            max-width: 32%;
+  
+        .smartchain {
+          .btn {
+            font-family: "Bahnschrift";
           }
-          flex-wrap: wrap;
-          row-gap: 10px;
+        }
+        .logo {
+          padding: 0;
+        }
+        .exchanges {
+          .exchange {
+            .pancakeswap {
+              max-width: 32%;
+            }
+            flex-wrap: wrap;
+            row-gap: 10px;
+          }
         }
       }
-    }
-    .content {
-      flex-wrap: wrap;
-      row-gap: 3rem;
-      padding-top: 1rem;
-    }
-  }
-
-  .header {
-    .header-content {
-      //z-index: 3;
-
-      .mobile-menu-btn {
-        display: block;
+      .content {
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        padding-top: 1rem;
       }
-
-      .header-menu {
-        white-space: nowrap;
-        padding: 8px;
-        border-radius: 12px;
-        -webkit-transform: translate3d(0, 8px, 0);
-        transform: translate3d(0, 8px, 0);
-        -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
-          0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
-        box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
-          0 24px 24px #0000000d;
-        -webkit-transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        -o-transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        position: fixed;
-
-        bottom: 15%;
-        left: -100%;
-        background-color: $header-background-color;
-
-        .menu {
-          padding: 0;
-          flex-direction: column;
-          align-items: stretch;
-          li {
+    }
+  
+    .header {
+      .header-content {
+        //z-index: 3;
+  
+        .mobile-menu-btn {
+          display: block;
+        }
+  
+        .header-menu {
+          white-space: nowrap;
+          padding: 8px;
+          border-radius: 12px;
+          -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+          -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
+            0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
+          box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
+            0 24px 24px #0000000d;
+          -webkit-transition: opacity 0.8s var(--ease-quart),
+            -webkit-transform 0.6s var(--ease-quart);
+          transition: opacity 0.8s var(--ease-quart),
+            -webkit-transform 0.6s var(--ease-quart);
+          -o-transition: opacity 0.8s var(--ease-quart),
+            transform 0.6s var(--ease-quart);
+          transition: opacity 0.8s var(--ease-quart),
+            transform 0.6s var(--ease-quart);
+          transition: opacity 0.8s var(--ease-quart),
+            transform 0.6s var(--ease-quart),
+            -webkit-transform 0.6s var(--ease-quart);
+          position: fixed;
+  
+          bottom: 15%;
+          left: -100%;
+          background-color: $header-background-color;
+  
+          .menu {
             padding: 0;
-            .item {
-              padding: 20px 10px;
-              width: 100%;
-              flex-direction: row;
-              justify-content: stretch;
-              column-gap: 10px;
-              font-size: 1.2rem;
-              border-radius: 10px;
-              img {
-                padding: 0;
+            flex-direction: column;
+            align-items: stretch;
+            li {
+              padding: 0;
+              .item {
+                padding: 20px 10px;
+                width: 100%;
+                flex-direction: row;
+                justify-content: stretch;
+                column-gap: 10px;
+                font-size: 1.2rem;
+                border-radius: 10px;
+                img {
+                  padding: 0;
+                }
               }
             }
           }
         }
-      }
-
-      .show {
-        opacity: 1;
-        z-index: 2;
-        pointer-events: auto;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translateZ(0);
-        left: 5%;
-      }
-    }
-  }
-  .footer {
-    .footer-content {
-      flex-direction: column;
-      padding-top: 0.5rem;
-      .social-icons ul {
-        column-gap: 20px;
-      }
-      .join {
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        width: 100%;
-
-        .btn {
-          flex-grow: 0;
-          max-width: 100vw;
-          font-size: 1rem;
-          padding: 10px 20px;
-          margin-bottom: 5px;
+  
+        .show {
+          opacity: 1;
+          z-index: 2;
+          pointer-events: auto;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translateZ(0);
+          left: 5%;
         }
       }
     }
-  }
-  //////////////////////////////////////////////////insignia page//////////////
+    .footer {
+      .footer-content {
+        flex-direction: column;
+        padding-top: 0.5rem;
+        .social-icons ul {
+          column-gap: 20px;
+        }
+        .join {
+          display: flex;
+          justify-content: center;
+          align-items: stretch;
+          width: 100%;
+  
+          .btn {
+            flex-grow: 0;
+            max-width: 100vw;
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    //////////////////////////////////////////////////insignia page//////////////
   .insigniaNFT-page {
     .Huralya-Squirrel {
       .content {
