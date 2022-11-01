@@ -11,8 +11,10 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import android_icon from "../img/genesis_android_icon.svg";
 import apple_icon from "../img/genesis_apple_icon.svg";
+import { useState } from "react";
+
 const Dashboard = () => {
-  const [users, setUser] = [
+  const [users, setUsers] = useState([
     {
       id: 1,
       name: "#3256",
@@ -45,8 +47,20 @@ const Dashboard = () => {
       img: userLogo,
       select: false,
     },
-  ];
-  const toggleSelect = (userId) => {};
+  ]);
+
+  const toggleSelect = (userId) => {
+    setUsers((prev) =>
+      prev.map((user) => {
+        const userSelect = user.select;
+        return {
+          ...user,
+          select: user.id === userId ? !userSelect : userSelect,
+        };
+      })
+    );
+  };
+
   return (
     <div className={classes.dashboardPage}>
       <div className={classes.top}>
@@ -148,29 +162,28 @@ const Dashboard = () => {
             <button className="btn">vitalize</button>
             <button className="btn">stake</button>
             <button className="btn">Gift</button>
-            <button className="btn">Gift</button>
-            <button className="btn">Gift</button>
-            <button className="btn">Gift</button>
           </div>
         </div>
 
         <div className={classes.nftPocket}>
           <div className={classes.nftHeader}>NFT Pocket</div>
           <div className={classes.users}>
-            <div>
-              <div className={classes.name}>#3256</div>
-              <img src={userLogo} alt="" />
-              <div className={classes.userDesc}><span>age:45d</span> <span>mp:1</span> </div>
-            </div>
-            <div>
-              <div className={classes.name}>#3256</div>
-              <img src={userLogo} alt="" />
-              <p className={classes.userDesc}><span>age:45d</span> <span>mp:1</span></p>
-            </div>
-            <div>
-              <div className={classes.name}>#3256</div>
-              <img src={userLogo} alt="" />
-              <p className={classes.userDesc}><span>age:45d</span> <span>mp:1</span></p>
+            <div className={classes.scrollSection}>
+              {users.map((user, key) => (
+                <div
+                  key={key}
+                  className={user.select ? classes.selected : ""}
+                  onClick={() => toggleSelect(user.id)}
+                >
+                  <div className={classes.name}>#3256</div>
+                  <div className={classes.img}>
+                    <img src={userLogo} alt="" />
+                  </div>
+                  <div className={classes.userDesc}>
+                    <span>age:45d</span> <span>mp:1</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -178,18 +191,20 @@ const Dashboard = () => {
         <div className={classes.stakingR}>
           <div className={classes.stakingHeader}>Staking Reward</div>
           <div>
-          <div>Earn LYA by staking Squirrels</div>
-          <div className={classes.claimBtn}>
-            <p>240 LYA</p> <button className={`btn ${classes.btn}`}>Claim</button>
-          </div>
-          <div>You will be rewarded 30 LYA per month</div>
-          <div>Read the staking rules</div>
+            <div>Earn LYA by staking Squirrels</div>
+            <div className={classes.claimBtn}>
+              <p>240 LYA</p>{" "}
+              <button className={`btn ${classes.btn}`}>Claim</button>
+            </div>
+            <div>You will be rewarded 30 LYA per month</div>
+            <div>Read the staking rules</div>
           </div>
         </div>
 
         <div className={classes.activities}>
           <div className={classes.activitesHeader}>
-            <p>Activities</p> <button className={`btn ${classes.btn}`}>Sort by</button>
+            <p>Activities</p>{" "}
+            <button className={`btn ${classes.btn}`}>Sort by</button>
           </div>
           <div className={classes.activitySection}>
             <p> #3445 staked on 4/8/2022</p>
@@ -252,7 +267,9 @@ const Dashboard = () => {
             </span>
           </div>
           <div>learn how to earn...</div>
-          <div className={classes.reserved}>Huralya © 2022 , All rights reserved </div>
+          <div className={classes.reserved}>
+            Huralya © 2022 , All rights reserved{" "}
+          </div>
         </div>
 
         <div className={classes.footerRight}>
@@ -263,7 +280,7 @@ const Dashboard = () => {
             <div>uniswap - pancakeswap</div>
           </span>
           <span>
-          <div></div>
+            <div></div>
             <div> Customer Support</div>
             <div>Terms & agreement</div>
             <div>Privacy Policy</div>

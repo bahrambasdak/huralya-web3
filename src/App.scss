@@ -62,7 +62,9 @@ $header-menu-text-color: #9298a5;
   padding-top: 6.2rem;
   font-family: "Bahnschrift";
   background-color: #161c26;
-  // overflow-y: hidden;
+  height: auto;
+
+  // overflow:visible;
   
 }
 
@@ -1287,7 +1289,8 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-xsmall} {
   .App {
-    padding-bottom: 9rem;
+    min-height: fit-content;
+    padding-bottom: 0;
     .header {
       .header-content {
         margin: 0 5%;
@@ -1295,6 +1298,7 @@ $header-menu-text-color: #9298a5;
     }
     .Container {
       margin: 0 5%;
+      padding-bottom: 9rem;
     }
     .footer {
       .footer-content {
