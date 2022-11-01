@@ -12,6 +12,41 @@ import { FaLinkedinIn } from "react-icons/fa";
 import android_icon from "../img/genesis_android_icon.svg";
 import apple_icon from "../img/genesis_apple_icon.svg";
 const Dashboard = () => {
+  const [users, setUser] = [
+    {
+      id: 1,
+      name: "#3256",
+      age: "45d",
+      mp: 1,
+      img: userLogo,
+      select: false,
+    },
+    {
+      id: 2,
+      name: "#3256",
+      age: "45d",
+      mp: 1,
+      img: userLogo,
+      select: false,
+    },
+    {
+      id: 3,
+      name: "#3256",
+      age: "45d",
+      mp: 1,
+      img: userLogo,
+      select: false,
+    },
+    {
+      id: 4,
+      name: "#3256",
+      age: "45d",
+      mp: 1,
+      img: userLogo,
+      select: false,
+    },
+  ];
+  const toggleSelect = (userId) => {};
   return (
     <div className={classes.dashboardPage}>
       <div className={classes.top}>
