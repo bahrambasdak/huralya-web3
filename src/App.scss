@@ -57,15 +57,18 @@ $header-menu-text-color: #9298a5;
   text-align: center;
   position: relative;
   min-height: 100vh;
-
+  position: relative;
   padding-bottom: 3rem;
   padding-top: 6.2rem;
   font-family: "Bahnschrift";
   background-color: #161c26;
+  // overflow-y: hidden;
+  
 }
 
 ///////////////////////////////////////////  Header   ////////////////////
-.header {
+
+.App .header {
   display: flex;
 
   max-width: 100%;
@@ -252,7 +255,7 @@ $header-menu-text-color: #9298a5;
   }
 }
 
-.Container {
+.App .Container {
   display: flex;
   margin: 0 30%;
   flex: 1 0 auto;
@@ -337,7 +340,7 @@ $header-menu-text-color: #9298a5;
 }
 
 /////////////////////////////////////////////////   LYA Page  ///////////////////
-.lyatoken-page {
+.Container .lyatoken-page {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -512,9 +515,9 @@ $header-menu-text-color: #9298a5;
     .LyaTokenDescription {
       min-width: 30%;
       text-align: left;
-      .icon{
-width: 106px;
-height: 90px;
+      .icon {
+        width: 106px;
+        height: 90px;
       }
       .title {
         padding: 1rem 0 0.8rem 0;
@@ -533,7 +536,7 @@ height: 90px;
 }
 
 //////////////////////////////////////////////////////////////INSIGNIA Page  //////////////////
-.insigniaNFT-page {
+.Container .insigniaNFT-page {
   display: grid;
   grid-template-columns: 7fr 9fr 1fr 3fr;
   grid-template-rows: 65% 3% 32%;
@@ -812,79 +815,93 @@ height: 90px;
 // $bp-xxlarge: 160em; // 2560px
 
 @media only screen and #{$mq-retina} {
-  .header {
-    .header-content {
+  .App {
+    .header {
+      .header-content {
+        margin: 0 30%;
+      }
+    }
+    .Container {
       margin: 0 30%;
     }
-  }
-  .Container {
-    margin: 0 30%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 30%;
+    .footer {
+      .footer-content {
+        margin: 0 30%;
+      }
     }
   }
+
 }
 
 @media only screen and #{$mq-xxlarge} {
-  .header {
-    .header-content {
+  .App{
+    .header {
+      .header-content {
+        margin: 0 25%;
+      }
+    }
+    .Container {
       margin: 0 25%;
     }
-  }
-  .Container {
-    margin: 0 25%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 25%;
-    }
-  }
-}
-
-@media only screen and #{$mq-xlarge} {
-  .header {
-    .header-content {
-      margin: 0 18%;
-    }
-  }
-  .Container {
-    margin: 0 18%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 18%;
-    }
-  }
-}
-@media only screen and #{$mq-large} {
-  .header {
-    .header-content {
-      max-width: 80%;
-      margin: 0 10%;
-    }
-  }
-  .Container {
-    margin: 0 10%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 8%;
-    }
-  }
-
-  .insigniaNFT-page {
-    .circulate-supply {
-      .content {
-        font-size: 0.8rem;
-        padding: 1rem 7% 1rem 10%;
+    .footer {
+      .footer-content {
+        margin: 0 25%;
       }
     }
   }
 }
 
+@media only screen and #{$mq-xlarge} {
+  .App{
+    .header {
+      .header-content {
+        margin: 0 18%;
+      }
+    }
+    .Container {
+      margin: 0 18%;
+    }
+    .footer {
+      .footer-content {
+        margin: 0 18%;
+      }
+    }
+
+  }
+
+}
+@media only screen and #{$mq-large} {
+  .App{
+    .header {
+      .header-content {
+        max-width: 80%;
+        margin: 0 10%;
+      }
+    }
+    .Container {
+      margin: 0 10%;
+    }
+    .footer {
+      .footer-content {
+        margin: 0 8%;
+      }
+    }
+  
+    .Container .insigniaNFT-page {
+      .circulate-supply {
+        .content {
+          font-size: 0.8rem;
+          padding: 1rem 7% 1rem 10%;
+        }
+      }
+    }
+
+  }
+
+}
+
 @media only screen and #{$mq-medium} {
+.App{
   .header {
     .header-content {
       max-width: 86%;
@@ -906,7 +923,7 @@ height: 90px;
     }
   }
 
-  .lyatoken-page {
+ .Container .lyatoken-page {
     .top {
       .logo {
         padding: 0;
@@ -914,7 +931,7 @@ height: 90px;
     }
   }
 
-  .insigniaNFT-page {
+  .Container .insigniaNFT-page {
     .circulate-supply {
       .content {
         font-size: 0.7rem;
@@ -932,7 +949,7 @@ height: 90px;
     }
   }
 
-  .genesis-page {
+  .Container .genesis-page {
     .content {
       .center {
         position: absolute;
@@ -957,329 +974,335 @@ height: 90px;
   }
 }
 
+
+}
+
 @media only screen and #{$mq-small} {
-  .header {
-    .header-content {
-      max-width: 90%;
+  .App{
+
+    .header {
+      .header-content {
+        max-width: 90%;
+        margin: 0 4%;
+      }
+    }
+    .Container {
       margin: 0 4%;
     }
-  }
-  .Container {
-    margin: 0 4%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 4%;
-      .join {
-        .btn {
-          max-width: 10vw;
+    .footer {
+      .footer-content {
+        margin: 0 4%;
+        .join {
+          .btn {
+            max-width: 10vw;
+          }
         }
       }
     }
-  }
-  .lyatoken-page {
-    .top {
-      .contract-address {
-        .contract {
-          .ether-hover {
-            left: -80%;
-          }
-          .ether-hover::after {
-            display: none;
-          }
-          .ether-hover::before {
-            display: block;
-            left: 60%;
+    .Container .lyatoken-page {
+      .top {
+        .contract-address {
+          .contract {
+            .ether-hover {
+              left: -80%;
+            }
+            .ether-hover::after {
+              display: none;
+            }
+            .ether-hover::before {
+              display: block;
+              left: 60%;
+            }
           }
         }
-      }
-
-      .logo {
-        display: none;
+  
+        .logo {
+          display: none;
+        }
       }
     }
-  }
-  .header {
-    .header-content {
-      .mobile-menu-btn {
-        display: block;
-      }
-
-      .header-login {
-        max-width: none;
-      }
-      .header-menu {
-        white-space: nowrap;
-
-        opacity: 0;
-        padding: 8px;
-        border-radius: 12px;
-        -webkit-transform: translate3d(0, 8px, 0);
-        transform: translate3d(0, 8px, 0);
-        -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
-          0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
-        box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
-          0 24px 24px #0000000d;
-        -webkit-transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        -o-transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart);
-        transition: opacity 0.8s var(--ease-quart),
-          transform 0.6s var(--ease-quart),
-          -webkit-transform 0.6s var(--ease-quart);
-        position: fixed;
-
-        bottom: 15%;
-        left: -100%;
-        background-color: $header-background-color;
-
-        .menu {
-          padding: 0;
-          flex-direction: column;
-          align-items: stretch;
-          li {
+    .header {
+      .header-content {
+        .mobile-menu-btn {
+          display: block;
+        }
+  
+        .header-login {
+          max-width: none;
+        }
+        .header-menu {
+          white-space: nowrap;
+  
+          opacity: 0;
+          padding: 8px;
+          border-radius: 12px;
+          -webkit-transform: translate3d(0, 8px, 0);
+          transform: translate3d(0, 8px, 0);
+          -webkit-box-shadow: 0 6px 6px rgb(0 0 0 / 5%),
+            0 12px 12px rgb(0 0 0 / 5%), 0 24px 24px rgb(0 0 0 / 5%);
+          box-shadow: 0 6px 6px #0000000d, 0 12px 12px #0000000d,
+            0 24px 24px #0000000d;
+          -webkit-transition: opacity 0.8s var(--ease-quart),
+            -webkit-transform 0.6s var(--ease-quart);
+          transition: opacity 0.8s var(--ease-quart),
+            -webkit-transform 0.6s var(--ease-quart);
+          -o-transition: opacity 0.8s var(--ease-quart),
+            transform 0.6s var(--ease-quart);
+          transition: opacity 0.8s var(--ease-quart),
+            transform 0.6s var(--ease-quart);
+          transition: opacity 0.8s var(--ease-quart),
+            transform 0.6s var(--ease-quart),
+            -webkit-transform 0.6s var(--ease-quart);
+          position: fixed;
+  
+          bottom: 15%;
+          left: -100%;
+          background-color: $header-background-color;
+  
+          .menu {
             padding: 0;
-            .item {
-              padding: 20px 10px;
-              width: 100%;
-              flex-direction: row;
-              justify-content: stretch;
-              column-gap: 10px;
-              font-size: 1.2rem;
-              border-radius: 10px;
-              img {
-                padding: 0;
+            flex-direction: column;
+            align-items: stretch;
+            li {
+              padding: 0;
+              .item {
+                padding: 20px 10px;
+                width: 100%;
+                flex-direction: row;
+                justify-content: stretch;
+                column-gap: 10px;
+                font-size: 1.2rem;
+                border-radius: 10px;
+                img {
+                  padding: 0;
+                }
               }
             }
           }
         }
-      }
-
-      .show {
-        opacity: 1;
-        z-index: 2;
-        pointer-events: auto;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translateZ(0);
-        left: 5%;
-      }
-    }
-  }
-
-  //////////////////////////////////////////InsigniaNFT Page////////////////////
-  .insigniaNFT-page {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    height: auto;
-    .Huralya-Squirrel {
-      width: 100%;
-      height: 100%;
-      min-height: 80vh;
-      .background-img {
-        width: 100%;
-        height: 100%;
-        object-fit: fill;
-        z-index: 0;
-      }
-    }
-
-    .min {
-      width: 100%;
-      max-height: 70vh;
-      overflow-x: unset;
-      position: relative;
-      text-align: center;
-      margin: 0 auto;
-      .background-img {
-        width: 100%;
-        position: static;
-        object-fit: fill;
-        z-index: 0;
-      }
-      .content {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 15px 15px 0px;
-
-        .cat-img {
-          flex-grow: 0;
-        }
-        .bottoms {
-          padding: 0 20%;
-        }
-        .text {
-          font-size: 1rem;
+  
+        .show {
+          opacity: 1;
+          z-index: 2;
+          pointer-events: auto;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translateZ(0);
+          left: 5%;
         }
       }
     }
-
-    .circulate-supply {
-      height: 100%;
-      width: 100%;
-      overflow-x: unset;
-      position: relative;
-      .background-img {
+  
+    //////////////////////////////////////////InsigniaNFT Page////////////////////
+    .Container .insigniaNFT-page {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      height: auto;
+      .Huralya-Squirrel {
         width: 100%;
-        position: static;
         height: 100%;
-        object-fit: fill;
-        z-index: 0;
+        min-height: 80vh;
+        .background-img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+          z-index: 0;
+        }
       }
-
-      .content {
-        position: absolute;
-        top: 0;
-        height: 100%;
+  
+      .min {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 15% 10% 15% 18%;
-
-        line-height: 2rem;
-        font-size: 1.2rem;
-      }
-    }
-  }
-  ////////////////////////////////////////////GENESIS Page/////////////////
-  .genesis-page {
-    .content {
-      height: 90%;
-
-      .center {
-        position: absolute;
-        top: 0;
-        row-gap: 6rem;
-        left: 15%;
-      }
-      .right {
-        position: absolute;
-        right: 5%;
-        bottom: 0;
-        div {
+        max-height: 70vh;
+        overflow-x: unset;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        .background-img {
+          width: 100%;
+          position: static;
+          object-fit: fill;
+          z-index: 0;
+        }
+        .content {
           position: absolute;
-          bottom: 70%;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 15px 15px 0px;
+  
+          .cat-img {
+            flex-grow: 0;
+          }
+          .bottoms {
+            padding: 0 20%;
+          }
+          .text {
+            font-size: 1rem;
+          }
+        }
+      }
+  
+      .circulate-supply {
+        height: 100%;
+        width: 100%;
+        overflow-x: unset;
+        position: relative;
+        .background-img {
+          width: 100%;
+          position: static;
+          height: 100%;
+          object-fit: fill;
+          z-index: 0;
+        }
+  
+        .content {
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: stretch;
+          padding: 15% 10% 15% 18%;
+  
+          line-height: 2rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    ////////////////////////////////////////////GENESIS Page/////////////////
+    .Container .genesis-page {
+      .content {
+        height: 90%;
+  
+        .center {
+          position: absolute;
+          top: 0;
+          row-gap: 6rem;
           left: 15%;
         }
-      }
-    }
-  }
-
-  //////////////////////////////about-us-page///////////
-  .about-us {
-    height: max-content;
-    min-height: fit-content;
-
-    .about-desc {
-      height: auto;
-      width: 100%;
-      margin: 0;
-      .desc-icons {
-        width: 100%;
-        .item {
+        .right {
+          position: absolute;
+          right: 5%;
+          bottom: 0;
+          div {
+            position: absolute;
+            bottom: 70%;
+            left: 15%;
+          }
         }
       }
     }
-    .bottom-section {
-      padding-top: 1rem;
-      position: relative;
-      height: auto;
+  
+    //////////////////////////////about-us-page///////////
+    .Container  .about-us {
+      height: max-content;
       min-height: fit-content;
-      .bottom-top {
-        flex-direction: column;
-        row-gap: 1rem;
+  
+      .about-desc {
         height: auto;
-        .content {
-          row-gap: 10px;
-        }
-        .backers {
-          width: 100%;
-
-          .top {
-            flex-direction: column;
-            row-gap: 10px;
-          }
-          .buttons {
-            flex-direction: column;
-            align-items: stretch;
-            row-gap: 10px;
-          }
-        }
-        .team {
-          width: 90%;
-          row-gap: 20px;
-        }
-      }
-
-      .socials {
-        flex-direction: column;
-        flex-wrap: wrap;
         width: 100%;
-        row-gap: 10px;
-        .btns {
+        margin: 0;
+        .desc-icons {
+          width: 100%;
+          .item {
+          }
+        }
+      }
+      .bottom-section {
+        padding-top: 1rem;
+        position: relative;
+        height: auto;
+        min-height: fit-content;
+        .bottom-top {
+          flex-direction: column;
+          row-gap: 1rem;
+          height: auto;
+          .content {
+            row-gap: 10px;
+          }
+          .backers {
+            width: 100%;
+  
+            .top {
+              flex-direction: column;
+              row-gap: 10px;
+            }
+            .buttons {
+              flex-direction: column;
+              align-items: stretch;
+              row-gap: 10px;
+            }
+          }
+          .team {
+            width: 90%;
+            row-gap: 20px;
+          }
+        }
+  
+        .socials {
+          flex-direction: column;
           flex-wrap: wrap;
+          width: 100%;
           row-gap: 10px;
-          column-gap: 5px;
-          .btn {
-            max-width: 35%;
+          .btns {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 5px;
+            .btn {
+              max-width: 35%;
+            }
           }
         }
       }
     }
-  }
-
-  /////////////////////////////////////////////mint Page//////////////
-  .mint {
-    .Huralya-Squirrel {
-      width: 70%;
-      .content {
-        padding: 10px 5px;
-        .scrollable-section {
-          padding: 10px;
-          .scroll {
-            padding-right: 0;
+  
+    /////////////////////////////////////////////mint Page//////////////
+    .Container .mint {
+      .Huralya-Squirrel {
+        width: 70%;
+        .content {
+          padding: 10px 5px;
+          .scrollable-section {
+            padding: 10px;
+            .scroll {
+              padding-right: 0;
+            }
           }
         }
       }
-    }
-
-    .buy-sell {
-      width: 30%;
+  
+      .buy-sell {
+        width: 30%;
+      }
     }
   }
+
 }
 
 @media only screen and #{$mq-xsmall} {
   .App {
     padding-bottom: 9rem;
-  }
-  .header {
-    .header-content {
+    .header {
+      .header-content {
+        margin: 0 5%;
+      }
+    }
+    .Container {
       margin: 0 5%;
     }
-  }
-  .Container {
-    margin: 0 5%;
-  }
-  .footer {
-    .footer-content {
-      margin: 0 5%;
+    .footer {
+      .footer-content {
+        margin: 0 5%;
+      }
     }
-  }
-
-  //////////////////////////////////////////////lyaToken Page//////////////////
+  
+    //////////////////////////////////////////////lyaToken Page//////////////////
     .Container .lyatoken-page {
       flex-wrap: wrap;
       .top {
@@ -1420,191 +1443,195 @@ height: 90px;
       }
     }
     //////////////////////////////////////////////////insignia page//////////////
-  .insigniaNFT-page {
-    .Huralya-Squirrel {
-      .content {
-        padding: 0.8rem;
-        .scrollable-section {
-          padding: 10px;
-          margin-right: 3%;
-          border-radius: 20px;
-        }
-        .scroll {
-          padding-right: 10px;
-          .section {
-            justify-content: space-between;
-            .title {
-              color: #dddedf;
-              min-width: fit-content;
-              font-size: 0.8rem;
-              padding: 0.5rem 0rem 0.5rem 0px;
+    .Container .insigniaNFT-page {
+      .Huralya-Squirrel {
+        .content {
+          padding: 0.8rem;
+          .scrollable-section {
+            padding: 10px;
+            margin-right: 3%;
+            border-radius: 20px;
+          }
+          .scroll {
+            padding-right: 10px;
+            .section {
+              justify-content: space-between;
+              .title {
+                color: #dddedf;
+                min-width: fit-content;
+                font-size: 0.8rem;
+                padding: 0.5rem 0rem 0.5rem 0px;
+              }
+              .text {
+                padding: 0.3rem 0.5rem;
+              }
             }
+            .plan-section {
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+  
+      .min {
+        .content {
+          display: flex;
+          .text {
+            padding-left: 2rem;
+          }
+        }
+      }
+      .circulate-supply {
+        .content {
+          font-size: 1rem;
+        }
+      }
+    }
+    /////////////////////////////////////////////GENESIS page////////////////
+    .Container .genesis-page {
+      .content {
+        height: 90%;
+        .left {
+          .icons {
             .text {
-              padding: 0.3rem 0.5rem;
+              left: 20%;
+              bottom: -2%;
             }
           }
-          .plan-section {
-            flex-wrap: wrap;
-          }
         }
-      }
-    }
-
-    .min {
-      .content {
-        display: flex;
-        .text {
-          padding-left: 2rem;
-        }
-      }
-    }
-    .circulate-supply {
-      .content {
-        font-size: 1rem;
-      }
-    }
-  }
-  /////////////////////////////////////////////GENESIS page////////////////
-  .genesis-page {
-    .content {
-      height: 90%;
-      .left {
-        .icons {
-          .text {
-            left: 20%;
-            bottom: -2%;
-          }
-        }
-      }
-      .center {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        top: 0;
-        left: 10%;
-        row-gap: 0;
-        .title {
-          .text {
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 1rem;
-            .text-right {
-              img {
-                width: 50%;
-                left: 30%;
-                bottom: 70%;
+        .center {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+          top: 0;
+          left: 10%;
+          row-gap: 0;
+          .title {
+            .text {
+              display: flex;
+              flex-wrap: wrap;
+              row-gap: 1rem;
+              .text-right {
+                img {
+                  width: 50%;
+                  left: 30%;
+                  bottom: 70%;
+                }
               }
             }
           }
+  
+          .explore-btn {
+            padding-bottom: 7rem;
+          }
+          .sector-btn {
+            padding-right: 3rem;
+          }
         }
-
-        .explore-btn {
-          padding-bottom: 7rem;
-        }
-        .sector-btn {
-          padding-right: 3rem;
-        }
-      }
-      .right {
-        position: absolute;
-        right: 5%;
-        bottom: 0;
-      }
-    }
-  }
-
-  //////////////////////////////about-us-page///////////
-  .about-us {
-    height: auto;
-    min-height: fit-content;
-
-    .about-desc {
-      height: auto;
-      width: 100%;
-      margin: 0;
-      .desc-icons {
-        width: 100%;
-        .item {
+        .right {
+          position: absolute;
+          right: 5%;
+          bottom: 0;
         }
       }
     }
-    .bottom-section {
-      padding-top: 1rem;
-      position: relative;
+  
+    //////////////////////////////about-us-page///////////
+    .Container .about-us {
       height: auto;
       min-height: fit-content;
-      .bottom-top {
-        flex-direction: column;
-        row-gap: 1rem;
+  
+      .about-desc {
         height: auto;
-        .content {
-          row-gap: 10px;
-        }
-        .backers {
-          width: 100%;
-
-          .top {
-            flex-direction: column;
-            row-gap: 10px;
-          }
-          .buttons {
-            flex-direction: column;
-            align-items: stretch;
-            row-gap: 10px;
-          }
-        }
-        .team {
-          width: 90%;
-          row-gap: 20px;
-        }
-      }
-
-      .socials {
-        flex-direction: column;
-        flex-wrap: wrap;
         width: 100%;
-        row-gap: 10px;
-        .btns {
+        margin: 0;
+        .desc-icons {
+          width: 100%;
+          .item {
+          }
+        }
+      }
+      .bottom-section {
+        padding-top: 1rem;
+        position: relative;
+        height: auto;
+        min-height: fit-content;
+        .bottom-top {
+          flex-direction: column;
+          row-gap: 1rem;
+          height: auto;
+          .content {
+            row-gap: 10px;
+          }
+          .backers {
+            width: 100%;
+            height: auto;
+            min-height: fit-content;
+  
+            .top {
+              flex-direction: column;
+              row-gap: 10px;
+            }
+            .buttons {
+              flex-direction: column;
+              align-items: stretch;
+              row-gap: 10px;
+            }
+          }
+          .team {
+            width: 90%;
+            row-gap: 20px;
+          }
+        }
+  
+        .socials {
+          flex-direction: column;
           flex-wrap: wrap;
+          width: 100%;
           row-gap: 10px;
-          column-gap: 5px;
-          .btn {
-            max-width: 35%;
+          .btns {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 5px;
+            .btn {
+              max-width: 35%;
+            }
+          }
+        }
+      }
+    }
+  
+    ///////////////////////////////////////////mint page////////////////
+    .Container .mint {
+      // flex-wrap: wrap;
+      height: auto;
+      flex-direction: column;
+      .Huralya-Squirrel {
+        width: 100%;
+        .content {
+          padding: 10px 5px;
+          .scrollable-section {
+            padding: 10px;
+            .scroll {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+  
+      .buy-sell {
+        width: 100%;
+        .bar {
+          text-align: center;
+  
+          img {
+            max-width: 250px;
           }
         }
       }
     }
   }
 
-  ///////////////////////////////////////////mint page////////////////
-  .mint {
-    // flex-wrap: wrap;
-    height: auto;
-    flex-direction: column;
-    .Huralya-Squirrel {
-      width: 100%;
-      .content {
-        padding: 10px 5px;
-        .scrollable-section {
-          padding: 10px;
-          .scroll {
-            padding-right: 0;
-          }
-        }
-      }
-    }
-
-    .buy-sell {
-      width: 100%;
-      .bar {
-        text-align: center;
-
-        img {
-          max-width: 250px;
-        }
-      }
-    }
-  }
 }
