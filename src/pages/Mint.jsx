@@ -1,7 +1,7 @@
-import HuralyaSquirrel from "../components/HuralyaSquirrel";
-import catImg from "../img/mintPageCatImg.svg";
-import mintBar from "../img/mintPagbar.svg";
-import { AiOutlineExclamationCircle } from "react-icons/ai";
+import HuralyaSquirrel from '../components/HuralyaSquirrel';
+import catImg from '../img/mintPageCatImg.svg';
+import mintBar from '../img/mintPagbar.svg';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
 const Mint = () => {
   return (
@@ -23,7 +23,10 @@ const Mint = () => {
           <img src={mintBar} alt="" />
         </div>
         <div className="date">
-          <p><AiOutlineExclamationCircle className="icon"/>Upcoming mint on 21 nov 2021 at price 400</p>
+          <p>
+            <AiOutlineExclamationCircle className="icon" />
+            Upcoming mint on 21 nov 2021 at price 400
+          </p>
         </div>
         <div className="buy-sell-lya">Buy/Sell LYA</div>
       </div>

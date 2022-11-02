@@ -1,15 +1,15 @@
-import LyaTokenDescription from "../components/LyaTokenDescription";
-import lya_icon1 from "../img/lya_icon1.svg";
-import lya_icon2 from "../img/lya_icon2.svg";
-import lya_icon3 from "../img/lya_icon3.svg";
-import metamask_icon from "../img/metamask_icon.svg";
-import { FiCopy } from "react-icons/fi";
+import LyaTokenDescription from '../components/LyaTokenDescription';
+import lya_icon1 from '../img/lya_icon1.svg';
+import lya_icon2 from '../img/lya_icon2.svg';
+import lya_icon3 from '../img/lya_icon3.svg';
+import metamask_icon from '../img/metamask_icon.svg';
+import { FiCopy } from 'react-icons/fi';
 //import d from "../img/d.svg";
 //import lyaLogo from "../img/lya_page_logo.svg";
-import LyaTokenLogo from "../components/svgComponent/LyaTokenLogo";
-import LyaIcon1 from "../components/svgComponent/LyaIcon1";
-import LyaIcon2 from "../components/svgComponent/LyaIcon2";
-import LyaIcon3 from "../components/svgComponent/LyaIcon3";
+import LyaTokenLogo from '../components/svgComponent/LyaTokenLogo';
+import LyaIcon1 from '../components/svgComponent/LyaIcon1';
+import LyaIcon2 from '../components/svgComponent/LyaIcon2';
+import LyaIcon3 from '../components/svgComponent/LyaIcon3';
 const LyaTokenDescription1 = `All consumption of lya token is in the ecosystem and its printing and burning 
 is done only based on supply and demand for users. The company's fundraising is only through 
 the Insignia Collection, and ZERO LYA tokens will belong to the Huralya team.`;
@@ -21,7 +21,7 @@ cryptocurrencies such as BTC, ETH, USDT or …
 
 const LyaTokenDescription3 = `LYA, the currency token in hualya game ecosystems. 
 All user’s transactions, expenses and income will be covered by this coin.`;
-const ethereumAddress = "0x3F162087420604ebBaa03eD048D8a8709De78923";
+const ethereumAddress = '0x3F162087420604ebBaa03eD048D8a8709De78923';
 const LyaToken = () => {
   const addressCopy = () => {
     navigator.clipboard.writeText(ethereumAddress);

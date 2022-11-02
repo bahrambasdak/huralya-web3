@@ -7,13 +7,13 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: "(max-width: #{$bp-xsmall})";
-$mq-small: "(max-width: #{$bp-small})";
-$mq-medium: "(max-width: #{$bp-medium})";
-$mq-large: "(max-width: #{$bp-large})";
-$mq-xlarge: "(max-width: #{$bp-xlarge})";
-$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
-$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+$mq-xsmall: '(max-width: #{$bp-xsmall})';
+$mq-small: '(max-width: #{$bp-small})';
+$mq-medium: '(max-width: #{$bp-medium})';
+$mq-large: '(max-width: #{$bp-large})';
+$mq-xlarge: '(max-width: #{$bp-xlarge})';
+$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
 .dashboardPage {
   width: 100%;
@@ -21,7 +21,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
   row-gap: 10px;
   display: flex;
   flex-direction: column;
-  font-family: "Alatsi";
+  font-family: 'Alatsi';
   font-style: normal;
   font-weight: 300;
   color: #cfd5dc;
@@ -232,7 +232,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
             font-size: 12px;
             color: white;
             font-weight: 100;
-             flex-grow: 1;
+            flex-grow: 1;
           }
         }
       }
@@ -639,7 +639,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       display: flex;
       justify-content: space-between;
       align-items: center;
-     
+
       column-gap: 20px;
       > span {
         display: flex;
@@ -747,7 +747,6 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       height: auto;
       //align-items: stretch;
 
-
       .leftBtns {
         // min-width: fit-content;
         width: 100%;
@@ -764,13 +763,11 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
           .scrollSection {
             padding: 0 20px;
             > div {
-              .img{
-              
-                img{
-                 // height: 20%;
+              .img {
+                img {
+                  // height: 20%;
                 }
               }
-              
             }
           }
         }

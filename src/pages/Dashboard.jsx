@@ -1,52 +1,52 @@
-import { FiCopy } from "react-icons/fi";
-import topBg from "../img/dashboardPageTopBg.svg";
-import icon1 from "../img/dashboardPageIcon1.svg";
-import classes from "../styles/dashboardPage.module.scss"; //'dashboardPage.module.scss';
-import lyaLogo from "../img/lya_page_logo.svg";
-import chart from "../img/dashboardPageChart.svg";
-import userLogo from "../img/dashboardPageUserLogo.svg";
-import { BsWhatsapp } from "react-icons/bs";
-import { ImFacebook } from "react-icons/im";
-import { AiOutlineTwitter } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import android_icon from "../img/genesis_android_icon.svg";
-import apple_icon from "../img/genesis_apple_icon.svg";
-import { useState } from "react";
+import { FiCopy } from 'react-icons/fi';
+import topBg from '../img/dashboardPageTopBg.svg';
+import icon1 from '../img/dashboardPageIcon1.svg';
+import classes from '../styles/dashboardPage.module.scss'; //'dashboardPage.module.scss';
+import lyaLogo from '../img/lya_page_logo.svg';
+import chart from '../img/dashboardPageChart.svg';
+import userLogo from '../img/dashboardPageUserLogo.svg';
+import { BsWhatsapp } from 'react-icons/bs';
+import { ImFacebook } from 'react-icons/im';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
+import android_icon from '../img/genesis_android_icon.svg';
+import apple_icon from '../img/genesis_apple_icon.svg';
+import { useState } from 'react';
 
 const Dashboard = () => {
   const [users, setUsers] = useState([
     {
       id: 1,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
+      select: false
     },
     {
       id: 2,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
+      select: false
     },
     {
       id: 3,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
+      select: false
     },
     {
       id: 4,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
-    },
+      select: false
+    }
   ]);
 
   const toggleSelect = (userId) => {
@@ -55,7 +55,7 @@ const Dashboard = () => {
         const userSelect = user.select;
         return {
           ...user,
-          select: user.id === userId ? !userSelect : userSelect,
+          select: user.id === userId ? !userSelect : userSelect
         };
       })
     );
@@ -172,9 +172,8 @@ const Dashboard = () => {
               {users.map((user, key) => (
                 <div
                   key={key}
-                  className={user.select ? classes.selected : ""}
-                  onClick={() => toggleSelect(user.id)}
-                >
+                  className={user.select ? classes.selected : ''}
+                  onClick={() => toggleSelect(user.id)}>
                   <div className={classes.name}>#3256</div>
                   <div className={classes.img}>
                     <img src={userLogo} alt="" />
@@ -193,7 +192,7 @@ const Dashboard = () => {
           <div>
             <div>Earn LYA by staking Squirrels</div>
             <div className={classes.claimBtn}>
-              <p>240 LYA</p>{" "}
+              <p>240 LYA</p>{' '}
               <button className={`btn ${classes.btn}`}>Claim</button>
             </div>
             <div>You will be rewarded 30 LYA per month</div>
@@ -203,7 +202,7 @@ const Dashboard = () => {
 
         <div className={classes.activities}>
           <div className={classes.activitesHeader}>
-            <p>Activities</p>{" "}
+            <p>Activities</p>{' '}
             <button className={`btn ${classes.btn}`}>Sort by</button>
           </div>
           <div className={classes.activitySection}>
@@ -268,7 +267,7 @@ const Dashboard = () => {
           </div>
           <div>learn how to earn...</div>
           <div className={classes.reserved}>
-            Huralya © 2022 , All rights reserved{" "}
+            Huralya © 2022 , All rights reserved{' '}
           </div>
         </div>
 

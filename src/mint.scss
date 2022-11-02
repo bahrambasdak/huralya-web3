@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   column-gap: 10px;
-  font-family: "Alatsi";
+  font-family: 'Alatsi';
   font-weight: 400;
 
   .Huralya-Squirrel {
@@ -34,7 +34,7 @@
       text-align: left;
 
       /* width */
-     
+
       ::-webkit-scrollbar {
         width: 0.2rem;
         max-height: 50%;
@@ -76,7 +76,6 @@
         background-color: rgba(62, 70, 91, 0.54);
         border-radius: 20px;
         z-index: 1;
-
       }
       .scroll {
         height: 100%;
@@ -95,7 +94,7 @@
             color: #dddedf;
             min-width: fit-content;
             padding: 0.7rem 0rem 0.2rem 0px;
-            font-family: "Alatsi";
+            font-family: 'Alatsi';
             display: flex;
             align-items: center;
           }
@@ -106,7 +105,7 @@
             color: #898d92;
             font-size: 12px;
             flex-grow: 1;
-            font-family: "Alatsi";
+            font-family: 'Alatsi';
             padding: 0.3rem 1.5rem;
             p {
               display: none;
@@ -154,7 +153,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    font-family: "Alatsi";
+    font-family: 'Alatsi';
     background: linear-gradient(
       -180deg,
       rgba(32, 36, 57, 0) 0%,
@@ -179,12 +178,12 @@
         font-size: 14px;
         line-height: 24px;
         text-align: left;
-        font-family: "Alatsi";
+        font-family: 'Alatsi';
       }
       .last {
         font-size: 10px;
         padding-left: 10px;
-        font-family: "Alatsi";
+        font-family: 'Alatsi';
       }
     }
     .bar {
@@ -202,7 +201,7 @@
       justify-content: center;
       p {
         display: flex;
-        font-family: "Alatsi";
+        font-family: 'Alatsi';
         column-gap: 3px;
         justify-content: center;
         .icon {
@@ -215,7 +214,7 @@
       color: #eaeaea;
       font-size: 14px;
       padding: 1rem 0;
-      font-family: "Alatsi";
+      font-family: 'Alatsi';
     }
   }
 }

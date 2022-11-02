@@ -1,9 +1,9 @@
-import huralya_squirrel_left from "../img/insignia_page_left.svg";
-import insignia_min from "../img/insignia_page_min.svg";
-import insignia_supply from "../img/insignia_page_supply.svg";
-import cat from "../img/insignia_page_cat.svg";
-import { AiOutlineExclamationCircle } from "react-icons/ai";
-import HuralyaSquirrel from "../components/HuralyaSquirrel";
+import huralya_squirrel_left from '../img/insignia_page_left.svg';
+import insignia_min from '../img/insignia_page_min.svg';
+import insignia_supply from '../img/insignia_page_supply.svg';
+import cat from '../img/insignia_page_cat.svg';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
+import HuralyaSquirrel from '../components/HuralyaSquirrel';
 
 const InsigniaNFT = () => {
   return (
@@ -31,7 +31,7 @@ const InsigniaNFT = () => {
         </div>
       </div>
 
-      <HuralyaSquirrel huralya_squirrel_left={huralya_squirrel_left}/>
+      <HuralyaSquirrel huralya_squirrel_left={huralya_squirrel_left} />
 
       <div className="circulate-supply">
         <img
