@@ -10,7 +10,7 @@ import Mint from "../pages/Mint";
 
 
 const Container = () => {
- // const location = useLocation();
+  const location = useLocation();
   return (
     <div className="Container">
         {/* <TransitionGroup component={null}>

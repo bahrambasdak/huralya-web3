@@ -9,22 +9,17 @@
 
   .Huralya-Squirrel {
     flex-grow: 1;
-    width: 75%;
+    width: 78%;
     height: 100%;
     position: relative;
 
-    background: linear-gradient(
-      -180deg,
-      rgba(32, 36, 57, 0) 0%,
-      rgba($color: #08757a, $alpha: 0.5) 100%
-    );
+    background:linear-gradient(183.5deg, rgba(17, 20, 29, 0) 20%, #1d3d4b 100%);
     border-radius: 20px;
 
     .content {
       width: 100%;
       z-index: 1;
       padding: 15px;
-
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -81,6 +76,7 @@
       .scroll {
         overflow-y: auto;
         padding-right: 20px;
+        height: 100%;
         .section {
           display: flex;
           flex-wrap: wrap;
@@ -148,17 +144,13 @@
   }
 
   .buy-sell {
-    width: 25%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     font-family: "Alatsi";
-    background: linear-gradient(
-      -180deg,
-      rgba(32, 36, 57, 0) 0%,
-      rgba($color: #08757a, $alpha: 0.5) 100%
-    );
+    background: linear-gradient(0deg, #295669 -50%, rgba(7, 9, 12, 0) 50%);
     border-radius: 20px;
     color: #9fa3a7;
 

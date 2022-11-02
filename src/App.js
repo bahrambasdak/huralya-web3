@@ -9,7 +9,7 @@ import Container from "./components/Container";
 import Header from "./components/Header";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import { useState } from "react";
-
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   //const location = useLocation();
