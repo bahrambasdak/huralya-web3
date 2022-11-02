@@ -1,16 +1,16 @@
 import { FiCopy } from 'react-icons/fi';
-import topBg from '../img/dashboardPageTopBg.svg';
-import icon1 from '../img/dashboardPageIcon1.svg';
-import classes from '../styles/dashboardPage.module.scss'; //'dashboardPage.module.scss';
-import lyaLogo from '../img/lya_page_logo.svg';
-import chart from '../img/dashboardPageChart.svg';
-import userLogo from '../img/dashboardPageUserLogo.svg';
+import topBg from '../../assets/images/dashboardPageTopBg.svg';
+import icon1 from '../../assets/images/dashboardPageIcon1.svg';
+import classes from '../../styles/dashboardPage.module.scss'; //'dashboardPage.module.scss';
+import lyaLogo from '../../assets/images/lya_page_logo.svg';
+import chart from '../../assets/images/dashboardPageChart.svg';
+import userLogo from '../../assets/images/dashboardPageUserLogo.svg';
 import { BsWhatsapp } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
-import android_icon from '../img/genesis_android_icon.svg';
-import apple_icon from '../img/genesis_apple_icon.svg';
+import android_icon from '../../assets/images/genesis_android_icon.svg';
+import apple_icon from '../../assets/images/genesis_apple_icon.svg';
 import { useState } from 'react';
 
 const Dashboard = () => {

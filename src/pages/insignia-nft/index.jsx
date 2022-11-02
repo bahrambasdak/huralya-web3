@@ -1,9 +1,9 @@
-import huralya_squirrel_left from '../img/insignia_page_left.svg';
-import insignia_min from '../img/insignia_page_min.svg';
-import insignia_supply from '../img/insignia_page_supply.svg';
-import cat from '../img/insignia_page_cat.svg';
+import huralya_squirrel_left from '../../assets/images/insignia_page_left.svg';
+import insignia_min from '../../assets/images/insignia_page_min.svg';
+import insignia_supply from '../../assets/images/insignia_page_supply.svg';
+import cat from '../../assets/images/insignia_page_cat.svg';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
-import HuralyaSquirrel from '../components/HuralyaSquirrel';
+import HuralyaSquirrel from '../../components/HuralyaSquirrel';
 
 const InsigniaNFT = () => {
   return (

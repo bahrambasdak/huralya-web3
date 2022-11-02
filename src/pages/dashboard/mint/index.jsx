@@ -1,6 +1,6 @@
-import HuralyaSquirrel from '../components/HuralyaSquirrel';
-import catImg from '../img/mintPageCatImg.svg';
-import mintBar from '../img/mintPagbar.svg';
+import HuralyaSquirrel from '../../../components/HuralyaSquirrel';
+import catImg from '../../../assets/images/mintPageCatImg.svg';
+import mintBar from '../../../assets/images/mintPagbar.svg';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
 
 const Mint = () => {

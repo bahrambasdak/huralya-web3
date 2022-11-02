@@ -1,11 +1,11 @@
-import icon1 from '../img/about_us_icon1.svg';
-import icon2 from '../img/about_us_icon2.svg';
-import icon3 from '../img/about_us_icon3.svg';
-import profileImg1 from '../img/about_us_team_profile1.svg';
-import profileImg2 from '../img/about_us_team_profile2.svg';
-import profileImg3 from '../img/about_us_team_profile3.svg';
-import backersBg from '../img/about_us_backer_bg.svg';
-import teamBg from '../img/about_us_team_bg.svg';
+import icon1 from '../../assets/images/about_us_icon1.svg';
+import icon2 from '../../assets/images/about_us_icon2.svg';
+import icon3 from '../../assets/images/about_us_icon3.svg';
+import profileImg1 from '../../assets/images/about_us_team_profile1.svg';
+import profileImg2 from '../../assets/images/about_us_team_profile2.svg';
+import profileImg3 from '../../assets/images/about_us_team_profile3.svg';
+import backersBg from '../../assets/images/about_us_backer_bg.svg';
+import teamBg from '../../assets/images/about_us_team_bg.svg';
 import { BsQuestionCircle } from 'react-icons/bs';
 
 const AboutUs = () => {
