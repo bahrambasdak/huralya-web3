@@ -65,7 +65,7 @@
         padding: 1px 40%;
         top: calc(40% - 2px);
         left: 10%;
-        z-index: 2;
+        z-index: 1;
       }
 
       .item2::before {
@@ -76,7 +76,7 @@
         padding: 3px;
         top: calc(40% - 4px);
         left: calc(50% - 3px);
-        z-index: 2;
+        z-index: 1;
       }
     }
 

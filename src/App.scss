@@ -51,6 +51,16 @@ $header-menu-text-color: #9298a5;
   box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
   border-color: transparent;
 }
+.fade-exit{
+  
+opacity: 0;
+}
+.fade-enter-done{
+  opacity: 1;
+}
+// fade-appear, fade-appear-active, fade-appear-done
+// fade-enter, fade-enter-active, fade-enter-done
+// fade-exit, fade-exit-active, fade-exit-done
 
 .App {
   width: 100%;
@@ -251,7 +261,8 @@ $header-menu-text-color: #9298a5;
         max-width: 100px;
         padding: 5px;
         background-color: #282f42;
-        border-color: #9298a5;
+       // border-color: #9298a5;
+       border-width: 2px;
       }
     }
   }
@@ -733,17 +744,19 @@ $header-menu-text-color: #9298a5;
 
         .mint-btn {
           background-color: #181c27;
-          border: 2px solid #595f71;
+         // border: 2px solid #595f71;
           border-radius: 63px 0px 0px 63px;
           flex-grow: 1;
           padding: 0.3rem 0;
           color: #abb1ba;
           font-family: "Alatsi";
+          border-width: 2px;
         }
         .market-btn {
+          border-width: 2px;
           flex-grow: 1;
           background-color: #181c27;
-          border: 2px solid #595f71;
+          //border: 2px solid #595f71;
           border-radius: 0px 63px 63px 0px;
           padding: 0.3rem 0;
           color: #abb1ba;
@@ -954,18 +967,16 @@ $header-menu-text-color: #9298a5;
   .Container .genesis-page {
     .content {
       .center {
-        position: absolute;
+        //position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: space-evenly;
         height: 100%;
-        top: 0;
-        left: 20%;
+ 
       }
       .right {
-        position: absolute;
-        right: 5%;
-        bottom: 0;
+       // position: absolute;
         div {
           position: absolute;
           bottom: 70%;
@@ -1180,18 +1191,32 @@ $header-menu-text-color: #9298a5;
     ////////////////////////////////////////////GENESIS Page/////////////////
     .Container .genesis-page {
       .content {
-        height: 90%;
+       // height: 90%;
+       .left{
+       // max-width: 50%;
+       }
   
         .center {
-          position: absolute;
-          top: 0;
-          row-gap: 6rem;
-          left: 15%;
+          .title{
+            .text{
+              .text-right{
+                img{
+                  bottom: 35%;
+                  width: 50%;
+                  height: 60%;
+                }
+ 
+              }
+            }
+          }
+         // position: absolute;
+          //top: 0;
+         // row-gap: 6rem;
+          //left: 15%;
+         // min-width: fit-content;
         }
         .right {
-          position: absolute;
-          right: 5%;
-          bottom: 0;
+
           div {
             position: absolute;
             bottom: 70%;
@@ -1494,7 +1519,7 @@ $header-menu-text-color: #9298a5;
     /////////////////////////////////////////////GENESIS page////////////////
     .Container .genesis-page {
       .content {
-        height: 90%;
+       // height: 90%;
         .left {
           .icons {
             .text {
@@ -1507,7 +1532,7 @@ $header-menu-text-color: #9298a5;
           position: absolute;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-evenly;
           height: 100%;
           top: 0;
           left: 10%;

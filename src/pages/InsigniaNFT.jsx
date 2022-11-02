@@ -21,8 +21,8 @@ const InsigniaNFT = () => {
             <img src={cat} alt="" width={200} height={200} />
           </div>
           <div className="bottoms">
-            <button className="mint-btn">Mint</button>
-            <button className="market-btn">Market place</button>
+            <button className="mint-btn btn">Mint</button>
+            <button className="market-btn btn">Market place</button>
           </div>
           <p className="text">
             Upcoming MINT on Mars-21-2023

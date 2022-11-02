@@ -43,7 +43,7 @@ const Header = ({ toggleMenu, showMenu }) => {
                 <NavLink
                   to="/genesis"
                   className="item item1"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   <img src={menuIcon1} alt="menuIcon1" />
                   GENESIS
@@ -53,7 +53,7 @@ const Header = ({ toggleMenu, showMenu }) => {
                 <NavLink
                   to="/aboutus"
                   className="item item2"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   <img src={menuIcon2} alt="menuIcon2" />
                   About us
@@ -63,7 +63,7 @@ const Header = ({ toggleMenu, showMenu }) => {
                 <NavLink
                   to="/insignia"
                   className="item item3"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   <img src={menuIcon3} alt="menuIcon3" />
                   insignia NFT
@@ -73,7 +73,7 @@ const Header = ({ toggleMenu, showMenu }) => {
                 <NavLink
                   to="/lyatoken"
                   className="item item4"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   <img src={menuIcon4} alt="menuIcon4" />
                   LYA TOKEN
@@ -88,7 +88,7 @@ const Header = ({ toggleMenu, showMenu }) => {
                 <NavLink
                   to="/mint"
                   className="item item1"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Mint
                 </NavLink>
@@ -97,7 +97,7 @@ const Header = ({ toggleMenu, showMenu }) => {
                 <NavLink
                   to="/dashboard"
                   className="item item3"
-                  activeClassName="active"
+                  activeclassname="active"
                 >
                   Dashboard
                 </NavLink>
