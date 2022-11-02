@@ -4,13 +4,12 @@
   height: 480px;
   font-family: "Bahnschrift";
 
-
   .background-img {
-   // resize: horizontal;
+    // resize: horizontal;
     overflow: hidden;
     width: 100%;
     height: 90%;
-    left:0;
+    left: 0;
     top: 0;
     position: absolute;
     // width: 100%;
@@ -21,23 +20,28 @@
   }
 
   .content {
-
     padding: 0 2rem;
     width: 100%;
     height: 100%;
     display: flex;
+    display: -webkit-flex;
+    display: -webkit-flex;
     justify-content: space-between;
     align-items: flex-end;
     position: relative;
 
     .left {
       display: flex;
+      display: -webkit-flex;
+      display: -webkit-flex;
       align-self: flex-end;
       justify-self: flex-start;
       max-width: 30%;
 
       .icons {
         display: flex;
+        display: -webkit-flex;
+        display: -webkit-flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
@@ -92,22 +96,30 @@
 
     .center {
       display: flex;
+      display: -webkit-flex;
+      display: -webkit-flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       row-gap: 40px;
       color: white;
-    
+
       .title {
         display: flex;
+        display: -webkit-flex;
+        display: -webkit-flex;
         align-items: flex-end;
         font-weight: 600;
         font-size: 2rem;
         .text {
           display: flex;
+          display: -webkit-flex;
+          display: -webkit-flex;
           font-family: "Bahnschrift";
           .text-right {
             display: flex;
+            display: -webkit-flex;
+            display: -webkit-flex;
             align-items: flex-end;
             padding-left: 1rem;
             position: relative;
@@ -130,6 +142,7 @@
       .explore-btn {
         button {
           display: flex;
+          display: -webkit-flex;
           align-items: flex-end;
           background: rgba(53, 53, 53, 0.26);
           font-weight: 350;
@@ -153,9 +166,11 @@
       }
       .sector-btn {
         display: flex;
+        display: -webkit-flex;
         align-items: center;
         button {
           display: flex;
+          display: -webkit-flex;
           align-items: center;
           justify-content: center;
           background-color: transparent;
@@ -167,6 +182,7 @@
     .right {
       position: relative;
       display: flex;
+      display: -webkit-flex;
       align-items: flex-end;
       align-self: flex-end;
       justify-content: space-between;
@@ -188,6 +204,7 @@
       div {
         position: absolute;
         display: flex;
+        display: -webkit-flex;
         align-items: center;
         justify-content: space-between;
         top: 10%;

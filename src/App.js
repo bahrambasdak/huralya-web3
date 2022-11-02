@@ -3,6 +3,8 @@ import "./genesis.scss";
 import "./about_us.scss";
 import "./mint.scss";
 import "./App.scss";
+import classes from "./styles/dashboardPage.module.scss"; 
+import styles from "./styles/App.module.scss";
 
 import Footer from "./components/Footer";
 import Container from "./components/Container";
@@ -10,6 +12,7 @@ import Header from "./components/Header";
 import { BrowserRouter, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import DashboardFooter from "./components/DashboardFooter";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   //const location = useLocation();
@@ -21,14 +24,14 @@ function App() {
     else if (showMenu) setShowMenu((prev) => !prev);
   };
   return (
-    <div className="App" onClick={toggleMenu}>
+    <div className={`${styles.App} App`} onClick={toggleMenu}>
       <BrowserRouter>
         <Header toggleMenu={toggleMenu} showMenu={showMenu} />
 
         <Container />
 
-
-        <Footer />
+<DashboardFooter/>
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

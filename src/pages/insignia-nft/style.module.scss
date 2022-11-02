@@ -1,0 +1,271 @@
+.insigniaNFTPage {
+    display: grid;
+    grid-template-columns: 7fr 9fr 1fr 3fr;
+    grid-template-rows: 65% 3% 32%;
+    height: 480px;
+    width: 100%;
+    font-family: "Alatsi";
+    font-weight: 400;
+    .HuralyaSquirrel {
+      height: 100%;
+      grid-column: 1/3;
+      grid-row: 1/4;
+      position: relative;
+      .backgroundImg {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        z-index: 0;
+      }
+      .content {
+        width: 100%;
+        position: absolute;
+        padding: 20px 3.5rem 20px 20px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: left;
+        text-align: left;
+        /* width */
+        ::-webkit-scrollbar {
+          width: 0.2rem;
+          max-height: 50%;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+          //box-shadow: inset 0 0 5px grey;
+          background: linear-gradient(0deg, #898d92, #898d92),
+            linear-gradient(0deg, #898d92, #898d92), #898d92;
+          border-radius: 20px;
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: linear-gradient(0deg, #cfd5dc, #cfd5dc),
+            linear-gradient(0deg, #898d92, #898d92), #898d92;
+          border-radius: 20px;
+        }
+        /* Handle on hover */
+  
+        .title {
+          color: #e29b1d;
+          padding: 0.6rem;
+          font-family: "Alatsi";
+        }
+        .desc1 {
+          color: #cfd5dc;
+          padding: 0.6rem;
+          font-family: "Alatsi";
+        }
+        .desc2 {
+          color: #cfd5dc;
+          font-size: 0.8rem;
+          padding: 0.6rem;
+          font-family: "Alatsi";
+        }
+        .scrollableSection {
+          padding: 20px;
+          height: 70%;
+          background-color: rgba(62, 70, 91, 0.54);
+          border-radius: 20px;
+        }
+        .scroll {
+          height: 100%;
+          overflow-y: auto;
+          padding-right: 20px;
+          .section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-bottom: 1px solid #282f42;
+            align-items: stretch;
+            position: relative;
+  
+            .title {
+              color: #dddedf;
+              min-width: fit-content;
+              padding: 0.7rem 0rem 0.2rem 0px;
+              font-family: "Alatsi";
+              display: flex;
+              align-items: center;
+            }
+            .text {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: #898d92;
+              font-size: 12px;
+              flex-grow: 1;
+              font-family: "Alatsi";
+              padding: 0.3rem 1.5rem;
+              p {
+                display: none;
+              }
+            }
+            .icon {
+              min-width: fit-content;
+              color: white;
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              right: 5px;
+              top: calc(50% - 7px);
+              z-index: 0;
+            }
+            .checkbox {
+              position: absolute;
+              right: 5px;
+              top: calc(50% - 10px);
+              width: 20px;
+              height: 20px;
+              opacity: 0;
+              z-index: 1;
+              cursor: pointer;
+            }
+            .checkbox:checked ~ .text {
+              p {
+                display: flex;
+              }
+              .icon {
+                color: #dccfdb;
+              }
+            }
+          }
+          .planSection {
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  
+    .min {
+      height: 100%;
+      grid-column: 3/5;
+      grid-row: 1/2;
+      overflow-x: visible;
+      position: relative;
+      .backgroundImg {
+        width: 120%;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        object-fit: fill;
+        z-index: 0;
+      }
+      .content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px 15px 0px;
+  
+        .catImg {
+          position: relative;
+          flex-grow: 1;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            mix-blend-mode: lighten;
+          }
+        }
+        .catImg::after {
+          content: "";
+          position: absolute;
+          bottom: 5px;
+          left: 0;
+          width: 100%;
+          border-bottom: 2px solid rgb(190, 186, 186);
+        }
+  
+        .bottoms {
+          z-index: 1;
+          flex-grow: 1;
+          align-self: stretch;
+          font-size: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 3px;
+  
+          .mintBtn {
+            background-color: #181c27;
+           // border: 2px solid #595f71;
+            border-radius: 63px 0px 0px 63px;
+            flex-grow: 1;
+            padding: 0.3rem 0;
+            color: #abb1ba;
+            font-family: "Alatsi";
+            border-width: 2px;
+          }
+          .marketBtn {
+            border-width: 2px;
+            flex-grow: 1;
+            background-color: #181c27;
+            //border: 2px solid #595f71;
+            border-radius: 0px 63px 63px 0px;
+            padding: 0.3rem 0;
+            color: #abb1ba;
+            font-family: "Alatsi";
+          }
+        }
+        .text {
+          display: flex;
+          align-items: center;
+          column-gap: 3px;
+          font-size: 12px;
+          flex-grow: 1;
+          color: #979b9f;
+          font-family: "Alatsi";
+          z-index: 1;
+          .icon {
+            color: #e2641d;
+          }
+        }
+      }
+    }
+  
+    .circulateSupply {
+      grid-column: 3/5;
+      grid-row: 3/4;
+      overflow-x: visible;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      .backgroundImg {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        z-index: 0;
+      }
+  
+      .content {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 20px 20px 20px 30px;
+        line-height: 18px;
+        font-size: 13px;
+        color: #979b9f;
+        font-family: "Alatsi";
+        > div div {
+          flex-grow: 1;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
