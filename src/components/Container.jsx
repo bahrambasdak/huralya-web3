@@ -1,4 +1,4 @@
-import { Route, useLocation } from 'react-router';
+import { Route } from 'react-router';
 import { Routes } from 'react-router-dom';
 import AboutUs from '../pages/about-us';
 import Dashboard from '../pages/dashboard';

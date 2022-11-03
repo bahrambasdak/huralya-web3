@@ -49,6 +49,8 @@ const Dashboard = () => {
     }
   ]);
 
+  const [fromTo, setFromTo] = useState('from-wallet');
+
   const toggleSelect = (userId) => {
     setUsers((prev) =>
       prev.map((user) => {
@@ -64,7 +66,7 @@ const Dashboard = () => {
   return (
     <div className={classes.dashboardPage}>
       <div className={classes.top}>
-        <img src={topBg} alt="" className={classes.bgImg} />
+        {/* <img src={topBg} alt="" className={classes.bgImg} /> */}
         <div className={classes.cards}>
           <div className={`${classes.card} , ${classes.wellcom}`}>
             <div className={classes.title}>
@@ -98,16 +100,22 @@ const Dashboard = () => {
           <div className={`${classes.card} , ${classes.wallet}`}>
             <div>
               <div className={classes.addr}>
-                <span>
+                <span
+                  onClick={() =>
+                    setFromTo((prev) =>
+                      prev === 'from-wallet' ? 'to-wallet' : 'from-wallet'
+                    )
+                  }>
                   <img src={icon1} alt="" />
                 </span>
                 <span>
                   <div>
-                    <span>From</span>
+                    <span>{fromTo === 'from-wallet' ? 'From' : 'To'}</span>
                     <span>wallet</span>
                   </div>
+
                   <div>
-                    <span>To</span>
+                    <span>{fromTo === 'from-wallet' ? 'To' : 'From'}</span>
                     <span>Game account</span>
                   </div>
                 </span>

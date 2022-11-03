@@ -9,14 +9,14 @@
 
   .Huralya-Squirrel {
     flex-grow: 1;
-    width: 75%;
+    width: 78%;
     height: 100%;
     position: relative;
 
     background: linear-gradient(
-      -180deg,
-      rgba(32, 36, 57, 0) 0%,
-      rgba($color: #08757a, $alpha: 0.5) 100%
+      183.5deg,
+      rgba(17, 20, 29, 0) 20%,
+      #1d3d4b 100%
     );
     border-radius: 20px;
 
@@ -24,7 +24,6 @@
       width: 100%;
       z-index: 1;
       padding: 15px;
-
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -76,89 +75,85 @@
         background-color: rgba(62, 70, 91, 0.54);
         border-radius: 20px;
         z-index: 1;
-      }
-      .scroll {
-        height: 100%;
 
-        overflow-y: auto;
-        padding-right: 20px;
-        .section {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          border-bottom: 1px solid #282f42;
-          align-items: stretch;
-          position: relative;
-
-          .title {
-            color: #dddedf;
-            min-width: fit-content;
-            padding: 0.7rem 0rem 0.2rem 0px;
-            font-family: 'Alatsi';
+        .scroll {
+          overflow-y: auto;
+          padding-right: 20px;
+          height: 100%;
+          .section {
             display: flex;
-            align-items: center;
-          }
-          .text {
-            display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
-            align-items: center;
-            color: #898d92;
-            font-size: 12px;
-            flex-grow: 1;
-            font-family: 'Alatsi';
-            padding: 0.3rem 1.5rem;
-            p {
-              display: none;
-            }
-          }
-          .icon {
-            min-width: fit-content;
-            color: white;
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            right: 5px;
-            top: calc(50% - 7px);
-            z-index: 0;
-          }
-          .checkbox {
-            position: absolute;
-            right: 4px;
-            top: calc(50% - 10px);
-            width: 20px;
-            height: 20px;
-            opacity: 0;
-            z-index: 1;
-            cursor: pointer;
-          }
-          .checkbox:checked ~ .text {
-            p {
+            border-bottom: 1px solid #282f42;
+            align-items: stretch;
+            position: relative;
+
+            .title {
+              color: #dddedf;
+              min-width: fit-content;
+              padding: 0.7rem 0rem 0.2rem 0px;
+              font-family: 'Alatsi';
               display: flex;
+              align-items: center;
+            }
+            .text {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: #898d92;
+              font-size: 12px;
+              flex-grow: 1;
+              font-family: 'Alatsi';
+              padding: 0.3rem 1.5rem;
+              p {
+                display: none;
+              }
             }
             .icon {
-              color: #dccfdb;
+              min-width: fit-content;
+              color: white;
+              width: 15px;
+              height: 15px;
+              position: absolute;
+              right: 5px;
+              top: calc(50% - 7px);
+              z-index: 0;
+            }
+            .checkbox {
+              position: absolute;
+              right: 4px;
+              top: calc(50% - 10px);
+              width: 20px;
+              height: 20px;
+              opacity: 0;
+              z-index: 1;
+              cursor: pointer;
+            }
+            .checkbox:checked ~ .text {
+              p {
+                display: flex;
+              }
+              .icon {
+                color: #dccfdb;
+              }
             }
           }
-        }
-        .plan-section {
-          flex-wrap: wrap;
+          .plan-section {
+            flex-wrap: wrap;
+          }
         }
       }
     }
   }
 
   .buy-sell {
-    width: 25%;
+    width: 22%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     font-family: 'Alatsi';
-    background: linear-gradient(
-      -180deg,
-      rgba(32, 36, 57, 0) 0%,
-      rgba($color: #08757a, $alpha: 0.5) 100%
-    );
+    background: linear-gradient(0deg, #295669 -50%, rgba(7, 9, 12, 0) 50%);
     border-radius: 20px;
     color: #9fa3a7;
 
