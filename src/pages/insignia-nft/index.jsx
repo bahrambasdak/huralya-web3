@@ -4,45 +4,48 @@ import insignia_supply from '../../assets/images/insignia_page_supply.svg';
 import cat from '../../assets/images/insignia_page_cat.svg';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
 import HuralyaSquirrel from '../../components/HuralyaSquirrel';
+import styles from './style.module.scss';
 
 const InsigniaNFT = () => {
   return (
-    <div className="insigniaNFT-page">
-      <div className="min">
+    <div className={styles.insigniaNFTPage}>
+      <div className={styles.min}>
         <img
           src={insignia_min}
           alt=""
-          className="background-img"
+          className={styles.backgroundImg}
           width={270}
           height={310}
         />
-        <div className="content">
-          <div className="cat-img">
+        <div className={styles.content}>
+          <div className={styles.catImg}>
             <img src={cat} alt="" width={200} height={200} />
           </div>
-          <div className="bottoms">
-            <button className="mint-btn btn">Mint</button>
-            <button className="market-btn btn">Market place</button>
+          <div className={styles.bottoms}>
+            <button className={`${styles.mintBtn} ${btn}`}>Mint</button>
+            <button className={`${styles.marketBtn} ${btn}`}>
+              Market place
+            </button>
           </div>
-          <p className="text">
+          <p className={styles.text}>
             Upcoming MINT on Mars-21-2023
-            <AiOutlineExclamationCircle className="icon" />
+            <AiOutlineExclamationCircle className={styles.icon} />
           </p>
         </div>
       </div>
 
       <HuralyaSquirrel huralya_squirrel_left={huralya_squirrel_left} />
 
-      <div className="circulate-supply">
+      <div className={styles.circulateSupply}>
         <img
           src={insignia_supply}
           alt=""
-          className="background-img"
+          className={styles.backgroundImg}
           width={235}
           height={170}
         />
-        <div className="content">
-          <div className="text1">
+        <div className={styles.content}>
+          <div className={styles.text1}>
             <div>
               <p>Circulating Supply</p>
               <p>1000</p>

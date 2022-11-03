@@ -7,13 +7,13 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: '(max-width: #{$bp-xsmall})';
-$mq-small: '(max-width: #{$bp-small})';
-$mq-medium: '(max-width: #{$bp-medium})';
-$mq-large: '(max-width: #{$bp-large})';
-$mq-xlarge: '(max-width: #{$bp-xlarge})';
-$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
-$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
 
 .dashboardPage {
   position: relative;
@@ -22,7 +22,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   row-gap: 10px;
   display: flex;
   flex-direction: column;
-  font-family: 'Alatsi';
+  font-family: "Alatsi";
   font-style: normal;
   font-weight: 300;
   color: #cfd5dc;
@@ -579,160 +579,34 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
 }
 
-.dashboardFooter {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: 100vw;
-  height:15%;
-  font-size: 14px;
-  align-items: center;
-  .footerContent {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin: 0 30%;
-    flex: 1 0 auto;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #282f42;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 5px 20px;
-    color: #CFD5DC;
-    
-    .footerLeft {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      row-gap: 5px;
-      div {
-        //padding-top: 5px;
-        ul {
-          padding-top: 5px;
-          display: flex;
-          column-gap: 5px;
-          li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #161c26;
-            padding: 5px 6px;
-            border-radius: 7px;
-            color: #9298a5;
-            cursor: pointer;
-          }
-          li:hover {
-            color: #ffff;
-          }
-          li:active {
-            color: #099098;
-          }
-        }
-      }
-    }
-    .footerCenter {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: stretch;
-      row-gap: 3px;
-      height: 100%;
 
-      .icons {
-        height: 35%;
-        display: flex;
-        justify-content: space-evenly;
-
-        > span {
-          //height: 100%;
-          //width: 100%;
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-      }
-
-      .reserved {
-        padding-top: 10px;
-      }
-    }
-
-    .footerRight {
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      column-gap: 20px;
-      > span {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-around;
-        row-gap: 2px;
-      }
-    }
-  }
-}
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
-//   $bp-xsmall: 37.5em; // 600px
-// $bp-small: 48em; // 768px
-// $bp-medium: 64em; // 1024px
-// $bp-large: 85.375em; // 1366px
-// $bp-xlarge: 120em; // 1920px
-// $bp-xxlarge: 160em; // 2560px
+
 
 @media only screen and #{$mq-retina} {
-  .dashboardFooter{
-    .footerContent {
-    margin: 0 30%;
-    }
-  }
+
 
 }
 
 @media only screen and #{$mq-xxlarge} {
-  .dashboardFooter{
-    .footerContent {
-    margin: 0 25%;
-    }
-  }
+
 }
 
 @media only screen and #{$mq-xlarge} {
-  .dashboardFooter{
-    .footerContent {
-    margin: 0 18%;
-    }
-  }
+
 }
 @media only screen and #{$mq-large} {
-  .dashboardFooter{
-    .footerContent {
-    margin: 0 8%;
-    }
-  }
+
 }
 
 @media only screen and #{$mq-medium} {
-  .dashboardFooter{
-    .footerContent {
-    margin: 0 5%;
-    }
-  }
+
 }
 
 @media only screen and #{$mq-small} {
 
   .dashboardPage {
-    .dashboardFooter{
-      .footerContent {
-      margin: 0 4%;
-      }
-    }
+
 
     height: auto;
     .top {
@@ -801,11 +675,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 @media only screen and #{$mq-xsmall} {
   .dashboardPage {
 
-    .dashboardFooter{
-      .footerContent {
-      margin: 0 5%;
-      }
-    }
+
     .nft {
       flex-wrap: wrap;
       height: auto;

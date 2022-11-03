@@ -1,10 +1,10 @@
-.genesis-page {
+.genesisPage {
   position: relative;
   width: 100%;
   height: 480px;
   font-family: 'Bahnschrift';
 
-  .background-img {
+  .backgroundImg {
     // resize: horizontal;
     overflow: hidden;
     width: 100%;
@@ -12,11 +12,6 @@
     left: 0;
     top: 0;
     position: absolute;
-    // width: 100%;
-    // height: 90%;
-    //     object-fit: fill;
-    // z-index: 0;
-    // border-radius: 30px;
   }
 
   .content {
@@ -47,7 +42,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        .icons-bg {
+        .iconsBg {
           position: absolute;
           width: 100%;
           height: 100%;
@@ -56,17 +51,17 @@
           z-index: 0;
         }
 
-        .android-icon {
+        .androidIcon {
           width: 70%;
           height: 50%;
           margin: 1rem;
           z-index: 1;
           color: #080868;
         }
-        .android-icon:active {
+        .androidIcon:active {
           box-shadow: inset 2px -3px 6px rgba(0, 0, 0, 0.4);
         }
-        .apple-icon {
+        .appleIcon {
           width: 70%;
           height: 50%;
           margin: 1rem;
@@ -116,7 +111,7 @@
           display: -webkit-flex;
           display: -webkit-flex;
           font-family: 'Bahnschrift';
-          .text-right {
+          .textRight {
             display: flex;
             display: -webkit-flex;
             display: -webkit-flex;
@@ -133,13 +128,12 @@
               //width: 100%;
             }
             p {
-              //color-scheme: linear-gradient(0deg, #d4a50b -17.36%, rgba(219, 55, 34, 0) 100%);
               color: rgb(243, 142, 74);
             }
           }
         }
       }
-      .explore-btn {
+      .exploreBtn {
         button {
           display: flex;
           display: -webkit-flex;
@@ -164,7 +158,7 @@
           box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.4);
         }
       }
-      .sector-btn {
+      .sectorBtn {
         display: flex;
         display: -webkit-flex;
         align-items: center;
@@ -191,7 +185,7 @@
         width: 100%;
         height: 100%;
       }
-      .trailer-svg {
+      .trailerSvg {
         background: radial-gradient(
           77.33% 69.98% at 1.06% -8.88%,
           #09d6e2 0%,

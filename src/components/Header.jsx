@@ -12,9 +12,9 @@ import WalletConnect from '@walletconnect/client';
 import QRCodeModal from '@walletconnect/qrcode-modal';
 
 const Header = ({ toggleMenu, showMenu }) => {
-  const [loggedIn, setLoggedIn] = useState(false);
-  const handleLogin = () => {
-    setLoggedIn((prev) => !prev);
+  const [loginBtn, setLoginBtn] = useState(false);
+  const handleLoginBtn = () => {
+    setLoginBtn((prev) => !prev);
   };
 
   /*
@@ -73,7 +73,7 @@ const Header = ({ toggleMenu, showMenu }) => {
           />
           {/* <Logo1 className="logo-img"/> */}
         </div>
-        {!loggedIn ? (
+        {!loginBtn ? (
           <div className={`header-menu ${showMenu ? 'show' : ''}`}>
             <ul className="menu">
               <li>
@@ -137,9 +137,15 @@ const Header = ({ toggleMenu, showMenu }) => {
           </div>
         )}
         <div className="header-login">
-          <button className="login-btn btn" onClick={handleLogin}>
-            {loggedIn ? 'LOGOUT' : 'LOGIN'}
-          </button>
+          {!loginBtn ? (
+            <button className="login-btn btn" onClick={handleLoginBtn}>
+              LOGIN
+            </button>
+          ) : (
+            <button className="btn connectWallet" onClick={handleLoginBtn}>
+              connect wallet
+            </button>
+          )}
         </div>
       </div>
     </div>

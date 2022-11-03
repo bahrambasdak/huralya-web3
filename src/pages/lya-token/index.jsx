@@ -9,7 +9,9 @@ import { FiCopy } from 'react-icons/fi';
 import LyaTokenLogo from '../../components/svgComponent/LyaTokenLogo';
 import LyaIcon1 from '../../components/svgComponent/LyaIcon1';
 import LyaIcon2 from '../../components/svgComponent/LyaIcon2';
-import LyaIcon3 from '../../components/svgComponent/LyaIcon3';
+
+import styles from './style.module.scss';
+
 const LyaTokenDescription1 = `All consumption of lya token is in the ecosystem and its printing and burning 
 is done only based on supply and demand for users. The company's fundraising is only through 
 the Insignia Collection, and ZERO LYA tokens will belong to the Huralya team.`;
@@ -22,50 +24,54 @@ cryptocurrencies such as BTC, ETH, USDT or …
 const LyaTokenDescription3 = `LYA, the currency token in hualya game ecosystems. 
 All user’s transactions, expenses and income will be covered by this coin.`;
 const ethereumAddress = '0x3F162087420604ebBaa03eD048D8a8709De78923';
+
 const LyaToken = () => {
   const addressCopy = () => {
     navigator.clipboard.writeText(ethereumAddress);
   };
   return (
-    <div className="lyatoken-page">
-      <div className="top">
-        <div className="exchanges card">
-          <div className="title">Exchanges</div>
-          <div className="exchange">
-            <button className="btn">Kucoin</button>
-            <button className="btn">MEXC</button>
-            <button className="btn">uniswap</button>
-            <button className="btn pancakeswap">pancakeswap</button>
+    <div className={styles.lyatokenPage}>
+      <div className={styles.top}>
+        <div className={`${styles.exchanges} ${styles.card}`}>
+          <div className={styles.title}>Exchanges</div>
+          <div className={styles.exchange}>
+            <button className={styles.btn}>Kucoin</button>
+            <button className={styles.btn}>MEXC</button>
+            <button className={styles.btn}>uniswap</button>
+            <button className={`${styles.btn} ${styles.pancakeswap}`}>
+              pancakeswap
+            </button>
           </div>
         </div>
-        <div className="contract-address card">
-          <div className="title">Contract Address</div>
-          <div className="contract">
-            <div className="ethereum">
-              <button className="btn">Ethereum</button>
-              <span className="ether-hover">
+        <div className={`${styles.contractAddress} ${styles.card}`}>
+          <div className={styles.title}>Contract Address</div>
+          <div className={styles.contract}>
+            <div className={styles.ethereum}>
+              <button className={styles.btn}>Ethereum</button>
+              <span className={styles.etherHover}>
                 <div>
                   <p>{ethereumAddress}</p>
-                  <div className="icons">
-                    | <FiCopy onClick={addressCopy} className="copy-icon" />
+                  <div className={styles.icons}>
+                    |{' '}
+                    <FiCopy onClick={addressCopy} className={styles.copyIcon} />
                     <img src={metamask_icon} alt="metamask_icon" />
                   </div>
                 </div>
               </span>
             </div>
 
-            <div className="smartchain">
-              <button className="btn">SmartChain</button>
+            <div className={styles.smartchain}>
+              <button className={styles.btn}>SmartChain</button>
             </div>
           </div>
         </div>
 
-        <div className="logo card">
+        <div className={`${styles.logo} ${styles.card}`}>
           {/* <img src={lyaLogo} alt="lya_page_logo" width={141} height={86}/> */}
-          <LyaTokenLogo className="lya-token-logo" />
+          <LyaTokenLogo className={styles.lyaTokenLogo} />
         </div>
       </div>
-      <div className="content card">
+      <div className={`${styles.content} ${styles.card}`}>
         <LyaTokenDescription
           icon={lya_icon1}
           title="Allocation and release"
