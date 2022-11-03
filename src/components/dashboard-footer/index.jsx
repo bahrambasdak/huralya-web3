@@ -1,13 +1,13 @@
-import classes from "../styles/dashboardPage.module.scss";
+//import classes from "./styles.module.scss";
 
 import { BsWhatsapp } from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import android_icon from "../img/genesis_android_icon.svg";
-import apple_icon from "../img/genesis_apple_icon.svg";
+import android_icon from "../../assets/images/genesis_android_icon.svg";
+import apple_icon from "../../assets/images/genesis_apple_icon.svg";
 
-const DashboardFooter = () => {
+const DashboardFooter = ({classes}) => {
     return ( <div className={classes.dashboardFooter}>
       <div className={classes.footerContent}>
         <div className={classes.footerLeft}>

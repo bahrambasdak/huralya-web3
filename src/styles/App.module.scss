@@ -1,15 +1,92 @@
+// Breakpoints
+$bp-xsmall: 37.5em; // 600px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+
+$header-background-color: #282f42;
+$header-menu-text-color: #9298a5;
+:root {
+  --ease-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@mixin headerMenuFont {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #282f42;
+  border: 1px solid #595f71;
+  border-radius: 63px;
+  font-family: "Alatsi";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #595f71;
+}
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+.btn:active {
+  box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+
+///////////////////////////////////////////////
+.fade-enter {
+  opacity: 0;
+
+  z-index: 1;
+  scale: 0.8;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  scale: 1;
+  transition: opacity 250ms ease-out, scale 300ms ease;
+}
+.fade-exit {
+  opacity: 0;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 250ms ease-out;
+}
+// fade-appear, fade-appear-active, fade-appear-done
+// fade-enter, fade-enter-active, fade-enter-done
+// fade-exit, fade-exit-active, fade-exit-done
+
 .App {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 3rem;
-    padding-top: 6.2rem;
-    font-family: "Bahnschrift";
-    background-color: #161c26;
-    height: auto;
-  }
+  width: 100%;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 3rem;
+  padding-top: 6.2rem;
+  font-family: "Bahnschrift";
+  background-color: #161c26;
+  height: auto;
+}
 
 ///////////////////////////////////////////  Header   ////////////////////
 
@@ -108,7 +185,7 @@
             height: 100%;
             text-decoration: none;
             color: $header-menu-text-color; //#9298A5;
-            @include header-menu-font;
+            @include headerMenuFont;
             overflow: hidden;
             min-width: fit-content;
             text-align: center;
@@ -118,59 +195,6 @@
           }
           .item:hover {
             color: white;
-          }
-          .item::after {
-            content: "";
-            box-sizing: border-box;
-            position: absolute;
-            border-bottom: 0.2rem solid transparent;
-            width: 100%;
-            left: 100%;
-            bottom: 0;
-            transition: all 0.3s ease-out;
-          }
-          .item1::after {
-            border-image: linear-gradient(
-              90deg,
-              rgb(27, 90, 7),
-              rgb(177, 247, 170)
-            );
-            border-image-slice: 1;
-          }
-          .item2::after {
-            border-image: linear-gradient(
-              90deg,
-              rgb(119, 58, 8),
-              rgb(243, 210, 161)
-            );
-            border-image-slice: 1;
-          }
-          .item3::after {
-            border-image: linear-gradient(
-              90deg,
-              rgb(10, 48, 97),
-              rgb(192, 232, 255)
-            );
-            border-image-slice: 1;
-          }
-          .item4::after {
-            border-image: linear-gradient(
-              254.24deg,
-              #bc68fe 14.93%,
-              #6f31d6 87.95%
-            );
-            border-image-slice: 1;
-          }
-
-          .active {
-            background-image: linear-gradient(
-              0.74deg,
-              #0c0e16 0.5%,
-              rgba(159, 176, 219, 0.05) 100%
-            );
-          }
-          .active::after {
-            left: 0;
           }
         }
       }
@@ -192,8 +216,8 @@
         max-width: 100px;
         padding: 5px;
         background-color: #282f42;
-       // border-color: #9298a5;
-       border-width: 2px;
+        // border-color: #9298a5;
+        border-width: 2px;
       }
     }
   }
@@ -283,8 +307,105 @@
   }
 }
 
+.App .dashboardFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 100vw;
+  height: 15%;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  .footerContent {
+    // width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 30%;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282f42;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 5px 20px;
+    color: #cfd5dc;
 
+    .footerLeft {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      row-gap: 5px;
+      div {
+        //padding-top: 5px;
+        ul {
+          padding-top: 5px;
+          display: flex;
+          column-gap: 5px;
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #161c26;
+            padding: 5px 6px;
+            border-radius: 7px;
+            color: #9298a5;
+            cursor: pointer;
+          }
+          li:hover {
+            color: #ffff;
+          }
+          li:active {
+            color: #099098;
+          }
+        }
+      }
+    }
+    .footerCenter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: stretch;
+      row-gap: 3px;
+      height: 100%;
 
+      .icons {
+        height: 35%;
+        display: flex;
+        justify-content: space-evenly;
+
+        > span {
+          //height: 100%;
+          //width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .reserved {
+        padding-top: 10px;
+      }
+    }
+
+    .footerRight {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      column-gap: 20px;
+      > span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+        row-gap: 2px;
+      }
+    }
+  }
+}
 
 @media only screen and #{$mq-retina} {
   .App {
@@ -301,12 +422,16 @@
         margin: 0 30%;
       }
     }
+    .dashboardFooter {
+      .footerContent {
+        margin: 0 30%;
+      }
+    }
   }
-
 }
 
 @media only screen and #{$mq-xxlarge} {
-  .App{
+  .App {
     .header {
       .headerContent {
         margin: 0 25%;
@@ -320,11 +445,16 @@
         margin: 0 25%;
       }
     }
+    .dashboardFooter {
+      .footerContent {
+        margin: 0 25%;
+      }
+    }
   }
 }
 
 @media only screen and #{$mq-xlarge} {
-  .App{
+  .App {
     .header {
       .headerContent {
         margin: 0 18%;
@@ -338,12 +468,15 @@
         margin: 0 18%;
       }
     }
-
+    .dashboardFooter {
+      .footerContent {
+        margin: 0 18%;
+      }
+    }
   }
-
 }
 @media only screen and #{$mq-large} {
-  .App{
+  .App {
     .header {
       .headerContent {
         max-width: 80%;
@@ -358,44 +491,46 @@
         margin: 0 8%;
       }
     }
-
-
-  }
-
-}
-
-@media only screen and #{$mq-medium} {
-.App{
-  .header {
-    .headerContent {
-      max-width: 86%;
-
-      margin: 0 6%;
-    }
-  }
-  .Container {
-    margin: 0 6%;
-  }
-  .footer {
-    .footerContent {
-      margin: 0 5%;
-      .join {
-        .btn {
-          max-width: 10vw;
-        }
+    .dashboardFooter {
+      .footerContent {
+        margin: 0 8%;
       }
     }
   }
-
-
 }
 
+@media only screen and #{$mq-medium} {
+  .App {
+    .header {
+      .headerContent {
+        max-width: 86%;
 
+        margin: 0 6%;
+      }
+    }
+    .Container {
+      margin: 0 6%;
+    }
+    .footer {
+      .footerContent {
+        margin: 0 5%;
+        .join {
+          .btn {
+            max-width: 10vw;
+          }
+        }
+      }
+    }
+    .dashboardFooter {
+      .footerContent {
+        margin: 0 5%;
+      }
+    }
+  }
 }
 
 @media only screen and #{$mq-small} {
-  .App{
-
+  .App {
     .header {
       .headerContent {
         max-width: 90%;
@@ -415,20 +550,59 @@
         }
       }
     }
+    .dashboardFooter {
+      .footerContent {
+        flex-wrap: wrap;
+        margin: 0 4%;
+      }
+      height: auto;
+      flex-wrap: wrap;
+      min-height: fit-content;
+      //row-gap: 20px;
 
+      .footerLeft {
+        min-width: fit-content;
+        flex-grow: 1;
+        height: auto;
+        justify-content: center;
+        row-gap: 5px;
+      }
+      .footerCenter {
+        min-width: fit-content;
+        flex-grow: 0;
+        height: auto;
+        .icons {
+           height: 10%;
+          > span {
+            height: 5%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .footerRight {
+        min-width: fit-content;
+        //  flex-grow: 1;
+        height: auto;
+        // justify-content: center;
+      }
+    }
 
     .header {
       .headerContent {
         .mobileMenuBtn {
           display: block;
         }
-  
+
         .headerLogin {
           max-width: none;
         }
         .headerMenu {
           white-space: nowrap;
-  
+
           opacity: 0;
           padding: 8px;
           border-radius: 12px;
@@ -450,11 +624,11 @@
             transform 0.6s var(--ease-quart),
             -webkit-transform 0.6s var(--ease-quart);
           position: fixed;
-  
+
           bottom: 15%;
           left: -100%;
           background-color: $header-background-color;
-  
+
           .menu {
             padding: 0;
             flex-direction: column;
@@ -476,7 +650,7 @@
             }
           }
         }
-  
+
         .show {
           opacity: 1;
           z-index: 2;
@@ -487,94 +661,7 @@
         }
       }
     }
-  
-
-
-  
-    //////////////////////////////about-us-page///////////
-    .Container  .about-us {
-      height: max-content;
-      min-height: fit-content;
-  
-      .about-desc {
-        height: auto;
-        width: 100%;
-        margin: 0;
-        .desc-icons {
-          width: 100%;
-          .item {
-          }
-        }
-      }
-      .bottom-section {
-        padding-top: 1rem;
-        position: relative;
-        height: auto;
-        min-height: fit-content;
-        .bottom-top {
-          flex-direction: column;
-          row-gap: 1rem;
-          height: auto;
-          .content {
-            row-gap: 10px;
-          }
-          .backers {
-            width: 100%;
-  
-            .top {
-              flex-direction: column;
-              row-gap: 10px;
-            }
-            .buttons {
-              flex-direction: column;
-              align-items: stretch;
-              row-gap: 10px;
-            }
-          }
-          .team {
-            width: 90%;
-            row-gap: 20px;
-          }
-        }
-  
-        .socials {
-          flex-direction: column;
-          flex-wrap: wrap;
-          width: 100%;
-          row-gap: 10px;
-          .btns {
-            flex-wrap: wrap;
-            row-gap: 10px;
-            column-gap: 5px;
-            .btn {
-              max-width: 35%;
-            }
-          }
-        }
-      }
-    }
-  
-    /////////////////////////////////////////////mint Page//////////////
-    .Container .mint {
-      .Huralya-Squirrel {
-        width: 70%;
-        .content {
-          padding: 10px 5px;
-          .scrollable-section {
-            padding: 10px;
-            .scroll {
-              padding-right: 0;
-            }
-          }
-        }
-      }
-  
-      .buy-sell {
-        width: 30%;
-      }
-    }
   }
-
 }
 
 @media only screen and #{$mq-xsmall} {
@@ -582,7 +669,7 @@
     min-height: fit-content;
     padding-bottom: 0;
     .header {
-      .header-content {
+      .headerContent {
         margin: 0 5%;
       }
     }
@@ -591,70 +678,46 @@
       padding-bottom: 9rem;
     }
     .footer {
-      .footer-content {
+      .footerContent {
         margin: 0 5%;
       }
     }
-  
-    //////////////////////////////////////////////lyaToken Page//////////////////
-    .Container .lyatoken-page {
-      flex-wrap: wrap;
-      .top {
-        flex-wrap: wrap;
-        row-gap: 10px;
-        .contract-address {
-          .contract {
-            .ether-hover {
-              left: -8%;
-            }
-            .ether-hover::after {
-              display: block;
-              left: 20%;
-            }
-            .ether-hover::before {
-              display: none;
-            }
-          }
-        }
-  
-        .btn {
-          font-family: "Alatsi";
-        }
-  
-        .smartchain {
-          .btn {
-            font-family: "Bahnschrift";
-          }
-        }
-        .logo {
-          padding: 0;
-        }
-        .exchanges {
-          .exchange {
-            .pancakeswap {
-              max-width: 32%;
-            }
-            flex-wrap: wrap;
-            row-gap: 10px;
-          }
-        }
+
+    .dashboardFooter {
+      .footerContent {
+        margin: 0 5%;
       }
-      .content {
-        flex-wrap: wrap;
-        row-gap: 3rem;
-        padding-top: 1rem;
+      row-gap: 20px;
+
+      .footerLeft {
+        width: 100%;
+        flex-grow: 1;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+      }
+      .footerCenter {
+        width: 100%;
+      }
+
+      .footerRight {
+        width: 100%;
+        > span {
+          text-align: left;
+        }
       }
     }
-  
+
     .header {
-      .header-content {
+      .headerContent {
         //z-index: 3;
-  
-        .mobile-menu-btn {
+
+        .mobileMenuBtn {
           display: block;
         }
-  
-        .header-menu {
+
+        .headerMenu {
           white-space: nowrap;
           padding: 8px;
           border-radius: 12px;
@@ -676,11 +739,11 @@
             transform 0.6s var(--ease-quart),
             -webkit-transform 0.6s var(--ease-quart);
           position: fixed;
-  
+
           bottom: 15%;
           left: -100%;
           background-color: $header-background-color;
-  
+
           .menu {
             padding: 0;
             flex-direction: column;
@@ -702,7 +765,7 @@
             }
           }
         }
-  
+
         .show {
           opacity: 1;
           z-index: 2;
@@ -714,10 +777,10 @@
       }
     }
     .footer {
-      .footer-content {
+      .footerContent {
         flex-direction: column;
         padding-top: 0.5rem;
-        .social-icons ul {
+        .socialIcons ul {
           column-gap: 20px;
         }
         .join {
@@ -725,7 +788,7 @@
           justify-content: center;
           align-items: stretch;
           width: 100%;
-  
+
           .btn {
             flex-grow: 0;
             max-width: 100vw;
@@ -736,198 +799,5 @@
         }
       }
     }
-    //////////////////////////////////////////////////insignia page//////////////
-    .Container .insigniaNFT-page {
-      .Huralya-Squirrel {
-        .content {
-          padding: 0.8rem;
-          .scrollable-section {
-            padding: 10px;
-            margin-right: 3%;
-            border-radius: 20px;
-          }
-          .scroll {
-            padding-right: 10px;
-            .section {
-              justify-content: space-between;
-              .title {
-                color: #dddedf;
-                min-width: fit-content;
-                font-size: 0.8rem;
-                padding: 0.5rem 0rem 0.5rem 0px;
-              }
-              .text {
-                padding: 0.3rem 0.5rem;
-              }
-            }
-            .plan-section {
-              flex-wrap: wrap;
-            }
-          }
-        }
-      }
-  
-      .min {
-        .content {
-          display: flex;
-          .text {
-            padding-left: 2rem;
-          }
-        }
-      }
-      .circulate-supply {
-        .content {
-          font-size: 1rem;
-        }
-      }
-    }
-    /////////////////////////////////////////////GENESIS page////////////////
-    .Container .genesis-page {
-      .content {
-       // height: 90%;
-        .left {
-          .icons {
-            .text {
-              left: 20%;
-              bottom: -2%;
-            }
-          }
-        }
-        .center {
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 100%;
-          top: 0;
-          left: 10%;
-          row-gap: 0;
-          .title {
-            .text {
-              display: flex;
-              flex-wrap: wrap;
-              row-gap: 1rem;
-              .text-right {
-                img {
-                  width: 50%;
-                  left: 30%;
-                  bottom: 70%;
-                }
-              }
-            }
-          }
-  
-          .explore-btn {
-            padding-bottom: 7rem;
-          }
-          .sector-btn {
-            padding-right: 3rem;
-          }
-        }
-        .right {
-          position: absolute;
-          right: 5%;
-          bottom: 0;
-        }
-      }
-    }
-  
-    //////////////////////////////about-us-page///////////
-    .Container .about-us {
-      height: auto;
-      min-height: fit-content;
-  
-      .about-desc {
-        height: auto;
-        width: 100%;
-        margin: 0;
-        .desc-icons {
-          width: 100%;
-          .item {
-          }
-        }
-      }
-      .bottom-section {
-        padding-top: 1rem;
-        position: relative;
-        height: auto;
-        min-height: fit-content;
-        .bottom-top {
-          flex-direction: column;
-          row-gap: 1rem;
-          height: auto;
-          .content {
-            row-gap: 10px;
-          }
-          .backers {
-            width: 100%;
-            height: auto;
-            min-height: fit-content;
-  
-            .top {
-              flex-direction: column;
-              row-gap: 10px;
-            }
-            .buttons {
-              flex-direction: column;
-              align-items: stretch;
-              row-gap: 10px;
-            }
-          }
-          .team {
-            width: 90%;
-            row-gap: 20px;
-          }
-        }
-  
-        .socials {
-          flex-direction: column;
-          flex-wrap: wrap;
-          width: 100%;
-          row-gap: 10px;
-          .btns {
-            flex-wrap: wrap;
-            row-gap: 10px;
-            column-gap: 5px;
-            .btn {
-              max-width: 35%;
-            }
-          }
-        }
-      }
-    }
-  
-    ///////////////////////////////////////////mint page////////////////
-    .Container .mint {
-     height: auto;
-      flex-direction: column;
-      row-gap: 20px;
-      .Huralya-Squirrel {
-        width: 100%;
-        height: 80vh;
-        .content {
-          padding: 10px 5px;
-          .scrollable-section {
-            padding: 10px;
-            .scroll {
-              max-height: 100%;
-              padding-right: 0;
-            }
-          }
-        }
-      }
-  
-      .buy-sell {
-        width: 100%;
-        .bar {
-          text-align: center;
-  
-          img {
-            max-width: 250px;
-          }
-        }
-      }
-    }
   }
-
 }

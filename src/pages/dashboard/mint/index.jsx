@@ -1,13 +1,13 @@
-import HuralyaSquirrel from "../components/HuralyaSquirrel";
-import catImg from "../img/mintPageCatImg.svg";
-import mintBar from "../img/mintPagbar.svg";
+import HuralyaSquirrel from "../../../components/HuralyaSquirrel";
+import catImg from "../../../assets/images/mintPageCatImg.svg";
+import mintBar from "../../../assets/images/mintPagbar.svg";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 import styles from './style.module.scss';
 
 const Mint = () => {
   return (
     <div className={styles.mint}>
-      <HuralyaSquirrel />
+      <HuralyaSquirrel styles={styles}/>
       <div className={styles.buySell}>
         <img src={catImg} alt="" className={styles.catImg} width={270} height={270} />
         <div className={styles.desc}>

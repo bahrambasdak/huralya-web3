@@ -1,12 +1,12 @@
-import LyaTokenDescription from "../components/LyaTokenDescription";
-import lya_icon1 from "../img/lya_icon1.svg";
-import lya_icon2 from "../img/lya_icon2.svg";
-import lya_icon3 from "../img/lya_icon3.svg";
-import metamask_icon from "../img/metamask_icon.svg";
+import LyaTokenDescription from "../../components/LyaTokenDescription";
+import lya_icon1 from "../../assets/images/lya_icon1.svg";
+import lya_icon2 from "../../assets/images/lya_icon2.svg";
+import lya_icon3 from "../../assets/images/lya_icon3.svg";
+import metamask_icon from "../../assets/images/metamask_icon.svg";
 import { FiCopy } from "react-icons/fi";
 //import d from "../img/d.svg";
 //import lyaLogo from "../img/lya_page_logo.svg";
-import LyaTokenLogo from "../components/svgComponent/LyaTokenLogo";
+import LyaTokenLogo from "../../components/svgComponent/LyaTokenLogo";
 // import LyaIcon1 from "../components/svgComponent/LyaIcon1";
 // import LyaIcon2 from "../components/svgComponent/LyaIcon2";
 // import LyaIcon3 from "../components/svgComponent/LyaIcon3";
@@ -75,16 +75,19 @@ const LyaToken = () => {
           icon={lya_icon1}
           title="Allocation and release"
           text={LyaTokenDescription1}
+          styles={styles}
         />
         <LyaTokenDescription
           icon={lya_icon2}
           title="how to buy and sell"
           text={LyaTokenDescription2}
+          styles={styles}
         />
         <LyaTokenDescription
           icon={lya_icon3}
           title="Token Usage"
           text={LyaTokenDescription3}
+          styles={styles}
         />
       </div>
     </div>

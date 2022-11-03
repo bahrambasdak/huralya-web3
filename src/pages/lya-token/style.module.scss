@@ -1,4 +1,52 @@
- .lyatokenPage {
+// Breakpoints
+$bp-xsmall: 37.5em; // 600px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+
+
+
+.card {
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #282f42;
+  border: 1px solid #595f71;
+  border-radius: 63px;
+  font-family: "Alatsi";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #595f71;
+}
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+.btn:active {
+  box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+
+
+
+
+.lyatokenPage {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -189,6 +237,97 @@
           width: 100%;
           font-family: "Bahnschrift";
         }
+      }
+    }
+  }
+
+
+
+
+  @media only screen and #{$mq-medium} {
+     .lyatokenPage {
+      .top {
+        .logo {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$mq-small} {
+   .lyatokenPage {
+      .top {
+        .contractAddress {
+          .contract {
+            .etherHover {
+              left: -80%;
+            }
+            .etherHover::after {
+              display: none;
+            }
+            .etherHover::before {
+              display: block;
+              left: 60%;
+            }
+          }
+        }
+  
+        .logo {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$mq-xsmall} {
+
+    //////////////////////////////////////////////lyaToken Page//////////////////
+     .lyatokenPage {
+      flex-wrap: wrap;
+      .top {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        .contractAddress {
+          .contract {
+            .etherHover {
+              left: -8%;
+            }
+            .etherHover::after {
+              display: block;
+              left: 20%;
+            }
+            .etherHover::before {
+              display: none;
+            }
+          }
+        }
+  
+        .btn {
+          font-family: "Alatsi";
+        }
+  
+        .smartchain {
+          .btn {
+            font-family: "Bahnschrift";
+          }
+        }
+        .logo {
+          padding: 0;
+        }
+        .exchanges {
+          .exchange {
+            .pancakeswap {
+              max-width: 32%;
+            }
+            flex-wrap: wrap;
+            row-gap: 10px;
+          }
+        }
+      }
+      .content {
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        padding-top: 1rem;
       }
     }
   }

@@ -1,17 +1,17 @@
-import android_icon from "../img/genesis_android_icon.svg";
-import apple_icon from "../img/genesis_apple_icon.svg";
-import icon_bg from "../img/genesis_icon_bg.svg";
-import genesis_background from "../img/genesis_bg.svg";
-import genesis_logo from "../img/genesis_logo.svg";
-import btn_logo from "../img/genesis_btn_logo.svg";
-import genesis_trailer from "../img/genesis_trailer.svg";
-import sector_btn from "../img/genesis_sector_btn.svg";
-import GenesisBgSvg from "../components/svgComponent/GenesisBgSvg";
-import GenesisTrailerBgSvg from "../components/svgComponent/GenesisTrailerBgSvg";
+import android_icon from "../../assets/images/genesis_android_icon.svg";
+import apple_icon from "../../assets/images/genesis_apple_icon.svg";
+import icon_bg from "../../assets/images/genesis_icon_bg.svg";
+import genesis_background from "../../assets/images/genesis_bg.svg";
+import genesis_logo from "../../assets/images/genesis_logo.svg";
+import btn_logo from "../../assets/images/genesis_btn_logo.svg";
+import genesis_trailer from "../../assets/images/genesis_trailer.svg";
+import sector_btn from "../../assets/images/genesis_sector_btn.svg";
+import GenesisBgSvg from "../../components/svgComponent/GenesisBgSvg";
+import GenesisTrailerBgSvg from "../../components/svgComponent/GenesisTrailerBgSvg";
 //import Convert from 'convert-svg-react';
 import { useState } from "react";
 import { useEffect } from "react";
-import GenesisTrailerSvg from "../components/svgComponent/GenesisTrailerSvg";
+import GenesisTrailerSvg from "../../components/svgComponent/GenesisTrailerSvg";
 import styles from './style.module.scss';
 
 
@@ -48,12 +48,12 @@ const Genesis = () => {
               </span>
             </p>
           </div>
-          <div className={styles.explore-btn}>
+          <div className={styles.exploreBtn}>
             <button>
               Explore the genesis <img src={btn_logo} alt="" width={40} height={35}/>
             </button>
           </div>
-          <div className={styles.sector-btn}>
+          <div className={styles.sectorBtn}>
             <button>
               <img src={sector_btn} alt="" width={55} height={20}/>
             </button>

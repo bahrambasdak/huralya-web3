@@ -1,3 +1,48 @@
+// Breakpoints
+$bp-xsmall: 37.5em; // 600px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+
+
+
+.card {
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #282f42;
+  border: 1px solid #595f71;
+  border-radius: 63px;
+  font-family: "Alatsi";
+  font-weight: 400;
+  font-size: 1rem;
+  color: #595f71;
+}
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+.btn:active {
+  box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+
 .aboutUs {
     width: 100%;
     position: relative;
@@ -98,13 +143,17 @@
       height: 40%;
       font-family: 'Bahnschrift';
       .smallBtns {
-        .s-btn {
+        .sBtn {
           position: relative;
           padding: 10px;
           border-radius: 50%;
           border: 1px solid #fbc350;
           background-color: transparent;
           margin: 2px;
+          cursor: pointer;
+        }
+        .sBtn:active{
+          background-color: #fbc350;
         }
         .left::after {
           content: "";
@@ -259,6 +308,138 @@
         }
         .smallBtns {
           flex-grow: 1;
+        }
+      }
+    }
+  }
+
+
+  @media only screen and #{$mq-small} {
+      .aboutUs {
+      height: max-content;
+      min-height: fit-content;
+  
+      .aboutDesc {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        .descIcons {
+          width: 100%;
+          .item {
+          }
+        }
+      }
+      .bottomSection {
+        padding-top: 1rem;
+        position: relative;
+        height: auto;
+        min-height: fit-content;
+        .bottomTop {
+          flex-direction: column;
+          row-gap: 1rem;
+          height: auto;
+          .content {
+            row-gap: 10px;
+          }
+          .backers {
+            width: 100%;
+  
+            .top {
+              flex-direction: column;
+              row-gap: 10px;
+            }
+            .buttons {
+              flex-direction: column;
+              align-items: stretch;
+              row-gap: 10px;
+            }
+          }
+          .team {
+            width: 90%;
+            row-gap: 20px;
+          }
+        }
+  
+        .socials {
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+          row-gap: 10px;
+          .btns {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 5px;
+            .btn {
+              max-width: 35%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$mq-xsmall} {
+
+     .aboutUs {
+      height: auto;
+      min-height: fit-content;
+  
+      .aboutDesc {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        .descIcons {
+          width: 100%;
+          .item {
+          }
+        }
+      }
+      .bottomSection {
+        padding-top: 1rem;
+        position: relative;
+        height: auto;
+        min-height: fit-content;
+        .bottomTop {
+          flex-direction: column;
+          row-gap: 1rem;
+          height: auto;
+          .content {
+            row-gap: 10px;
+          }
+          .backers {
+            width: 100%;
+            height: auto;
+            min-height: fit-content;
+  
+            .top {
+              flex-direction: column;
+              row-gap: 10px;
+            }
+            .buttons {
+              flex-direction: column;
+              align-items: stretch;
+              row-gap: 10px;
+            }
+          }
+          .team {
+            width: 90%;
+            row-gap: 20px;
+          }
+        }
+  
+        .socials {
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+          row-gap: 10px;
+          .btns {
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 5px;
+            .btn {
+              max-width: 35%;
+            }
+          }
         }
       }
     }

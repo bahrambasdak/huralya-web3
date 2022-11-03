@@ -1,17 +1,17 @@
-import icon1 from "../img/about_us_icon1.svg";
-import icon2 from "../img/about_us_icon2.svg";
-import icon3 from "../img/about_us_icon3.svg";
-import profileImg1 from "../img/about_us_team_profile1.svg";
-import profileImg2 from "../img/about_us_team_profile2.svg";
-import profileImg3 from "../img/about_us_team_profile3.svg";
-import backersBg from "../img/about_us_backer_bg.svg";
-import teamBg from "../img/about_us_team_bg.svg";
+import icon1 from "../../assets/images/about_us_icon1.svg";
+import icon2 from "../../assets/images/about_us_icon2.svg";
+import icon3 from "../../assets/images/about_us_icon3.svg";
+import profileImg1 from "../../assets/images/about_us_team_profile1.svg";
+import profileImg2 from "../../assets/images/about_us_team_profile2.svg";
+import profileImg3 from "../../assets/images/about_us_team_profile3.svg";
+import backersBg from "../../assets/images/about_us_backer_bg.svg";
+import teamBg from "../../assets/images/about_us_team_bg.svg";
 import { BsQuestionCircle } from "react-icons/bs";
 import styles from './style.module.scss';
 
 const AboutUs = () => {
   return (
-    <div className={styles.abouteUs}>
+    <div className={styles.aboutUs}>
       <div className={styles.aboutDesc}>
         <div className={styles.title}>About Us</div>
         <p className={styles.desc}>
@@ -24,35 +24,35 @@ const AboutUs = () => {
           monetization system for their games.
         </p>
         <div className={styles.descIcons}>
-          <span className={`${styles.item} ${item1}`}>
+          <span className={`${styles.item} ${styles.item1}`}>
             <div className={styles.icon}>
               <img src={icon1} alt="" />
             </div>
 
             <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
           </span>
-          <span className={`${styles.item} ${item2}`}>
+          <span className={`${styles.item} ${styles.item2}`}>
             <div className={styles.icon}>
               <img src={icon2} alt="" />
             </div>
 
             <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
           </span>
-          <span className={`${styles.item} ${item3}`}>
+          <span className={`${styles.item} ${styles.item3}`}>
             <div className={styles.icon}>
               <img src={icon3} alt="" />
             </div>
 
             <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
           </span>
-          <span className={`${styles.item} ${item4}`}>
+          <span className={`${styles.item} ${styles.item4}`}>
             <div className={styles.icon}>
               <img src={icon1} alt="" />
             </div>
 
             <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
           </span>
-          <span className={`${styles.item} ${item5}`}>
+          <span className={`${styles.item} ${styles.item5}`}>
             <div className={styles.icon}>
               <img src={icon2} alt="" />
             </div>
@@ -88,8 +88,8 @@ const AboutUs = () => {
                   <button className={styles.btn}>binance labs</button>
                 </div>
                 <div className={styles.smallBtns}>
-                  <button className={`${styles.sBtn} ${left}`}></button>
-                  <button className={`${styles.sBtn} ${right}`}></button>
+                  <button className={`${styles.sBtn} ${styles.left}`}></button>
+                  <button className={`${styles.sBtn} ${styles.right}`}></button>
                 </div>
               </div>
             </div>
@@ -103,14 +103,14 @@ const AboutUs = () => {
               height={150}
             />
             <div className={styles.title}>Our Team</div>
-            <div className={styles.profile-img}>
+            <div className={styles.profileImg}>
               <img src={profileImg1} alt="" />
               <img src={profileImg2} alt="" />
               <img src={profileImg3} alt="" />
             </div>
             <div className={styles.smallBtns}>
-              <button className={`${styles.sBtn} ${left}`}></button>
-              <button className={`${styles.sBtn} ${right}`}></button>
+              <button className={`${styles.sBtn} ${styles.left}`}></button>
+              <button className={`${styles.sBtn} ${styles.right}`}></button>
             </div>
           </div>
         </div>
@@ -122,8 +122,8 @@ const AboutUs = () => {
             <button className={styles.btn}>GAMERANK</button>
           </div>
           <div className={styles.smallBtns}>
-            <button className={`${styles.sBtn} ${left}`}></button>
-            <button className={`${styles.sBtn} ${right}`}></button>
+            <button className={`${styles.sBtn} ${styles.left}`}></button>
+            <button className={`${styles.sBtn} ${styles.right}`}></button>
           </div>
         </div>
       </div>
