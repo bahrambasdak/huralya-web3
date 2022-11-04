@@ -47,11 +47,11 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
 
 
 .lyatokenPage {
-    display: flex;
+   display: flex;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+
     row-gap: 1rem;
     .top {
       text-align: left;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus , AiOutlineMinus} from "react-icons/ai";
 import { BsSdCardFill } from "react-icons/bs";
 import InsigniaPageLeftBg from "./svgComponent/InsigniaPageLeftBg";
 
@@ -86,12 +86,15 @@ const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
               <div className={styles.section} key={key}>
                 <div className={styles.title}>{item.title}</div>
                 <p className={styles.text}>
-                  {item.showText && <p>{item.content}</p>}
+                  <p>{item.showText ? item.content:''}</p>
                 </p>
-                <AiOutlinePlus
+                {!item.showText ? <AiOutlinePlus
                   className={styles.icon}
                   onClick={() => toggleSquirrel(item.id)}
-                />
+                />:<AiOutlineMinus
+                className={styles.icon}
+                onClick={() => toggleSquirrel(item.id)}
+              />}
               </div>
             ))}
 

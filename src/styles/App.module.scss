@@ -85,6 +85,9 @@ $header-menu-text-color: #9298a5;
   font-family: "Bahnschrift";
   background-color: #161c26;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
 }
 
@@ -387,6 +390,7 @@ $header-menu-text-color: #9298a5;
         > span {
           //height: 100%;
           //width: 100%;
+          cursor: pointer;
           img {
             width: 100%;
             height: 100%;
