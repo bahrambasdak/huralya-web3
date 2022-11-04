@@ -634,6 +634,7 @@ $header-menu-text-color: #9298a5;
       .headerContent {
         .mobileMenuBtn {
           display: block;
+          
         }
 
         .headerLogin {
@@ -705,7 +706,7 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-xsmall} {
   .App {
-    min-height: fit-content;
+   // min-height: fit-content;
     padding-bottom: 0;
     .header {
       .headerContent {

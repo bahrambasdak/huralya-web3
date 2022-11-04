@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AiOutlinePlus , AiOutlineMinus} from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { BsSdCardFill } from "react-icons/bs";
 import InsigniaPageLeftBg from "./svgComponent/InsigniaPageLeftBg";
 
@@ -9,31 +9,36 @@ const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
       id: 6,
       showText: true,
       title: "Squirrel supply",
-      content: "Squirrels are cute and useful pets that can collect food on your island",
+      content:
+        "Squirrels are cute and useful pets that can collect food on your island",
     },
     {
       id: 1,
       showText: true,
       title: "Squirrel supply",
-      content: "Squirrels are cute and useful pets that can collect food on your island"
+      content:
+        "Squirrels are cute and useful pets that can collect food on your island",
     },
     {
       id: 2,
       showText: false,
       title: "Squirrel supply",
-      content: "Squirrels are cute and useful pets that can collect food on your island",
+      content:
+        "Squirrels are cute and useful pets that can collect food on your island",
     },
     {
       id: 3,
       showText: false,
       title: "Squirrel supply",
-      content: "Squirrels are cute and useful pets that can collect food on your island",
+      content:
+        "Squirrels are cute and useful pets that can collect food on your island",
     },
     {
       id: 4,
       showText: false,
       title: "Squirrel supply",
-      content: "Squirrels are cute and useful pets that can collect food on your island",
+      content:
+        "Squirrels are cute and useful pets that can collect food on your island",
     },
   ]);
 
@@ -85,20 +90,20 @@ const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
             {huralyaSquirrels.map((item, key) => (
               <div className={styles.section} key={key}>
                 <div className={styles.title}>{item.title}</div>
-                <p className={styles.text}>
-                  <p>{item.showText ? item.content:''}</p>
-                </p>
-                {!item.showText ? <AiOutlinePlus
-                  className={styles.icon}
-                  onClick={() => toggleSquirrel(item.id)}
-                />:<AiOutlineMinus
-                className={styles.icon}
-                onClick={() => toggleSquirrel(item.id)}
-              />}
+                <div className={styles.text}>
+                  <p>{item.showText ? item.content : ""}</p>
+                  {!item.showText ? (
+                    <div className={styles.icon}>
+                      <AiOutlinePlus onClick={() => toggleSquirrel(item.id)} />
+                    </div>
+                  ) : (
+                    <div className={styles.icon}>
+                      <AiOutlineMinus onClick={() => toggleSquirrel(item.id)} />
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
-
-            
           </div>
         </div>
       </div>

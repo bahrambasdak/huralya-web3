@@ -117,13 +117,13 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       .scroll {
         height: 100%;
         overflow-y: auto;
-        padding-right: 20px;
+        padding-right: 5px;
         .section {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-between;
+          //justify-content: space-between;
           border-bottom: 1px solid #282f42;
-          align-items: stretch;
+          //align-items: stretch;
           position: relative;
 
           .title {
@@ -143,24 +143,25 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
             flex-grow: 1;
             font-family: "Alatsi";
             padding: 0.3rem 1.5rem;
+            >p{
+              flex-grow: 1;
+            }
+            .icon {
+              min-width: fit-content;
+              color: white;
+              width: 15px;
+              height: 15px;
+              z-index: 0;
+              cursor: pointer;
+            }
+            .icon:hover {
+              color: #dccfdb;
+            }
+            .icon:active {
+              transform: scale(1.2);
+            }
           }
-          .icon {
-            min-width: fit-content;
-            color: white;
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            right: 5px;
-            top: calc(50% - 7px);
-            z-index: 0;
-            cursor: pointer;
-          }
-          .icon:hover {
-            color: #dccfdb;
-          }
-          .icon:active {
-            transform: scale(1.2);
-          }
+
         }
         .planSection {
           flex-wrap: wrap;

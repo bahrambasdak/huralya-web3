@@ -13,6 +13,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import GenesisTrailerSvg from "../../components/svgComponent/GenesisTrailerSvg";
 import styles from './style.module.scss';
+import GenesisLogo from "../../components/svgComponent/GenesisLogo";
 
 
 
@@ -44,6 +45,7 @@ const Genesis = () => {
               The first creation of
               <span className={styles.textRight}>
                 <img src={genesis_logo} alt="" width={80} height={55}/>
+                {/* <GenesisLogo width={80} height={55} className={styles.img}/> */}
                 <p>Huralya</p>
               </span>
             </p>
@@ -64,6 +66,8 @@ const Genesis = () => {
           <img src={genesis_trailer} alt="" width={150} height={155}/>
 {/* <GenesisTrailerBgSvg/>
           <GenesisTrailerSvg className="trailer-svg"/> */}
+           {/* <GenesisTrailerSvg className="trailer-svg"/> 
+           <GenesisTrailerBgSvg/> */}
           <div>
             <button></button>
             <p>watch trailer</p>
