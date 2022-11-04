@@ -15,12 +15,10 @@ import { useState } from "react";
 import DashboardFooter from "./components/dashboard-footer";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
-  //const location = useLocation();
   const [loginBtn, setLoginBtn] = useState(false);
-  //const navigate = useNavigate();
+  const [showMainFooter , setShowMainFooter] = useState(false);
   const handleLoginBtn = () => {
     setLoginBtn((prev) => !prev);
-
   };
   const toggleMenu = (e) => {
     e.stopPropagation();
@@ -28,6 +26,9 @@ function App() {
     if (e.target.className.includes("dot")) setShowMenu((prev) => !prev);
     else if (showMenu) setShowMenu((prev) => !prev);
   };
+
+
+
   return (
     <div className={`${styles.App}`} onClick={toggleMenu}>
       <BrowserRouter>
@@ -37,12 +38,11 @@ function App() {
           styles={styles}
           handleLoginBtn={handleLoginBtn}
           loginBtn={loginBtn}
+          showMainFooter={setShowMainFooter}
         />
 
         <Container />
-{loginBtn ? <DashboardFooter classes={styles} /> :<Footer /> }
-        
-       
+        {loginBtn && !showMainFooter ? <DashboardFooter classes={styles} /> : <Footer />}
       </BrowserRouter>
     </div>
   );

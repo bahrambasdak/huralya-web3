@@ -10,7 +10,7 @@ import Logo1 from "../svgComponent/Logo";
 import "./styles.scss";
 //import styles from "../styles/App.module.scss";
 
-const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
+const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn , showMainFooter}) => {
 
   return (
     <div className={styles.header}>
@@ -87,7 +87,7 @@ const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
             className={`${styles.headerMenu} ${showMenu ? styles.show : ""}`}
           >
             <ul className={styles.menu}>
-              <li>
+              <li onClick={()=>showMainFooter(true)}>
                 <NavLink
                   to="/mint"
                   className={`${styles.item} ${styles.item1} item1 item`}
@@ -96,7 +96,7 @@ const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
                   Mint
                 </NavLink>
               </li>
-              <li>
+              <li onClick={()=>showMainFooter(false)}>
                 <NavLink
                   to="/dashboard"
                   className={`${styles.item} ${styles.item3} item3 item`}

@@ -18,7 +18,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
 
 .mint {
     //position: relative;
-    height: 480px;
+    height: 500px;
     width: 100%;
     display: flex;
     column-gap: 10px;
@@ -120,9 +120,6 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
               flex-grow: 1;
               font-family: "Alatsi";
               padding: 0.3rem 1.5rem;
-              p {
-                display: none;
-              }
             }
             .icon {
               min-width: fit-content;
@@ -133,25 +130,13 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
               right: 5px;
               top: calc(50% - 7px);
               z-index: 0;
-            }
-            .checkbox {
-              position: absolute;
-              right: 4px;
-              top: calc(50% - 10px);
-              width: 20px;
-              height: 20px;
-              opacity: 0;
-              z-index: 1;
               cursor: pointer;
             }
-            .checkbox:checked ~ .text {
-              p {
-                display: flex;
-              }
-              .icon {
-                color: #dccfdb;
-              }
+            .icon:active{
+              transform: scale(1.2);
+              color: #dccfdb;
             }
+           
           }
           .planSection {
             flex-wrap: wrap;

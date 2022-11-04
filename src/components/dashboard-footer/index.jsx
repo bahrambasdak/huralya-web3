@@ -4,8 +4,8 @@ import { BsWhatsapp } from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import android_icon from "../../assets/images/genesis_android_icon.svg";
-import apple_icon from "../../assets/images/genesis_apple_icon.svg";
+import android_icon from "../../assets/images/android_icon2.svg";
+import apple_icon from "../../assets/images/apple_icon2.svg";
 
 const DashboardFooter = ({classes}) => {
     return ( <div className={classes.dashboardFooter}>
