@@ -222,26 +222,26 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
 
   @media only screen and #{$mq-medium} {
 
-  }
-    @media only screen and #{$mq-small} {
-     .mint {
-        .HuralyaSquirrel {
-          width: 70%;
-          .content {
-            padding: 10px 5px;
-            .scrollableSection {
-              padding: 10px;
-              .scroll {
-                padding-right: 0;
-              }
-            }
+}
+@media only screen and #{$mq-small} {
+  .mint {
+    .HuralyaSquirrel {
+      width: 70%;
+      .content {
+        padding: 10px 5px;
+        .scrollableSection {
+          padding: 10px;
+          .scroll {
+            padding-right: 0;
           }
         }
-    
-        .buySell {
-          width: 30%;
-        }
       }
+    }
+
+    .buySell {
+      width: 30%;
+    }
+  }
 
     }
     @media only screen and #{$mq-xsmall} {
