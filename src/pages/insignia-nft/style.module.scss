@@ -92,7 +92,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       }
       /* Handle on hover */
 
-      .title {
+      > .title {
         color: #e29b1d;
         padding: 0.6rem;
         font-family: "Alatsi";
@@ -119,52 +119,58 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
         overflow-y: auto;
         padding-right: 5px;
         .section {
+          width: 100%;
+          height: auto;
           display: flex;
-          flex-wrap: wrap;
-          //justify-content: space-between;
+          justify-content: space-between;
+          align-items: center;
+          flex-grow: 1;
           border-bottom: 1px solid #282f42;
-          //align-items: stretch;
-          position: relative;
-
-          .title {
-            color: #dddedf;
-            min-width: fit-content;
-            padding: 0.7rem 0rem 0.2rem 0px;
-            font-family: "Alatsi";
-            display: flex;
-            align-items: center;
-          }
+          padding: 0.6rem 0;
           .text {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            color: #898d92;
-            font-size: 12px;
             flex-grow: 1;
-            font-family: "Alatsi";
-            padding: 0.3rem 1.5rem;
-            >p{
-              flex-grow: 1;
-            }
-            .icon {
+            row-gap: 0.3rem;
+            .title {
+              color: #dddedf;
               min-width: fit-content;
-              color: white;
-              width: 15px;
-              height: 15px;
-              z-index: 0;
-              cursor: pointer;
+              font-family: "Alatsi";
+              display: flex;
+              align-items: center;
             }
-            .icon:hover {
-              color: #dccfdb;
-            }
-            .icon:active {
-              transform: scale(1.2);
+            .desc {
+              display: flex;
+              align-items: center;
+              color: #898d92;
+              font-size: 12px;
+              flex-grow: 1;
+              font-family: "Alatsi";
+              padding: 0rem 0.5rem;
             }
           }
 
+          .icon {
+            flex-shrink: 0;
+            color: white;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .icon:hover {
+            color: #dccfdb;
+          }
+          .icon:active {
+            transform: scale(1.2);
+          }
         }
         .planSection {
-          flex-wrap: wrap;
+          .text {
+            flex-wrap: wrap;
+          }
         }
       }
     }
@@ -440,18 +446,12 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
           padding-right: 10px;
           .section {
             justify-content: space-between;
-            .title {
-              color: #dddedf;
-              min-width: fit-content;
-              font-size: 0.8rem;
-              padding: 0.5rem 0rem 0.5rem 0px;
-            }
             .text {
-              padding: 0.3rem 0.5rem;
+              flex-wrap: wrap;
             }
-          }
-          .planSection {
-            flex-wrap: wrap;
+            .icon{
+              align-self: flex-start;
+            }
           }
         }
       }

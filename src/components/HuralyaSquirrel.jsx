@@ -79,28 +79,29 @@ const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
         <div className={styles.scrollableSection}>
           <div className={styles.scroll}>
             <div className={`${styles.section} ${styles.planSection}`}>
+              <div className={styles.text}>
               <div className={styles.title}>Squirrel plan</div>
-              <p className={styles.text}>
+              <p className={styles.desc}>
                 The mint price of Squirrel nfts increases by 100 lya every month
                 , So most likely you can sell your nfts at a higher price every
                 month
               </p>
+              </div>
             </div>
 
             {huralyaSquirrels.map((item, key) => (
               <div className={styles.section} key={key}>
-                <div className={styles.title}>{item.title}</div>
                 <div className={styles.text}>
-                  <p>{item.showText ? item.content : ""}</p>
-                  {!item.showText ? (
-                    <div className={styles.icon}>
-                      <AiOutlinePlus onClick={() => toggleSquirrel(item.id)} />
-                    </div>
-                  ) : (
-                    <div className={styles.icon}>
-                      <AiOutlineMinus onClick={() => toggleSquirrel(item.id)} />
-                    </div>
-                  )}
+                  <div className={styles.title}>{item.title}</div>
+                  <p className={styles.desc}>
+                    {item.showText ? item.content : ""}
+                  </p>
+                </div>
+                <div
+                  className={styles.icon}
+                  onClick={() => toggleSquirrel(item.id)}
+                >
+                  {!item.showText ? <AiOutlinePlus /> : <AiOutlineMinus />}
                 </div>
               </div>
             ))}

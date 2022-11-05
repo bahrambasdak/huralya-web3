@@ -51,7 +51,6 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
     width: 100%;
     flex-direction: column;
     align-items: center;
-
     row-gap: 1rem;
     .top {
       text-align: left;
@@ -73,7 +72,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
         .title {
           padding: 0px 0 20px 0;
           color: white;
-  
+  font-family: 'Bahnschrift';
           font-weight: 600;
           font-size: 22px;
         }
@@ -87,6 +86,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
             width: 25%;
             min-width: fit-content;
             flex-grow: 1;
+            font-family: 'Alatsi';
           }
         }
       }
@@ -104,6 +104,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
           font-weight: 600;
           font-size: 24px;
           color: #ffffff;
+          font-family: 'Bahnschrift';
         }
         .contract {
           display: flex;
@@ -127,6 +128,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
               column-gap: 5px;
               p {
                 font-size: 12px;
+                font-family: 'Alatsi';
               }
               .icons {
                 font-size: 1.2rem;
@@ -166,6 +168,9 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
             flex-grow: 1;
             max-width: 38%;
             min-width: fit-content;
+            .btn{
+              font-family: 'Alatsi';
+            }
           }
           .ethereum:hover {
             .etherHover {

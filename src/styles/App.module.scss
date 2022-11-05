@@ -76,6 +76,9 @@ $header-menu-text-color: #9298a5;
 // fade-exit, fade-exit-active, fade-exit-done
 
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   text-align: center;
   position: relative;
@@ -85,9 +88,7 @@ $header-menu-text-color: #9298a5;
   font-family: "Bahnschrift";
   background-color: #161c26;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
   
 }
 
@@ -244,14 +245,15 @@ $header-menu-text-color: #9298a5;
 
 ////////////////////////////////////////////     Footer    //////////////////////
 .App .footer {
-  position: absolute;
-  bottom: 0;
+  //position: absolute;
+  //bottom: 0;
   width: 100%;
   max-width: 100vw;
   align-items: center;
   justify-content: center;
 
   .footerContent {
+    font-family: "Bahnschrift";
     display: flex;
     margin: 0 30%;
     flex: 1 0 auto;
@@ -319,7 +321,7 @@ $header-menu-text-color: #9298a5;
 }
 
 .App .dashboardFooter {
-  position: absolute;
+  //position: absolute;
   display: flex;
   bottom: 0;
   width: 100%;
