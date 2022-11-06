@@ -23,7 +23,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
   column-gap: 10px;
   font-family: "Alatsi";
   font-weight: 400;
-
+  min-width: 100%;
   .HuralyaSquirrel {
     flex-grow: 1;
     width: 78%;

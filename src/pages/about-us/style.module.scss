@@ -47,6 +47,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
     width: 100%;
     position: relative;
     height: 480px;
+    min-width: 100%;
     .aboutDesc {
       background: #282f42;
       border-radius: 27px;

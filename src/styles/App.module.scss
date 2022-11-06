@@ -88,8 +88,6 @@ $header-menu-text-color: #9298a5;
   font-family: "Bahnschrift";
   background-color: #161c26;
   height: auto;
-
-  
 }
 
 ///////////////////////////////////////////  Header   ////////////////////
@@ -200,6 +198,60 @@ $header-menu-text-color: #9298a5;
           .item:hover {
             color: white;
           }
+
+          .item::after {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            border-bottom: 0.2rem solid transparent;
+            width: 100%;
+            left: 100%;
+            bottom: 0;
+            transition: all 0.3s ease-out;
+          }
+          .item1::after {
+            border-image: linear-gradient(
+              90deg,
+              rgb(27, 90, 7),
+              rgb(177, 247, 170)
+            );
+            border-image-slice: 1;
+          }
+          .item2::after {
+            border-image: linear-gradient(
+              90deg,
+              rgb(119, 58, 8),
+              rgb(243, 210, 161)
+            );
+            border-image-slice: 1;
+          }
+          .item3::after {
+            border-image: linear-gradient(
+              90deg,
+              rgb(10, 48, 97),
+              rgb(192, 232, 255)
+            );
+            border-image-slice: 1;
+          }
+          .item4::after {
+            border-image: linear-gradient(
+              254.24deg,
+              #bc68fe 14.93%,
+              #6f31d6 87.95%
+            );
+            border-image-slice: 1;
+          }
+
+          .active {
+            background-image: linear-gradient(
+              0.74deg,
+              #0c0e16 0.5%,
+              rgba(159, 176, 219, 0.05) 100%
+            );
+          }
+          .active::after {
+            left: 0;
+          }
         }
       }
     }
@@ -215,7 +267,7 @@ $header-menu-text-color: #9298a5;
         width: 100%;
         display: flex;
         justify-content: flex-end;
-      
+
         .loginBtn {
           flex-grow: 1;
           color: #9298a5;
@@ -227,7 +279,6 @@ $header-menu-text-color: #9298a5;
           background-color: #282f42;
           // border-color: #9298a5;
           border-width: 2px;
-        
         }
       }
     }
@@ -241,6 +292,19 @@ $header-menu-text-color: #9298a5;
   max-width: 100%;
   min-height: fit-content;
   padding-bottom: 0;
+
+  > div {
+    display: flex;
+    column-gap: 20px;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+  }
+  ::-webkit-scrollbar {
+    width: 0rem;
+  }
 }
 
 ////////////////////////////////////////////     Footer    //////////////////////
@@ -527,12 +591,12 @@ $header-menu-text-color: #9298a5;
     }
     .Container {
       margin: 0 6%;
-      padding-bottom: 1rem;
+      //padding-bottom: 1rem;
     }
     .footer {
       position: static;
       bottom: 0;
-     // height: ;
+      // height: ;
       .footerContent {
         margin: 0 5%;
         .join {
@@ -561,6 +625,22 @@ $header-menu-text-color: #9298a5;
     }
     .Container {
       margin: 0 4%;
+    }
+
+    .genesisPageShow {
+      height: 70vh;
+    }
+    .insigniaPageShow {
+    }
+    .aboutusPageShow {
+      height: 140vh;
+
+    }
+    .lyatokenPageShow {
+      height: 110vh;
+    }
+    .mintPageShow{
+      height: 80vh;
     }
     .footer {
       .footerContent {
@@ -636,7 +716,6 @@ $header-menu-text-color: #9298a5;
       .headerContent {
         .mobileMenuBtn {
           display: block;
-          
         }
 
         .headerLogin {
@@ -708,7 +787,7 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-xsmall} {
   .App {
-   // min-height: fit-content;
+    // min-height: fit-content;
     padding-bottom: 0;
     .header {
       .headerContent {
@@ -718,6 +797,23 @@ $header-menu-text-color: #9298a5;
     .Container {
       margin: 0 5%;
       //padding-bottom: 9rem;
+    }
+    .genesisPageShow {
+      height: 60vh;
+    }
+    .insigniaPageShow {
+      //height: 90vh;
+    }
+    .aboutusPageShow {
+      height: 170vh;
+
+    }
+    .lyatokenPageShow {
+      height: auto;
+    }
+
+    .mintPageShow{
+      height: 190vh;
     }
     .footer {
       .footerContent {

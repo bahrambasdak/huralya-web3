@@ -16,7 +16,7 @@ import DashboardFooter from "./components/dashboard-footer";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [loginBtn, setLoginBtn] = useState(false);
-  const [showMainFooter , setShowMainFooter] = useState(false);
+  const [showMainFooter, setShowMainFooter] = useState(false);
   const handleLoginBtn = () => {
     setLoginBtn((prev) => !prev);
   };
@@ -27,7 +27,23 @@ function App() {
     else if (showMenu) setShowMenu((prev) => !prev);
   };
 
-
+  const [headerMenuActive, setHeaderMenuActive] = useState({
+    genesis: true,
+    aboutus: false,
+    insignia: false,
+    lyatoken: false,
+    mint: false,
+    dashboard: true,
+  });
+  const handleChangeMenu = (pageName) => {
+    setHeaderMenuActive((prev) => ({
+      genesis: false,
+      aboutus: false,
+      insignia: false,
+      lyatoken: false,
+      [pageName]: true,
+    }));
+  };
 
   return (
     <div className={`${styles.App}`} onClick={toggleMenu}>
@@ -39,10 +55,19 @@ function App() {
           handleLoginBtn={handleLoginBtn}
           loginBtn={loginBtn}
           showMainFooter={setShowMainFooter}
+          handleMenuClick={handleChangeMenu}
+          headerMenuActive={headerMenuActive}
         />
 
-        <Container />
-        {loginBtn && !showMainFooter ? <DashboardFooter classes={styles} /> : <Footer />}
+        <Container
+          handleChangeMenu={handleChangeMenu}
+          headerMenuActive={headerMenuActive}
+        />
+        {loginBtn && !showMainFooter ? (
+          <DashboardFooter classes={styles} />
+        ) : (
+          <Footer />
+        )}
       </BrowserRouter>
     </div>
   );

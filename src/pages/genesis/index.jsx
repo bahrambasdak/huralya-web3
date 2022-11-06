@@ -23,7 +23,7 @@ const Genesis = () => {
     //Convert(genesis_background).then(svg=>setGenesisBgSvg(svg))
   },[])
   return (
-    <div className={styles.genesisPage}>
+    <div className={styles.genesisPage} id="genesis">
 
       {/* <img src={genesis_background} alt="" className="background-img" width={1100} height={445}/> */}
       <div className={styles.backgroundImg}><GenesisBgSvg  /></div>

@@ -77,7 +77,7 @@ const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
         <p className={styles.desc2}>Learn more below...</p>
 
         <div className={styles.scrollableSection}>
-          <div className={styles.scroll}>
+          <div className={styles.scroll} id='inScSec'>
             <div className={`${styles.section} ${styles.planSection}`}>
               <div className={styles.text}>
               <div className={styles.title}>Squirrel plan</div>

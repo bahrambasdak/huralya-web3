@@ -61,7 +61,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={classes.dashboardPage}>
+    <div className={classes.dashboardPage} id="dashboard">
       <div className={classes.top}>
         {/* <img src={topBg} alt="" className={classes.bgImg} /> */}
         <div className={classes.cards}>

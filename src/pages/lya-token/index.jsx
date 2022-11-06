@@ -32,7 +32,7 @@ const LyaToken = () => {
     navigator.clipboard.writeText(ethereumAddress);
   };
   return (
-    <div className={styles.lyatokenPage}>
+    <div className={styles.lyatokenPage} id='lyatoken'>
       <div className={styles.top}>
         <div className={`${styles.exchanges} ${styles.card}`}>
           <div className={styles.title}>Exchanges</div>
