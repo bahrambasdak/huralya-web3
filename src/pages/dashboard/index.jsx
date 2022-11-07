@@ -1,5 +1,5 @@
 import { FiCopy } from "react-icons/fi";
-import topBg from "../../assets/images/dashboardPageTopBg.svg";
+//import topBg from "../../assets/images/dashboardPageTopBg.svg";
 import icon1 from "../../assets/images/dashboardPageIcon1.svg";
 import classes from "./style.module.scss"; //'dashboardPage.module.scss';
 import lyaLogo from "../../assets/images/lya_page_logo.svg";

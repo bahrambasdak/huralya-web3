@@ -18,7 +18,8 @@ const Header = ({
   loginBtn,
   showMainFooter,
   handleMenuClick,
-  headerMenuActive
+  headerMenuActive,
+  toggleShowModal,
 }) => {
 
   return (
@@ -147,6 +148,7 @@ const Header = ({
             
             <button
               className={`${styles.connectWallet} ${styles.btn}`}
+              onClick={toggleShowModal}
             >
               connect wallet
             </button>

@@ -76,7 +76,7 @@ const Container = ({ handleChangeMenu, headerMenuActive }) => {
     const scrollLeft = mainScroll.current.scrollLeft;
 
     //console.log(mainScroll.current.scrollLeft);
-    if (location.pathname === "/huralya") {
+    if (location.pathname === "/huralya" || location.pathname === "/") {
       if (scrollLeft < containerWidth * 0.9) {
         handleChangeMenu("genesis");
         //  mainScroll.current.scrollTo(containerWidth * 0, 0);

@@ -1,0 +1,145 @@
+// Breakpoints
+$bp-xsmall: 37.5em; // 600px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+
+
+.connectWalletModal {
+  position: fixed;
+  z-index: 9998;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease 0s;
+  background-color: rgba(9, 13, 20, 0.8);
+  .modalWrapper {
+    display: table-cell;
+    vertical-align: middle;
+
+    .modalContainer {
+      position: relative;
+      z-index: 100;
+      width: 872px;
+      backdrop-filter: blur(40px);
+      box-shadow: rgba(9, 13, 20, 0.4) 32px 32px 96px 0px,
+        rgba(224, 224, 255, 0.04) -16px -16px 32px 0px,
+        rgba(9, 13, 20, 0.4) 0px 16px 16px 0px;
+      background-image: linear-gradient(
+        117deg,
+        rgba(245, 247, 250, 0.12),
+        rgba(245, 247, 250, 0.06) 52%,
+        rgba(245, 247, 250, 0)
+      );
+      display: flex;
+      border-radius: 12px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(245, 247, 250, 0.06);
+      border-image: initial;
+
+      .modalBody {
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 3.78rem;
+        .modalHeader {
+          font-size: 2rem;
+          line-height: 1.2em;
+          font-weight: 400;
+          letter-spacing: normal;
+          color: rgb(255, 255, 255);
+          font-family: "Druk Wide Cy Web Super";
+          margin: 0px 0px 0.8rem;
+          text-align: left;
+        }
+        .modalRes {
+          width: 100%;
+          padding: 0.4rem;
+          display: flex;
+          justify-content: space-between;
+          background-color: rgba(224, 224, 255, 0.02);
+          border-radius: 4px;
+          .col {
+            width: calc(50% - 0.2rem);
+            padding: 1rem 1.2rem;
+            border-radius: 2px;
+            > button {
+              cursor: pointer;
+              font-family: inherit;
+              width: 100%;
+              height: 100%;
+              padding: 1.3rem;
+              background-color: rgb(251, 189, 116);
+              border: none;
+            }
+          }
+        }
+      }
+
+      .modalCloseBtn {
+        position: absolute;
+        top: 4.8rem;
+        right: 4.8rem;
+        z-index: 10;
+
+        > button {
+          font-size: 2rem;
+          cursor: pointer;
+          display: flex;
+          background: transparent;
+          border: none;
+          color: aliceblue;
+        }
+        button:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and #{$mq-small}{
+    .connectWalletModal{
+        .modalWrapper{
+            .modalContainer{
+                width: 100%;
+            
+            }
+        
+        }
+
+    }
+
+}
+
+@media only screen and #{$mq-xsmall}{
+    .connectWalletModal{
+        .modalWrapper{
+            .modalContainer{
+                width: 100%;
+            
+            }
+        
+        }
+
+    }
+
+}

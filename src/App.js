@@ -9,10 +9,11 @@ import styles from "./styles/App.module.scss";
 import Footer from "./components/Footer";
 import Container from "./components/Container";
 import Header from "./components/header/Header";
-import { BrowserRouter, useLocation, useNavigate } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { useState } from "react";
 //import { CSSTransition, TransitionGroup } from "react-transition-group";
 import DashboardFooter from "./components/dashboard-footer";
+import ConnectWalletModal from "./components/modals/ConnectWallet";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [loginBtn, setLoginBtn] = useState(false);
@@ -26,7 +27,10 @@ function App() {
     if (e.target.className.includes("dot")) setShowMenu((prev) => !prev);
     else if (showMenu) setShowMenu((prev) => !prev);
   };
-
+const [showModal , setShowModal] = useState(false);
+const toggleShowModal=()=>{
+  setShowModal(prev=>!prev)
+}
   const [headerMenuActive, setHeaderMenuActive] = useState({
     genesis: true,
     aboutus: false,
@@ -57,6 +61,7 @@ function App() {
           showMainFooter={setShowMainFooter}
           handleMenuClick={handleChangeMenu}
           headerMenuActive={headerMenuActive}
+          toggleShowModal={toggleShowModal}
         />
 
         <Container
@@ -68,6 +73,7 @@ function App() {
         ) : (
           <Footer />
         )}
+        {showModal && <ConnectWalletModal handleCloseModal={toggleShowModal}/>}
       </BrowserRouter>
     </div>
   );
