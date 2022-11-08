@@ -7,14 +7,13 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: "(max-width: #{$bp-xsmall})";
-$mq-small: "(max-width: #{$bp-small})";
-$mq-medium: "(max-width: #{$bp-medium})";
-$mq-large: "(max-width: #{$bp-large})";
-$mq-xlarge: "(max-width: #{$bp-xlarge})";
-$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
-$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
-
+$mq-xsmall: '(max-width: #{$bp-xsmall})';
+$mq-small: '(max-width: #{$bp-small})';
+$mq-medium: '(max-width: #{$bp-medium})';
+$mq-large: '(max-width: #{$bp-large})';
+$mq-xlarge: '(max-width: #{$bp-xlarge})';
+$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
 .connectWalletModal {
   position: fixed;
@@ -65,7 +64,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
           font-weight: 400;
           letter-spacing: normal;
           color: rgb(255, 255, 255);
-          font-family: "Druk Wide Cy Web Super";
+          font-family: 'Druk Wide Cy Web Super';
           margin: 0px 0px 0.8rem;
           text-align: left;
         }
@@ -115,31 +114,22 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
   }
 }
 
-
-@media only screen and #{$mq-small}{
-    .connectWalletModal{
-        .modalWrapper{
-            .modalContainer{
-                width: 100%;
-            
-            }
-        
-        }
-
+@media only screen and #{$mq-small} {
+  .connectWalletModal {
+    .modalWrapper {
+      .modalContainer {
+        width: 100%;
+      }
     }
-
+  }
 }
 
-@media only screen and #{$mq-xsmall}{
-    .connectWalletModal{
-        .modalWrapper{
-            .modalContainer{
-                width: 100%;
-            
-            }
-        
-        }
-
+@media only screen and #{$mq-xsmall} {
+  .connectWalletModal {
+    .modalWrapper {
+      .modalContainer {
+        width: 100%;
+      }
     }
-
+  }
 }

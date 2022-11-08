@@ -1,9 +1,9 @@
-import huralya_squirrel_left from "../../assets/images/insignia_page_left.svg";
-import insignia_min from "../../assets/images/insignia_page_min.svg";
-import insignia_supply from "../../assets/images/insignia_page_supply.svg";
-import cat from "../../assets/images/insignia_page_cat.svg";
-import { AiOutlineExclamationCircle } from "react-icons/ai";
-import HuralyaSquirrel from "../../components/HuralyaSquirrel";
+import huralya_squirrel_left from '../../assets/images/insignia_page_left.svg';
+import insignia_min from '../../assets/images/insignia_page_min.svg';
+import insignia_supply from '../../assets/images/insignia_page_supply.svg';
+import cat from '../../assets/images/insignia_page_cat.svg';
+import { AiOutlineExclamationCircle } from 'react-icons/ai';
+import HuralyaSquirrel from '../../components/HuralyaSquirrel';
 import styles from './style.module.scss';
 
 const InsigniaNFT = () => {
@@ -23,7 +23,9 @@ const InsigniaNFT = () => {
           </div>
           <div className={styles.bottoms}>
             <button className={`${styles.mintBtn} ${styles.btn}`}>Mint</button>
-            <button className={`${styles.marketBtn} ${styles.btn}`}>Market place</button>
+            <button className={`${styles.marketBtn} ${styles.btn}`}>
+              Market place
+            </button>
           </div>
           <p className={styles.text}>
             Upcoming MINT on Mars-21-2023
@@ -32,7 +34,10 @@ const InsigniaNFT = () => {
         </div>
       </div>
 
-      <HuralyaSquirrel huralya_squirrel_left={huralya_squirrel_left} styles={styles}/>
+      <HuralyaSquirrel
+        huralya_squirrel_left={huralya_squirrel_left}
+        styles={styles}
+      />
 
       <div className={styles.circulateSupply}>
         <img

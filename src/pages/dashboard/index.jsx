@@ -1,52 +1,59 @@
-import { FiCopy } from "react-icons/fi";
+import { FiCopy } from 'react-icons/fi';
 //import topBg from "../../assets/images/dashboardPageTopBg.svg";
-import icon1 from "../../assets/images/dashboardPageIcon1.svg";
-import classes from "./style.module.scss"; //'dashboardPage.module.scss';
-import lyaLogo from "../../assets/images/lya_page_logo.svg";
-import chart from "../../assets/images/dashboardPageChart.svg";
-import userLogo from "../../assets/images/dashboardPageUserLogo.svg";
+import icon1 from '../../assets/images/dashboardPageIcon1.svg';
+import classes from './style.module.scss'; //'dashboardPage.module.scss';
+import lyaLogo from '../../assets/images/lya_page_logo.svg';
+import chart from '../../assets/images/dashboardPageChart.svg';
+import userLogo from '../../assets/images/dashboardPageUserLogo.svg';
+//import classes from "./styles.module.scss";
 
-import { useState } from "react";
+import { BsWhatsapp } from 'react-icons/bs';
+import { ImFacebook } from 'react-icons/im';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
+import android_icon from '../../assets/images/android_icon2.svg';
+import apple_icon from '../../assets/images/apple_icon2.svg';
+
+import { useState } from 'react';
 //import DashboardFooter from "../components/DashboardFooter";
 
 const Dashboard = () => {
   const [users, setUsers] = useState([
     {
       id: 1,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
+      select: false
     },
     {
       id: 2,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
+      select: false
     },
     {
       id: 3,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
+      select: false
     },
     {
       id: 4,
-      name: "#3256",
-      age: "45d",
+      name: '#3256',
+      age: '45d',
       mp: 1,
       img: userLogo,
-      select: false,
-    },
+      select: false
+    }
   ]);
 
-  const [fromTo , setFromTo] = useState('from-wallet');
-
+  const [fromTo, setFromTo] = useState('from-wallet');
 
   const toggleSelect = (userId) => {
     setUsers((prev) =>
@@ -54,7 +61,7 @@ const Dashboard = () => {
         const userSelect = user.select;
         return {
           ...user,
-          select: user.id === userId ? !userSelect : userSelect,
+          select: user.id === userId ? !userSelect : userSelect
         };
       })
     );
@@ -97,21 +104,24 @@ const Dashboard = () => {
           <div className={`${classes.card}  ${classes.wallet}`}>
             <div>
               <div className={classes.addr}>
-                <span onClick={()=>setFromTo(prev=>prev==='from-wallet'? 'to-wallet':'from-wallet')}>
+                <span
+                  onClick={() =>
+                    setFromTo((prev) =>
+                      prev === 'from-wallet' ? 'to-wallet' : 'from-wallet'
+                    )
+                  }>
                   <img src={icon1} alt="" />
                 </span>
                 <span>
-                 
                   <div>
-                    <span>From</span>
-                    <span>{fromTo==='from-wallet'? 'wallet':'Game account'}</span>
+                    <span>{fromTo === 'from-wallet' ? 'From' : 'To'}</span>
+                    <span>wallet</span>
                   </div>
 
                   <div>
-                    <span>To</span>
-                    <span>{fromTo!=='from-wallet'? 'wallet':'Game account'}</span>
+                    <span>{fromTo === 'from-wallet' ? 'To' : 'From'}</span>
+                    <span>Game account</span>
                   </div>
-
                 </span>
               </div>
               <div className={classes.amount}>
@@ -174,9 +184,8 @@ const Dashboard = () => {
               {users.map((user, key) => (
                 <div
                   key={key}
-                  className={user.select ? classes.selected : ""}
-                  onClick={() => toggleSelect(user.id)}
-                >
+                  className={user.select ? classes.selected : ''}
+                  onClick={() => toggleSelect(user.id)}>
                   <div className={classes.name}>#3256</div>
                   <div className={classes.img}>
                     <img src={userLogo} alt="" />
@@ -225,7 +234,70 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* <DashboardFooter/> */}
+      <div className={classes.dashboardFooter}>
+        <div className={classes.footerLeft}>
+          <p>Whitepaper</p>
+          <p>Bug Bounty</p>
+          <div className="social-icons">
+            <ul>
+              <li className="icon">
+                <ImFacebook />
+              </li>
+              <li className="icon">
+                <AiOutlineTwitter />
+              </li>
+
+              <li className="icon">
+                <BsWhatsapp />
+              </li>
+              <li className="icon">
+                <FaLinkedinIn />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={classes.footerCenter}>
+          <div className={classes.icons}>
+            <span>
+              <img
+                src={android_icon}
+                alt=""
+                className="android-icon"
+                width={55}
+                height={55}
+              />
+            </span>
+            <span>
+              <img
+                src={apple_icon}
+                alt=""
+                className="apple-icon"
+                width={55}
+                height={55}
+              />
+            </span>
+          </div>
+          <div>learn how to earn...</div>
+          <div className={classes.reserved}>
+            Huralya © 2022 , All rights reserved{' '}
+          </div>
+        </div>
+
+        <div className={classes.footerRight}>
+          <span>
+            <div> tradable on</div>
+            <div>open sea - rarible</div>
+            <div>binance - kucoin</div>
+            <div>uniswap - pancakeswap</div>
+          </span>
+          <span>
+            <div></div>
+            <div> Customer Support</div>
+            <div>Terms & agreement</div>
+            <div>Privacy Policy</div>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };

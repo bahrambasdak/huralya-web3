@@ -1,14 +1,15 @@
 //import classes from "./styles.module.scss";
 
-import { BsWhatsapp } from "react-icons/bs";
-import { ImFacebook } from "react-icons/im";
-import { AiOutlineTwitter } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import android_icon from "../../assets/images/android_icon2.svg";
-import apple_icon from "../../assets/images/apple_icon2.svg";
+import { BsWhatsapp } from 'react-icons/bs';
+import { ImFacebook } from 'react-icons/im';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { FaLinkedinIn } from 'react-icons/fa';
+import android_icon from '../../assets/images/android_icon2.svg';
+import apple_icon from '../../assets/images/apple_icon2.svg';
 
-const DashboardFooter = ({classes}) => {
-    return ( <div className={classes.dashboardFooter}>
+const DashboardFooter = ({ classes }) => {
+  return (
+    <div className={classes.dashboardFooter}>
       <div className={classes.footerContent}>
         <div className={classes.footerLeft}>
           <p>Whitepaper</p>
@@ -54,7 +55,7 @@ const DashboardFooter = ({classes}) => {
           </div>
           <div>learn how to earn...</div>
           <div className={classes.reserved}>
-            Huralya © 2022 , All rights reserved{" "}
+            Huralya © 2022 , All rights reserved{' '}
           </div>
         </div>
 
@@ -72,8 +73,9 @@ const DashboardFooter = ({classes}) => {
             <div>Privacy Policy</div>
           </span>
         </div>
-        </div>
-      </div> );
-}
- 
+      </div>
+    </div>
+  );
+};
+
 export default DashboardFooter;

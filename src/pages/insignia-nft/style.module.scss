@@ -7,13 +7,13 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: "(max-width: #{$bp-xsmall})";
-$mq-small: "(max-width: #{$bp-small})";
-$mq-medium: "(max-width: #{$bp-medium})";
-$mq-large: "(max-width: #{$bp-large})";
-$mq-xlarge: "(max-width: #{$bp-xlarge})";
-$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
-$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+$mq-xsmall: '(max-width: #{$bp-xsmall})';
+$mq-small: '(max-width: #{$bp-small})';
+$mq-medium: '(max-width: #{$bp-medium})';
+$mq-large: '(max-width: #{$bp-large})';
+$mq-xlarge: '(max-width: #{$bp-xlarge})';
+$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
 .card {
   padding: 15px;
@@ -27,7 +27,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
   background-color: #282f42;
   border: 1px solid #595f71;
   border-radius: 63px;
-  font-family: "Alatsi";
+  font-family: 'Alatsi';
   font-weight: 400;
   font-size: 1rem;
   color: #595f71;
@@ -48,7 +48,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
   height: 480px;
   width: 100%;
   min-width: 100%;
-  font-family: "Alatsi";
+  font-family: 'Alatsi';
   font-weight: 400;
   .HuralyaSquirrel {
     height: 100%;
@@ -93,216 +93,207 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       }
       /* Handle on hover */
 
-      > .title {
-        color: #e29b1d;
-        padding: 0.6rem;
-        font-family: "Alatsi";
-      }
-      .desc1 {
-        color: #cfd5dc;
-        padding: 0.6rem;
-        font-family: "Alatsi";
-      }
-      .desc2 {
-        color: #cfd5dc;
-        font-size: 0.8rem;
-        padding: 0.6rem;
-        font-family: "Alatsi";
-      }
-      .scrollableSection {
-        padding: 20px;
-        height: 70%;
-        background-color: rgba(62, 70, 91, 0.54);
-        border-radius: 20px;
-      }
-      .scroll {
-        height: 100%;
-        overflow-y: auto;
-        padding-right: 5px;
-        .section {
-          width: 100%;
-          height: auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-grow: 1;
-          border-bottom: 1px solid #282f42;
-          padding: 0.6rem 0;
-          .text {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            row-gap: 0.3rem;
-            .title {
-              color: #dddedf;
-              min-width: fit-content;
-              font-family: "Alatsi";
-              display: flex;
-              align-items: center;
-            }
-            .desc {
-              display: flex;
-              align-items: center;
-              color: #898d92;
-              font-size: 12px;
-              flex-grow: 1;
-              font-family: "Alatsi";
-              padding: 0rem 0.5rem;
-            }
-          }
-
-          .icon {
-            flex-shrink: 0;
-            color: white;
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .icon:hover {
-            color: #dccfdb;
-          }
-          .icon:active {
-            transform: scale(1.2);
-          }
-        }
-        .planSection {
-          .text {
-            flex-wrap: wrap;
-          }
-        }
-      }
+      color: #cfd5dc;
+      padding: 0.6rem;
+      font-family: 'Alatsi';
     }
+    color: #cfd5dc;
+    font-size: 0.8rem;
+    padding: 0.6rem;
+    font-family: 'Alatsi';
   }
-
-  .min {
+  .scrollableSection {
+    padding: 20px;
+    height: 70%;
+    background-color: rgba(62, 70, 91, 0.54);
+    border-radius: 20px;
+  }
+  .scroll {
     height: 100%;
-    grid-column: 3/5;
-    grid-row: 1/2;
-    overflow-x: visible;
-    position: relative;
-    .backgroundImg {
-      width: 120%;
-      position: absolute;
-      right: 0;
-      height: 100%;
-      object-fit: fill;
-      z-index: 0;
-    }
-    .content {
-      height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+    .section {
+      width: 100%;
+      height: auto;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 15px 15px 0px;
-
-      .catImg {
-        position: relative;
-        flex-grow: 1;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: fill;
-          mix-blend-mode: lighten;
-        }
-      }
-      .catImg::after {
-        content: "";
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        width: 100%;
-        border-bottom: 2px solid rgb(190, 186, 186);
-      }
-
-      .bottoms {
-        z-index: 1;
-        flex-grow: 1;
-        align-self: stretch;
-        font-size: 17px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 3px;
-
-        .mintBtn {
-          background-color: #181c27;
-          // border: 2px solid #595f71;
-          border-radius: 63px 0px 0px 63px;
-          flex-grow: 1;
-          padding: 0.3rem 0;
-          color: #abb1ba;
-          font-family: "Alatsi";
-          border-width: 2px;
-        }
-        .marketBtn {
-          border-width: 2px;
-          flex-grow: 1;
-          background-color: #181c27;
-          //border: 2px solid #595f71;
-          border-radius: 0px 63px 63px 0px;
-          padding: 0.3rem 0;
-          color: #abb1ba;
-          font-family: "Alatsi";
-        }
-      }
+      flex-grow: 1;
+      border-bottom: 1px solid #282f42;
+      padding: 0.6rem 0;
       .text {
         display: flex;
         align-items: center;
-        column-gap: 3px;
-        font-size: 12px;
         flex-grow: 1;
-        color: #979b9f;
-        font-family: "Alatsi";
-        z-index: 1;
-        .icon {
-          color: #e2641d;
+        row-gap: 0.3rem;
+        .title {
+          color: #dddedf;
+          min-width: fit-content;
+          font-family: 'Alatsi';
+          display: flex;
+          align-items: center;
         }
+        .desc {
+          display: flex;
+          align-items: center;
+          color: #898d92;
+          font-size: 12px;
+          flex-grow: 1;
+          font-family: 'Alatsi';
+          padding: 0rem 0.5rem;
+        }
+      }
+
+      .icon {
+        flex-shrink: 0;
+        color: white;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon:hover {
+        color: #dccfdb;
+      }
+      .icon:active {
+        transform: scale(1.2);
+      }
+    }
+    .planSection {
+      .text {
+        flex-wrap: wrap;
       }
     }
   }
+}
 
-  .circulateSupply {
-    grid-column: 3/5;
-    grid-row: 3/4;
-    overflow-x: visible;
-    position: relative;
+.min {
+  height: 100%;
+  grid-column: 3/5;
+  grid-row: 1/2;
+  overflow-x: visible;
+  position: relative;
+  .backgroundImg {
+    width: 120%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+  }
+  .content {
+    height: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 15px 15px 15px 0px;
 
-    .backgroundImg {
+    .catImg {
+      position: relative;
+      flex-grow: 1;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        mix-blend-mode: lighten;
+      }
+    }
+    .catImg::after {
+      content: '';
       position: absolute;
-      right: 0;
-      bottom: 0;
+      bottom: 5px;
+      left: 0;
       width: 100%;
-      height: 100%;
-      object-fit: fill;
-      z-index: 0;
+      border-bottom: 2px solid rgb(190, 186, 186);
     }
 
-    .content {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 100%;
+    .bottoms {
+      z-index: 1;
+      flex-grow: 1;
+      align-self: stretch;
+      font-size: 17px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: stretch;
-      padding: 20px 20px 20px 30px;
-      line-height: 18px;
-      font-size: 13px;
-      color: #979b9f;
-      font-family: "Alatsi";
-      > div div {
+      justify-content: center;
+      align-items: center;
+      column-gap: 3px;
+
+      .mintBtn {
+        background-color: #181c27;
+        // border: 2px solid #595f71;
+        border-radius: 63px 0px 0px 63px;
         flex-grow: 1;
-        display: flex;
-        justify-content: space-between;
+        padding: 0.3rem 0;
+        color: #abb1ba;
+        font-family: 'Alatsi';
+        border-width: 2px;
       }
+      .marketBtn {
+        border-width: 2px;
+        flex-grow: 1;
+        background-color: #181c27;
+        //border: 2px solid #595f71;
+        border-radius: 0px 63px 63px 0px;
+        padding: 0.3rem 0;
+        color: #abb1ba;
+        font-family: 'Alatsi';
+      }
+    }
+    .text {
+      display: flex;
+      align-items: center;
+      column-gap: 3px;
+      font-size: 12px;
+      flex-grow: 1;
+      color: #979b9f;
+      font-family: 'Alatsi';
+      z-index: 1;
+      .icon {
+        color: #e2641d;
+      }
+    }
+  }
+}
+
+.circulateSupply {
+  grid-column: 3/5;
+  grid-row: 3/4;
+  overflow-x: visible;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .backgroundImg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px 20px 20px 30px;
+    line-height: 18px;
+    font-size: 13px;
+    color: #979b9f;
+    font-family: 'Alatsi';
+    > div div {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -450,7 +441,7 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
             .text {
               flex-wrap: wrap;
             }
-            .icon{
+            .icon {
               align-self: flex-start;
             }
           }

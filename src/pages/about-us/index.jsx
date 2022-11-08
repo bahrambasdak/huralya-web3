@@ -1,12 +1,12 @@
-import icon1 from "../../assets/images/about_us_icon1.svg";
-import icon2 from "../../assets/images/about_us_icon2.svg";
-import icon3 from "../../assets/images/about_us_icon3.svg";
-import profileImg1 from "../../assets/images/about_us_team_profile1.svg";
-import profileImg2 from "../../assets/images/about_us_team_profile2.svg";
-import profileImg3 from "../../assets/images/about_us_team_profile3.svg";
-import backersBg from "../../assets/images/about_us_backer_bg.svg";
-import teamBg from "../../assets/images/about_us_team_bg.svg";
-import { BsQuestionCircle } from "react-icons/bs";
+import icon1 from '../../assets/images/about_us_icon1.svg';
+import icon2 from '../../assets/images/about_us_icon2.svg';
+import icon3 from '../../assets/images/about_us_icon3.svg';
+import profileImg1 from '../../assets/images/about_us_team_profile1.svg';
+import profileImg2 from '../../assets/images/about_us_team_profile2.svg';
+import profileImg3 from '../../assets/images/about_us_team_profile3.svg';
+import backersBg from '../../assets/images/about_us_backer_bg.svg';
+import teamBg from '../../assets/images/about_us_team_bg.svg';
+import { BsQuestionCircle } from 'react-icons/bs';
 import styles from './style.module.scss';
 
 const AboutUs = () => {
@@ -29,35 +29,45 @@ const AboutUs = () => {
               <img src={icon1} alt="" />
             </div>
 
-            <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
+            <div className={styles.desc}>
+              Lorem ipsum dolor sit amet, doetetuer{' '}
+            </div>
           </span>
           <span className={`${styles.item} ${styles.item2}`}>
             <div className={styles.icon}>
               <img src={icon2} alt="" />
             </div>
 
-            <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
+            <div className={styles.desc}>
+              Lorem ipsum dolor sit amet, doetetuer{' '}
+            </div>
           </span>
           <span className={`${styles.item} ${styles.item3}`}>
             <div className={styles.icon}>
               <img src={icon3} alt="" />
             </div>
 
-            <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
+            <div className={styles.desc}>
+              Lorem ipsum dolor sit amet, doetetuer{' '}
+            </div>
           </span>
           <span className={`${styles.item} ${styles.item4}`}>
             <div className={styles.icon}>
               <img src={icon1} alt="" />
             </div>
 
-            <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
+            <div className={styles.desc}>
+              Lorem ipsum dolor sit amet, doetetuer{' '}
+            </div>
           </span>
           <span className={`${styles.item} ${styles.item5}`}>
             <div className={styles.icon}>
               <img src={icon2} alt="" />
             </div>
 
-            <div className={styles.desc}>Lorem ipsum dolor sit amet, doetetuer </div>
+            <div className={styles.desc}>
+              Lorem ipsum dolor sit amet, doetetuer{' '}
+            </div>
           </span>
         </div>
       </div>
@@ -76,7 +86,8 @@ const AboutUs = () => {
               <div className={styles.top}>
                 <div className={styles.title}>Our Backers</div>
                 <div className={styles.help}>
-                  To becpme a partner, Contact us <BsQuestionCircle className={styles.qIcon}/>
+                  To becpme a partner, Contact us{' '}
+                  <BsQuestionCircle className={styles.qIcon} />
                 </div>
               </div>
               <div className={styles.buttons}>
