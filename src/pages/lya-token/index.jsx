@@ -1,12 +1,12 @@
-import LyaTokenDescription from "../../components/LyaTokenDescription";
-import lya_icon1 from "../../assets/images/lya_icon1.svg";
-import lya_icon2 from "../../assets/images/lya_icon2.svg";
-import lya_icon3 from "../../assets/images/lya_icon3.svg";
-import metamask_icon from "../../assets/images/metamask_icon.svg";
-import { FiCopy } from "react-icons/fi";
+import LyaTokenDescription from '../../components/LyaTokenDescription';
+import lya_icon1 from '../../assets/images/lya_icon1.svg';
+import lya_icon2 from '../../assets/images/lya_icon2.svg';
+import lya_icon3 from '../../assets/images/lya_icon3.svg';
+import metamask_icon from '../../assets/images/metamask_icon.svg';
+import { FiCopy } from 'react-icons/fi';
 //import d from "../img/d.svg";
-import lyaLogo from "../../assets/images/lya_page_logo.svg";
-import LyaTokenLogo from "../../components/svgComponent/LyaTokenLogo";
+import lyaLogo from '../../assets/images/lya_page_logo.svg';
+import LyaTokenLogo from '../../components/svgComponent/LyaTokenLogo';
 // import LyaIcon1 from "../components/svgComponent/LyaIcon1";
 // import LyaIcon2 from "../components/svgComponent/LyaIcon2";
 // import LyaIcon3 from "../components/svgComponent/LyaIcon3";
@@ -23,16 +23,14 @@ cryptocurrencies such as BTC, ETH, USDT or …
 
 const LyaTokenDescription3 = `LYA, the currency token in hualya game ecosystems. 
 All user’s transactions, expenses and income will be covered by this coin.`;
-const ethereumAddress = "0x3F162087420604ebBaa03eD048D8a8709De78923";
-
-
+const ethereumAddress = '0x3F162087420604ebBaa03eD048D8a8709De78923';
 
 const LyaToken = () => {
   const addressCopy = () => {
     navigator.clipboard.writeText(ethereumAddress);
   };
   return (
-    <div className={styles.lyatokenPage} id='lyatoken'>
+    <div className={styles.lyatokenPage} id="lyatoken">
       <div className={styles.top}>
         <div className={`${styles.exchanges} ${styles.card}`}>
           <div className={styles.title}>Exchanges</div>
@@ -40,7 +38,9 @@ const LyaToken = () => {
             <button className={styles.btn}>Kucoin</button>
             <button className={styles.btn}>MEXC</button>
             <button className={styles.btn}>uniswap</button>
-            <button className={`${styles.btn} ${styles.pancakeswap}`}>pancakeswap</button>
+            <button className={`${styles.btn} ${styles.pancakeswap}`}>
+              pancakeswap
+            </button>
           </div>
         </div>
         <div className={`${styles.contractAddress} ${styles.card}`}>
@@ -52,7 +52,8 @@ const LyaToken = () => {
                 <div>
                   <p>{ethereumAddress}</p>
                   <div className={styles.icons}>
-                    | <FiCopy onClick={addressCopy} className={styles.copyIcon} />
+                    |{' '}
+                    <FiCopy onClick={addressCopy} className={styles.copyIcon} />
                     <img src={metamask_icon} alt="metamask_icon" />
                   </div>
                 </div>
@@ -66,7 +67,13 @@ const LyaToken = () => {
         </div>
 
         <div className={`${styles.logo} ${styles.card}`}>
-          <img src={lyaLogo} alt="lya_page_logo" width={141} height={86} className={styles.lyaTokenLogo}/>
+          <img
+            src={lyaLogo}
+            alt="lya_page_logo"
+            width={141}
+            height={86}
+            className={styles.lyaTokenLogo}
+          />
           {/* <LyaTokenLogo className={styles.lyaTokenLogo} /> */}
         </div>
       </div>

@@ -1,27 +1,10 @@
-// Breakpoints
-$bp-xsmall: 37.5em; // 600px
-$bp-small: 48em; // 768px
-$bp-medium: 64em; // 1024px
-$bp-large: 85.375em; // 1366px
-$bp-xlarge: 120em; // 1920px
-$bp-xxlarge: 160em; // 2560px
-
-// Media Queries
-$mq-xsmall: '(max-width: #{$bp-xsmall})';
-$mq-small: '(max-width: #{$bp-small})';
-$mq-medium: '(max-width: #{$bp-medium})';
-$mq-large: '(max-width: #{$bp-large})';
-$mq-xlarge: '(max-width: #{$bp-xlarge})';
-$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
-$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
-
-.genesisPage {
+.genesis-page {
   position: relative;
   width: 100%;
   height: 480px;
   font-family: 'Bahnschrift';
-  min-width: 100%;
-  .backgroundImg {
+
+  .background-img {
     // resize: horizontal;
     overflow: hidden;
     width: 100%;
@@ -29,6 +12,11 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     left: 0;
     top: 0;
     position: absolute;
+    // width: 100%;
+    // height: 90%;
+    //     object-fit: fill;
+    // z-index: 0;
+    // border-radius: 30px;
   }
 
   .content {
@@ -59,7 +47,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         position: relative;
         width: 100%;
         height: 100%;
-        .iconsBg {
+        .icons-bg {
           position: absolute;
           width: 100%;
           height: 100%;
@@ -68,23 +56,23 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           z-index: 0;
         }
 
-        .androidIcon {
+        .android-icon {
           width: 70%;
           height: 50%;
           margin: 1rem;
           z-index: 1;
           color: #080868;
-          cursor: pointer;
         }
-        .androidIcon:active {
+        .android-icon:active {
           box-shadow: inset 2px -3px 6px rgba(0, 0, 0, 0.4);
         }
-        .appleIcon {
+        .apple-icon {
           width: 70%;
           height: 50%;
           margin: 1rem;
+
           padding-right: 0.5rem;
-          cursor: pointer;
+
           z-index: 1;
         }
 
@@ -128,7 +116,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           display: -webkit-flex;
           display: -webkit-flex;
           font-family: 'Bahnschrift';
-          .textRight {
+          .text-right {
             display: flex;
             display: -webkit-flex;
             display: -webkit-flex;
@@ -141,15 +129,17 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
               left: 30%;
               width: 50%;
               height: 100%;
+
               //width: 100%;
             }
             p {
+              //color-scheme: linear-gradient(0deg, #d4a50b -17.36%, rgba(219, 55, 34, 0) 100%);
               color: rgb(243, 142, 74);
             }
           }
         }
       }
-      .exploreBtn {
+      .explore-btn {
         button {
           display: flex;
           display: -webkit-flex;
@@ -174,7 +164,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.4);
         }
       }
-      .sectorBtn {
+      .sector-btn {
         display: flex;
         display: -webkit-flex;
         align-items: center;
@@ -201,7 +191,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         width: 100%;
         height: 100%;
       }
-      .trailerSvg {
+      .trailer-svg {
         background: radial-gradient(
           77.33% 69.98% at 1.06% -8.88%,
           #09d6e2 0%,
@@ -240,114 +230,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           font-size: 1.1rem;
           color: #ffffff;
         }
-      }
-    }
-  }
-}
-
-@media only screen and #{$mq-medium} {
-  .genesisPage {
-    .content {
-      .center {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 100%;
-      }
-      .right {
-        div {
-          position: absolute;
-          bottom: 70%;
-          left: 15%;
-        }
-      }
-    }
-  }
-}
-@media only screen and #{$mq-small} {
-  .genesisPage {
-    height: auto;
-    .content {
-      .center {
-        .title {
-          .text {
-            .textRight {
-              img {
-                bottom: 35%;
-                width: 50%;
-                height: 60%;
-              }
-            }
-          }
-        }
-      }
-      .right {
-        div {
-          position: absolute;
-          bottom: 70%;
-          left: 15%;
-        }
-      }
-    }
-  }
-}
-@media only screen and #{$mq-xsmall} {
-  .genesisPage {
-    height: auto;
-    //max-height: 70vh;
-    .content {
-      .left {
-        .icons {
-          .text {
-            left: 20%;
-            bottom: -2%;
-          }
-        }
-      }
-      .center {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 100%;
-        top: 0;
-        left: 10%;
-        row-gap: 0;
-        .title {
-          .text {
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 1rem;
-            .textRight {
-              img {
-                width: 50%;
-                left: 30%;
-                bottom: 70%;
-              }
-            }
-          }
-          .sectorBtn {
-            padding-right: 3rem;
-          }
-        }
-        .right {
-          position: absolute;
-          right: 5%;
-          bottom: 0;
-        }
-
-        .exploreBtn {
-          padding-bottom: 7rem;
-        }
-        .sectorBtn {
-          padding-right: 3rem;
-        }
-      }
-      .right {
-        position: absolute;
-        right: 5%;
-        bottom: 0;
       }
     }
   }

@@ -1,19 +1,19 @@
-import { Route, useLocation } from "react-router";
-import { Routes } from "react-router-dom";
-import AboutUs from "../pages/about-us/index";
-import Dashboard from "../pages/dashboard/index";
-import Genesis from "../pages/genesis/index";
-import InsigniaNFT from "../pages/insignia-nft/index";
-import LyaToken from "../pages/lya-token/index";
-import Mint from "../pages/dashboard/mint/index";
-import styles from "../styles/App.module.scss";
-import { useRef } from "react";
-import { useEffect } from "react";
+import { Route, useLocation } from 'react-router';
+import { Routes } from 'react-router-dom';
+import AboutUs from '../pages/about-us/index';
+import Dashboard from '../pages/dashboard/index';
+import Genesis from '../pages/genesis/index';
+import InsigniaNFT from '../pages/insignia-nft/index';
+import LyaToken from '../pages/lya-token/index';
+import Mint from '../pages/dashboard/mint/index';
+import styles from '../styles/App.module.scss';
+import { useRef } from 'react';
+import { useEffect } from 'react';
 // import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const Container = ({ handleChangeMenu, headerMenuActive }) => {
   const location = useLocation();
-  let pageHeightStyle = "";
+  let pageHeightStyle = '';
   const mainScroll = useRef();
   let scrollPositionX = 0;
 
@@ -22,9 +22,9 @@ const Container = ({ handleChangeMenu, headerMenuActive }) => {
     const containerWidth = mainScroll.current.clientWidth + 20;
     const deltaY = e.deltaY;
     if (
-      e.target.parentElement.parentElement.parentElement.id !== "inScSec" &&
-      e.target.parentElement.parentElement.id !== "inScSec" &&
-      e.target.parentElement.id !== "inScSec" &&
+      e.target.parentElement.parentElement.parentElement.id !== 'inScSec' &&
+      e.target.parentElement.parentElement.id !== 'inScSec' &&
+      e.target.parentElement.id !== 'inScSec' &&
       containerWidth > 1024
     ) {
       mainScroll.current.scrollBy((deltaY * containerWidth) / 100, 0);
@@ -33,16 +33,16 @@ const Container = ({ handleChangeMenu, headerMenuActive }) => {
       if (deltaY > 0) scrollLeft += containerWidth;
       else scrollLeft -= containerWidth;
 
-      if (location.pathname === "/huralya") {
-        if (scrollLeft < containerWidth * 0.9) handleChangeMenu("genesis");
-        else if (scrollLeft < containerWidth * 1.9) handleChangeMenu("aboutus");
+      if (location.pathname === '/huralya') {
+        if (scrollLeft < containerWidth * 0.9) handleChangeMenu('genesis');
+        else if (scrollLeft < containerWidth * 1.9) handleChangeMenu('aboutus');
         else if (scrollLeft < containerWidth * 2.9)
-          handleChangeMenu("insignia");
-        else handleChangeMenu("lyatoken");
-      } else if (location.pathname === "/dashboard") {
-        if (scrollLeft < containerWidth * 0.9) handleChangeMenu("mint");
+          handleChangeMenu('insignia');
+        else handleChangeMenu('lyatoken');
+      } else if (location.pathname === '/dashboard') {
+        if (scrollLeft < containerWidth * 0.9) handleChangeMenu('mint');
         else if (scrollLeft < containerWidth * 1.9)
-          handleChangeMenu("dashboard");
+          handleChangeMenu('dashboard');
       }
     }
   };
@@ -76,51 +76,51 @@ const Container = ({ handleChangeMenu, headerMenuActive }) => {
     const scrollLeft = mainScroll.current.scrollLeft;
 
     //console.log(mainScroll.current.scrollLeft);
-    if (location.pathname === "/huralya" || location.pathname === "/") {
+    if (location.pathname === '/huralya' || location.pathname === '/') {
       if (scrollLeft < containerWidth * 0.9) {
-        handleChangeMenu("genesis");
+        handleChangeMenu('genesis');
         //  mainScroll.current.scrollTo(containerWidth * 0, 0);
       } else if (scrollLeft < containerWidth * 1.9) {
-        handleChangeMenu("aboutus");
+        handleChangeMenu('aboutus');
         // mainScroll.current.scrollTo(containerWidth * 1, 0);
       } else if (scrollLeft < containerWidth * 2.9) {
-        handleChangeMenu("insignia");
+        handleChangeMenu('insignia');
         //  mainScroll.current.scrollTo(containerWidth * 2, 0);
       } else {
-        handleChangeMenu("lyatoken");
+        handleChangeMenu('lyatoken');
         // mainScroll.current.scrollTo(containerWidth * 3, 0);
       }
-    } else if (location.pathname === "/dashboard") {
-      if (scrollLeft < containerWidth * 0.9) handleChangeMenu("mint");
-      else if (scrollLeft < containerWidth * 1.9) handleChangeMenu("dashboard");
+    } else if (location.pathname === '/dashboard') {
+      if (scrollLeft < containerWidth * 0.9) handleChangeMenu('mint');
+      else if (scrollLeft < containerWidth * 1.9) handleChangeMenu('dashboard');
     }
   };
-const handle=(e)=>{
-  console.log(e);
-}
+  const handle = (e) => {
+    console.log(e);
+  };
   useEffect(() => {
     //mainScroll.current.scrollBy(250,0);
     const containerWidth = mainScroll.current.clientWidth + 20;
     const scrollLeft = mainScroll.current.scrollLeft;
-    if (location.pathname === "/huralya") {
+    if (location.pathname === '/huralya') {
       if (scrollLeft < containerWidth * 0.9) {
-        handleChangeMenu("genesis");
+        handleChangeMenu('genesis');
         //  mainScroll.current.scrollTo(containerWidth * 0, 0);
       } else if (scrollLeft < containerWidth * 1.9) {
-        handleChangeMenu("aboutus");
+        handleChangeMenu('aboutus');
         // mainScroll.current.scrollTo(containerWidth * 1, 0);
       } else if (scrollLeft < containerWidth * 2.9) {
-        handleChangeMenu("insignia");
+        handleChangeMenu('insignia');
         //  mainScroll.current.scrollTo(containerWidth * 2, 0);
       } else {
-        handleChangeMenu("lyatoken");
+        handleChangeMenu('lyatoken');
         // mainScroll.current.scrollTo(containerWidth * 3, 0);
       }
-    } else if (location.pathname === "/dashboard") {
-      if (scrollLeft < containerWidth * 0.9) handleChangeMenu("mint");
-      else if (scrollLeft < containerWidth * 1.9) handleChangeMenu("dashboard");
+    } else if (location.pathname === '/dashboard') {
+      if (scrollLeft < containerWidth * 0.9) handleChangeMenu('mint');
+      else if (scrollLeft < containerWidth * 1.9) handleChangeMenu('dashboard');
     }
-  },[location]);
+  }, [location]);
 
   return (
     <div
@@ -135,9 +135,8 @@ const handle=(e)=>{
           ? styles.lyatokenPageShow
           : headerMenuActive.mint
           ? styles.mintPageShow
-          : ""
-      }`}
-    >
+          : ''
+      }`}>
       {/* <TransitionGroup component={null}>
             <CSSTransition key={location.key} classNames="fade" timeout={300}> */}
       <div
@@ -145,8 +144,7 @@ const handle=(e)=>{
         onScroll={handleScroll}
         onTouchEnd={handletouch}
         onSeeked={handle}
-        ref={mainScroll}
-      >
+        ref={mainScroll}>
         <Routes>
           <Route
             path="/huralya"
@@ -157,8 +155,7 @@ const handle=(e)=>{
                 <InsigniaNFT />
                 <LyaToken />
               </>
-            }
-          ></Route>
+            }></Route>
 
           <Route
             path="/dashboard"
@@ -167,8 +164,7 @@ const handle=(e)=>{
                 <Mint />
                 <Dashboard />
               </>
-            }
-          ></Route>
+            }></Route>
 
           <Route
             path="/"
@@ -179,8 +175,7 @@ const handle=(e)=>{
                 <InsigniaNFT />
                 <LyaToken />
               </>
-            }
-          ></Route>
+            }></Route>
         </Routes>
       </div>
       {/* </CSSTransition>
