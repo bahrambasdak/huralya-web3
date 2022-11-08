@@ -1,17 +1,20 @@
 import { FiCopy } from 'react-icons/fi';
-import topBg from '../../assets/images/dashboardPageTopBg.svg';
+//import topBg from "../../assets/images/dashboardPageTopBg.svg";
 import icon1 from '../../assets/images/dashboardPageIcon1.svg';
 import classes from './style.module.scss'; //'dashboardPage.module.scss';
 import lyaLogo from '../../assets/images/lya_page_logo.svg';
 import chart from '../../assets/images/dashboardPageChart.svg';
 import userLogo from '../../assets/images/dashboardPageUserLogo.svg';
+//import classes from "./styles.module.scss";
+
 import { BsWhatsapp } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
+import android_icon from '../../assets/images/android_icon2.svg';
+import apple_icon from '../../assets/images/apple_icon2.svg';
+
 import { useState } from 'react';
-import android_icon from '../../assets/images/genesis_android_icon.svg';
-import apple_icon from '../../assets/images/genesis_apple_icon.svg';
 //import DashboardFooter from "../components/DashboardFooter";
 
 const Dashboard = () => {
@@ -65,7 +68,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className={classes.dashboardPage}>
+    <div className={classes.dashboardPage} id="dashboard">
       <div className={classes.top}>
         {/* <img src={topBg} alt="" className={classes.bgImg} /> */}
         <div className={classes.cards}>

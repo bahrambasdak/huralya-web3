@@ -8,7 +8,7 @@ import styles from './style.module.scss';
 
 const InsigniaNFT = () => {
   return (
-    <div className={styles.insigniaNFTPage}>
+    <div className={styles.insigniaNFTPage} id="insignia">
       <div className={styles.min}>
         <img
           src={insignia_min}

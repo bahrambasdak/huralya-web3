@@ -1,11 +1,16 @@
 @import-normalize;
 
-@import url('http://fonts.cdnfonts.com/css/bahnschrift');
+/* @import url('http://fonts.cdnfonts.com/css/bahnschrift'); */
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url('http://fonts.cdnfonts.com/css/bahnschrift') format('truetype');
+  src: url('./assets/Bahnschrift.woff') format('woff');
+  src: url('./assets/Bahnschrift.eot') format('eot');
 
+}
 @font-face {
   font-family: 'Alatsi';
   src: url('../public/Alatsi-Regular.ttf');
-
   font-weight: normal;
   font-style: normal;
 }

@@ -11,7 +11,7 @@ import styles from './style.module.scss';
 
 const AboutUs = () => {
   return (
-    <div className={styles.aboutUs}>
+    <div className={styles.aboutUs} id="aboutus">
       <div className={styles.aboutDesc}>
         <div className={styles.title}>About Us</div>
         <p className={styles.desc}>

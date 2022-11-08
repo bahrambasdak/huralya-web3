@@ -7,10 +7,20 @@ import menuIcon4 from "../../assets/images/menu_icon4.svg";
 import { ImMenu3, ImMenu4 } from "react-icons/im";
 import { useState } from "react";
 import Logo1 from "../svgComponent/Logo";
-import "./styles.scss";
+
 //import styles from "../styles/App.module.scss";
 
-const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
+const Header = ({
+  toggleMenu,
+  showMenu,
+  styles,
+  handleLoginBtn,
+  loginBtn,
+  showMainFooter,
+  handleMenuClick,
+  headerMenuActive,
+  toggleShowModal,
+}) => {
 
   return (
     <div className={styles.header}>
@@ -26,13 +36,16 @@ const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
           </div>
         </button>
         <div className={styles.headerLogo}>
+        <Link to={'./huralya'}>
           <img
             src={logo}
             alt="logo"
             className={styles.logoImg}
             width={109}
             height={41}
+            onClick={handleLoginBtn}
           />
+          </Link>
           {/* <Logo1 className="logo-img"/> */}
         </div>
         {!loginBtn ? (
@@ -41,44 +54,52 @@ const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
           >
             <ul className={styles.menu}>
               <li>
-                <NavLink
-                  to="/genesis"
-                  className={`${styles.item} ${styles.item1} item1 item`}
-                  activeclassname={styles.active}
+                <a
+                  href="#genesis"
+                  className={`${styles.item} ${styles.item1} ${
+                    headerMenuActive.genesis ? styles.active : ""
+                  }`}
+                  onClick={() => handleMenuClick("genesis")}
                 >
                   <img src={menuIcon1} alt="menuIcon1" />
                   GENESIS
-                </NavLink>
+                </a>
               </li>
               <li>
-                <NavLink
-                  to="/aboutus"
-                  className={`${styles.item} ${styles.item2} item2 item`}
-                  activeclassname={styles.active}
+                <a
+                  href="#aboutus"
+                  className={`${styles.item} ${styles.item2} ${
+                    headerMenuActive.aboutus ? styles.active : ""
+                  }`}
+                  onClick={() => handleMenuClick("aboutus")}
                 >
                   <img src={menuIcon2} alt="menuIcon2" />
                   About us
-                </NavLink>
+                </a>
               </li>
               <li>
-                <NavLink
-                  to="/insignia"
-                  className={`${styles.item} ${styles.item3} item3 item`}
-                  activeclassname={styles.active}
+                <a
+                  href="#insignia"
+                  className={`${styles.item} ${styles.item3} ${
+                    headerMenuActive.insignia ? styles.active : ""
+                  }`}
+                  onClick={() => handleMenuClick("insignia")}
                 >
                   <img src={menuIcon3} alt="menuIcon3" />
                   insignia NFT
-                </NavLink>
+                </a>
               </li>
               <li>
-                <NavLink
-                  to="/lyatoken"
-                  className={`${styles.item} ${styles.item4} item4 item`}
-                  activeclassname={styles.active}
+                <a
+                  href="#lyatoken"
+                  className={`${styles.item} ${styles.item4} ${
+                    headerMenuActive.lyatoken ? styles.active : ""
+                  }`}
+                  onClick={() => handleMenuClick("lyatoken")}
                 >
                   <img src={menuIcon4} alt="menuIcon4" />
                   LYA TOKEN
-                </NavLink>
+                </a>
               </li>
             </ul>
           </div>
@@ -87,44 +108,51 @@ const Header = ({ toggleMenu, showMenu, styles,handleLoginBtn , loginBtn}) => {
             className={`${styles.headerMenu} ${showMenu ? styles.show : ""}`}
           >
             <ul className={styles.menu}>
-              <li>
-                <NavLink
-                  to="/mint"
-                  className={`${styles.item} ${styles.item1} item1 item`}
-                  activeclassname={styles.active}
+              <li onClick={() => showMainFooter(true)}>
+                <a
+                href="#mint"
+                  className={`${styles.item} ${styles.item1}  ${
+                    headerMenuActive.mint ? styles.active : ""
+                  }`}
+                  onClick={() => handleMenuClick("mint")}
                 >
                   Mint
-                </NavLink>
+                </a>
               </li>
-              <li>
-                <NavLink
-                  to="/dashboard"
-                  className={`${styles.item} ${styles.item3} item3 item`}
-                  activeclassname={styles.active}
+              <li onClick={() => showMainFooter(false)}>
+                <a
+                href="#dashboard"
+                  className={`${styles.item} ${styles.item3} ${
+                    headerMenuActive.dashboard ? styles.active : ""
+                  }`}
+                  onClick={() => handleMenuClick("dashboard")}
+
                 >
                   Dashboard
-                </NavLink>
+                </a>
               </li>
             </ul>
           </div>
         )}
         <div className={styles.headerLogin}>
           {!loginBtn ? (
-            <Link to={'./dashboard'}>
-            <button
-              className={`${styles.loginBtn} ${styles.btn}`}
-              onClick={handleLoginBtn}
-            >
-              LOGIN
-            </button>
+            <Link to={"./dashboard#dashboard"}>
+              <button
+                className={`${styles.loginBtn} ${styles.btn}`}
+                onClick={handleLoginBtn}
+              >
+                LOGIN
+              </button>
             </Link>
           ) : (
+            
             <button
               className={`${styles.connectWallet} ${styles.btn}`}
-              onClick={handleLoginBtn}
+              onClick={toggleShowModal}
             >
               connect wallet
             </button>
+           
           )}
         </div>
       </div>

@@ -23,128 +23,203 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   column-gap: 10px;
   font-family: 'Alatsi';
   font-weight: 400;
-
+  min-width: 100%;
   .HuralyaSquirrel {
     flex-grow: 1;
     width: 78%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: left;
-    //z-index: 2;
-    text-align: left;
+    position: relative;
 
-    /* width */
+    background: linear-gradient(
+      183.5deg,
+      rgba(17, 20, 29, 0) 20%,
+      #1d3d4b 100%
+    );
+    border-radius: 20px;
 
-    ::-webkit-scrollbar {
-      width: 0.2rem;
-      max-height: 50%;
-    }
-
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: linear-gradient(0deg, #898d92, #898d92),
-        linear-gradient(0deg, #898d92, #898d92), #898d92;
-      border-radius: 20px;
-    }
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: linear-gradient(0deg, #cfd5dc, #cfd5dc),
-        linear-gradient(0deg, #898d92, #898d92), #898d92;
-      border-radius: 20px;
-    }
-    /* Handle on hover */
-
-    .title {
-      color: #e29b1d;
-      padding: 0.6rem;
+    .content {
+      width: 100%;
       z-index: 1;
-    }
-    .desc1 {
-      color: #cfd5dc;
-      padding: 0.6rem;
-      z-index: 1;
-    }
-    .desc2 {
-      color: #cfd5dc;
-      font-size: 0.8rem;
-      padding: 0.6rem;
-      z-index: 1;
-    }
-    .scrollableSection {
-      padding: 20px;
-      height: 70%;
-      background-color: rgba(62, 70, 91, 0.54);
-      border-radius: 20px;
-      z-index: 1;
+      padding: 15px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      //z-index: 2;
+      text-align: left;
 
-      .scroll {
-        overflow-y: auto;
-        padding-right: 20px;
-        height: 100%;
-        .section {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          border-bottom: 1px solid #282f42;
-          align-items: stretch;
-          position: relative;
+      /* width */
 
-          .title {
-            color: #dddedf;
-            min-width: fit-content;
-            padding: 0.7rem 0rem 0.2rem 0px;
-            font-family: 'Alatsi';
-            display: flex;
-            align-items: center;
-          }
-          .text {
+      ::-webkit-scrollbar {
+        width: 0.2rem;
+        max-height: 50%;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: linear-gradient(0deg, #898d92, #898d92),
+          linear-gradient(0deg, #898d92, #898d92), #898d92;
+        border-radius: 20px;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(0deg, #cfd5dc, #cfd5dc),
+          linear-gradient(0deg, #898d92, #898d92), #898d92;
+        border-radius: 20px;
+      }
+      /* Handle on hover */
+
+      > .title {
+        color: #e29b1d;
+        padding: 0.6rem;
+        z-index: 1;
+      }
+      .desc1 {
+        color: #cfd5dc;
+        padding: 0.6rem;
+        z-index: 1;
+      }
+      .desc2 {
+        color: #cfd5dc;
+        font-size: 0.8rem;
+        padding: 0.6rem;
+        z-index: 1;
+      }
+      .scrollableSection {
+        padding: 20px;
+        height: 70%;
+        background-color: rgba(62, 70, 91, 0.54);
+        border-radius: 20px;
+        z-index: 1;
+
+        .scroll {
+          height: 100%;
+          overflow-y: auto;
+          padding-right: 5px;
+          .section {
+            width: 100%;
+            height: auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #898d92;
-            font-size: 12px;
             flex-grow: 1;
-            font-family: 'Alatsi';
-            padding: 0.3rem 1.5rem;
-            p {
-              display: none;
-            }
-          }
-          .icon {
-            min-width: fit-content;
-            color: white;
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            right: 5px;
-            top: calc(50% - 7px);
-            z-index: 0;
-          }
-          .checkbox {
-            position: absolute;
-            right: 4px;
-            top: calc(50% - 10px);
-            width: 20px;
-            height: 20px;
-            opacity: 0;
-            z-index: 1;
-            cursor: pointer;
-          }
-          .checkbox:checked ~ .text {
-            p {
+            border-bottom: 1px solid #282f42;
+            padding: 0.6rem 0;
+            .text {
               display: flex;
+              align-items: center;
+              flex-grow: 1;
+              row-gap: 0.3rem;
+              .title {
+                color: #dddedf;
+                min-width: fit-content;
+                font-family: 'Alatsi';
+                display: flex;
+                align-items: center;
+              }
+              .desc {
+                display: flex;
+                align-items: center;
+                color: #898d92;
+                font-size: 12px;
+                flex-grow: 1;
+                font-family: 'Alatsi';
+                padding: 0rem 0.5rem;
+              }
             }
+
             .icon {
+              flex-shrink: 0;
+              color: white;
+              width: 25px;
+              height: 25px;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .icon:hover {
               color: #dccfdb;
             }
+            .icon:active {
+              transform: scale(1.2);
+            }
+          }
+          .planSection {
+            .text {
+              flex-wrap: wrap;
+            }
           }
         }
-        .planSection {
-          flex-wrap: wrap;
+      }
+    }
+  }
+
+  .buySell {
+    width: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    font-family: 'Alatsi';
+    background: linear-gradient(0deg, #295669 -50%, rgba(7, 9, 12, 0) 50%);
+    border-radius: 20px;
+    color: #9fa3a7;
+
+    .catImg {
+      width: 100%;
+      height: 45%;
+      object-fit: fill;
+    }
+
+    .desc {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 1.5rem;
+
+      .total {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+        font-family: 'Alatsi';
+      }
+      .last {
+        font-size: 10px;
+        padding-left: 10px;
+        font-family: 'Alatsi';
+      }
+    }
+    .bar {
+      width: 100%;
+      padding: 0 1rem;
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+    .date {
+      font-size: 12px;
+      padding: 0 10px;
+      display: flex;
+      justify-content: center;
+      p {
+        display: flex;
+        font-family: 'Alatsi';
+        column-gap: 3px;
+        justify-content: center;
+        .icon {
+          color: #11ee9f;
+          flex-shrink: 0;
         }
       }
+    }
+    .buySellLya {
+      color: #eaeaea;
+      font-size: 14px;
+      padding: 1rem 0;
+      font-family: 'Alatsi';
     }
   }
 }
@@ -184,8 +259,16 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         .scrollableSection {
           padding: 10px;
           .scroll {
-            max-height: 100%;
-            padding-right: 0;
+            padding-right: 10px;
+            .section {
+              justify-content: space-between;
+              .text {
+                flex-wrap: wrap;
+              }
+              .icon {
+                align-self: flex-start;
+              }
+            }
           }
         }
       }

@@ -5,7 +5,7 @@ import lya_icon3 from '../../assets/images/lya_icon3.svg';
 import metamask_icon from '../../assets/images/metamask_icon.svg';
 import { FiCopy } from 'react-icons/fi';
 //import d from "../img/d.svg";
-//import lyaLogo from "../img/lya_page_logo.svg";
+import lyaLogo from '../../assets/images/lya_page_logo.svg';
 import LyaTokenLogo from '../../components/svgComponent/LyaTokenLogo';
 // import LyaIcon1 from "../components/svgComponent/LyaIcon1";
 // import LyaIcon2 from "../components/svgComponent/LyaIcon2";
@@ -30,7 +30,7 @@ const LyaToken = () => {
     navigator.clipboard.writeText(ethereumAddress);
   };
   return (
-    <div className={styles.lyatokenPage}>
+    <div className={styles.lyatokenPage} id="lyatoken">
       <div className={styles.top}>
         <div className={`${styles.exchanges} ${styles.card}`}>
           <div className={styles.title}>Exchanges</div>
@@ -67,8 +67,14 @@ const LyaToken = () => {
         </div>
 
         <div className={`${styles.logo} ${styles.card}`}>
-          {/* <img src={lyaLogo} alt="lya_page_logo" width={141} height={86}/> */}
-          <LyaTokenLogo className={styles.lyaTokenLogo} />
+          <img
+            src={lyaLogo}
+            alt="lya_page_logo"
+            width={141}
+            height={86}
+            className={styles.lyaTokenLogo}
+          />
+          {/* <LyaTokenLogo className={styles.lyaTokenLogo} /> */}
         </div>
       </div>
       <div className={`${styles.content} ${styles.card}`}>
