@@ -1,15 +1,19 @@
-import { Route } from 'react-router';
+import { Route, useLocation } from 'react-router';
 import { Routes } from 'react-router-dom';
-import AboutUs from '../pages/about-us';
-import Dashboard from '../pages/dashboard';
-import Genesis from '../pages/genesis';
-import InsigniaNFT from '../pages/insignia-nft';
-import LyaToken from '../pages/lya-token';
-import Mint from '../pages/dashboard/mint';
+import AboutUs from '../pages/about-us/index';
+import Dashboard from '../pages/dashboard/index';
+import Genesis from '../pages/genesis/index';
+import InsigniaNFT from '../pages/insignia-nft/index';
+import LyaToken from '../pages/lya-token/index';
+import Mint from '../pages/dashboard/mint/index';
+import styles from '../styles/App.module.scss';
+// import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const Container = () => {
   return (
-    <div className="Container">
+    <div className={styles.Container}>
+      {/* <TransitionGroup component={null}>
+            <CSSTransition key={location.key} classNames="fade" timeout={300}> */}
       <Routes>
         <Route path="/lya-token" element={<LyaToken />}></Route>
         <Route path="/insignia-nft" element={<InsigniaNFT />}></Route>

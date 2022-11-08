@@ -22,8 +22,8 @@ const InsigniaNFT = () => {
             <img src={cat} alt="" width={200} height={200} />
           </div>
           <div className={styles.bottoms}>
-            <button className={`${styles.mintBtn} ${btn}`}>Mint</button>
-            <button className={`${styles.marketBtn} ${btn}`}>
+            <button className={`${styles.mintBtn} ${styles.btn}`}>Mint</button>
+            <button className={`${styles.marketBtn} ${styles.btn}`}>
               Market place
             </button>
           </div>
@@ -34,7 +34,10 @@ const InsigniaNFT = () => {
         </div>
       </div>
 
-      <HuralyaSquirrel huralya_squirrel_left={huralya_squirrel_left} />
+      <HuralyaSquirrel
+        huralya_squirrel_left={huralya_squirrel_left}
+        styles={styles}
+      />
 
       <div className={styles.circulateSupply}>
         <img

@@ -1,7 +1,7 @@
 import { FiCopy } from 'react-icons/fi';
 import topBg from '../../assets/images/dashboardPageTopBg.svg';
 import icon1 from '../../assets/images/dashboardPageIcon1.svg';
-import classes from '../../styles/dashboardPage.module.scss'; //'dashboardPage.module.scss';
+import classes from './style.module.scss'; //'dashboardPage.module.scss';
 import lyaLogo from '../../assets/images/lya_page_logo.svg';
 import chart from '../../assets/images/dashboardPageChart.svg';
 import userLogo from '../../assets/images/dashboardPageUserLogo.svg';
@@ -9,9 +9,10 @@ import { BsWhatsapp } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
+import { useState } from 'react';
 import android_icon from '../../assets/images/genesis_android_icon.svg';
 import apple_icon from '../../assets/images/genesis_apple_icon.svg';
-import { useState } from 'react';
+//import DashboardFooter from "../components/DashboardFooter";
 
 const Dashboard = () => {
   const [users, setUsers] = useState([
@@ -68,7 +69,7 @@ const Dashboard = () => {
       <div className={classes.top}>
         {/* <img src={topBg} alt="" className={classes.bgImg} /> */}
         <div className={classes.cards}>
-          <div className={`${classes.card} , ${classes.wellcom}`}>
+          <div className={`${classes.card} ${classes.wellcom}`}>
             <div className={classes.title}>
               <div className={classes.mhmk}>
                 wellcome <span>mhmk</span>
@@ -83,7 +84,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className={`${classes.card} , ${classes.balance}`}>
+          <div className={`${classes.card} ${classes.balance}`}>
             <div className={classes.gameBalance}>
               <div>game account Balance</div>
               <div>
@@ -97,7 +98,7 @@ const Dashboard = () => {
             </div>
           </div>
 
-          <div className={`${classes.card} , ${classes.wallet}`}>
+          <div className={`${classes.card}  ${classes.wallet}`}>
             <div>
               <div className={classes.addr}>
                 <span
@@ -126,11 +127,11 @@ const Dashboard = () => {
               </div>
             </div>
             <div>
-              <button className="btn">Confirm</button>
+              <button className={classes.btn}>Confirm</button>
             </div>
           </div>
 
-          <div className={`${classes.card} , ${classes.price}`}>
+          <div className={`${classes.card} ${classes.price}`}>
             <div className={classes.logo}>
               <img src={lyaLogo} alt="" width={50} height={50} />
               <span>
@@ -144,14 +145,14 @@ const Dashboard = () => {
             <div className={classes.marketCcap}>Market Cap: $12,500,000</div>
           </div>
 
-          <div className={`${classes.card} , ${classes.referral}`}>
+          <div className={`${classes.card} ${classes.referral}`}>
             <div className={classes.content}>
               <div className={classes.ref}>Your referrals : 20</div>
               <div className={classes.reward}>
                 <span>Rewards:</span>
                 <span>20LYA</span>
               </div>
-              <button className="btn">Claim</button>
+              <button className={classes.btn}>Claim</button>
             </div>
             <div className={classes.refCode}>
               <p>Referral code : HTY65J</p>
@@ -167,9 +168,9 @@ const Dashboard = () => {
         <div className={classes.leftBtns}>
           <div className={classes.btnHeader}></div>
           <div className={classes.btns}>
-            <button className="btn">vitalize</button>
-            <button className="btn">stake</button>
-            <button className="btn">Gift</button>
+            <button className={classes.btn}>vitalize</button>
+            <button className={classes.btn}>stake</button>
+            <button className={classes.btn}>Gift</button>
           </div>
         </div>
 
@@ -200,8 +201,8 @@ const Dashboard = () => {
           <div>
             <div>Earn LYA by staking Squirrels</div>
             <div className={classes.claimBtn}>
-              <p>240 LYA</p>{' '}
-              <button className={`btn ${classes.btn}`}>Claim</button>
+              <p>240 LYA</p>
+              <button className={classes.btn}>Claim</button>
             </div>
             <div>You will be rewarded 30 LYA per month</div>
             <div>Read the staking rules</div>
@@ -210,8 +211,8 @@ const Dashboard = () => {
 
         <div className={classes.activities}>
           <div className={classes.activitesHeader}>
-            <p>Activities</p>{' '}
-            <button className={`btn ${classes.btn}`}>Sort by</button>
+            <p>Activities</p>
+            <button className={classes.btn}>Sort by</button>
           </div>
           <div className={classes.activitySection}>
             <p> #3445 staked on 4/8/2022</p>

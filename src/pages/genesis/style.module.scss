@@ -1,3 +1,20 @@
+// Breakpoints
+$bp-xsmall: 37.5em; // 600px
+$bp-small: 48em; // 768px
+$bp-medium: 64em; // 1024px
+$bp-large: 85.375em; // 1366px
+$bp-xlarge: 120em; // 1920px
+$bp-xxlarge: 160em; // 2560px
+
+// Media Queries
+$mq-xsmall: '(max-width: #{$bp-xsmall})';
+$mq-small: '(max-width: #{$bp-small})';
+$mq-medium: '(max-width: #{$bp-medium})';
+$mq-large: '(max-width: #{$bp-large})';
+$mq-xlarge: '(max-width: #{$bp-xlarge})';
+$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
+
 .genesisPage {
   position: relative;
   width: 100%;
@@ -223,6 +240,103 @@
           font-weight: 300;
           font-size: 1.1rem;
           color: #ffffff;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$mq-medium} {
+    .genesisPage {
+      .content {
+        .center {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+          height: 100%;
+        }
+        .right {
+          div {
+            position: absolute;
+            bottom: 70%;
+            left: 15%;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and #{$mq-small} {
+    .genesisPage {
+      .content {
+        .center {
+          .title {
+            .text {
+              .textRight {
+                img {
+                  bottom: 35%;
+                  width: 50%;
+                  height: 60%;
+                }
+              }
+            }
+          }
+        }
+        .right {
+          div {
+            position: absolute;
+            bottom: 70%;
+            left: 15%;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and #{$mq-xsmall} {
+    .genesisPage {
+      .content {
+        .left {
+          .icons {
+            .text {
+              left: 20%;
+              bottom: -2%;
+            }
+          }
+        }
+        .center {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 100%;
+          top: 0;
+          left: 10%;
+          row-gap: 0;
+          .title {
+            .text {
+              display: flex;
+              flex-wrap: wrap;
+              row-gap: 1rem;
+              .textRight {
+                img {
+                  width: 50%;
+                  left: 30%;
+                  bottom: 70%;
+                }
+              }
+            }
+          }
+
+          .exploreBtn {
+            padding-bottom: 7rem;
+          }
+          .sectorBtn {
+            padding-right: 3rem;
+          }
+        }
+        .right {
+          position: absolute;
+          right: 5%;
+          bottom: 0;
         }
       }
     }

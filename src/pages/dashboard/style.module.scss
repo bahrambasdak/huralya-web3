@@ -7,22 +7,43 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: "(max-width: #{$bp-xsmall})";
-$mq-small: "(max-width: #{$bp-small})";
-$mq-medium: "(max-width: #{$bp-medium})";
-$mq-large: "(max-width: #{$bp-large})";
-$mq-xlarge: "(max-width: #{$bp-xlarge})";
-$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
-$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+$mq-xsmall: '(max-width: #{$bp-xsmall})';
+$mq-small: '(max-width: #{$bp-small})';
+$mq-medium: '(max-width: #{$bp-medium})';
+$mq-large: '(max-width: #{$bp-large})';
+$mq-xlarge: '(max-width: #{$bp-xlarge})';
+$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
+
+.btn {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #282f42;
+  border: 1px solid #595f71;
+  border-radius: 30px;
+  font-family: 'Alatsi';
+  font-weight: 400;
+  font-size: 1rem;
+  color: #595f71;
+}
+.btn:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
+.btn:active {
+  box-shadow: inset 3px -4px 16px rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+}
 
 .dashboardPage {
   position: relative;
   width: 100%;
-  height: 580px;
+  height: 480px;
   row-gap: 10px;
   display: flex;
   flex-direction: column;
-  font-family: "Alatsi";
+  font-family: 'Alatsi';
   font-style: normal;
   font-weight: 300;
   color: #cfd5dc;
@@ -575,39 +596,32 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       }
     }
   }
-
-
 }
 
-
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
-
+//   $bp-xsmall: 37.5em; // 600px
+// $bp-small: 48em; // 768px
+// $bp-medium: 64em; // 1024px
+// $bp-large: 85.375em; // 1366px
+// $bp-xlarge: 120em; // 1920px
+// $bp-xxlarge: 160em; // 2560px
 
 @media only screen and #{$mq-retina} {
-
-
 }
 
 @media only screen and #{$mq-xxlarge} {
-
 }
 
 @media only screen and #{$mq-xlarge} {
-
 }
 @media only screen and #{$mq-large} {
-
 }
 
 @media only screen and #{$mq-medium} {
-
 }
 
 @media only screen and #{$mq-small} {
-
   .dashboardPage {
-
-
     height: auto;
     .top {
       height: max-content;
@@ -642,40 +656,11 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
         height: 50%;
       }
     }
-
-    .dashboardFooter {
-      height: auto;
-      flex-wrap: wrap;
-      min-height: fit-content;
-      //row-gap: 20px;
-
-      .footerLeft {
-        min-width: fit-content;
-        flex-grow: 1;
-        height: auto;
-        justify-content: center;
-        row-gap: 5px;
-      }
-      .footerCenter {
-        min-width: fit-content;
-        flex-grow: 1;
-        height: auto;
-      }
-
-      .footerRight {
-        min-width: fit-content;
-        //  flex-grow: 1;
-        height: auto;
-        // justify-content: center;
-      }
-    }
   }
 }
 
 @media only screen and #{$mq-xsmall} {
   .dashboardPage {
-
-
     .nft {
       flex-wrap: wrap;
       height: auto;
@@ -713,29 +698,6 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
       .activities {
         width: 100%;
         height: 30%;
-      }
-    }
-
-    .dashboardFooter {
-      row-gap: 20px;
-
-      .footerLeft {
-        width: 100%;
-        flex-grow: 1;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-        row-gap: 5px;
-      }
-      .footerCenter {
-        width: 100%;
-      }
-
-      .footerRight {
-        width: 100%;
-        > span {
-          text-align: left;
-        }
       }
     }
   }

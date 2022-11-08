@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 const Mint = () => {
   return (
     <div className={styles.mint}>
-      <HuralyaSquirrel />
+      <HuralyaSquirrel styles={styles} />
       <div className={styles.buySell}>
         <img
           src={catImg}

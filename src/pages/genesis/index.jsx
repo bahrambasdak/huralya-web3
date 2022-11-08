@@ -9,9 +9,9 @@ import sector_btn from '../../assets/images/genesis_sector_btn.svg';
 import GenesisBgSvg from '../../components/svgComponent/GenesisBgSvg';
 import GenesisTrailerBgSvg from '../../components/svgComponent/GenesisTrailerBgSvg';
 //import Convert from 'convert-svg-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 import GenesisTrailerSvg from '../../components/svgComponent/GenesisTrailerSvg';
-
 import styles from './style.module.scss';
 
 const Genesis = () => {
@@ -64,13 +64,13 @@ const Genesis = () => {
               </span>
             </p>
           </div>
-          <div className={styles.explore - btn}>
+          <div className={styles.exploreBtn}>
             <button>
               Explore the genesis{' '}
               <img src={btn_logo} alt="" width={40} height={35} />
             </button>
           </div>
-          <div className={styles.sector - btn}>
+          <div className={styles.sectorBtn}>
             <button>
               <img src={sector_btn} alt="" width={55} height={20} />
             </button>
