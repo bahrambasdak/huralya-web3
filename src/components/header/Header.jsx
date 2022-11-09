@@ -7,6 +7,8 @@ import menuIcon4 from "../../assets/images/menu_icon4.svg";
 import { ImMenu3, ImMenu4 } from "react-icons/im";
 import { useState } from "react";
 import Logo1 from "../svgComponent/Logo";
+import ConnectWalletBtn from "../connectWalletBtn";
+import { useAuth } from "../../contexts/Auth";
 
 //import styles from "../styles/App.module.scss";
 
@@ -19,7 +21,7 @@ const Header = ({
   showMainFooter,
   handleMenuClick,
   headerMenuActive,
-  toggleShowModal,
+  handleConnectWalletBtn,
 }) => {
 
   return (
@@ -145,13 +147,9 @@ const Header = ({
               </button>
             </Link>
           ) : (
-            
-            <button
-              className={`${styles.connectWallet} ${styles.btn}`}
-              onClick={toggleShowModal}
-            >
-              connect wallet
-            </button>
+
+            <ConnectWalletBtn styles={styles}/>
+  
            
           )}
         </div>

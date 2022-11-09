@@ -14,6 +14,7 @@ import { useState } from 'react';
 //import { CSSTransition, TransitionGroup } from "react-transition-group";
 import DashboardFooter from './components/dashboard-footer';
 import ConnectWalletModal from './components/modals/ConnectWallet';
+import { AuthProvider, useAuth } from './contexts/Auth';
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [loginBtn, setLoginBtn] = useState(false);
@@ -27,10 +28,8 @@ function App() {
     if (e.target.className.includes('dot')) setShowMenu((prev) => !prev);
     else if (showMenu) setShowMenu((prev) => !prev);
   };
-  const [showModal, setShowModal] = useState(false);
-  const toggleShowModal = () => {
-    setShowModal((prev) => !prev);
-  };
+  
+
   const [headerMenuActive, setHeaderMenuActive] = useState({
     genesis: true,
     aboutus: false,
@@ -52,6 +51,7 @@ function App() {
   return (
     <div className={`${styles.App}`} onClick={toggleMenu}>
       <BrowserRouter>
+      <AuthProvider>
         <Header
           toggleMenu={toggleMenu}
           showMenu={showMenu}
@@ -61,7 +61,6 @@ function App() {
           showMainFooter={setShowMainFooter}
           handleMenuClick={handleChangeMenu}
           headerMenuActive={headerMenuActive}
-          toggleShowModal={toggleShowModal}
         />
 
         <Container
@@ -73,7 +72,8 @@ function App() {
         ) : (
           <Footer />
         )}
-        {showModal && <ConnectWalletModal handleCloseModal={toggleShowModal} />}
+       
+        </AuthProvider>
       </BrowserRouter>
     </div>
   );

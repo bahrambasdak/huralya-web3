@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 
 import WalletConnect from '@walletconnect/client';
 import QRCodeModal from '@walletconnect/qrcode-modal';
+import { useAuth } from '../../contexts/Auth';
 
 const walletConnect = () => {
   const connector = new WalletConnect({
@@ -40,8 +41,9 @@ const walletConnect = () => {
   });
 };
 
-const ConnectWalletModal = ({ handleCloseModal }) => {
+const ConnectWalletModal = () => {
   const [provider, setProvider] = useState({});
+  const { setAuthState } = useAuth();
   useEffect(() => {
     setProvider(window.ethereum);
   }, []);
@@ -90,7 +92,13 @@ const ConnectWalletModal = ({ handleCloseModal }) => {
             </div>
           </div>
           <div className={styles.modalCloseBtn}>
-            <button onClick={handleCloseModal}>
+            <button
+              onClick={() =>
+                setAuthState((prev) => ({
+                  ...prev,
+                  connectWalletBtn: 'notConnect'
+                }))
+              }>
               <MdClose />
             </button>
           </div>
