@@ -7,13 +7,13 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: '(max-width: #{$bp-xsmall})';
-$mq-small: '(max-width: #{$bp-small})';
-$mq-medium: '(max-width: #{$bp-medium})';
-$mq-large: '(max-width: #{$bp-large})';
-$mq-xlarge: '(max-width: #{$bp-xlarge})';
-$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
-$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
 
 .mint {
   //position: relative;
@@ -21,7 +21,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   width: 100%;
   display: flex;
   column-gap: 10px;
-  font-family: 'Alatsi';
+  font-family: "Alatsi";
   font-weight: 400;
   min-width: 100%;
   .HuralyaSquirrel {
@@ -114,7 +114,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
               .title {
                 color: #dddedf;
                 min-width: fit-content;
-                font-family: 'Alatsi';
+                font-family: "Alatsi";
                 display: flex;
                 align-items: center;
               }
@@ -124,7 +124,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
                 color: #898d92;
                 font-size: 12px;
                 flex-grow: 1;
-                font-family: 'Alatsi';
+                font-family: "Alatsi";
                 padding: 0rem 0.5rem;
               }
             }
@@ -162,7 +162,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    font-family: 'Alatsi';
+    font-family: "Alatsi";
     background: linear-gradient(0deg, #295669 -50%, rgba(7, 9, 12, 0) 50%);
     border-radius: 20px;
     color: #9fa3a7;
@@ -183,12 +183,12 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         font-size: 14px;
         line-height: 24px;
         text-align: left;
-        font-family: 'Alatsi';
+        font-family: "Alatsi";
       }
       .last {
         font-size: 10px;
         padding-left: 10px;
-        font-family: 'Alatsi';
+        font-family: "Alatsi";
       }
     }
     .bar {
@@ -206,7 +206,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       justify-content: center;
       p {
         display: flex;
-        font-family: 'Alatsi';
+        font-family: "Alatsi";
         column-gap: 3px;
         justify-content: center;
         .icon {
@@ -219,7 +219,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       color: #eaeaea;
       font-size: 14px;
       padding: 1rem 0;
-      font-family: 'Alatsi';
+      font-family: "Alatsi";
     }
   }
 }
@@ -265,7 +265,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
               .text {
                 flex-wrap: wrap;
               }
-              .icon {
+              .icon{
                 align-self: flex-start;
               }
             }

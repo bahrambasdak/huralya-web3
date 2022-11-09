@@ -7,13 +7,15 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: '(max-width: #{$bp-xsmall})';
-$mq-small: '(max-width: #{$bp-small})';
-$mq-medium: '(max-width: #{$bp-medium})';
-$mq-large: '(max-width: #{$bp-large})';
-$mq-xlarge: '(max-width: #{$bp-xlarge})';
-$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
-$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
+$mq-xsmall: "(max-width: #{$bp-xsmall})";
+$mq-small: "(max-width: #{$bp-small})";
+$mq-medium: "(max-width: #{$bp-medium})";
+$mq-large: "(max-width: #{$bp-large})";
+$mq-xlarge: "(max-width: #{$bp-xlarge})";
+$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
+$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+
+
 
 .card {
   padding: 15px;
@@ -27,7 +29,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   background-color: #282f42;
   border: 1px solid #595f71;
   border-radius: 63px;
-  font-family: 'Alatsi';
+  font-family: "Alatsi";
   font-weight: 400;
   font-size: 1rem;
   color: #595f71;
@@ -41,376 +43,299 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   border-color: transparent;
 }
 
+
+
+
 .lyatokenPage {
-  display: flex;
-  width: 100%;
-  min-width: 100%;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1rem;
-
-  .top {
-    text-align: left;
-    display: flex;
-    justify-content: space-between;
+   display: flex;
     width: 100%;
-    column-gap: 10px;
-    .btn {
-      width: 25%;
-      min-width: fit-content;
-      flex-grow: 1;
-      background: linear-gradient(
-        90.01deg,
-        #08757a -51.74%,
-        rgba(32, 36, 57, 0) 100%
-      );
+    min-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    
 
-      .title {
-        padding: 0px 0 20px 0;
-        color: white;
-        font-family: 'Bahnschrift';
-        font-weight: 600;
-        font-size: 22px;
-      }
-
-      .exchange {
+    .top {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      column-gap: 12px;
+      .exchanges {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        width: 100%;
-        column-gap: 10px;
-        .btn {
-          width: 25%;
-          min-width: fit-content;
-          flex-grow: 1;
-          font-family: 'Alatsi';
+        flex-grow: 1;
+        background: linear-gradient(
+          90.01deg,
+          #08757a -51.74%,
+          rgba(32, 36, 57, 0) 100%
+        );
+  
+        .title {
+          padding: 0px 0 20px 0;
+          color: white;
+  font-family: 'Bahnschrift';
+          font-weight: 600;
+          font-size: 22px;
         }
-      }
-    }
-
-    .contractAddress {
-      flex-grow: 1;
-      background: linear-gradient(
-        270.28deg,
-        #08757a -52.43%,
-        rgba(32, 36, 57, 0) 100%
-      );
-      border-radius: 20px;
-      .title {
-        padding: 0px 0 20px 0;
-        font-weight: 600;
-        font-size: 24px;
-        color: #ffffff;
-        font-family: 'Bahnschrift';
-      }
-      .contract {
-        display: flex;
-        column-gap: 10px;
-        width: 100%;
-        position: relative;
-        .etherHover {
-          position: absolute;
-          display: none;
-          top: 100%;
-          padding-top: 10px;
-          div {
-            background-color: #9298a5;
-            border-radius: 50px;
-            transition: all 1s;
-            color: #282f42;
-            padding: 3px 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            column-gap: 5px;
-            p {
-              font-size: 12px;
-              font-family: 'Alatsi';
-            }
-            .icons {
-              font-size: 1.2rem;
-              font-weight: 100;
-              .copyIcon {
-                cursor: pointer;
-              }
-              .copyIcon:hover {
-                color: #08757a;
-              }
-              .copyIcon:active {
-                color: white;
-              }
-            }
-          }
-        }
-
-        .etherHover::after {
-          content: '';
-          position: absolute;
-          border-bottom: 10px solid #9298a5;
-          border-right: 10px solid transparent;
-          left: 5%;
-          top: 0;
-        }
-
-        .etherHover::before {
-          content: '';
-          position: absolute;
-          border-bottom: 10px solid #9298a5;
-          border-left: 10px solid transparent;
-          left: 5%;
-          top: 0;
-          display: none;
-        }
-        .ethereum {
-          flex-grow: 1;
-          max-width: 38%;
-          min-width: fit-content;
+  
+        .exchange {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          column-gap: 10px;
           .btn {
+            width: 25%;
+            min-width: fit-content;
+            flex-grow: 1;
             font-family: 'Alatsi';
           }
         }
-        .ethereum:hover {
-          .etherHover {
-            display: flex;
-            align-items: center;
-          }
-        }
-        .smartchain {
-          flex-grow: 1;
-          max-width: 38%;
-          min-width: fit-content;
-          .btn {
-            font-family: 'Bahnschrift';
-            font-size: 1.1rem;
-            font-weight: 300;
-            padding: 4px 5px;
-          }
-        }
-        .btn {
-          width: 100%;
-        }
       }
-    }
-
-    .logo {
-      padding: 0.5rem 0.5rem 0.5rem 2rem;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      border-radius: 20px;
-      background: linear-gradient(
-        89.31deg,
-        #09858b -100%,
-        rgba(40, 47, 66, 0) 100%
-      );
-      height: 110px;
-      .lyaTokenLogo {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
-}
-
-.contractAddress {
-  flex-grow: 1;
-  background: linear-gradient(
-    270.28deg,
-    #08757a -52.43%,
-    rgba(32, 36, 57, 0) 100%
-  );
-  border-radius: 20px;
-  .title {
-    padding: 0px 0 20px 0;
-    font-weight: 600;
-    font-size: 24px;
-    color: #ffffff;
-  }
-  .contract {
-    display: flex;
-    column-gap: 10px;
-    width: 100%;
-    position: relative;
-    .etherHover {
-      position: absolute;
-      display: none;
-      top: 100%;
-      padding-top: 10px;
-      div {
-        background-color: #9298a5;
-        border-radius: 50px;
-        transition: all 1s;
-        color: #282f42;
-        padding: 3px 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        column-gap: 5px;
-        p {
-          font-size: 12px;
-        }
-        .icons {
-          font-size: 1.2rem;
-          font-weight: 100;
-          .copyIcon {
-            cursor: pointer;
-          }
-          .copyIcon:hover {
-            color: #08757a;
-          }
-          .copyIcon:active {
-            color: white;
-          }
-        }
-      }
-    }
-
-    .etherHover::after {
-      content: '';
-      position: absolute;
-      border-bottom: 10px solid #9298a5;
-      border-right: 10px solid transparent;
-      left: 5%;
-      top: 0;
-    }
-
-    .etherHover::before {
-      content: '';
-      position: absolute;
-      border-bottom: 10px solid #9298a5;
-      border-left: 10px solid transparent;
-      left: 5%;
-      top: 0;
-      display: none;
-    }
-    .ethereum {
-      flex-grow: 1;
-      max-width: 38%;
-      min-width: fit-content;
-    }
-    .ethereum:hover {
-      .etherHover {
-        display: flex;
-        align-items: center;
-      }
-    }
-    .smartchain {
-      flex-grow: 1;
-      max-width: 38%;
-      min-width: fit-content;
-      .btn {
-        font-family: 'Bahnschrift';
-        font-size: 1.1rem;
-        font-weight: 300;
-        padding: 4px 5px;
-      }
-    }
-    .btn {
-      width: 100%;
-    }
-  }
-}
-
-.logo {
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 20px;
-  background: linear-gradient(
-    89.31deg,
-    #09858b -100%,
-    rgba(40, 47, 66, 0) 100%
-  );
-  height: 110px;
-  .lyaTokenLogo {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media only screen and #{$mq-medium} {
-  .lyatokenPage {
-    .top {
-      .logo {
-        padding: 0;
-      }
-    }
-  }
-}
-
-@media only screen and #{$mq-small} {
-  .lyatokenPage {
-    .top {
+  
       .contractAddress {
-        .contract {
-          .etherHover {
-            left: -80%;
-          }
-          .etherHover::after {
-            display: none;
-          }
-          .etherHover::before {
-            display: block;
-            left: 60%;
-          }
-        }
-      }
-
-      .logo {
-        display: none;
-      }
-    }
-  }
-}
-
-@media only screen and #{$mq-xsmall} {
-  //////////////////////////////////////////////lyaToken Page//////////////////
-  .lyatokenPage {
-    flex-wrap: wrap;
-    .top {
-      flex-wrap: wrap;
-      row-gap: 10px;
-      .contractAddress {
-        .contract {
-          .etherHover {
-            left: -8%;
-          }
-          .etherHover::after {
-            display: block;
-            left: 20%;
-          }
-          .etherHover::before {
-            display: none;
-          }
-        }
-      }
-
-      .btn {
-        font-family: 'Alatsi';
-      }
-
-      .smartchain {
-        .btn {
+        flex-grow: 1;
+        background: linear-gradient(
+          270.28deg,
+          #08757a -52.43%,
+          rgba(32, 36, 57, 0) 100%
+        );
+        border-radius: 20px;
+        .title {
+          padding: 0px 0 20px 0;
+          font-weight: 600;
+          font-size: 24px;
+          color: #ffffff;
           font-family: 'Bahnschrift';
         }
-      }
-      .logo {
-        padding: 0;
-      }
-      .exchanges {
-        .exchange {
-          .pancakeswap {
-            max-width: 32%;
+        .contract {
+          display: flex;
+          column-gap: 10px;
+          width: 100%;
+          position: relative;
+          .etherHover {
+            position: absolute;
+            display: none;
+            top: 100%;
+            padding-top: 10px;
+            div {
+              background-color: #9298a5;
+              border-radius: 50px;
+              transition: all 1s;
+              color: #282f42;
+              padding: 3px 5px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              column-gap: 5px;
+              p {
+                font-size: 12px;
+                font-family: 'Alatsi';
+              }
+              .icons {
+                font-size: 1.2rem;
+                font-weight: 100;
+                .copyIcon {
+                  cursor: pointer;
+                }
+                .copyIcon:hover {
+                  color: #08757a;
+                }
+                .copyIcon:active {
+                  color: white;
+                }
+              }
+            }
           }
-          flex-wrap: wrap;
-          row-gap: 10px;
+  
+          .etherHover::after {
+            content: "";
+            position: absolute;
+            border-bottom: 10px solid #9298a5;
+            border-right: 10px solid transparent;
+            left: 5%;
+            top: 0;
+          }
+  
+          .etherHover::before {
+            content: "";
+            position: absolute;
+            border-bottom: 10px solid #9298a5;
+            border-left: 10px solid transparent;
+            left: 5%;
+            top: 0;
+            display: none;
+          }
+          .ethereum {
+            flex-grow: 1;
+            max-width: 38%;
+            min-width: fit-content;
+            .btn{
+              font-family: 'Alatsi';
+            }
+          }
+          .ethereum:hover {
+            .etherHover {
+              display: flex;
+              align-items: center;
+            }
+          }
+          .smartchain {
+            flex-grow: 1;
+            max-width: 38%;
+            min-width: fit-content;
+            .btn {
+              font-family: "Bahnschrift";
+              font-size: 1.1rem;
+              font-weight: 300;
+              padding: 4px 5px;
+            }
+          }
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+  
+      .logo {
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 20px;
+        background: linear-gradient(
+          89.31deg,
+          #09858b -100%,
+          rgba(40, 47, 66, 0) 100%
+        );
+        height: 110px;
+        .lyaTokenLogo {
+          width: 100%;
+          height: 100%;
         }
       }
     }
+  
     .content {
-      flex-wrap: wrap;
-      row-gap: 3rem;
-      padding-top: 1rem;
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      color: aliceblue;
+      background-color: #253046;
+      padding: 2.5rem 2rem;
+      column-gap: 2rem;
+      .LyaTokenDescription {
+        min-width: 30%;
+        text-align: left;
+        .icon {
+          width: 106px;
+          height: 90px;
+        }
+        .title {
+          padding: 1rem 0 0.8rem 0;
+          font-weight: 600;
+          color: #ebebeb;
+          font-family: "Bahnschrift";
+        }
+        .text {
+          font-weight: 300;
+          color: #898d92;
+          width: 100%;
+          font-family: "Bahnschrift";
+        }
+      }
     }
   }
-}
+
+
+
+
+  @media only screen and #{$mq-medium} {
+     .lyatokenPage {
+      .top {
+        .logo {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$mq-small} {
+   .lyatokenPage {
+      .top {
+        .contractAddress {
+          .contract {
+            .etherHover {
+              left: -80%;
+            }
+            .etherHover::after {
+              display: none;
+            }
+            .etherHover::before {
+              display: block;
+              left: 60%;
+            }
+          }
+        }
+  
+        .logo {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media only screen and #{$mq-xsmall} {
+
+    //////////////////////////////////////////////lyaToken Page//////////////////
+     .lyatokenPage {
+      flex-wrap: wrap;
+      .top {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        .contractAddress {
+          .contract {
+            .etherHover {
+              left: -8%;
+            }
+            .etherHover::after {
+              display: block;
+              left: 20%;
+            }
+            .etherHover::before {
+              display: none;
+            }
+          }
+        }
+  
+        .btn {
+          font-family: "Alatsi";
+        }
+  
+        .smartchain {
+          .btn {
+            font-family: "Bahnschrift";
+          }
+        }
+        .logo {
+          padding: 0;
+        }
+        .exchanges {
+          .exchange {
+            .pancakeswap {
+              max-width: 32%;
+            }
+            flex-wrap: wrap;
+            row-gap: 10px;
+          }
+        }
+      }
+      .content {
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        padding-top: 1rem;
+      }
+    }
+  }

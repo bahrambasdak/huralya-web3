@@ -1,21 +1,15 @@
-import HuralyaSquirrel from '../../../components/HuralyaSquirrel';
-import catImg from '../../../assets/images/mintPageCatImg.svg';
-import mintBar from '../../../assets/images/mintPagbar.svg';
-import { AiOutlineExclamationCircle } from 'react-icons/ai';
+import HuralyaSquirrel from "../../../components/HuralyaSquirrel";
+import catImg from "../../../assets/images/mintPageCatImg.svg";
+import mintBar from "../../../assets/images/mintPagbar.svg";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 import styles from './style.module.scss';
 
 const Mint = () => {
   return (
     <div className={styles.mint} id="mint">
-      <HuralyaSquirrel styles={styles} />
+      <HuralyaSquirrel styles={styles}/>
       <div className={styles.buySell}>
-        <img
-          src={catImg}
-          alt=""
-          className={styles.catImg}
-          width={270}
-          height={270}
-        />
+        <img src={catImg} alt="" className={styles.catImg} width={270} height={270} />
         <div className={styles.desc}>
           <div className={styles.total}>
             <p>Total supply : 1200</p>
@@ -30,10 +24,7 @@ const Mint = () => {
           <img src={mintBar} alt="" />
         </div>
         <div className={styles.date}>
-          <p>
-            <AiOutlineExclamationCircle className={styles.icon} />
-            Upcoming mint on 21 nov 2021 at price 400
-          </p>
+          <p><AiOutlineExclamationCircle className={styles.icon}/>Upcoming mint on 21 nov 2021 at price 400</p>
         </div>
         <div className={styles.buySellLya}>Buy/Sell LYA</div>
       </div>
