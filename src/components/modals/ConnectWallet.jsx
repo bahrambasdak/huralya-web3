@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import WalletConnect from '@walletconnect/client';
 import QRCodeModal from '@walletconnect/qrcode-modal';
 import { useAuth } from '../../contexts/Auth';
-import LoaderAnimation from '../loader';
+import Loading from './loading';
 
 const ConnectWalletModal = () => {
   const [provider, setProvider] = useState({});
@@ -106,19 +106,21 @@ const ConnectWalletModal = () => {
                   <div>icon</div>
                   <div>
                     metamask
-                    {metamaskBtnStatus === 'connecting' &&  <LoaderAnimation type={'spin'} color={'#FFFFF'}/>}
                   </div>
+                  {metamaskBtnStatus === 'connecting' && (
+                      <Loading type={'spin'} color={'#FFFFF'} />
+                    )}
                 </button>
               </div>
               <div className={styles.col}>
-                <button onClick={handleWalletConnect} style={{position:'relative'}}>
+                <button onClick={handleWalletConnect} >
                   <div>icon</div>
                   <div>
                     wallet Connect
-                    {walletConnectBtnStatus === 'connecting' && (
-                      <LoaderAnimation type={'spin'} color={'#FFFFF'} />
-                    )}
                   </div>
+                  {walletConnectBtnStatus === 'connecting' && (
+                      <Loading type={'spin'} color={'#FFFFF'} />
+                    )}
                 </button>
               </div>
             </div>
