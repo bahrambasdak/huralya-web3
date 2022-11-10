@@ -7,13 +7,13 @@ $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px
 
 // Media Queries
-$mq-xsmall: "(max-width: #{$bp-xsmall})";
-$mq-small: "(max-width: #{$bp-small})";
-$mq-medium: "(max-width: #{$bp-medium})";
-$mq-large: "(max-width: #{$bp-large})";
-$mq-xlarge: "(max-width: #{$bp-xlarge})";
-$mq-xxlarge: "(max-width: #{$bp-xxlarge})";
-$mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
+$mq-xsmall: '(max-width: #{$bp-xsmall})';
+$mq-small: '(max-width: #{$bp-small})';
+$mq-medium: '(max-width: #{$bp-medium})';
+$mq-large: '(max-width: #{$bp-large})';
+$mq-xlarge: '(max-width: #{$bp-xlarge})';
+$mq-xxlarge: '(max-width: #{$bp-xxlarge})';
+$mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
 $header-background-color: #282f42;
 $header-menu-text-color: #9298a5;
@@ -38,7 +38,7 @@ $header-menu-text-color: #9298a5;
   background-color: #282f42;
   border: 1px solid #595f71;
   border-radius: 63px;
-  font-family: "Alatsi";
+  font-family: 'Alatsi';
   font-weight: 400;
   font-size: 1rem;
   color: #595f71;
@@ -85,7 +85,7 @@ $header-menu-text-color: #9298a5;
   min-height: 100vh;
   // padding-bottom: 3rem;
   padding-top: 6.2rem;
-  font-family: "Bahnschrift";
+  font-family: 'Bahnschrift';
   background-color: #161c26;
   height: auto;
 }
@@ -177,7 +177,7 @@ $header-menu-text-color: #9298a5;
           height: 100%;
           padding: 0px 5px 0px 5px;
           .item {
-            font-family: "Bahnschrift";
+            font-family: 'Bahnschrift';
             position: relative;
             display: flex;
             align-items: center;
@@ -200,7 +200,7 @@ $header-menu-text-color: #9298a5;
           }
 
           .item::after {
-            content: "";
+            content: '';
             box-sizing: border-box;
             position: absolute;
             border-bottom: 0.2rem solid transparent;
@@ -271,7 +271,7 @@ $header-menu-text-color: #9298a5;
         .loginBtn {
           flex-grow: 1;
           color: #9298a5;
-          font-family: "Bahnschrift";
+          font-family: 'Bahnschrift';
           font-weight: 300;
           font-size: 20px;
           max-width: 100px;
@@ -280,8 +280,30 @@ $header-menu-text-color: #9298a5;
           // border-color: #9298a5;
           border-width: 2px;
         }
+
+
       }
     }
+
+    .connectBtn {
+      display: flex;
+       align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      color: #cfd5dc;
+      column-gap: 5px;
+      padding-right: 20px;
+      max-width: 40%;
+     // flex-wrap: wrap;
+      .walletAddress {
+        font-size: 0.8rem;
+        color: #cfd5dc;
+      }
+      button {
+      }
+    }
+
+
   }
 }
 
@@ -317,7 +339,7 @@ $header-menu-text-color: #9298a5;
   justify-content: center;
 
   .footerContent {
-    font-family: "Bahnschrift";
+    font-family: 'Bahnschrift';
     display: flex;
     margin: 0 30%;
     flex: 1 0 auto;
@@ -341,7 +363,7 @@ $header-menu-text-color: #9298a5;
       .link {
         padding: 5px;
         cursor: pointer;
-        font-family: "Bahnschrift";
+        font-family: 'Bahnschrift';
       }
       .link:hover {
         color: white;
@@ -634,12 +656,11 @@ $header-menu-text-color: #9298a5;
     }
     .aboutusPageShow {
       height: 140vh;
-
     }
     .lyatokenPageShow {
       height: 110vh;
     }
-    .mintPageShow{
+    .mintPageShow {
       height: 80vh;
     }
     .footer {
@@ -806,13 +827,12 @@ $header-menu-text-color: #9298a5;
     }
     .aboutusPageShow {
       height: 170vh;
-
     }
     .lyatokenPageShow {
       height: auto;
     }
 
-    .mintPageShow{
+    .mintPageShow {
       height: 190vh;
     }
     .footer {

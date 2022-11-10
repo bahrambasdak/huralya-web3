@@ -62,12 +62,12 @@ const Dashboard = () => {
     );
   };
 
-  const { authState } = useAuth();
+  const { user } = useAuth();
   return (
     <div className={classes.dashboardPage} id="dashboard">
       <div className={classes.top}>
         {/* <img src={topBg} alt="" className={classes.bgImg} /> */}
-        {authState.connectWalletBtn !== 'connected' && (
+        {user.connectBtn !== 'connected' && (
           <div className={classes.blurFilter}></div>
         )}
         <div className={classes.cards}>
@@ -171,7 +171,7 @@ const Dashboard = () => {
       </div>
 
       <div className={classes.nft}>
-        {authState.connectWalletBtn !== 'connected' && (
+        {user.connectBtn !== 'connected' && (
           <div className={classes.blurFilter}>
             <ConnectWalletBtn styles={classes} />
           </div>
@@ -242,7 +242,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {authState.connectWalletBtn === 'connecting' && <ConnectWalletModal />}
+      {user.connectBtn === 'connecting' && <ConnectWalletModal />}
       {/* <DashboardFooter/> */}
     </div>
   );

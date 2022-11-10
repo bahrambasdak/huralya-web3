@@ -14,7 +14,7 @@ import { useState } from 'react';
 //import { CSSTransition, TransitionGroup } from "react-transition-group";
 import DashboardFooter from './components/dashboard-footer';
 import ConnectWalletModal from './components/modals/ConnectWallet';
-import { AuthProvider, useAuth } from './contexts/Auth';
+import { AuthProvider } from './contexts/Auth';
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [loginBtn, setLoginBtn] = useState(false);
@@ -25,7 +25,7 @@ function App() {
   const toggleMenu = (e) => {
     e.stopPropagation();
     console.log(e.target.className);
-    if (e.target.className.includes('dot')) setShowMenu((prev) => !prev);
+    if ( e.target.className.includes('dot')) setShowMenu((prev) => !prev);
     else if (showMenu) setShowMenu((prev) => !prev);
   };
   

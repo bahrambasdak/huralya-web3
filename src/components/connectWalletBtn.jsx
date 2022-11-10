@@ -1,20 +1,26 @@
 import { useAuth } from '../contexts/Auth';
 
-const ConnectWalletBtn = ({  styles }) => {
-  const { authState, setAuthState } = useAuth();
+const ConnecttBtn = ({ styles }) => {
+  const { user, setConnectBtn } = useAuth();
+  const handleConnectBtn = () => {
+    if (user.connectBtn === 'notConnect') setConnectBtn('connecting');
+    else if (user.connectBtn === 'connected') setConnectBtn('notConnect');
+  };
+
+  const addressSturcture = (address) =>
+  `[${address.substring(0, 3)}...${address.substring(address.length - 3)}]`;
 
   return (
-    <div>
-      <button
-      
-        onClick={() =>
-          setAuthState((prev) => ({ ...prev, connectWalletBtn: 'connecting' }))
-        }
-        className={styles.btn}>
-        {authState.connectWalletBtn==='connecting' ? '...connecting' : 'connect Wallet'}
+    <div className={styles.connectBtn}>
+      <div className={styles.walletAddress}>
+        {user.metamaskIsSuccess && addressSturcture(user.metamaskAddress)}
+        {user.walletIsSuccess && addressSturcture(user.walletAddress)}
+      </div>
+      <button onClick={handleConnectBtn} className={styles.btn}>
+        {user.connectBtn === 'notConnect' ? 'connect Wallet' : 'connected'}
       </button>
     </div>
   );
 };
 
-export default ConnectWalletBtn;
+export default ConnecttBtn;
