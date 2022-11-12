@@ -2,25 +2,29 @@ import styles from './styles.module.scss';
 import { MdClose } from 'react-icons/md';
 import { wallets } from '../../libs';
 import { useEffect, useState } from 'react';
-
 import WalletConnect from '@walletconnect/client';
 import QRCodeModal from '@walletconnect/qrcode-modal';
 import { useAuth } from '../../contexts/Auth';
 import Loading from './loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ConnectWalletModal = () => {
   const [provider, setProvider] = useState({});
   const { setMetamaskWallet, setConnectBtn, setWalletAddress, user } =
     useAuth();
+
   const [metamaskBtnStatus, setMetamaskBtnStatus] = useState('notConnect');
   const [walletConnectBtnStatus, setWalletConnectBtnStatus] =
     useState('notConnect');
-  useEffect(() => {
-    setProvider(window.ethereum);
-  }, []);
 
   const addressSturcture = (address) =>
     `${address.substring(0, 3)}...${address.substring(address.length - 3)}`;
+
+  const notify = (text) => toast(text);
+
+
+
 
   const walletConnect = () => {
     setWalletConnectBtnStatus('connecting');
@@ -40,10 +44,15 @@ const ConnectWalletModal = () => {
 
       const { accounts, chainId } = payload.params[0];
       const data = { isSuccess: true, address: [accounts] };
-      setWalletAddress(data.address[0]);
-      setConnectBtn('connected');
-      setWalletConnectBtnStatus('connected');
-      console.log(data.address);
+      console.log(data);
+      if(data.isSuccess){
+        setWalletAddress(data.address[0].toString(), data.isSuccess);
+        setConnectBtn('connected');
+        setWalletConnectBtnStatus('connected');
+        console.log(data.address[0].toString(), data.isSuccess);
+        notify('wallet connected is sucsses');
+      }
+
     });
 
     connector.on('session_update', (error, payload) => {
@@ -52,6 +61,12 @@ const ConnectWalletModal = () => {
       }
       const { accounts, chainId } = payload.params[0];
       const data = { isSuccess: true, address: [accounts] };
+      if (data.isSuccess) {
+        setWalletAddress(data.address[0].toString(), data.isSuccess);
+        setConnectBtn('connected');
+        console.log(data.address[0].toString(), data.isSuccess);
+      
+      }
     });
 
     connector.on('disconnect', (error, payload) => {
@@ -69,17 +84,22 @@ const ConnectWalletModal = () => {
       .onClickConnect()
       .then((r) => {
         console.log(r);
-        console.log(addressSturcture(r.address));
-        setMetamaskBtnStatus('connected');
-        setMetamaskWallet(r.address);
-        setConnectBtn('connected');
+       if(r.isSuccess) console.log(addressSturcture(r.address));
+        if (r.isSuccess) {
+          setMetamaskBtnStatus('connected');
+          setMetamaskWallet(r.address.toString(), r.isSuccess);
+          setConnectBtn('connected');
+        } else {
+          
+          setMetamaskBtnStatus('notConnect');
+        }
+        notify(r.message);
         return r;
       })
       .catch((e) => {
-        console.log(e);
+        console.log( e);
         setMetamaskBtnStatus('notConnect');
-        setConnectBtn('notConnect');
-        setMetamaskWallet('');
+        notify(e.message);
         return e;
       });
   };
@@ -89,38 +109,33 @@ const ConnectWalletModal = () => {
   };
 
   useEffect(() => {
-    //console.log('handlconnectwallet', handleWalletConnect());
-    //console.log('walletconnect', walletConnect());
-    // console.log('handlemetamask', handleMetaMaskWallet());
-  }, [handleWalletConnect, walletConnect]);
+    setProvider(window.ethereum);
+  }, []);
 
   return (
     <div className={styles.connectWalletModal}>
       <div className={styles.modalWrapper}>
         <div className={styles.modalContainer}>
           <div className={styles.modalBody}>
+            <ToastContainer />
             <div className={styles.modalHeader}>Connect Wallet</div>
             <div className={styles.modalRes}>
               <div className={styles.col}>
                 <button onClick={handleMetaMaskWallet}>
                   <div>icon</div>
-                  <div>
-                    metamask
-                  </div>
+                  <div>metamask</div>
                   {metamaskBtnStatus === 'connecting' && (
-                      <Loading type={'spin'} color={'#FFFFF'} />
-                    )}
+                    <Loading type={'spin'} color={'#FFFFF'} />
+                  )}
                 </button>
               </div>
               <div className={styles.col}>
-                <button onClick={handleWalletConnect} >
+                <button onClick={handleWalletConnect}>
                   <div>icon</div>
-                  <div>
-                    wallet Connect
-                  </div>
+                  <div>wallet Connect</div>
                   {walletConnectBtnStatus === 'connecting' && (
-                      <Loading type={'spin'} color={'#FFFFF'} />
-                    )}
+                    <Loading type={'spin'} color={'#FFFFF'} />
+                  )}
                 </button>
               </div>
             </div>

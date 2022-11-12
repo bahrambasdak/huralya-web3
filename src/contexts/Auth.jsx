@@ -39,15 +39,6 @@ const AuthProvider = ({ children }) => {
     setLocalStorage('user', user);
   }, [user]);
 
-  const setMetamaskWallet = useCallback(
-    (address) =>
-      setUser((prev) => ({
-        ...prev,
-        metamaskAddress: address,
-        metamaskIsSuccess: address!==''
-      })),
-    []
-  );
 
   const setConnectBtn = useCallback(
     (status) =>
@@ -58,12 +49,35 @@ const AuthProvider = ({ children }) => {
     []
   );
 
+  const setMetamaskWallet = useCallback(
+    (address,isSuccess) =>
+      setUser((prev) => ({
+        ...prev,
+        metamaskAddress: address,
+        metamaskIsSuccess: isSuccess
+      })),
+    []
+  );
+
   const setWalletAddress = useCallback(
-    (address) =>
+    (address,isSuccess) =>
       setUser((prev) => ({
         ...prev,
         walletAddress: address,
-        walletIsSuccess: address!==''
+        walletIsSuccess: isSuccess
+      })),
+    []
+  );
+
+  const DisconnectWallets = useCallback(
+    () =>
+      setUser((prev) => ({
+        ...prev,
+        connectBtn: 'notConnect',
+        walletAddress: '',
+        metamaskAddress: '',
+        walletIsSuccess: false,
+        metamaskIsSuccess: false
       })),
     []
   );
@@ -73,9 +87,10 @@ const AuthProvider = ({ children }) => {
       setMetamaskWallet: setMetamaskWallet,
       setConnectBtn: setConnectBtn,
       setWalletAddress: setWalletAddress,
+      DisconnectWallets:DisconnectWallets,
       user
     }),
-    [setMetamaskWallet, setConnectBtn, setWalletAddress, user]
+    [setMetamaskWallet, setConnectBtn, setWalletAddress,DisconnectWallets, user]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -24,7 +24,6 @@ function App() {
   };
   const toggleMenu = (e) => {
     e.stopPropagation();
-    console.log(e.target.className);
     if ( e.target.className.includes('dot')) setShowMenu((prev) => !prev);
     else if (showMenu) setShowMenu((prev) => !prev);
   };
