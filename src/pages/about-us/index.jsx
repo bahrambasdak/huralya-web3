@@ -11,7 +11,8 @@ import styles from "./style.module.scss";
 
 const AboutUs = () => {
   return (
-    <div className={styles.aboutUs} id="aboutus">
+    <div className={styles.aboutUs} >
+      <div id="aboutus" style={{position:'absolute' , top:'-100px'}}></div>
       <div className={styles.aboutDesc}>
         <div className={styles.title}>About Us</div>
         <p className={styles.desc}>
@@ -73,6 +74,22 @@ const AboutUs = () => {
       </div>
 
       <div className={styles.bottomSection}>
+
+      <div className={styles.socials}>
+          <div className={styles.btns}>
+            <button className={styles.btn}>yahoo!</button>
+            <button className={styles.btn}>coinMarketCap</button>
+            <button className={styles.btn}>CoinDesk</button>
+            <button className={styles.btn}>GAMERANK</button>
+          </div>
+          <div className={styles.smallBtns}>
+            <button className={`${styles.sBtn} ${styles.left}`}></button>
+            <button className={`${styles.sBtn} ${styles.right}`}></button>
+          </div>
+        </div>
+
+
+
         <div className={styles.bottomTop}>
           <div className={styles.backers}>
             <img
@@ -125,18 +142,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className={styles.socials}>
-          <div className={styles.btns}>
-            <button className={styles.btn}>yahoo!</button>
-            <button className={styles.btn}>coinMarketCap</button>
-            <button className={styles.btn}>CoinDesk</button>
-            <button className={styles.btn}>GAMERANK</button>
-          </div>
-          <div className={styles.smallBtns}>
-            <button className={`${styles.sBtn} ${styles.left}`}></button>
-            <button className={`${styles.sBtn} ${styles.right}`}></button>
-          </div>
-        </div>
+
       </div>
     </div>
   );
