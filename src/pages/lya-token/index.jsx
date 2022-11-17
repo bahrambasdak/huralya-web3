@@ -31,96 +31,75 @@ const LyaToken = () => {
   };
   return (
     <div className={styles.lyatokenPage}>
-      <div id="lyatoken" style={{ position: 'absolute', top: '-100px' }}></div>
+      <div  id="lyatoken" style={{ position: 'absolute', top: '-100px' }}></div>
 
       <div className={`${styles.content}`}>
-        <div className={`${styles.lyaTokenLogo}`}>
-          <LyaTokenLogo className={styles.logo} width={141} height={86} />
+        <div className={`${styles.lyaPageLogo}`}>
+          <div className={styles.logoContent}>
+            <div>THE</div>
+            <div className={styles.logo}>
+              <LyaTokenLogo width={100} height={50} />
+            </div>
+          </div>
         </div>
+
         <div className={styles.lyaPageDesc}>
           <LyaTokenDescription
             title="Allocation and release"
             text={LyaTokenDescription1}
             styles={styles}
           />
-          <LyaTokenDescription
-            title="how to buy and sell"
-            text={LyaTokenDescription2}
-            styles={styles}
-          />
+
           <LyaTokenDescription
             title="Token Usage"
             text={LyaTokenDescription3}
             styles={styles}
           />
-        </div>
-      </div>
 
-      <div className={styles.top}>
-        <div className={`${styles.exchanges} ${styles.card}`}>
-          <div className={styles.title}>Exchanges</div>
-          <div className={styles.exchange}>
-            <button className={styles.btn}>Kucoin</button>
-            <button className={styles.btn}>MEXC</button>
-            <button className={styles.btn}>uniswap</button>
-            <button className={`${styles.btn} ${styles.pancakeswap}`}>
-              pancakeswap
-            </button>
-          </div>
-        </div>
-        <div className={`${styles.contractAddress} ${styles.card}`}>
-          <div className={styles.title}>Contract Address</div>
-          <div className={styles.contract}>
-            <div className={styles.ethereum}>
-              <button className={styles.btn}>Ethereum</button>
-              <span className={styles.etherHover}>
-                <div>
-                  <p>{ethereumAddress}</p>
-                  <div className={styles.icons}>
-                    |{' '}
-                    <FiCopy onClick={addressCopy} className={styles.copyIcon} />
-                    <img src={metamask_icon} alt="metamask_icon" />
-                  </div>
-                </div>
-              </span>
-            </div>
-
-            <div className={styles.smartchain}>
-              <button className={styles.btn}>SmartChain</button>
-            </div>
-          </div>
-        </div>
-
-        <div className={`${styles.logo} ${styles.card}`}>
-          <img
-            src={lyaLogo}
-            alt="lya_page_logo"
-            width={141}
-            height={86}
-            className={styles.lyaTokenLogo}
+          <LyaTokenDescription
+            title="how to buy and sell"
+            text={LyaTokenDescription2}
+            styles={styles}
           />
-          {/* <LyaTokenLogo className={styles.lyaTokenLogo} /> */}
         </div>
-      </div>
-      <div className={`${styles.content} ${styles.card}`}>
-        <LyaTokenDescription
-          icon={lya_icon1}
-          title="Allocation and release"
-          text={LyaTokenDescription1}
-          styles={styles}
-        />
-        <LyaTokenDescription
-          icon={lya_icon2}
-          title="how to buy and sell"
-          text={LyaTokenDescription2}
-          styles={styles}
-        />
-        <LyaTokenDescription
-          icon={lya_icon3}
-          title="Token Usage"
-          text={LyaTokenDescription3}
-          styles={styles}
-        />
+
+        <div className={`${styles.lyaPageAddress} ${styles.card}`}>
+          <div className={styles.contractAddress}>
+            <div className={styles.title}>Contract Address</div>
+            <div className={styles.contract}>
+              <div className={styles.ethereum}>
+                <button className={styles.btn}>polygan</button>
+                <span className={styles.etherHover}>
+                  <div>
+                    <p>{ethereumAddress}</p>
+                    <div className={styles.icons}>
+                      <FiCopy
+                        onClick={addressCopy}
+                        className={styles.copyIcon}
+                      />
+                      <img src={metamask_icon} alt="metamask_icon" />
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div className={styles.smartchain}>
+                <button className={styles.btn}>SmartChain</button>
+              </div>
+            </div>
+          </div>
+
+          <div className={`${styles.exchanges} ${styles.card}`}>
+            <div className={styles.title}>Exchanges</div>
+            <div className={styles.exchange}>
+              <button className={styles.btn}>Kucoin</button>
+              <button className={styles.btn}>uniswap</button>
+              <button className={`${styles.btn} ${styles.pancakeswap}`}>
+                pancakeswap
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

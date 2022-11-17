@@ -24,7 +24,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   padding: 5px;
   cursor: pointer;
   transition: all 0.2s;
-  background-color: #282f42;
+  background-color: #10202D;
   border: 1px solid #595f71;
   border-radius: 63px;
   font-family: 'Alatsi';
@@ -42,32 +42,38 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 }
 
 .aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2rem;
   width: 100%;
   position: relative;
-  height: 480px;
+  height: 550px;
   min-width: 100%;
   background: linear-gradient(67deg, rgba(9, 144, 152, 0) -13%, #1d3649 52.7%);
   border-radius: 27px;
   .aboutDesc {
-    padding: 2rem;
+    padding: 0rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    height: 70%;
-    row-gap: 1rem;
+    //height: 60%;
+   // row-gap: 1rem;
     .title {
       font-weight: 400;
-      font-size: 1.4rem;
+      font-size: 3rem;
       color: #ebebeb;
       font-family: 'Alatsi';
+      padding-bottom: 1.5rem;
     }
-    .desc {
+    .textDesc {
       font-weight: 350;
       font-size: 1rem;
       color: #898d92;
       text-align: left;
       font-family: 'Alatsi';
+      padding-bottom: 1.5rem;
     }
 
     .descIcons {
@@ -83,13 +89,14 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        margin: 0 10px;
         .icon {
           //padding-bottom: 5px;
         }
 
         .desc {
           padding-top: 20px;
+          padding-bottom: 0;
           font-weight: 350;
           font-size: 0.8rem;
           color: #9298a5;
@@ -106,9 +113,9 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         content: '';
         position: absolute;
         background-color: #ffb111;
-        padding: 1px 40%;
+        padding: 1px 50%;
         top: calc(40% - 2px);
-        left: 10%;
+       // left: 10%;
         z-index: 1;
       }
 
@@ -135,16 +142,12 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   }
 
   .bottomSection {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    padding: 0 2%;
-    height: 40%;
     font-family: 'Bahnschrift';
     .smallBtns {
       .sBtn {
         position: relative;
-        padding: 10px;
+        padding: 8px;
         border-radius: 50%;
         border: 1px solid #fbc350;
         background-color: transparent;
@@ -156,20 +159,20 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       }
       .left::after {
         content: '';
-        border: 5px solid transparent;
+        border: 4px solid transparent;
         border-right-color: #fbc350;
         position: absolute;
         right: calc(50% - 1.5px);
-        top: calc(50% - 5px);
+        top: calc(50% - 4px);
       }
 
       .right::after {
         content: '';
-        border: 5px solid transparent;
+        border: 4px solid transparent;
         border-left-color: #fbc350;
         position: absolute;
         left: calc(50% - 1.5px);
-        top: calc(50% - 5px);
+        top: calc(50% - 4px);
       }
     }
 
@@ -294,6 +297,8 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       justify-content: space-between;
       width: 70%;
       padding: 1rem;
+      margin-left: 4rem;
+      align-items: flex-end;
       .btns {
         flex-grow: 1;
         display: flex;

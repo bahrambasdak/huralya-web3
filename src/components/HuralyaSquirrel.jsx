@@ -3,7 +3,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { BsSdCardFill } from "react-icons/bs";
 import InsigniaPageLeftBg from "./svgComponent/InsigniaPageLeftBg";
 
-const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
+const HuralyaSquirrel = ({ styles }) => {
   const [huralyaSquirrels, sethuralyaSquirrels] = useState([
     {
       id: 6,
@@ -58,24 +58,8 @@ const HuralyaSquirrel = ({ huralya_squirrel_left, styles }) => {
 
   return (
     <div className={styles.HuralyaSquirrel}>
-      {huralya_squirrel_left && (
-        <img
-          src={huralya_squirrel_left}
-          alt=""
-          className={styles.backgroundImg}
-          width={850}
-          height={480}
-        />
-      )}
 
-      {/* <InsigniaPageLeftBg className="background-img"/> */}
       <div className={styles.content}>
-        <h3 className={styles.title}>Huralya Squirrel</h3>
-        <p className={styles.desc1}>
-          Squirrel NFTs are a way to invest in Huralya
-        </p>
-        <p className={styles.desc2}>Learn more below...</p>
-
         <div className={styles.scrollableSection}>
           <div className={styles.scroll} id='inScSec'>
             <div className={`${styles.section} ${styles.planSection}`}>

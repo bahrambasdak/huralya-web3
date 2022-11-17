@@ -76,9 +76,9 @@ $header-menu-text-color: #9298a5;
 // fade-exit, fade-exit-active, fade-exit-done
 
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+ // display: flex;
+  //flex-direction: column;
+ // justify-content: space-between;
   width: 100%;
   text-align: center;
   position: relative;
@@ -309,23 +309,14 @@ $header-menu-text-color: #9298a5;
 
 .App .Container {
   display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   margin: 0 30%;
   flex: 1 0 auto;
   max-width: 100%;
-  min-height: fit-content;
+  min-height: 100vh;
   padding-bottom: 20px;
   height: auto;
-
-  > div {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    width: 100%;
-     overflow-x: hidden;
-     overflow-y: auto;
-    scroll-behavior: smooth;
-  }
-
 }
 
 ////////////////////////////////////////////     Footer    //////////////////////
@@ -648,20 +639,6 @@ $header-menu-text-color: #9298a5;
       margin: 0 4%;
     }
 
-    .genesisPageShow {
-      height: 70vh;
-    }
-    .insigniaPageShow {
-    }
-    .aboutusPageShow {
-      height: 140vh;
-    }
-    .lyatokenPageShow {
-      height: 110vh;
-    }
-    .mintPageShow {
-      height: 80vh;
-    }
     .footer {
       .footerContent {
         margin: 0 4%;

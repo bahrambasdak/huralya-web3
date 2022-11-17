@@ -8,7 +8,11 @@ const Mint = () => {
   return (
     <div className={styles.mint}>
       <div id="mint" style={{ position: 'absolute', top: '-100px' }}></div>
-
+      <h3 className={styles.title}>Huralya Squirrel</h3>
+        <p className={styles.desc1}>
+          Squirrel NFTs are a way to invest in Huralya
+        </p>
+        <p className={styles.desc2}>Learn more below...</p>
       <HuralyaSquirrel styles={styles} />
       <div className={styles.buySell}>
         <img
