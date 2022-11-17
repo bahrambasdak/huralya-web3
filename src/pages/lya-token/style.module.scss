@@ -55,12 +55,12 @@ $mq-retina: "(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)";
     row-gap: 1rem;
     position: relative;
 
-    .top {
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      column-gap: 12px;
+  .top {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 12px;
       .exchanges {
         display: flex;
         flex-direction: column;

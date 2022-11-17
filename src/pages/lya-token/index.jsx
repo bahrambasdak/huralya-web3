@@ -33,6 +33,29 @@ const LyaToken = () => {
     <div className={styles.lyatokenPage}>
       <div id="lyatoken" style={{ position: 'absolute', top: '-100px' }}></div>
 
+      <div className={`${styles.content}`}>
+        <div className={`${styles.lyaTokenLogo}`}>
+          <LyaTokenLogo className={styles.logo} width={141} height={86} />
+        </div>
+        <div className={styles.lyaPageDesc}>
+          <LyaTokenDescription
+            title="Allocation and release"
+            text={LyaTokenDescription1}
+            styles={styles}
+          />
+          <LyaTokenDescription
+            title="how to buy and sell"
+            text={LyaTokenDescription2}
+            styles={styles}
+          />
+          <LyaTokenDescription
+            title="Token Usage"
+            text={LyaTokenDescription3}
+            styles={styles}
+          />
+        </div>
+      </div>
+
       <div className={styles.top}>
         <div className={`${styles.exchanges} ${styles.card}`}>
           <div className={styles.title}>Exchanges</div>

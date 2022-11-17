@@ -41,7 +41,7 @@ const InsigniaNFT = () => {
         styles={styles}
       />
 
-      <div className={styles.circulateSupply}>
+        <div className={styles.circulateSupply}>
         <img
           src={insignia_supply}
           alt=""
