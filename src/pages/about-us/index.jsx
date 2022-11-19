@@ -1,9 +1,6 @@
-
 import profileImg1 from '../../assets/images/about_us_team_profile1.svg';
 import profileImg2 from '../../assets/images/about_us_team_profile2.svg';
 import profileImg3 from '../../assets/images/about_us_team_profile3.svg';
-import backersBg from '../../assets/images/about_us_backer_bg.svg';
-import teamBg from '../../assets/images/about_us_team_bg.svg';
 import { BsQuestionCircle } from 'react-icons/bs';
 import styles from './style.module.scss';
 import AboutUsBackersBg from '../../components/svgComponent/AboutUsBackersBg';
@@ -16,6 +13,7 @@ const AboutUs = () => {
   return (
     <div className={styles.aboutUs}>
       <div id="aboutus" style={{ position: 'absolute', top: '-100px' }}></div>
+      
       <div className={styles.aboutDesc}>
         <div className={styles.title}>About Us</div>
         <div className={styles.textDesc}>
@@ -35,7 +33,7 @@ const AboutUs = () => {
         <div className={styles.descIcons}>
           <span className={`${styles.item} ${styles.item1}`}>
             <div className={styles.icon}>
-              <AboutUsDescIcon1/>
+              <AboutUsDescIcon1 />
             </div>
 
             <div className={styles.desc}>
@@ -44,7 +42,7 @@ const AboutUs = () => {
           </span>
           <span className={`${styles.item} ${styles.item2}`}>
             <div className={styles.icon}>
-              <AboutUsDescIcon2/>
+              <AboutUsDescIcon2 />
             </div>
 
             <div className={styles.desc}>
@@ -53,7 +51,7 @@ const AboutUs = () => {
           </span>
           <span className={`${styles.item} ${styles.item3}`}>
             <div className={styles.icon}>
-            <AboutUsDescIcon3/>
+              <AboutUsDescIcon3 />
             </div>
 
             <div className={styles.desc}>
@@ -62,7 +60,7 @@ const AboutUs = () => {
           </span>
           <span className={`${styles.item} ${styles.item4}`}>
             <div className={styles.icon}>
-            <AboutUsDescIcon1/>
+              <AboutUsDescIcon1 />
             </div>
 
             <div className={styles.desc}>
@@ -71,7 +69,7 @@ const AboutUs = () => {
           </span>
           <span className={`${styles.item} ${styles.item5}`}>
             <div className={styles.icon}>
-            <AboutUsDescIcon2/>
+              <AboutUsDescIcon2 />
             </div>
 
             <div className={styles.desc}>
@@ -95,7 +93,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className={styles.bottomTop}>
+        <div className={styles.ourBackerTeam}>
           <div className={styles.backers}>
             <AboutUsBackersBg
               className={styles.backersBg}
@@ -127,18 +125,12 @@ const AboutUs = () => {
           </div>
           <div className={styles.team}>
             <AboutUsTeamBg className={styles.teamBg} width={231} height={163} />
-            <img
-              src={teamBg}
-              alt=""
-              className={styles.teamBg}
-              width={210}
-              height={150}
-            />
+
             <div className={styles.title}>Our Team</div>
             <div className={styles.profileImg}>
-              <img src={profileImg1} alt="" width={50} height={50}/>
-              <img src={profileImg2} alt="" width={50} height={50}/>
-              <img src={profileImg3} alt="" width={50} height={50}/>
+              <img src={profileImg1} alt="" width={50} height={50} />
+              <img src={profileImg2} alt="" width={50} height={50} />
+              <img src={profileImg3} alt="" width={50} height={50} />
             </div>
             <div className={styles.smallBtns}>
               <button className={`${styles.sBtn} ${styles.left}`}></button>

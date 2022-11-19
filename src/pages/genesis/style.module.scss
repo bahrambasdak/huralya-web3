@@ -227,27 +227,29 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           left: 5%;
         }
       }
-    }
-    .center {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 100%;
-      top: 0;
-      left: 10%;
-      row-gap: 0;
-      .title {
-        .text {
-          display: flex;
-          flex-wrap: wrap;
-          row-gap: 1rem;
 
-        }
-        .exploreBtn {
-          padding-bottom: 7rem;
+      .center {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        top: 0;
+        left: 10%;
+        row-gap: 0;
+        .title {
+          .text {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 1rem;
+  
+          }
+          .exploreBtn {
+            padding-bottom: 7rem;
+          }
         }
       }
     }
+
   }
 }

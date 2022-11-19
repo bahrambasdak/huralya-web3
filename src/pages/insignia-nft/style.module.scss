@@ -93,9 +93,10 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     }
 
     .HuralyaSquirrel {
-      //height: 100%;
+     // height: 100%;
       width: 100%;
       position: relative;
+      
       .content {
         width: 100%;
         //padding: 20px 3.5rem 20px 20px;
@@ -127,7 +128,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
         .scrollableSection {
           padding: 20px;
-          // height: 70%;
+           height: 100%;
           background-color: rgba(62, 70, 91, 0.54);
           border-radius: 20px;
         }
@@ -152,6 +153,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
               .title {
                 color: #dddedf;
                 min-width: fit-content;
+                
                 font-family: 'Alatsi';
                 display: flex;
                 align-items: center;
@@ -194,18 +196,19 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     }
   }
 
-  .min {
+  .rightSection {
     height: 100%;
+    width: 22%;
     position: relative;
     background: rgba(41, 67, 88, 0.86);
     border-radius: 27px;
-    width: 22%;
+ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
     align-items: center;
-    .content {
+    .topSection {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -317,39 +320,43 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   }
 }
 
-@media only screen and #{$mq-retina} {
-}
 
-@media only screen and #{$mq-xxlarge} {
-}
 
-@media only screen and #{$mq-xlarge} {
-}
+
+
+
 @media only screen and #{$mq-large} {
   .insigniaNFTPage {
-    .circulateSupply {
-      .content {
-        font-size: 0.8rem;
-        padding: 1rem 7% 1rem 10%;
+    .rightSection{
+      width: auto;
+      .circulateSupply {
+        .content {
+          font-size: 0.8rem;
+          padding: 1rem 7% 1rem 10%;
+        }
       }
     }
+
   }
 }
 
 @media only screen and #{$mq-medium} {
   .insigniaNFTPage {
-    .circulateSupply {
-      .content {
-        font-size: 0.7rem;
-        padding: 6%;
-        padding-left: 10%;
-      }
-    }
 
-    .min {
-      .content {
+
+
+    .rightSection {
+      .topSection {
         .bottoms {
           font-size: 0.9rem;
+        }
+      }
+
+      .circulateSupply {
+        .content {
+          font-size: 0.7rem;
+          padding: 6%;
+          padding-left: 10%;
         }
       }
     }
@@ -357,50 +364,45 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 }
 
 @media only screen and #{$mq-small} {
-  //////////////////////////////////////////InsigniaNFT Page////////////////////
   .insigniaNFTPage {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    justify-content: space-between;
+    row-gap: 2rem;
     height: auto;
-    .HuralyaSquirrel {
+    .investment{
       width: 100%;
-      height: 100%;
-      min-height: 80vh;
-      .backgroundImg {
+      height: auto;
+      row-gap: 1rem;
+      .investmentTitle{
+      }
+      .HuralyaSquirrel {
         width: 100%;
-        height: 100%;
-        object-fit: fill;
-        z-index: 0;
+        .content{
+          height: 350px;
+         // padding: 0;
+          .scrollableSection{
+            //padding: 0;
+            //margin: 0;
+          }
+        }
       }
     }
+  
 
-    .min {
+    .rightSection {
+      height: auto;
       width: 100%;
-      max-height: 70vh;
-      overflow-x: unset;
       position: relative;
       text-align: center;
       margin: 0 auto;
-      .backgroundImg {
+
+      .topSection {
         width: 100%;
-        position: static;
-        object-fit: fill;
-        z-index: 0;
-      }
-      .content {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 15px 15px 0px;
+       // padding: 15px 15px 15px 0px;
 
         .catImg {
-          flex-grow: 0;
+          //flex-grow: 0;
         }
         .bottoms {
           padding: 0 20%;
@@ -409,67 +411,78 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           font-size: 1rem;
         }
       }
-    }
 
-    .circulateSupply {
-      height: 100%;
-      width: 100%;
-      overflow-x: unset;
-      position: relative;
-      .backgroundImg {
+      .circulateSupply {
         width: 100%;
-        position: static;
-        height: 100%;
-        object-fit: fill;
-        z-index: 0;
-      }
-
-      .content {
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 15% 10% 15% 18%;
-
-        line-height: 2rem;
-        font-size: 1.2rem;
+        position: relative;
+        .content {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: stretch;
+          padding: 15% 10% 15% 18%;
+  
+          line-height: 2rem;
+          font-size: 1.2rem;
+        }
       }
     }
+
+
   }
 }
 
 @media only screen and #{$mq-xsmall} {
   //////////////////////////////////////////////////insignia page//////////////
   .insigniaNFTPage {
-    .HuralyaSquirrel {
-      .content {
-        padding: 0.8rem;
-        .scrollableSection {
-          padding: 10px;
-          margin-right: 3%;
-          border-radius: 20px;
+padding: 20px 10px;
+    .investment{
+      
+      .investmentTitle{
+        padding-left: 0;
+        width: 100%;
+        column-gap: 0px;
+        
+        .logo{
         }
-        .scroll {
-          padding-right: 10px;
-          .section {
-            justify-content: space-between;
-            .text {
-              flex-wrap: wrap;
-            }
-            .icon {
-              align-self: flex-start;
+        .text{
+          p{
+            font-size: 16px;
+          }
+          :first-child{
+            font-size: 25px;
+            line-height: 25px;
+
+          }
+        }
+      }
+      .HuralyaSquirrel {
+        .content {
+          .scrollableSection {
+            padding: 10px;
+            border-radius: 20px;
+          }
+          .scroll {
+            padding-right: 10px;
+            .section {
+              justify-content: space-between;
+              .text {
+                flex-wrap: wrap;
+              }
+              .icon {
+                align-self: flex-start;
+              }
             }
           }
         }
       }
+  
     }
 
-    .min {
-      .content {
+    .rightSection {
+      .topSection {
         display: flex;
         .text {
           padding-left: 2rem;

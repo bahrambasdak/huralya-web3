@@ -1,17 +1,8 @@
 import LyaTokenDescription from '../../components/LyaTokenDescription';
-import lya_icon1 from '../../assets/images/lya_icon1.svg';
-import lya_icon2 from '../../assets/images/lya_icon2.svg';
-import lya_icon3 from '../../assets/images/lya_icon3.svg';
 import metamask_icon from '../../assets/images/metamask_icon.svg';
 import { FiCopy } from 'react-icons/fi';
-//import d from "../img/d.svg";
-import lyaLogo from '../../assets/images/lya_page_logo.svg';
 import LyaTokenLogo from '../../components/svgComponent/LyaTokenLogo';
-// import LyaIcon1 from "../components/svgComponent/LyaIcon1";
-// import LyaIcon2 from "../components/svgComponent/LyaIcon2";
-// import LyaIcon3 from "../components/svgComponent/LyaIcon3";
 import styles from './style.module.scss';
-
 const LyaTokenDescription1 = `All consumption of lya token is in the ecosystem and its printing and burning 
 is done only based on supply and demand for users. The company's fundraising is only through 
 the Insignia Collection, and ZERO LYA tokens will belong to the Huralya team.`;
@@ -100,6 +91,7 @@ const LyaToken = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );

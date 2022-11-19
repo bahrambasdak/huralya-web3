@@ -1,11 +1,8 @@
-import huralya_squirrel_left from '../../assets/images/insignia_page_left.svg';
-import insignia_min from '../../assets/images/insignia_page_min.svg';
-import insignia_supply from '../../assets/images/insignia_page_supply.svg';
+
 import cat from '../../assets/images/insignia_page_cat.svg';
 import { AiOutlineExclamationCircle } from 'react-icons/ai';
 import HuralyaSquirrel from '../../components/HuralyaSquirrel';
 import styles from './style.module.scss';
-import InsigniaCatImg from '../../components/svgComponent/InsigniaCatImg';
 import InsigniaMintIcon1 from '../../components/svgComponent/InsigniaMintIcon1';
 import InsigniaMintIcon2 from '../../components/svgComponent/InsigniaMintIcon2';
 import InsigniaInvestmentImg from '../../components/svgComponent/InsigniaInvestmentImg';
@@ -15,8 +12,8 @@ const InsigniaNFT = () => {
     <div className={styles.insigniaNFTPage}>
       <div id="insignia" style={{ position: 'absolute', top: '-100px' }}></div>
 
-      <div className={styles.min}>
-        <div className={styles.content}>
+      <div className={styles.rightSection}>
+        <div className={styles.topSection}>
           <div className={styles.catImg}>
             <img src={cat} alt="" width={200} height={200} />
           </div>
@@ -69,6 +66,7 @@ const InsigniaNFT = () => {
           <InsigniaMintIcon2 width={28} height={28} />
         </div>
       </div>
+
 
       <div className={styles.investment}>
         <div className={styles.investmentTitle}>

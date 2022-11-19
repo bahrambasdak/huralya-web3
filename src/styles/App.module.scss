@@ -785,6 +785,7 @@ $header-menu-text-color: #9298a5;
 @media only screen and #{$mq-xsmall} {
   .App {
     // min-height: fit-content;
+    height: auto;
     padding-bottom: 0;
     .header {
       .headerContent {
@@ -795,22 +796,7 @@ $header-menu-text-color: #9298a5;
       margin: 0 5%;
       //padding-bottom: 9rem;
     }
-    .genesisPageShow {
-      height: 60vh;
-    }
-    .insigniaPageShow {
-      //height: 90vh;
-    }
-    .aboutusPageShow {
-      height: 170vh;
-    }
-    .lyatokenPageShow {
-      height: auto;
-    }
 
-    .mintPageShow {
-      height: 190vh;
-    }
     .footer {
       .footerContent {
         margin: 0 5%;

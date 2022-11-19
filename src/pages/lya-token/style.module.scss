@@ -130,7 +130,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         .text {
           font-weight: 300;
           color: #979b9f;
-          font-size: .8rem;
+          font-size: 0.8rem;
           width: 100%;
           font-family: 'Bahnschrift';
         }
@@ -278,34 +278,62 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
 @media only screen and #{$mq-medium} {
   .lyatokenPage {
-    .top {
-      .logo {
-        padding: 0;
-      }
-    }
   }
 }
 
 @media only screen and #{$mq-small} {
   .lyatokenPage {
-    .top {
-      .contractAddress {
-        .contract {
-          .etherHover {
-            left: -80%;
+    height: auto;
+    .content {
+      .lyaPageAddress {
+        padding: 20px 20px;
+        //flex-wrap: wrap;
+        .exchanges {
+          max-width: 100%;
+          width: 100%;
+
+          .title {
+            padding: 0px 0 15px 10px;
           }
-          .etherHover::after {
-            display: none;
-          }
-          .etherHover::before {
-            display: block;
-            left: 60%;
+
+          .exchange {
+            .btn {
+              width: 30%;
+            }
           }
         }
-      }
 
-      .logo {
-        display: none;
+        .contractAddress {
+          max-width: 100%;
+          width: 100%;
+          .title {
+            padding: 0px 0 15px 10px;
+          }
+          .contract {
+            .ethereum {
+              position: relative;
+              .etherHover {
+                position: absolute;
+                left: -20%;
+              }
+
+              .etherHover::after {
+                display: none;
+              }
+              .etherHover::before {
+                left: 5%;
+                top: 0;
+                display: block;
+              }
+            }
+            .ethereum:hover {
+              .etherHover {
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -314,51 +342,65 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 @media only screen and #{$mq-xsmall} {
   //////////////////////////////////////////////lyaToken Page//////////////////
   .lyatokenPage {
-    flex-wrap: wrap;
-    .top {
-      flex-wrap: wrap;
-      row-gap: 10px;
-      .contractAddress {
-        .contract {
-      .etherHover {
-            left: -8%;
-          }
-          .etherHover::after {
-            display: block;
-            left: 20%;
-          }
-          .etherHover::before {
-            display: none;
-          }
-        }
-      }
-
-      .btn {
-        font-family: 'Alatsi';
-      }
-
-      .smartchain {
-        .btn {
-          font-family: 'Bahnschrift';
-        }
-      }
-      .logo {
-        padding: 0;
-      }
-      .exchanges {
-        .exchange {
-          .pancakeswap {
-            max-width: 32%;
-          }
-          flex-wrap: wrap;
-          row-gap: 10px;
-        }
-      }
-    }
+    padding: 20px 10px;
+    height: auto;
     .content {
-      flex-wrap: wrap;
-      row-gap: 3rem;
-      padding-top: 1rem;
+      .lyaPageLogo {
+      }
+      .lyaPageDesc {
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        padding-top: 1rem;
+      }
+
+      .lyaPageAddress {
+        padding: 20px 10px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        .exchanges {
+          max-width: 100%;
+          width: 100%;
+
+          .title {
+            padding: 0px 0 15px 10px;
+          }
+
+          .exchange {
+            .btn {
+              width: 30%;
+            }
+          }
+        }
+
+        .contractAddress {
+          max-width: 100%;
+          width: 100%;
+          .title {
+            padding: 0px 0 15px 10px;
+          }
+          .contract {
+            .ethereum {
+              position: relative;
+              .etherHover {
+                position: absolute;
+                left: -20%;
+              }
+
+              .etherHover::before {
+                left: 5%;
+                top: 0;
+                display: block;
+              }
+            }
+            .ethereum:hover {
+              .etherHover {
+                display: flex;
+                align-items: center;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
