@@ -76,9 +76,9 @@ $header-menu-text-color: #9298a5;
 // fade-exit, fade-exit-active, fade-exit-done
 
 .App {
- // display: flex;
+  // display: flex;
   //flex-direction: column;
- // justify-content: space-between;
+  // justify-content: space-between;
   width: 100%;
   text-align: center;
   position: relative;
@@ -103,14 +103,21 @@ $header-menu-text-color: #9298a5;
   width: 100%;
 
   .headerContent {
+    position: relative;
     display: flex;
     margin: 0 30%;
     flex: 1 0 auto;
-    background-color: $header-background-color;
-    border-radius: 59px;
     align-items: stretch;
     justify-content: space-between;
     padding: 0px 0px 0px 0px;
+    .headerBg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
     .mobileMenuBtn {
       background-color: rgba($color: #586664, $alpha: 0.5);
       border-radius: 50%;
@@ -157,6 +164,7 @@ $header-menu-text-color: #9298a5;
       padding-left: 20px;
       overflow: hidden;
       height: 68px;
+      z-index: 1;
       .logoImg {
         height: 100%;
         width: 100%;
@@ -263,6 +271,7 @@ $header-menu-text-color: #9298a5;
       justify-content: flex-end;
       align-items: center;
       padding-right: 20px;
+      z-index: 1;
       a {
         width: 100%;
         display: flex;
@@ -280,21 +289,20 @@ $header-menu-text-color: #9298a5;
           // border-color: #9298a5;
           border-width: 2px;
         }
-
-
       }
     }
 
     .connectBtn {
       display: flex;
-       align-items: center;
+      align-items: center;
       justify-content: space-between;
       height: 100%;
       color: #cfd5dc;
       column-gap: 5px;
       padding-right: 20px;
       max-width: 40%;
-     // flex-wrap: wrap;
+      z-index: 1;
+      // flex-wrap: wrap;
       .walletAddress {
         font-size: 0.8rem;
         color: #cfd5dc;
@@ -302,8 +310,6 @@ $header-menu-text-color: #9298a5;
       button {
       }
     }
-
-
   }
 }
 
@@ -335,7 +341,7 @@ $header-menu-text-color: #9298a5;
     flex: 1 0 auto;
     align-items: center;
     justify-content: space-between;
-    background-color: #282f42;
+    background-color: #294358;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 0 5px 0 5px;

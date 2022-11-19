@@ -9,6 +9,7 @@ import { useState } from 'react';
 import Logo1 from '../svgComponent/Logo';
 import ConnecttBtn from '../connectWalletBtn';
 import { useAuth } from '../../contexts/Auth';
+import HeaderBg from '../svgComponent/HeaderBg';
 
 //import styles from "../styles/App.module.scss";
 
@@ -25,6 +26,7 @@ const Header = ({
   return (
     <div className={styles.header}>
       <div className={styles.headerContent}>
+        <div className={styles.headerBg}><HeaderBg/></div>
         <button className={styles.mobileMenuBtn}>
           <div
             className={`${styles.dots} ${showMenu ? styles.active : ''}`}
