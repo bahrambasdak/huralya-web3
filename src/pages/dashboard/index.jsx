@@ -64,8 +64,8 @@ const Dashboard = () => {
 
   const { user } = useAuth();
   return (
-    <div className={classes.dashboardPage} >
-            <div id="dashboard" style={{position:'absolute' , top:'-100px'}}></div>
+    <div className={classes.dashboardPage} id="dashboardPage">
+      <div id="dashboard" style={{ position: 'absolute', top: '-100px' }}></div>
 
       <div className={classes.top}>
         {/* <img src={topBg} alt="" className={classes.bgImg} /> */}

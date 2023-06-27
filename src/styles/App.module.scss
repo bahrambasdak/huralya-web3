@@ -88,6 +88,10 @@ $header-menu-text-color: #9298a5;
   font-family: 'Bahnschrift';
   background-color: #161c26;
   height: auto;
+  // height: 100vh;
+  // scroll-behavior: smooth;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
 }
 
 ///////////////////////////////////////////  Header   ////////////////////
@@ -578,7 +582,7 @@ $header-menu-text-color: #9298a5;
   .App {
     .header {
       .headerContent {
-        max-width: 80%;
+        //max-width: 80%;
         margin: 0 10%;
       }
     }

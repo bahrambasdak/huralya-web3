@@ -21,8 +21,8 @@ const LyaToken = () => {
     navigator.clipboard.writeText(ethereumAddress);
   };
   return (
-    <div className={styles.lyatokenPage}>
-      <div  id="lyatoken" style={{ position: 'absolute', top: '-100px' }}></div>
+    <div className={styles.lyatokenPage} id="lyatokenPage">
+      <div id="lyatoken" style={{ position: 'absolute', top: '-100px' }}></div>
 
       <div className={`${styles.content}`}>
         <div className={`${styles.lyaPageLogo}`}>
@@ -91,7 +91,6 @@ const LyaToken = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import styles from './style.module.scss';
 
 const Mint = () => {
   return (
-    <div className={styles.mint}>
+    <div className={styles.mint} id="mintPage">
       <div id="mint" style={{ position: 'absolute', top: '-100px' }}></div>
       <div className={styles.left}>
         <div className={styles.leftTitle}>

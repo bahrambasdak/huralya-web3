@@ -7,11 +7,9 @@ import GenesisIconBg from '../../components/svgComponent/GenesisIconBg';
 import GenesisLogo from '../../components/svgComponent/GenesisLogo';
 import GenesisExplorBtn from '../../components/svgComponent/GenesisExploreBtn';
 
-
 const Genesis = () => {
-
   return (
-    <div className={styles.genesisPage}>
+    <div className={styles.genesisPage} id="genesisPage">
       <div id="genesis" style={{ position: 'absolute', top: '-100px' }}></div>
       <div className={styles.backgroundImg}>
         <GenesisBgSvg />

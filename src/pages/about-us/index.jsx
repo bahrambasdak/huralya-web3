@@ -11,9 +11,9 @@ import AboutUsDescIcon3 from '../../components/svgComponent/AboutUsDescIcon3';
 
 const AboutUs = () => {
   return (
-    <div className={styles.aboutUs}>
+    <div className={styles.aboutUs} id="aboutusPage">
       <div id="aboutus" style={{ position: 'absolute', top: '-100px' }}></div>
-      
+
       <div className={styles.aboutDesc}>
         <div className={styles.title}>About Us</div>
         <div className={styles.textDesc}>
