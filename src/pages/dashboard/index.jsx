@@ -1,7 +1,6 @@
 import { FiCopy } from 'react-icons/fi';
-//import topBg from "../../assets/images/dashboardPageTopBg.svg";
 import icon1 from '../../assets/images/dashboardPageIcon1.svg';
-import classes from './style.module.scss'; //'dashboardPage.module.scss';
+import classes from './style.module.scss'; 
 import lyaLogo from '../../assets/images/lya_page_logo.svg';
 import chart from '../../assets/images/dashboardPageChart.svg';
 import userLogo from '../../assets/images/dashboardPageUserLogo.svg';
@@ -10,7 +9,6 @@ import { useState } from 'react';
 import ConnectWalletBtn from '../../components/connectWalletBtn';
 import ConnectWalletModal from '../../components/modals/ConnectWallet';
 import { useAuth } from '../../contexts/Auth';
-//import DashboardFooter from "../components/DashboardFooter";
 
 const Dashboard = () => {
   const [users, setUsers] = useState([
@@ -68,7 +66,6 @@ const Dashboard = () => {
       <div id="dashboard" style={{ position: 'absolute', top: '-100px' }}></div>
 
       <div className={classes.top}>
-        {/* <img src={topBg} alt="" className={classes.bgImg} /> */}
         {user.connectBtn !== 'connected' && (
           <div className={classes.blurFilter}></div>
         )}
@@ -245,7 +242,6 @@ const Dashboard = () => {
       </div>
 
       {user.connectBtn === 'connecting' && <ConnectWalletModal />}
-      {/* <DashboardFooter/> */}
     </div>
   );
 };

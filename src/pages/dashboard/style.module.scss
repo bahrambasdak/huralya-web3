@@ -58,13 +58,10 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     background: rgba(40, 47, 66, 0.93);
     border-radius: 20px;
     z-index: 2;
-   // filter: blur(2px);
    display: flex;
    justify-content: center;
    align-items: center;
-   .btn{
 
-   }
   }
   .top {
     width: 100%;
@@ -100,7 +97,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         z-index: 1;
         background: rgba(207, 213, 220, 0.15);
         border-radius: 20px;
-        // padding: 10px;
         width: 20%;
         overflow: hidden;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -112,7 +108,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         justify-content: space-between;
         align-items: stretch;
         color: #bdc3cc;
-        //flex-grow: 1;
         > div {
           padding: 10px;
         }
@@ -225,7 +220,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
               row-gap: 10px;
               > div {
                 display: flex;
-                //align-items: flex-end;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-end;
@@ -386,7 +380,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     height: 60%;
     overflow: hidden;
     font-size: 12px;
-    //background-color: #282f42;
     background: linear-gradient(
       90.05deg,
       rgba($color: #099098, $alpha: 0.4) 0%,
@@ -446,7 +439,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         height: 50%;
         row-gap: 5px;
         button {
-          //max-width: 50%;
           flex-grow: 1;
           min-width: 60%;
           max-width: 90%;
@@ -533,7 +525,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
             }
           }
           .selected {
-            //margin: 0;
             padding: 5px;
           }
         }
@@ -569,7 +560,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         font-size: 18px;
         display: flex;
         width: 100%;
-        //justify-content: space-between;
         align-items: center;
         .btn {
           padding: 2px 15px;
@@ -620,12 +610,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 }
 
 ///////////////////////////////RESPONSIVE///////////////////////////////////////////////
-//   $bp-xsmall: 37.5em; // 600px
-// $bp-small: 48em; // 768px
-// $bp-medium: 64em; // 1024px
-// $bp-large: 85.375em; // 1366px
-// $bp-xlarge: 120em; // 1920px
-// $bp-xxlarge: 160em; // 2560px
 
 @media only screen and #{$mq-retina} {
 }
@@ -664,7 +648,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       flex-wrap: wrap;
       height: auto;
       .leftBtns {
-        // min-width: fit-content;
         width: 50%;
       }
       .nftPocket {
@@ -687,7 +670,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     .top {
       .cards {
         height: auto;
-        // flex-wrap: wrap;
         row-gap: 10px;
         flex-direction: column;
 
@@ -708,10 +690,8 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
     .nft {
       flex-wrap: wrap;
       height: auto;
-      //align-items: stretch;
 
       .leftBtns {
-        // min-width: fit-content;
         width: 100%;
       }
       .nftPocket {
@@ -725,13 +705,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
           padding: 0;
           .scrollSection {
             padding: 0 20px;
-            > div {
-              .img {
-                img {
-                  // height: 20%;
-                }
-              }
-            }
           }
         }
       }

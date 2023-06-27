@@ -32,55 +32,58 @@ function App() {
   });
   const handleChangeMenu = (pageName) => {
     setHeaderMenuActive((prev) => ({
+      ...prev,
       genesis: false,
       aboutus: false,
       insignia: false,
       lyatoken: false,
+      mint: false,
+      dashboard: false,
       [pageName]: true
     }));
   };
-  useEffect(() => {
-    const handleScroll = (e) => {
-      if (
-        window.scrollY <=
-        document.getElementById('mintPage')?.offsetTop + 200
-      ) {
-        handleChangeMenu('mint');
-      } else if (
-        window.scrollY <=
-        document.getElementById('dashboardPage')?.offsetTop + 200
-      ) {
-        handleChangeMenu('dashboard');
-      }
+  // useEffect(() => {
+  //   const handleScroll = (e) => {
+  //     if (
+  //       window.scrollY <=
+  //       document.getElementById('mintPage')?.offsetTop + 200
+  //     ) {
+  //       handleChangeMenu('mint');
+  //     } else if (
+  //       window.scrollY <=
+  //       document.getElementById('dashboardPage')?.offsetTop + 200
+  //     ) {
+  //       handleChangeMenu('dashboard');
+  //     }
 
-      if (
-        window.scrollY <=
-        document.getElementById('genesisPage')?.offsetTop + 300
-      ) {
-        handleChangeMenu('genesis');
-      } else if (
-        window.scrollY <=
-        document.getElementById('aboutusPage')?.offsetTop + 300
-      ) {
-        handleChangeMenu('aboutus');
-      } else if (
-        window.scrollY <=
-        document.getElementById('insigniaPage')?.offsetTop + 300
-      ) {
-        handleChangeMenu('insignia');
-      } else if (
-        window.scrollY <=
-        document.getElementById('lyatokenPage')?.offsetTop + 300
-      ) {
-        handleChangeMenu('lyatoken');
-      }
-    };
+  //     if (
+  //       window.scrollY <=
+  //       document.getElementById('genesisPage')?.offsetTop + 300
+  //     ) {
+  //       handleChangeMenu('genesis');
+  //     } else if (
+  //       window.scrollY <=
+  //       document.getElementById('aboutusPage')?.offsetTop + 300
+  //     ) {
+  //       handleChangeMenu('aboutus');
+  //     } else if (
+  //       window.scrollY <=
+  //       document.getElementById('insigniaPage')?.offsetTop + 300
+  //     ) {
+  //       handleChangeMenu('insignia');
+  //     } else if (
+  //       window.scrollY <=
+  //       document.getElementById('lyatokenPage')?.offsetTop + 300
+  //     ) {
+  //       handleChangeMenu('lyatoken');
+  //     }
+  //   };
 
-    document.addEventListener('scroll', handleScroll);
-    return () => {
-      document.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   document.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     document.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   return (
     <div className={`${styles.App}`} onClick={toggleMenu}>

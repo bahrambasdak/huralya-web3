@@ -71,34 +71,24 @@ $header-menu-text-color: #9298a5;
   opacity: 0;
   transition: opacity 250ms ease-out;
 }
-// fade-appear, fade-appear-active, fade-appear-done
-// fade-enter, fade-enter-active, fade-enter-done
-// fade-exit, fade-exit-active, fade-exit-done
+
 
 .App {
-  // display: flex;
-  //flex-direction: column;
-  // justify-content: space-between;
   width: 100%;
   text-align: center;
   position: relative;
   min-height: 100vh;
-  // padding-bottom: 3rem;
   padding-top: 6.2rem;
   font-family: 'Bahnschrift';
   background-color: #161c26;
   height: auto;
-  // height: 100vh;
-  // scroll-behavior: smooth;
-  // overflow-y: scroll;
-  // overflow-x: hidden;
+
 }
 
 ///////////////////////////////////////////  Header   ////////////////////
 
 .App .header {
   display: flex;
-
   max-width: 100%;
   z-index: 20;
   position: fixed;
@@ -198,7 +188,7 @@ $header-menu-text-color: #9298a5;
             flex-grow: 1;
             height: 100%;
             text-decoration: none;
-            color: $header-menu-text-color; //#9298A5;
+            color: $header-menu-text-color; ;
             @include headerMenuFont;
             overflow: hidden;
             min-width: fit-content;
@@ -290,7 +280,6 @@ $header-menu-text-color: #9298a5;
           max-width: 100px;
           padding: 5px;
           background-color: #282f42;
-          // border-color: #9298a5;
           border-width: 2px;
         }
       }
@@ -306,13 +295,11 @@ $header-menu-text-color: #9298a5;
       padding-right: 20px;
       max-width: 40%;
       z-index: 1;
-      // flex-wrap: wrap;
       .walletAddress {
         font-size: 0.8rem;
         color: #cfd5dc;
       }
-      button {
-      }
+
     }
   }
 }
@@ -331,8 +318,6 @@ $header-menu-text-color: #9298a5;
 
 ////////////////////////////////////////////     Footer    //////////////////////
 .App .footer {
-  //position: absolute;
-  //bottom: 0;
   width: 100%;
   max-width: 100vw;
   align-items: center;
@@ -407,17 +392,14 @@ $header-menu-text-color: #9298a5;
 }
 
 .App .dashboardFooter {
-  //position: absolute;
   display: flex;
   bottom: 0;
   width: 100%;
   max-width: 100vw;
-  //height: 15%;
   font-size: 14px;
   align-items: center;
   justify-content: center;
   .footerContent {
-    // width: 100%;
     height: 100%;
     display: flex;
     margin: 0 30%;
@@ -437,7 +419,6 @@ $header-menu-text-color: #9298a5;
       justify-content: center;
       row-gap: 5px;
       div {
-        //padding-top: 5px;
         ul {
           padding-top: 5px;
           display: flex;
@@ -476,8 +457,6 @@ $header-menu-text-color: #9298a5;
         column-gap: 10px;
 
         > span {
-          //height: 100%;
-          //width: 100%;
           cursor: pointer;
           img {
             width: 100%;
@@ -582,7 +561,6 @@ $header-menu-text-color: #9298a5;
   .App {
     .header {
       .headerContent {
-        //max-width: 80%;
         margin: 0 10%;
       }
     }
@@ -613,12 +591,10 @@ $header-menu-text-color: #9298a5;
     }
     .Container {
       margin: 0 6%;
-      //padding-bottom: 1rem;
     }
     .footer {
       position: static;
       bottom: 0;
-      // height: ;
       .footerContent {
         margin: 0 5%;
         .join {
@@ -673,7 +649,6 @@ $header-menu-text-color: #9298a5;
           justify-content: center;
           row-gap: 5px;
           div {
-            //padding-top: 5px;
             ul {
               padding-top: 5px;
               display: flex;
@@ -794,7 +769,6 @@ $header-menu-text-color: #9298a5;
 
 @media only screen and #{$mq-xsmall} {
   .App {
-    // min-height: fit-content;
     height: auto;
     padding-bottom: 0;
     .header {
@@ -804,7 +778,6 @@ $header-menu-text-color: #9298a5;
     }
     .Container {
       margin: 0 5%;
-      //padding-bottom: 9rem;
     }
 
     .footer {
@@ -822,10 +795,8 @@ $header-menu-text-color: #9298a5;
         justify-content: center;
         row-gap: 20px;
       }
-      //row-gap: 20px;
 
       .footerLeft {
-        // width: 100%;
         flex-grow: 1;
         height: auto;
         justify-content: center;
@@ -836,15 +807,9 @@ $header-menu-text-color: #9298a5;
           text-align: center;
         }
       }
-      .footerCenter {
-        //width: 100%;
-        .icons {
-          // flex-direction: column;
-        }
-      }
+
 
       .footerRight {
-        //  width: 100%;
         > span {
           text-align: left;
         }
@@ -853,8 +818,6 @@ $header-menu-text-color: #9298a5;
 
     .header {
       .headerContent {
-        //z-index: 3;
-
         .mobileMenuBtn {
           display: block;
         }

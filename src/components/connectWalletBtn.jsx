@@ -18,8 +18,6 @@ const ConnecttBtn = ({ styles }) => {
       <div className={styles.walletAddress}>
         {user.metamaskIsSuccess && addressSturcture(user.metamaskAddress)}
         {user.walletIsSuccess && addressSturcture(user.walletAddress)}
-                {/* {user.metamaskIsSuccess && user.metamaskAddress}
-        {user.walletIsSuccess && user.walletAddress} */}
       </div>
       <button onClick={handleConnectBtn} className={styles.btn}>
         {user.connectBtn === 'notConnect' ? 'connect Wallet' : 'connected'}

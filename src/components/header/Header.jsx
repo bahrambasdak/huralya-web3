@@ -11,8 +11,6 @@ import ConnecttBtn from '../connectWalletBtn';
 import { useAuth } from '../../contexts/Auth';
 import HeaderBg from '../svgComponent/HeaderBg';
 
-//import styles from "../styles/App.module.scss";
-
 const Header = ({
   toggleMenu,
   showMenu,
@@ -47,7 +45,6 @@ const Header = ({
               onClick={handleLoginBtn}
             />
           </Link>
-          {/* <Logo1 className="logo-img"/> */}
         </div>
         {!loginBtn ? (
           <div
@@ -57,7 +54,7 @@ const Header = ({
                 <a
                   href="#genesis"
                   className={`${styles.item} ${styles.item1} ${
-                    headerMenuActive.genesis ? styles.active : ''
+                    headerMenuActive.genesis && styles.active
                   }`}
                   onClick={() => handleMenuClick('genesis')}>
                   <img src={menuIcon1} alt="menuIcon1" />
@@ -68,7 +65,7 @@ const Header = ({
                 <a
                   href="#aboutus"
                   className={`${styles.item} ${styles.item2} ${
-                    headerMenuActive.aboutus ? styles.active : ''
+                    headerMenuActive.aboutus && styles.active
                   }`}
                   onClick={() => handleMenuClick('aboutus')}>
                   <img src={menuIcon2} alt="menuIcon2" />
@@ -79,7 +76,7 @@ const Header = ({
                 <a
                   href="#insignia"
                   className={`${styles.item} ${styles.item3} ${
-                    headerMenuActive.insignia ? styles.active : ''
+                    headerMenuActive.insignia && styles.active
                   }`}
                   onClick={() => handleMenuClick('insignia')}>
                   <img src={menuIcon3} alt="menuIcon3" />
@@ -90,7 +87,7 @@ const Header = ({
                 <a
                   href="#lyatoken"
                   className={`${styles.item} ${styles.item4} ${
-                    headerMenuActive.lyatoken ? styles.active : ''
+                    headerMenuActive.lyatoken && styles.active
                   }`}
                   onClick={() => handleMenuClick('lyatoken')}>
                   <img src={menuIcon4} alt="menuIcon4" />
@@ -107,7 +104,7 @@ const Header = ({
                 <a
                   href="#mint"
                   className={`${styles.item} ${styles.item1}  ${
-                    headerMenuActive.mint ? styles.active : ''
+                    headerMenuActive.mint && styles.active
                   }`}
                   onClick={() => handleMenuClick('mint')}>
                   Mint
@@ -117,7 +114,7 @@ const Header = ({
                 <a
                   href="#dashboard"
                   className={`${styles.item} ${styles.item3} ${
-                    headerMenuActive.dashboard ? styles.active : ''
+                    headerMenuActive.dashboard && styles.active 
                   }`}
                   onClick={() => handleMenuClick('dashboard')}>
                   Dashboard
@@ -128,7 +125,7 @@ const Header = ({
         )}
         {!loginBtn ? (
           <div className={styles.headerLogin}>
-            <Link to={'./dashboard#dashboard'}>
+            <Link to={'./dashboard'}>
               <button
                 className={`${styles.loginBtn} ${styles.btn}`}
                 onClick={handleLoginBtn}>

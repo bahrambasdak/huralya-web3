@@ -80,7 +80,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       position: relative;
       width: 70%;
       margin-right: 10%;
-      //margin-top: 5%;
 
       align-self: center;
       .item {
@@ -88,9 +87,7 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         flex-direction: column;
         align-items: center;
         margin: 0 10px;
-        .icon {
-          //padding-bottom: 5px;
-        }
+
 
         .desc {
           padding-top: 20px;
@@ -113,7 +110,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         background-color: #ffb111;
         padding: 1px 50%;
         top: calc(40% - 2px);
-        // left: 10%;
         z-index: 1;
       }
 
@@ -413,7 +409,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
       height: auto;
       min-height: fit-content;
       .socials {
-        //flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
         row-gap: 10px;

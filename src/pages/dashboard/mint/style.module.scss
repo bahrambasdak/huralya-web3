@@ -61,8 +61,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
     .HuralyaSquirrel {
       flex-grow: 1;
-     // width: 100%;
-    // height: 100%;
       position: relative;
 
       .content {
@@ -74,7 +72,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
         flex-direction: column;
         justify-content: space-between;
         align-items: left;
-        //z-index: 2;
         text-align: left;
 
         /* width */
@@ -241,8 +238,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
   .mint {
     .left {
       width: 70%;
-      .leftTitle {
-      }
     }
     .HuralyaSquirrel {
       .content {
@@ -294,8 +289,6 @@ $mq-retina: '(-webkit-max-device-pixel-ratio: 2), (max-resolution: 192dpi)';
 
     .buySell {
       width: 100%;
-      .catImg {
-      }
 
       .desc {
         padding: 1.5rem 1.5rem;

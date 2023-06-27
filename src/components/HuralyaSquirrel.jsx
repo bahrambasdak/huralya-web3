@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { BsSdCardFill } from "react-icons/bs";
-import InsigniaPageLeftBg from "./svgComponent/InsigniaPageLeftBg";
+
 
 const HuralyaSquirrel = ({ styles }) => {
   const [huralyaSquirrels, sethuralyaSquirrels] = useState([
